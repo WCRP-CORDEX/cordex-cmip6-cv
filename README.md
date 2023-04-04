@@ -1,2 +1,3 @@
 # CORDEX-CV
-Controlled Vocabulary (CV) for use in CORDEX
+
+Controlled Vocabulary (CV) for use in CORDEX.
