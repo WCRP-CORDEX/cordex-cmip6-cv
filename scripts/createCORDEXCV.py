@@ -11,6 +11,7 @@ filelist = [
     "CORDEX_domain_id.json",
     "CORDEX_domain.json",
     "CORDEX_institution_id.json",
+    "CORDEX_driving_source_id.json",
     "CORDEX_source_id.json",
     "CORDEX_source_type.json",
     "CORDEX_frequency.json",
@@ -21,7 +22,7 @@ filelist = [
     #    "CORDEX_license.json",
     "CORDEX_DRS.json",
     "mip_era.json",
-    #    "CORDEX_driving_experiment_id.json",
+    #"CORDEX_driving_experiment_id.json",
     "CORDEX_experiment_id.json",
 ]
 # Github repository with CORDEX related Control Vocabulary files
