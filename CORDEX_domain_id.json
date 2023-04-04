@@ -1,0 +1,16 @@
+{
+    "domain_id":{
+        "EUR-11": {
+          "domain_id": "EUR-11",
+          "domain": "Europe"
+        },
+        "EUR-22": {
+          "domain_id": "EUR-22",
+          "domain": "Europe"
+        },
+        "EUR-44": {
+          "domain_id": "EUR-44",
+          "domain": "Europe"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "experiment_id": {
+        "evaluation": {
+            "activity_id": [
+                "CORDEX"
+            ],
+            "additional_allowed_model_components": [
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "experiment": "all-forcing simulation of the recent past",
+            "experiment_id": "evaluation",
+            "driving_experiment_id": [
+                "evaluation"
+            ]
+        }
+    }
+}

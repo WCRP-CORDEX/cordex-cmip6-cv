@@ -1,0 +1,61 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: cfchecks
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  test:
+    name: py${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest"]
+        # python versions
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags.
+      - name: Set environment variables
+        run: |
+          echo "CONDA_ENV_FILE=ci/environment.yml" >> $GITHUB_ENV
+          echo "PYTHON_VERSION=${{ matrix.python-version }}" >> $GITHUB_ENV
+      - name: Create conda environment
+        uses: mamba-org/provision-with-micromamba@main
+        with:
+          cache-downloads: true
+          cache-downloads-key: "${{runner.os}}-${{runner.arch}}-py${{matrix.python-version}}-${{hashFiles(env.CONDA_ENV_FILE)}}"
+          micromamba-version: 'latest'
+          environment-file: ci/environment.yml
+          extra-specs: |
+            python=${{ matrix.python-version }}
+      - name: Version info
+        run: |
+          conda info -a
+          conda list
+      - name: Run tests
+        timeout-minutes: 5
+        run: python -m pytest ci/tests.py::test_cfchecker
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Test results for ${{ runner.os }}-${{ matrix.python-version }}
+          path: ./CORDEX
+          retention-days: 15
