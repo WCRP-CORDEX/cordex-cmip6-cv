@@ -49,13 +49,15 @@ jobs:
       # WANDB_CONSOLE: "off"
       run: |
         python scripts/createCORDEXCV.py
-        #mv CORDEX_CV.json  Tables
+        mv CORDEX_CV.json tables/Tables
 
-#    - name: Commit CORDEX_CV.json
-#      run: |
-#        git config --global user.name "github-actions[bot]"
-#        (pre-commit run --all-files) || true
-#        git pull origin main
-#        #git config --global user.email 'your-username@users.noreply.github.com'
-#        git commit Tables/CORDEX_CV.json -m "automated CV update"
-#        git push
+    - name: Commit CORDEX_CV.json
+      run: |
+        cd tables
+        git config --global user.name "github-actions[bot]"
+        (pre-commit run --all-files) || true
+        git pull origin main
+        #git config --global user.email 'your-username@users.noreply.github.com'
+        git commit Tables/CORDEX_CV.json -m "automated CV update"
+        git status
+        git push
