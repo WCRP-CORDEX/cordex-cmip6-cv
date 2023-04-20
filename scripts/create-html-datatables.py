@@ -26,11 +26,15 @@ def delistify(text):
 def listify(dic):
   return {k:[v] for k,v in dic}
 
-def json2datatable(jsonfile, htmlout, top_level, title='', intro='', columns = [], rename_fields = {}, is_1d = False):
+def json2datatable(jsonfile, htmlout, top_level, title='', intro='', columns = [], linearize_columns = [], rename_fields = {}, is_1d = False):
   with open(jsonfile) as f:
     data = json.load(f)
   if top_level:
     data = data[top_level]
+  if linearize_columns:
+    for col in linearize_columns:
+      for item in data:
+        data[item].update({k:v['description'] for k,v in data[item][col].items()})
   if is_1d:
     df = pd.DataFrame(data.values(), index = data.keys()).reset_index()
     df.columns = [top_level, top_level.replace('_id', '')]
@@ -110,6 +114,7 @@ span.warning {color: #FF0000; font-weight: bold}
 
 datatable_columns = {
   'source_id': ['source_id', 'label', 'release_year', 'institution_id', 'activity_participation', 'cohort', 'license'],
+  'source_id_components': ['source_id', 'label', 'release_year', 'institution_id', 'aerosol', 'atmos', 'atmosChem', 'land', 'landIce', 'ocean', 'lake', 'ocnBgchem', 'seaIce'],
   'institution_id': ['institution_id', 'institution']
 }
 
@@ -120,7 +125,8 @@ is_1d = {
 
 text = {
   'source_id': 'Registered models and license. <span class="warning">This is a test page.</span>',
-  'institution_id': 'Registered institutions. <span class="warning">This is a test page.</span>'
+  'institution_id': 'Registered institutions. <span class="warning">This is a test page.</span>',
+  'source_id_components': 'Registered models with components. <span class="warning">This is a test page.</span>',
 }
 
 
@@ -131,3 +137,9 @@ if __name__ == '__main__':
       title = f'WCRP-CORDEX CORDEX-CMIP6 CV {cv}',
       intro = text[cv]
     )
+  json2datatable(f'../CORDEX_source_id.json', f'../docs/CORDEX_source_id_components.html', 'source_id',
+    columns = datatable_columns['source_id_components'],
+    linearize_columns = ['model_component'],
+    title = f'WCRP-CORDEX CORDEX-CMIP6 CV model components',
+    intro = text['source_id_components']
+  )
