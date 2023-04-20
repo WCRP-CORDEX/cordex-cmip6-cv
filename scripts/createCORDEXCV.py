@@ -8,6 +8,7 @@ from collections import OrderedDict
 filelist = [
     "CORDEX_required_global_attributes.json",
     "CORDEX_activity_id.json",
+    "CORDEX_project_id.json",
     "CORDEX_domain_id.json",
     "CORDEX_domain.json",
     "CORDEX_institution_id.json",

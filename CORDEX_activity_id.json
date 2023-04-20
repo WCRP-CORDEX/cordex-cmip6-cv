@@ -1,5 +1,8 @@
 {
-    "activity_id": {
-        "CORDEX": "Coordinated Regional Climate Downscaling Experiment"
-    }
+    "activity_id": [
+        "RCM",
+        "ESD",
+        "FPS",
+        "Adjust"
+    ]
 }
