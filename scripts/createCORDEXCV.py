@@ -17,7 +17,7 @@ filelist = [
     "CORDEX_source_type.json",
     "CORDEX_frequency.json",
     "CORDEX_grid_label.json",
-    "CORDEX_nominal_resolution.json",
+    # "CORDEX_native_resolution.json",
     "CORDEX_realm.json",
     "CORDEX_table_id.json",
     #    "CORDEX_license.json",
