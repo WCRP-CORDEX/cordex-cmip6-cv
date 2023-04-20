@@ -57,5 +57,5 @@ def create_driving_source_id():
     driving_source_id = dict(
         driving_source_id=create_driving_source_attrs(cmip6_cv["CV"]["source_id"])
     )
-    driving_source_id["ECMWF-ERA5"] = era5_driving_source_id()
+    driving_source_id["driving_source_id"]["ECMWF-ERA5"] = era5_driving_source_id()
     return write_json(driving_source_id, "CORDEX_driving_source_id.json")
