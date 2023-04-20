@@ -43,6 +43,52 @@
             },
             "release_year":"2022",
             "source_id": "REMO2020"
+        },
+        "WRF442Q": {
+            "activity_participation": [
+                "CORDEX"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "institution_id": [
+                "AUTH",
+                "BCCR",
+                "UCAN"
+            ],
+            "label":"WRF-v4.4.2-Q",
+            "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
+            "model_component":{
+                "aerosol":{
+                    "description":"prescribed"
+                },
+                "atmos":{
+                    "description":"dynamic"
+                },
+                "atmosChem":{
+                    "description":"none"
+                },
+                "land":{
+                    "description":"NOAH-MP"
+                },
+                "landIce":{
+                    "description":"none"
+                },
+                "ocean":{
+                    "description":"prescribed"
+                },
+                "lake":{
+                    "description":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none"
+                },
+                "seaIce":{
+                    "description":"none"
+                }
+            },
+            "release_year":"2022",
+            "source_id": "WRF442Q"
         }
     }
 }
