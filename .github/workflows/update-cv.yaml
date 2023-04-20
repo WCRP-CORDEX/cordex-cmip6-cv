@@ -63,9 +63,10 @@ jobs:
     - name: Check if there are any changes
       id: verify_diff
       run: |
+        cd tables
         git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
-    - name: Commit
+    - name: Commit and push
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
         cd tables
@@ -74,10 +75,4 @@ jobs:
         (pre-commit run --all-files) || true
         git commit Tables/CORDEX_CV.json -m "automated CV update"
         git status
-
-    - name: Push
-      if: steps.verify_diff.outputs.changed == 'true'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.TABLE_ACCESS_TOKEN }}
-        branch: ${{ github.ref }}
+        git push
