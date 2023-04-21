@@ -1,51 +1,76 @@
 import json
+
 import pandas as pd
 
+
 def addtag(word, field):
-  rval = word
-  if (field == 'comments') and word.startswith('#'):
-    rval = f'<span class="tag">{word[1:]}</span>'
-  elif (field == 'comments') and word.startswith('http'):
-    rval = f'<a href="{word}">{word}</a>'
-  elif (field == 'status') and word in ['selected', 'planned', 'running', 'completed', 'published']:
-    rval = f'<span class="{word}">{word}</span>'
-  return(rval)
+    rval = word
+    if (field == "comments") and word.startswith("#"):
+        rval = f'<span class="tag">{word[1:]}</span>'
+    elif (field == "comments") and word.startswith("http"):
+        rval = f'<a href="{word}">{word}</a>'
+    elif (field == "status") and word in [
+        "selected",
+        "planned",
+        "running",
+        "completed",
+        "published",
+    ]:
+        rval = f'<span class="{word}">{word}</span>'
+    return rval
+
 
 def taggify(text, field):
-  rval = text
-  if field in ['status', 'comments']:
-    rval = ' '.join([addtag(x, field) for x in text.split(' ')])
-  return(rval)
+    rval = text
+    if field in ["status", "comments"]:
+        rval = " ".join([addtag(x, field) for x in text.split(" ")])
+    return rval
+
 
 def delistify(text):
-  rval = text
-  if type(text) == list:
-    rval = ', '.join(text)
-  return rval
+    rval = text
+    if type(text) == list:
+        rval = ", ".join(text)
+    return rval
+
 
 def listify(dic):
-  return {k:[v] for k,v in dic}
+    return {k: [v] for k, v in dic}
 
-def json2datatable(jsonfile, htmlout, top_level, title='', intro='', columns = [], linearize_columns = [], rename_fields = {}, is_1d = False):
-  with open(jsonfile) as f:
-    data = json.load(f)
-  if top_level:
-    data = data[top_level]
-  if linearize_columns:
-    for col in linearize_columns:
-      for item in data:
-        data[item].update({k:v['description'] for k,v in data[item][col].items()})
-  if is_1d:
-    df = pd.DataFrame(data.values(), index = data.keys()).reset_index()
-    df.columns = [top_level, top_level.replace('_id', '')]
-  else:
-    df = pd.DataFrame(data).transpose()
-  if columns:
-    df = df[columns]
-  field_names = dict(zip(df.columns,df.columns))
-  field_names.update(rename_fields)
-  fp = open(htmlout,'w')
-  fp.write('''<!DOCTYPE html>
+
+def json2datatable(
+    jsonfile,
+    htmlout,
+    top_level,
+    title="",
+    intro="",
+    columns=[],
+    linearize_columns=[],
+    rename_fields={},
+    is_1d=False,
+):
+    with open(jsonfile) as f:
+        data = json.load(f)
+    if top_level:
+        data = data[top_level]
+    if linearize_columns:
+        for col in linearize_columns:
+            for item in data:
+                data[item].update(
+                    {k: v["description"] for k, v in data[item][col].items()}
+                )
+    if is_1d:
+        df = pd.DataFrame(data.values(), index=data.keys()).reset_index()
+        df.columns = [top_level, top_level.replace("_id", "")]
+    else:
+        df = pd.DataFrame(data).transpose()
+    if columns:
+        df = df[columns]
+    field_names = dict(zip(df.columns, df.columns))
+    field_names.update(rename_fields)
+    fp = open(htmlout, "w")
+    fp.write(
+        """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta name="author" content="J. Fernandez" />
@@ -61,10 +86,12 @@ $(document).ready( function () {
     });
 } );
 </script>
-''')
-  if title:
-    fp.write(f'<title>{title}</title>')
-  fp.write('''
+"""
+    )
+    if title:
+        fp.write(f"<title>{title}</title>")
+    fp.write(
+        """
 <style>
 span.tag {
   background-color: #c5def5;
@@ -84,62 +111,96 @@ span.warning {color: #FF0000; font-weight: bold}
 </style>
 </head>
 <body>
-''')
-  if title:
-    fp.write(f'<h1>{title}</h1>')
-  if intro:
-    fp.write(f'{intro}<p>')
-  fp.write('''
+"""
+    )
+    if title:
+        fp.write(f"<h1>{title}</h1>")
+    if intro:
+        fp.write(f"{intro}<p>")
+    fp.write(
+        """
 <table id="table_id" class="display">
     <thead>
         <tr>
-''')
-  [fp.write(f'              <th>{field_names[x]}</th>\n') for x in df]
-  fp.write(f'''
+"""
+    )
+    [fp.write(f"              <th>{field_names[x]}</th>\n") for x in df]
+    fp.write(
+        """
         </tr>
     </thead>
     <tbody>
-''')
-  for idx, row in df.iterrows():
-    fp.write(f'        <tr>\n')
-    for field,item in zip(df.columns, row):
-      fp.write(f'            <td>{delistify(item)}</td>\n')
-    fp.write(f'        </tr>\n')
-  fp.write('''
+"""
+    )
+    for idx, row in df.iterrows():
+        fp.write("        <tr>\n")
+        for field, item in zip(df.columns, row):
+            fp.write(f"            <td>{delistify(item)}</td>\n")
+        fp.write("        </tr>\n")
+    fp.write(
+        """
     </tbody>
 </table>
 </body>
-</html>''')
-  fp.close()
+</html>"""
+    )
+    fp.close()
+
 
 datatable_columns = {
-  'source_id': ['source_id', 'label', 'release_year', 'institution_id', 'activity_participation', 'cohort', 'license'],
-  'source_id_components': ['source_id', 'label', 'release_year', 'institution_id', 'aerosol', 'atmos', 'atmosChem', 'land', 'landIce', 'ocean', 'lake', 'ocnBgchem', 'seaIce'],
-  'institution_id': ['institution_id', 'institution']
+    "source_id": [
+        "source_id",
+        "label",
+        "release_year",
+        "institution_id",
+        "activity_participation",
+        "cohort",
+        "license",
+    ],
+    "source_id_components": [
+        "source_id",
+        "label",
+        "release_year",
+        "institution_id",
+        "aerosol",
+        "atmos",
+        "atmosChem",
+        "land",
+        "landIce",
+        "ocean",
+        "lake",
+        "ocnBgchem",
+        "seaIce",
+    ],
+    "institution_id": ["institution_id", "institution"],
 }
 
-is_1d = {
-  'source_id': False,
-  'institution_id': True
-}
+is_1d = {"source_id": False, "institution_id": True}
 
 text = {
-  'source_id': 'Registered models and license. <span class="warning">This is a test page.</span>',
-  'institution_id': 'Registered institutions. <span class="warning">This is a test page.</span>',
-  'source_id_components': 'Registered models with components. <span class="warning">This is a test page.</span>',
+    "source_id": 'Registered models and license. <span class="warning">This is a test page.</span>',
+    "institution_id": 'Registered institutions. <span class="warning">This is a test page.</span>',
+    "source_id_components": 'Registered models with components. <span class="warning">This is a test page.</span>',
 }
 
 
-if __name__ == '__main__':
-  for cv in ['source_id', 'institution_id']:
-    json2datatable(f'../CORDEX_{cv}.json', f'../docs/CORDEX_{cv}.html', cv,
-      columns = datatable_columns[cv], is_1d = is_1d[cv],
-      title = f'WCRP-CORDEX CORDEX-CMIP6 CV {cv}',
-      intro = text[cv]
+if __name__ == "__main__":
+    for cv in ["source_id", "institution_id"]:
+        json2datatable(
+            f"../CORDEX_{cv}.json",
+            f"../docs/CORDEX_{cv}.html",
+            cv,
+            columns=datatable_columns[cv],
+            is_1d=is_1d[cv],
+            title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
+            intro=text[cv],
+        )
+    json2datatable(
+        "../CORDEX_source_id.json",
+        "../docs/CORDEX_source_id_components.html",
+        "source_id",
+        columns=datatable_columns["source_id_components"],
+        linearize_columns=["model_component"],
+        title="WCRP-CORDEX CORDEX-CMIP6 CV model components",
+        intro=text["source_id_components"],
     )
-  json2datatable(f'../CORDEX_source_id.json', f'../docs/CORDEX_source_id_components.html', 'source_id',
-    columns = datatable_columns['source_id_components'],
-    linearize_columns = ['model_component'],
-    title = f'WCRP-CORDEX CORDEX-CMIP6 CV model components',
-    intro = text['source_id_components']
-  )
