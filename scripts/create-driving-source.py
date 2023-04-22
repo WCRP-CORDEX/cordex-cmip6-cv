@@ -1,25 +1,4 @@
-import json
-
-import requests
-
-CMIP6_CV_URL = "https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_CV.json"
-
-
-def read_json_url(url):
-    with requests.get(url) as r:
-        return r.json()
-
-
-def read_json(filename):
-    with open(filename) as f:
-        return json.loads(f.read())
-    return filename
-
-
-def write_json(content, filename):
-    with open(filename, "w") as f:
-        json.dump(content, f, indent=4)
-    return filename
+from common import CMIP6_CV_URL, read_json_url, write_json
 
 
 def create_driving_source_attrs(cmip6_source_id):
@@ -59,3 +38,7 @@ def create_driving_source_id():
     )
     driving_source_id["driving_source_id"]["ECMWF-ERA5"] = era5_driving_source_id()
     return write_json(driving_source_id, "CORDEX_driving_source_id.json")
+
+
+if __name__ == "__main__":
+    create_driving_source_id()
