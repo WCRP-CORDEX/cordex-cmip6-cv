@@ -7,6 +7,9 @@ data_request = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cmip6-data-
 
 CMIP6_CV_URL = "https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_CV.json"
 
+domain_table_url = "https://raw.githubusercontent.com/WCRP-CORDEX/domain-tables/main/rotated-latitude-longitude.csv"
+
+
 table_dir = op.join(op.dirname(op.dirname(__file__)), "Tables")
 
 table_prefix = "CORDEX"
