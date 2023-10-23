@@ -1,4 +1,4 @@
-# CORDEX-CV
+# CORDEX-CMIP6 CV
 
 **Controlled Vocabulary (CV) for use in CORDEX.**
 
