@@ -46,7 +46,7 @@ jobs:
     - name: Update controlled vocabulary
       run: |
         python scripts/create-cv.py
-        mv CORDEX-CMIP6_CV.json tables/Tables
+        mv CORDEX_CV.json tables/Tables
 
     - name: Check if there are any changes
       id: verify_diff
