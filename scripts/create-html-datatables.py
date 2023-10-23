@@ -29,7 +29,8 @@ def taggify(text, field):
 
 def delistify(text):
     rval = text
-    if type(text) == list:
+    # if type(text) == list:
+    if isinstance(text, list):
         rval = ", ".join(text)
     return rval
 
