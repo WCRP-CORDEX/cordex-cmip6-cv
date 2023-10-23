@@ -1,6 +1,7 @@
 import json
 
 import pandas as pd
+from common import table_prefix
 
 
 def addtag(word, field):
@@ -188,8 +189,8 @@ text = {
 if __name__ == "__main__":
     for cv in ["source_id", "institution_id"]:
         json2datatable(
-            f"../CORDEX_{cv}.json",
-            f"../docs/CORDEX_{cv}.html",
+            f"../{table_prefix}_{cv}.json",
+            f"../docs/{table_prefix}_{cv}.html",
             cv,
             columns=datatable_columns[cv],
             is_1d=is_1d[cv],
@@ -197,8 +198,8 @@ if __name__ == "__main__":
             intro=text[cv],
         )
     json2datatable(
-        "../CORDEX_source_id.json",
-        "../docs/CORDEX_source_id_components.html",
+        f"../{table_prefix}_source_id.json",
+        f"../docs/{table_prefix}_source_id_components.html",
         "source_id",
         columns=datatable_columns["source_id_components"],
         linearize_columns=["model_component"],

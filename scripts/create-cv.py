@@ -27,7 +27,7 @@ filelist = [
 ]
 # Github repository with CORDEX related Control Vocabulary files
 # -------------------------------------------------------------
-githubRepo = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cv/rename/"
+githubRepo = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cv/main/"
 
 
 class readWCRP:
