@@ -3,28 +3,27 @@ import json
 import urllib.request
 from collections import OrderedDict
 
+from common import table_prefix
+
 # List of files needed from github for CORDEX CV
 # ---------------------------------------------
 filelist = [
-    "CORDEX_required_global_attributes.json",
-    "CORDEX_activity_id.json",
-    "CORDEX_project_id.json",
-    "CORDEX_domain_id.json",
-    "CORDEX_domain.json",
-    "CORDEX_institution_id.json",
-    "CORDEX_driving_source_id.json",
-    "CORDEX_source_id.json",
-    "CORDEX_source_type.json",
-    "CORDEX_frequency.json",
-    "CORDEX_grid_label.json",
-    # "CORDEX_native_resolution.json",
-    "CORDEX_realm.json",
-    "CORDEX_table_id.json",
-    #    "CORDEX_license.json",
-    "CORDEX_DRS.json",
+    f"{table_prefix}_required_global_attributes.json",
+    f"{table_prefix}_activity_id.json",
+    f"{table_prefix}_project_id.json",
+    f"{table_prefix}_domain_id.json",
+    f"{table_prefix}_domain.json",
+    f"{table_prefix}_institution_id.json",
+    f"{table_prefix}_driving_source_id.json",
+    f"{table_prefix}_source_id.json",
+    f"{table_prefix}_source_type.json",
+    f"{table_prefix}_frequency.json",
+    f"{table_prefix}_native_resolution.json",
+    f"{table_prefix}_realm.json",
+    f"{table_prefix}_license.json",
+    f"{table_prefix}_DRS.json",
+    f"{table_prefix}_experiment_id.json",
     "mip_era.json",
-    # "CORDEX_driving_experiment_id.json",
-    "CORDEX_experiment_id.json",
 ]
 # Github repository with CORDEX related Control Vocabulary files
 # -------------------------------------------------------------
@@ -103,11 +102,11 @@ class readWCRP:
             with urllib.request.urlopen(req) as response:
                 urlJson = response.read().decode()
             myjson = json.loads(urlJson, object_pairs_hook=OrderedDict)
-            if file == "CORDEX_source_id.json":
+            if file == f"{table_prefix}_source_id.json":
                 self.createSource(myjson)
-            if file == "CORDEX_experiment_id.json":
+            if file == f"{table_prefix}_experiment_id.json":
                 self.createExperimentID(myjson)
-            if file == "CORDEX_license.json":
+            if file == "{table_prefix}_license.json":
                 self.createLicense(myjson)
             Dico.update(myjson)
 
@@ -124,18 +123,18 @@ def run():
     regexp["mip_era"] = ["CMIP6"]
     regexp["product"] = ["model-output"]
     regexp["tracking_id"] = ["hdl:21.14100/.*"]
-    regexp["further_info_url"] = ["https://furtherinfo.es-doc.org/.*"]
-    regexp["realization_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
+    # regexp["further_info_url"] = ["https://furtherinfo.es-doc.org/.*"]
+    # regexp["realization_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
     regexp["variant_label"] = [
         "r[[:digit:]]\\{1,\\}i[[:digit:]]\\{1,\\}p[[:digit:]]\\{1,\\}f[[:digit:]]\\{1,\\}$"
     ]
-    regexp["data_specs_version"] = [
-        "^[[:digit:]]\\{2,2\\}\\.[[:digit:]]\\{2,2\\}\\.[[:digit:]]\\{2,2\\}$"
-    ]
+    # regexp["data_specs_version"] = [
+    #    "^[[:digit:]]\\{2,2\\}\\.[[:digit:]]\\{2,2\\}\\.[[:digit:]]\\{2,2\\}$"
+    # ]
     regexp["Conventions"] = ["^CF-1.7 CMIP-6.[0-2]\\( UGRID-1.0\\)\\{0,\\}$"]
-    regexp["forcing_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
-    regexp["initialization_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
-    regexp["physics_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
+    # regexp["forcing_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
+    # regexp["initialization_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
+    # regexp["physics_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
 
     CV["CV"].update(regexp)
     for exp in CV["CV"]["experiment_id"]:

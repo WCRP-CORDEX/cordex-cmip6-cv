@@ -1,13 +1,7 @@
-from common import CMIP6_CV_URL, read_json_url, write_json
+from common import CMIP6_CV_URL, read_json_url, table_prefix, write_json
 
 
 def create_driving_source_attrs(cmip6_source_id):
-    """Create CORDEX driving source id from CMIP6 source_id
-
-    Takes the original CMIP6 source id, takes and renames
-    some attributes for use as driving_source_id in CORDEX.
-
-    """
     keep_rename = {
         "institution_id": "driving_institution_id",
         "source_id": "driving_source_id",
@@ -32,12 +26,18 @@ def era5_driving_source_id():
 
 
 def create_driving_source_id():
+    """Create CORDEX driving source id from CMIP6 source_id
+
+    Takes the original CMIP6 source id, takes and renames
+    some attributes for use as driving_source_id in CORDEX.
+
+    """
     cmip6_cv = read_json_url(CMIP6_CV_URL)
     driving_source_id = dict(
         driving_source_id=create_driving_source_attrs(cmip6_cv["CV"]["source_id"])
     )
     driving_source_id["driving_source_id"]["ECMWF-ERA5"] = era5_driving_source_id()
-    return write_json(driving_source_id, "CORDEX_driving_source_id.json")
+    return write_json(driving_source_id, f"{table_prefix}_driving_source_id.json")
 
 
 if __name__ == "__main__":

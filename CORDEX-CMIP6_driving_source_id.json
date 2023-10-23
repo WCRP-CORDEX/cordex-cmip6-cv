@@ -680,13 +680,6 @@
             "driving_source_id": "IPSL-CM6A-LR-INCA",
             "driving_source": "IPSL-CM6A-LR-INCA (2019): \naerosol: INCA v6 AER\natmos: LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)\natmosChem: none\nland: ORCHIDEE (v2.0, Water/Carbon/Energy mode)\nlandIce: none\nocean: NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)\nocnBgchem: NEMO-PISCES\nseaIce: NEMO-LIM3"
         },
-        "IPSL-CM6A-MR025": {
-            "driving_institution_id": [
-                "IPSL"
-            ],
-            "driving_source_id": "IPSL-CM6A-MR025",
-            "driving_source": "IPSL-CM6A-MR025 (2021): \naerosol: none\natmos: LMDZ (NPv6; 256 x 256 longitude/latitude; 79 levels; top level 80000 m)\natmosChem: none\nland: ORCHIDEE (v2.2, Water/Carbon/Energy mode; same grid as atmos)\nlandIce: none\nocean: NEMO-OPA (eORCA025, tripolar primarily 0.25deg; 1442 x 1207 longitude/latitude; 75 levels; top grid cell 0-2 m)\nocnBgchem: none\nseaIce: NEMO-LIM3 (same grid as ocean)"
-        },
         "IPSL-CM6A-MR1": {
             "driving_institution_id": [
                 "IPSL"
