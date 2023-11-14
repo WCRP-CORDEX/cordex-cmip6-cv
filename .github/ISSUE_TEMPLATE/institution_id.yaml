@@ -17,7 +17,7 @@ body:
         An identifier for the institution that is responsible for generating
         and providing CORDEX simulations.
         No spaces, dots or underscores are allowed.
-        Hyphens are typically used to separate community names from the specific institution performing the run (e.g. HCLIMcom-SMHI), or to separate different institute acronyms contributing to a single set of scenarios from the same `driving_source_id` (e.g. NORCE-UCAN).
+        Hyphens are typically used to separate community names from the specific institution performing the run (e.g. HCLIMcom-SMHI), or to separate different institute acronyms partnering to contribute a given simulation (e.g. NORCE-UCAN).
       placeholder: ex. `GERICS`
     validations:
       required: true
