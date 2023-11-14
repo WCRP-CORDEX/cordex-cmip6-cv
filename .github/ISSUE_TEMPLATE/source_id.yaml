@@ -1,7 +1,7 @@
 name: Register a new model
 description: Register a new model (source_id) for the CORDEX-CMIP6 CV.
 title: "[source_id]: "
-labels: ["register source-id"]
+labels: ["Register source-id"]
 body:
 
   - type: markdown
@@ -52,6 +52,8 @@ body:
         - ARCM
         - RESM
         - AGCM
+    validations:
+      required: true
 
   - type: input
     id: release_year
@@ -77,6 +79,8 @@ body:
       options:
         - DD
         - ESD
+    validations:
+      required: true
 
   - type: input
     id: institution_id
@@ -113,3 +117,6 @@ body:
       options:
         - CC0
         - CC BY 4.0
+    validations:
+      required: true
+
