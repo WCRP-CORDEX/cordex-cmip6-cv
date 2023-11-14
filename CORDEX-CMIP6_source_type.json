@@ -1,5 +1,7 @@
 {
     "source_type": {
-        "ARCM": "atmospheric regional circulation model run with prescribed ocean surface conditions and usually a model of the land surface"
+        "ARCM": "atmospheric regional climate model, including a land model",
+        "AORCM": "atmosphere-ocean regional climate model",
+        "AGCM": "atmosphere global climate model including variable resolution"
     }
 }

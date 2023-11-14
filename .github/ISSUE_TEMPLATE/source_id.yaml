@@ -11,9 +11,9 @@ body:
         Please, read carefully each of the placeholder instructions.
 
   - type: input
-    id: source
+    id: label
     attributes:
-      label: source
+      label: label
       description: >
         A short acronym that uniquely identifies your model and distinguishes
         it from other versions used in CORDEX-CMIP6.
@@ -24,13 +24,23 @@ body:
       required: true
 
   - type: input
+    id: label_extended
+    attributes:
+      label: label_extended
+      description: >
+        A longer description of the model name, possibly including the acronym expanded.
+      placeholder: ex. `Weather Research and Forecasting model version 4.4.2, CORDEX WRF Community configuration Q`
+    validations:
+      required: true
+
+  - type: input
     id: source_id
     attributes:
       label: source_id
       description: >
-        An identifier that should be identical to `source` but with forbidden
+        An identifier that should be identical to `label` but with forbidden
         characters either removed or replaced by a hyphen (`-`).
-        The source_id will appear in the ESGF search interface and in filenames
+        The `source_id` will appear in the ESGF search interface and in filenames
         a subdirectory names.
         Restrict characters used in source_id to letters, numbers and hyphens
         (e.g. NO dots, spaces or underscores are allowed).
