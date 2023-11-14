@@ -1,0 +1,32 @@
+name: Register new institution
+description: Register a new instituion conducting CORDEX-CMIP6 simulations for inclusion into CV.
+title: "[institution_id]: "
+labels: ["register institution-id"]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time!
+
+  - type: input
+    id: institution_id
+    attributes:
+      label: institution_id
+      description: >
+        An identifier for the institution that is responsible for generating
+        and providing CORDEX simulations.
+        No spaces, dots or underscores are allowed.
+        Hyphens are typically used to separate community names from the specific institution performing the run (e.g. HCLIMcom-SMHI), or to separate different institute acronyms contributing to a single set of scenarios from the same `driving_source_id` (e.g. NORCE-UCAN).
+      placeholder: ex. `GERICS`
+    validations:
+      required: true
+
+  - type: input
+    id: institution
+    attributes:
+      label: institution
+      description: Full name and address, including city, of the institution that is responsible for CORDEX simulations. If several institutions are registered as a single provider, use a semicolon to separate their full names.
+      placeholder: ex. `Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany`
+    validations:
+      required: true
