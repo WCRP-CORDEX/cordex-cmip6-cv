@@ -47,10 +47,10 @@ body:
         The type of model. Choose from the dropdown menu. If you feel that a new
         source type should be added, please, open first an issue requesting to update
         https://github.com/WCRP-CORDEX/cordex-cmip6-cv/blob/main/CORDEX-CMIP6_source_type.json
-      multiple: True
+      multiple: False
       options:
         - ARCM
-        - RESM
+        - AORCM
         - AGCM
     validations:
       required: true
@@ -74,8 +74,8 @@ body:
       label: activity_participation
       description: >
         The CORDEX-CMIP6 activities that you intend to run experiment simulations.
-        DD is for dynamical downscaling using RCMs or AGCMs. 
-      multiple: True
+        DD is for dynamical downscaling and ESD for empirical-statistical downscaling.
+      multiple: true
       options:
         - DD
         - ESD
