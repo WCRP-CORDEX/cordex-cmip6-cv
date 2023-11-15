@@ -17,7 +17,7 @@ body:
         An identifier for the institution that is responsible for generating
         and providing CORDEX simulations.
         No spaces, dots or underscores are allowed.
-        Hyphens are typically used to separate community names from the specific institution performing the run (e.g. HCLIMcom-SMHI), or to separate different institute acronyms partnering to contribute a given simulation (e.g. NORCE-UCAN).
+        Hyphens are typically used to separate community names from the specific institution performing the run (e.g. COMM-INST), or to separate different institution acronyms partnering to contribute a given simulation (e.g. INST1-INST2).
       placeholder: ex. `GERICS`
     validations:
       required: true
@@ -26,7 +26,7 @@ body:
     id: institution
     attributes:
       label: institution
-      description: Full name and address, including city, of the institution that is responsible for CORDEX simulations. If several institutions are registered as a single provider, use a semicolon to separate their full names.
-      placeholder: ex. `Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany`
+      description: Full name, city, country of the institution that is responsible for CORDEX simulations. If several institutions are registered as a single provider, use a semicolon to separate their full names and place them into brackets. E.g. `INST1 [Full name 1, city1, country1]; INST2 [Full name 2, city2, country2]`
+      placeholder: ex. `Climate Service Center Germany, Helmholtz Centre hereon GmbH, Hamburg, Germany`
     validations:
       required: true

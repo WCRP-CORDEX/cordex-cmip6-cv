@@ -38,7 +38,7 @@ body:
     attributes:
       label: source_id
       description: >
-        An identifier that should be identical to `label` but with forbidden
+        An identifier corresponding to `label` but with forbidden
         characters either removed or replaced by a hyphen (`-`).
         The `source_id` will appear in the ESGF search interface and in filenames
         a subdirectory names.
