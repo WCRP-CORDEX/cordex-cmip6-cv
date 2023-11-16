@@ -1,19 +1,60 @@
 {
-    "experiment_id": {
-        "evaluation": {
-            "activity_id": [
-                "CORDEX"
+    "driving_experiment_id": {
+        "evaluation":{
+            "activity_id":[
+                "DD",
+                "ESD"
             ],
-            "additional_allowed_model_components": [
-                "AER",
-                "CHEM",
-                "BGC"
+            "driving_experiment":"ERA5 reanalysis-driven evaluation simulation of the recent past",
+            "driving_experiment_id":"evaluation"
+        },
+        "historical":{
+            "activity_id":[
+                "DD",
+                "ESD"
             ],
-            "experiment": "all-forcing simulation of the recent past",
-            "experiment_id": "evaluation",
-            "driving_experiment_id": [
-                "evaluation"
-            ]
+            "driving_experiment":"CMIP6 historical. All-forcing simulation of the recent past",
+            "driving_experiment_id":"historical"
+        },
+        "ssp119":{
+            "activity_id":[
+                "DD",
+                "ESD"
+            ],
+            "driving_experiment":"Future scenario with low radiative forcing throughout reaching about 1.9 W/m2 in 2100 based on SSP1. Concentration-driven",
+            "driving_experiment_id":"ssp119"
+        },
+        "ssp126":{
+            "activity_id":[
+                "DD",
+                "ESD"
+            ],
+            "driving_experiment":"Future scenario with low radiative forcing by the end of century. Following approximately RCP2.6 global forcing pathway but with new forcing based on SSP1. Concentration-driven. As a tier 2 option, this simulation should be extended to year 2300",
+            "driving_experiment_id":"ssp126"
+        },
+        "ssp245":{
+            "activity_id":[
+                "DD",
+                "ESD"
+            ],
+            "driving_experiment":"Future scenario with medium radiative forcing by the end of century. Following approximately RCP4.5 global forcing pathway but with new forcing based on SSP2. Concentration-driven",
+            "driving_experiment_id":"ssp245"
+        },
+        "ssp370":{
+            "activity_id":[
+                "DD",
+                "ESD"
+            ],
+            "driving_experiment":"Future scenario with high radiative forcing by the end of century. Reaches about 7.0 W/m2 by 2100; fills gap in RCP forcing pathways between 6.0 and 8.5 W/m2. Concentration-driven",
+            "driving_experiment_id":"ssp370"
+        },
+        "ssp585":{
+            "activity_id":[
+                "DD",
+                "ESD"
+            ],
+            "driving_experiment":"Future scenario with high radiative forcing by the end of century. Following approximately RCP8.5 global forcing pathway but with new forcing based on SSP5. Concentration-driven. As a tier 2 option, this simulation should be extended to year 2300",
+            "driving_experiment_id":"ssp585"
         }
     }
 }
