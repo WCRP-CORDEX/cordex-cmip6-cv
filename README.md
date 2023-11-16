@@ -12,7 +12,7 @@ The aim is to have the `CORDEX_CV.json` table updated when, e.g., a new RCM mode
 ## Registering Institutions, Models, or requesting changes to CVs:
 
 To register your institution or model, please submit an issue using these forms: [New institution_id]() or [New source_id (i.e. model)]().
-These forms will automatically create a pull request, where further details can be discussed. 
+These forms will automatically create a pull request, where further details can be discussed.
 Models must not be distinguished by the `institution_id`.
 Do not register a new `source_id` if the same model or method configuration is already registered by other institution.
 Just request to add your `institution_id` to the list of the corresponding `source_id`.
@@ -30,4 +30,3 @@ To view current repository contents in HTML format, point your browser to:
 The CVs build on logic that is described in the [CORDEX-CMIP6 Archiving Specifications for Dynamical Downscaling](http://goo.gl/v1drZl) document.
 
 The controlled vocabularies for CORDEX-CMIP6 will be augmented (e.g., as new `institution_id`s and `source_id`s are registered), but there should be no changes in the existing vocabulary that would impair searches of and access to already published data or that would in any way invalidate published data.
-
