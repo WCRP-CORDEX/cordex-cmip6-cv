@@ -162,15 +162,21 @@ datatable_columns = {
         "activity_participation",
         "license",
     ],
-    "institution_id": [
-        "institution_id",
-        "institution"
-    ],
+    "institution_id": ["institution_id", "institution"],
 }
 
 is_1d = {"source_id": False, "institution_id": True}
 
-link_header = '> ' + ' · '.join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in datatable_columns.keys()]) + '<p>'
+link_header = (
+    "> "
+    + " · ".join(
+        [
+            f'<a href="{table_prefix}_{x}.html">{x} table</a>'
+            for x in datatable_columns.keys()
+        ]
+    )
+    + "<p>"
+)
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
 
 text = {
