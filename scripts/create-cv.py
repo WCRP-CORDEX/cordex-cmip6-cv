@@ -22,7 +22,7 @@ filelist = [
     f"{table_prefix}_realm.json",
     f"{table_prefix}_license.json",
     f"{table_prefix}_DRS.json",
-    f"{table_prefix}_experiment_id.json",
+    f"{table_prefix}_driving_experiment_id.json",
     "mip_era.json",
 ]
 # Github repository with CORDEX related Control Vocabulary files
@@ -137,11 +137,11 @@ def run():
     # regexp["physics_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
 
     CV["CV"].update(regexp)
-    for exp in CV["CV"]["experiment_id"]:
-        CV["CV"]["experiment_id"][exp]["activity_id"] = [
-            " ".join(CV["CV"]["experiment_id"][exp]["activity_id"])
-        ]
-        print("AC ID:", CV["CV"]["experiment_id"][exp]["activity_id"])
+    # for exp in CV["CV"]["driving_experiment_id"]:
+    #    CV["CV"]["driving_experiment_id"][exp]["activity_id"] = [
+    #        " ".join(CV["CV"]["driving_experiment_id"][exp]["activity_id"])
+    #    ]
+    #    print("AC ID:", CV["CV"]["driving_experiment_id"][exp]["activity_id"])
     f.write(json.dumps(CV, indent=4, separators=(",", ":"), sort_keys=False))
 
     f.close()
