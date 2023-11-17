@@ -110,6 +110,10 @@ span.running {color: #009900}
 span.completed {color: black; font-weight: bold}
 span.published {color: #3399FF; font-weight: bold}
 span.warning {color: #FF0000; font-weight: bold}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:active { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -156,33 +160,23 @@ datatable_columns = {
         "release_year",
         "institution_id",
         "activity_participation",
-        "cohort",
         "license",
     ],
-    "source_id_components": [
-        "source_id",
-        "label",
-        "release_year",
+    "institution_id": [
         "institution_id",
-        "aerosol",
-        "atmos",
-        "atmosChem",
-        "land",
-        "landIce",
-        "ocean",
-        "lake",
-        "ocnBgchem",
-        "seaIce",
+        "institution"
     ],
-    "institution_id": ["institution_id", "institution"],
 }
 
 is_1d = {"source_id": False, "institution_id": True}
 
+link_header = '> ' + ' · '.join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in datatable_columns.keys()]) + '<p>'
+cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
+
 text = {
-    "source_id": 'Registered models and license. <span class="warning">This is a test page.</span>',
-    "institution_id": 'Registered institutions. <span class="warning">This is a test page.</span>',
-    "source_id_components": 'Registered models with components. <span class="warning">This is a test page.</span>',
+    "source_id": f'{link_header}Registered models. Visit the {cordex_cv_repo} to register or update your model. <span class="warning">This is a test page.</span>',
+    "institution_id": f'{link_header}Registered institutions. Visit the {cordex_cv_repo} to register or update your institution details. <span class="warning">This is a test page.</span>',
+    "source_id_components": f'{link_header}Registered models with components. <span class="warning">This is a test page.</span>',
 }
 
 
@@ -197,12 +191,3 @@ if __name__ == "__main__":
             title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
             intro=text[cv],
         )
-    json2datatable(
-        f"../{table_prefix}_source_id.json",
-        f"../docs/{table_prefix}_source_id_components.html",
-        "source_id",
-        columns=datatable_columns["source_id_components"],
-        linearize_columns=["model_component"],
-        title="WCRP-CORDEX CORDEX-CMIP6 CV model components",
-        intro=text["source_id_components"],
-    )
