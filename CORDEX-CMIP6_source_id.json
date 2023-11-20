@@ -2,93 +2,39 @@
     "source_id": {
         "REMO2020": {
             "activity_participation": [
-                "CORDEX"
+                "DD"
             ],
             "cohort": [
                 "Registered"
             ],
+            "further_info_url":"https://www.remo-rcm.de",
             "institution_id": [
                 "GERICS"
             ],
             "label":"REMO2020",
+            "label_extended":"REMO regional model 2020",
             "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
-            "model_component":{
-                "aerosol":{
-                    "description":"MACv2"
-                },
-                "atmos":{
-                    "description":"dynamic"
-                },
-                "atmosChem":{
-                    "description":"none"
-                },
-                "land":{
-                    "description":"none"
-                },
-                "landIce":{
-                    "description":"none"
-                },
-                "ocean":{
-                    "description":"prescribed"
-                },
-                "lake":{
-                    "description":"FLake"
-                },
-                "ocnBgchem":{
-                    "description":"none"
-                },
-                "seaIce":{
-                    "description":"none"
-                }
-            },
             "release_year":"2022",
-            "source_id": "REMO2020"
+            "source_id": "REMO2020",
+            "source_type": "ARCM"
         },
-        "WRF442Q": {
+        "WRF451Q": {
             "activity_participation": [
-                "CORDEX"
+                "DD"
             ],
             "cohort": [
                 "Registered"
             ],
+            "further_info_url":"https://github.com/CORDEX-WRF-community/euro-cordex-cmip6",
             "institution_id": [
-                "AUTH",
-                "BCCR",
-                "UCAN"
+                "NORCE-UCAN"
             ],
-            "label":"WRF-v4.4.2-Q",
+            "label":"WRF v4.5.1-Q",
+            "label_extended":"Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q",
             "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
-            "model_component":{
-                "aerosol":{
-                    "description":"prescribed"
-                },
-                "atmos":{
-                    "description":"dynamic"
-                },
-                "atmosChem":{
-                    "description":"none"
-                },
-                "land":{
-                    "description":"NOAH-MP"
-                },
-                "landIce":{
-                    "description":"none"
-                },
-                "ocean":{
-                    "description":"prescribed"
-                },
-                "lake":{
-                    "description":"none"
-                },
-                "ocnBgchem":{
-                    "description":"none"
-                },
-                "seaIce":{
-                    "description":"none"
-                }
-            },
             "release_year":"2022",
-            "source_id": "WRF442Q"
+            "source_id": "WRF451Q",
+            "source_type": "ARCM"
         }
     }
 }

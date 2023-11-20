@@ -50,6 +50,8 @@ def json2datatable(
     linearize_columns=[],
     rename_fields={},
     is_1d=False,
+    column_as_link="",
+    column_as_link_source=""
 ):
     with open(jsonfile) as f:
         data = json.load(f)
@@ -68,6 +70,12 @@ def json2datatable(
         df = pd.DataFrame(data).transpose()
     if columns:
         df = df[columns]
+    if column_as_link:
+        if not column_as_link_source:
+            column_as_link_source = column_as_link
+        df[column_as_link] = '<a href="' + df[column_as_link_source] + '">' + df[column_as_link] + '</a>'
+        if column_as_link != column_as_link_source:
+            df.drop(columns = column_as_link_source, inplace=True)
     field_names = dict(zip(df.columns, df.columns))
     field_names.update(rename_fields)
     fp = open(htmlout, "w")
@@ -152,48 +160,42 @@ a:active { text-decoration: underline; }
     )
     fp.close()
 
+cvs = ["source_id", "institution_id"]
 
-datatable_columns = {
-    "source_id": [
-        "source_id",
-        "label",
-        "release_year",
-        "institution_id",
-        "activity_participation",
-        "license",
-    ],
-    "institution_id": ["institution_id", "institution"],
-}
-
-is_1d = {"source_id": False, "institution_id": True}
-
-link_header = (
-    "> "
-    + " · ".join(
-        [
-            f'<a href="{table_prefix}_{x}.html">{x} table</a>'
-            for x in datatable_columns.keys()
-        ]
-    )
-    + "<p>"
-)
+link_header = ("> " + " · ".join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in cvs]) + "<p>")
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
-
-text = {
-    "source_id": f'{link_header}Registered models. Visit the {cordex_cv_repo} to register or update your model. <span class="warning">This is a test page.</span>',
-    "institution_id": f'{link_header}Registered institutions. Visit the {cordex_cv_repo} to register or update your institution details. <span class="warning">This is a test page.</span>',
-    "source_id_components": f'{link_header}Registered models with components. <span class="warning">This is a test page.</span>',
+display_options = {
+    "source_id": {
+        "columns" : [
+            "source_id",
+            "label",
+            "label_extended",
+            "release_year",
+            "source_type",
+            "institution_id",
+            "activity_participation",
+            "further_info_url",
+            "license",
+        ],
+        "is_1d": False,
+        "intro": f'{link_header}Registered models. Visit the {cordex_cv_repo} to register or update your model. <span class="warning">This is a test page.</span>',
+        "column_as_link": "source_id",
+        "column_as_link_source": "further_info_url",
+    },
+    "institution_id": {
+        "columns" : ["institution_id", "institution"],
+        "is_1d": True,
+        "intro": f'{link_header}Registered institutions. Visit the {cordex_cv_repo} to register or update your institution details. <span class="warning">This is a test page.</span>',
+    },
 }
-
 
 if __name__ == "__main__":
     for cv in ["source_id", "institution_id"]:
+        opts = display_options[cv]
         json2datatable(
             f"../{table_prefix}_{cv}.json",
             f"../docs/{table_prefix}_{cv}.html",
             cv,
-            columns=datatable_columns[cv],
-            is_1d=is_1d[cv],
             title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
-            intro=text[cv],
+            **opts
         )
