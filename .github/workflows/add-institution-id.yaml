@@ -4,8 +4,8 @@ on:
     types: opened
 concurrency: 'main'
 jobs:
-  process_source_id:
-    #if: github.event.label.name == 'register source-id'
+  add_institution_id:
+    if: github.event.label.name == 'register institution-id'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
