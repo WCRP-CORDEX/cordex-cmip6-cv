@@ -51,7 +51,7 @@ def json2datatable(
     rename_fields={},
     is_1d=False,
     column_as_link="",
-    column_as_link_source=""
+    column_as_link_source="",
 ):
     with open(jsonfile) as f:
         data = json.load(f)
@@ -73,9 +73,11 @@ def json2datatable(
     if column_as_link:
         if not column_as_link_source:
             column_as_link_source = column_as_link
-        df[column_as_link] = '<a href="' + df[column_as_link_source] + '">' + df[column_as_link] + '</a>'
+        df[column_as_link] = (
+            '<a href="' + df[column_as_link_source] + '">' + df[column_as_link] + "</a>"
+        )
         if column_as_link != column_as_link_source:
-            df.drop(columns = column_as_link_source, inplace=True)
+            df.drop(columns=column_as_link_source, inplace=True)
     field_names = dict(zip(df.columns, df.columns))
     field_names.update(rename_fields)
     fp = open(htmlout, "w")
@@ -160,13 +162,18 @@ a:active { text-decoration: underline; }
     )
     fp.close()
 
+
 cvs = ["source_id", "institution_id"]
 
-link_header = ("> " + " · ".join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in cvs]) + "<p>")
+link_header = (
+    "> "
+    + " · ".join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in cvs])
+    + "<p>"
+)
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
 display_options = {
     "source_id": {
-        "columns" : [
+        "columns": [
             "source_id",
             "label",
             "label_extended",
@@ -183,7 +190,7 @@ display_options = {
         "column_as_link_source": "further_info_url",
     },
     "institution_id": {
-        "columns" : ["institution_id", "institution"],
+        "columns": ["institution_id", "institution"],
         "is_1d": True,
         "intro": f'{link_header}Registered institutions. Visit the {cordex_cv_repo} to register or update your institution details. <span class="warning">This is a test page.</span>',
     },
@@ -197,5 +204,5 @@ if __name__ == "__main__":
             f"../docs/{table_prefix}_{cv}.html",
             cv,
             title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
-            **opts
+            **opts,
         )
