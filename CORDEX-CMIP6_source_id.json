@@ -27,7 +27,7 @@
             ],
             "further_info_url":"https://github.com/CORDEX-WRF-community/euro-cordex-cmip6",
             "institution_id": [
-                "NORCE-UCAN"
+                "BCCR-UCAN"
             ],
             "label":"WRF v4.5.1-Q",
             "label_extended":"Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q",
