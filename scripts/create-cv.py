@@ -122,7 +122,9 @@ def run():
     regexp = OrderedDict()
     regexp["mip_era"] = ["CMIP6"]
     regexp["product"] = ["model-output"]
-    regexp["tracking_id"] = ["hdl:21.14103/.*"] # see https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/51
+    regexp["tracking_id"] = [
+        "hdl:21.14103/.*"
+    ]  # see https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/51
     # regexp["further_info_url"] = ["https://furtherinfo.es-doc.org/.*"]
     # regexp["realization_index"] = ["^\\[\\{0,\\}[[:digit:]]\\{1,\\}\\]\\{0,\\}$"]
     regexp["variant_label"] = [
