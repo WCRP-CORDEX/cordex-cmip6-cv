@@ -1,6 +1,6 @@
 {
-    "activity_id": [
-        "DD",
-        "ESD"
-    ]
+  "activity_id": {
+    "DD": "Dynamical downscaling",
+    "ESD": "Empirical-statistical downscaling"
+   }
 }
