@@ -31,7 +31,7 @@ jobs:
 
       - name: Update institution id table
         run: |
-          python update-institution_id.py '${{ steps.issue-parser.outputs.jsonString }}'
+          python scripts/update-institution_id.py '${{ steps.issue-parser.outputs.jsonString }}'
 
         #      - name: Create Pull Request
         #        uses: peter-evans/create-pull-request@v5
