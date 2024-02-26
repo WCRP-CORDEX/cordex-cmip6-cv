@@ -27,7 +27,7 @@ jobs:
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/institution_id.yaml
-          issue-body: ${{ github.event.client_payload.issue.body }}
+          issue-body: ${{ github.event.client_payload.github.payload.issue.body }}
 
       - name: Update institution id table
         run: |
