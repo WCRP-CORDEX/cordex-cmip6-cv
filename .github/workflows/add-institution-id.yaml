@@ -1,0 +1,45 @@
+name: Process institution id
+on:
+  repository_dispatch:
+    types: [register-command]
+concurrency: 'main'
+jobs:
+  add_institution_id:
+    if: github.event.label.name == 'register institution-id'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.2
+        with:
+          python-version: 3.9
+
+      - uses: stefanbuck/github-issue-parser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/institution_id.yaml
+          issue-body: ${{ github.event.client_payload.issue.body }}
+
+      - name: Update institution id table
+        run: |
+          python update-institution_id.py '${{ steps.issue-parser.outputs.jsonString }}'
+
+        #      - name: Create Pull Request
+        #        uses: peter-evans/create-pull-request@v5
+        #        with:
+        #          title: add ${{ steps.issue-parser.outputs.issueparser_source_id }}
+        #          commit-message: add-${{ steps.issue-parser.outputs.issueparser_source_id }}
+        #          branch: add-${{ steps.issue-parser.outputs.issueparser_source_id }}
+        #          body: |
+        #            Closes #${{ github.event.issue.number }}
+        #            Request to add ${{ steps.issue-parser.outputs.issueparser_source_id }}
+        #          delete-branch: true
