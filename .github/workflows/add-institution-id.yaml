@@ -5,7 +5,7 @@ on:
 concurrency: 'main'
 jobs:
   add_institution_id:
-    if: github.event.label.name == 'register institution-id'
+    # if: github.event.label.name == 'register institution-id'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
