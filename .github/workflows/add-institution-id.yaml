@@ -1,7 +1,7 @@
 name: Process institution id
 on:
-  issues:
-    types: opened
+  repository_dispatch:
+    types: [register-command]
 concurrency: 'main'
 jobs:
   add_institution_id:
@@ -27,19 +27,9 @@ jobs:
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/institution_id.yaml
-
-   #   - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > source_id.json
+          issue-body: ${{ github.event.client_payload.issue.body }}
 
       - run: python update-institution_id.py '${{ steps.issue-parser.outputs.jsonString }}'
-
-   #  - name: Commit changes
-   #     shell: bash
-   #     run: |
-   #       git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
-   #       git config --global user.name "github-actions[bot]" && \
-   #       git add source_id.json && \
-   #       git commit -m 'added source_id' && \
-   #       git push
 
         #      - name: Create Pull Request
         #        uses: peter-evans/create-pull-request@v5
