@@ -28,10 +28,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: checkout cordex-cv
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: checkout cordex cmor tables
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: WCRP-CORDEX/cordex-cmip6-cmor-tables
         path: tables
