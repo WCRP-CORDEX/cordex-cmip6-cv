@@ -16,7 +16,11 @@ def update_table(entry):
     new_id = entry[table_name]
     if new_id not in current[table_name]:
         current[table_name][new_id] = entry
+    else:
+        print(f"'{new_id}' already in table with value: '{current[table_name][new_id]}'")
+        raise Exception
     pprint.pprint(current)
+    current = dict(sorted(current.items()))
     with open(table, "w") as f:
         json.dump(current, f, indent=4)
 
