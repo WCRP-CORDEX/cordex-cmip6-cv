@@ -7,7 +7,7 @@ def test_update_table():
 
     text = '{"institution_id": "GERICS", "institution": "Climate Service Center"}'
     entry = json.loads(text)
-    with pytest.raises(Exception) as e_info:
+    with pytest.raises(Exception):
         update_table(entry, "CORDEX-CMIP6_institution_id.json", "institution_id")
 
     text = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
@@ -24,7 +24,7 @@ def test_update_table():
         '"source_id": "REMO2020", "source_type": "ARCM"}'
     )
     entry = json.loads(text)
-    with pytest.raises(Exception) as e_info:
+    with pytest.raises(Exception):
         update_table(entry, "CORDEX-CMIP6_source_id.json", "source_id")
 
     text = (
