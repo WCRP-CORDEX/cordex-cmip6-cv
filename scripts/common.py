@@ -9,7 +9,6 @@ CMIP6_CV_URL = "https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master
 
 domain_table_url = "https://raw.githubusercontent.com/WCRP-CORDEX/domain-tables/main/rotated-latitude-longitude.csv"
 
-
 table_dir = op.join(op.dirname(op.dirname(__file__)), "Tables")
 
 table_prefix = "CORDEX-CMIP6"

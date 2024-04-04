@@ -29,4 +29,4 @@ if __name__ == "__main__":
     content = sys.argv[1]
     entry = get_entries(content)
     print(entry)
-    update_table(entry)
+    update_table(entry, table)
