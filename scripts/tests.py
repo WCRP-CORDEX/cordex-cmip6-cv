@@ -9,7 +9,7 @@ def test_update_table():
     entry = json.loads(text)
     with pytest.raises(Exception) as e_info:
         update_table(entry, "CORDEX-CMIP6_institution_id.json", "institution_id")
-    
+
     text = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = json.loads(text)
     update_table(entry, "CORDEX-CMIP6_institution_id.json", "institution_id")
@@ -26,7 +26,7 @@ def test_update_table():
     entry = json.loads(text)
     with pytest.raises(Exception) as e_info:
         update_table(entry, "CORDEX-CMIP6_source_id.json", "source_id")
-    
+
     text = (
         '{"activity_participation": ["DD"], "cohort": '
         '["Registered"], "further_info_url": "https://www.remo-rcm.de", '
