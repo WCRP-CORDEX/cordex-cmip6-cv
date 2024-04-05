@@ -12,7 +12,7 @@ filelist = [
     f"{table_prefix}_activity_id.json",
     f"{table_prefix}_project_id.json",
     f"{table_prefix}_domain_id.json",
-    f"{table_prefix}_domain.json",
+   # f"{table_prefix}_domain.json",
     f"{table_prefix}_institution_id.json",
     f"{table_prefix}_driving_source_id.json",
     f"{table_prefix}_source_id.json",
@@ -28,6 +28,10 @@ filelist = [
 # Github repository with CORDEX related Control Vocabulary files
 # -------------------------------------------------------------
 githubRepo = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cv/main/"
+
+
+def read_tables():
+    pass
 
 
 class readWCRP:

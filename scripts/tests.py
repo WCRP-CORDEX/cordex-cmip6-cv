@@ -1,6 +1,9 @@
 import json
 import pytest
-from .tools import update_table
+import sys
+import os
+sys.path.insert(0,os.path.join(os.getcwd(),'tools'))
+from scripts.tools import update_table
 
 
 def test_update_table():
