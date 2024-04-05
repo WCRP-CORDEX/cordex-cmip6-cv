@@ -7,7 +7,7 @@ filelist = [
     f"{table_prefix}_activity_id.json",
     f"{table_prefix}_project_id.json",
     f"{table_prefix}_domain_id.json",
-   # f"{table_prefix}_domain.json",
+    # f"{table_prefix}_domain.json",
     f"{table_prefix}_institution_id.json",
     f"{table_prefix}_driving_source_id.json",
     f"{table_prefix}_source_id.json",
@@ -26,24 +26,26 @@ def create_cv_statics():
     cv_statics = {
         "mip_era": ["CMIP6"],
         "product": ["model-output"],
-        "tracking_id": ["hdl:21.14103/.*"], # see https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/51
+        "tracking_id": [
+            "hdl:21.14103/.*"
+        ],  # see https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/51
         "variant_label": [
             "r[[:digit:]]\\{1,\\}i[[:digit:]]\\{1,\\}p[[:digit:]]\\{1,\\}f[[:digit:]]\\{1,\\}$"
-            ],
+        ],
         "Conventions": ["CF-1.8", "CF-1.10", "CF-1.11"],
-        }
+    }
     return cv_statics
 
 
 def read_json(filename):
     with open(filename, "r") as f:
         return json.load(f)
-    
+
 
 def write_json(filename, data):
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-    
+
 
 def read_tables():
     tables = {}
@@ -53,7 +55,7 @@ def read_tables():
         tables[key] = table.get(key)
     return tables
 
-    
+
 def create_cv(filename=None):
     if filename is None:
         filename = f"{table_prefix}_CV.json"
@@ -64,11 +66,6 @@ def create_cv(filename=None):
     cv = {"CV": cv_tables | cv_statics}
 
     write_json(filename, cv)
-
-
-    
-
-
 
 
 def update_table(entry, filename, table_name):

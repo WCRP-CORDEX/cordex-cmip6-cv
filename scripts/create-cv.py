@@ -12,7 +12,7 @@ filelist = [
     f"{table_prefix}_activity_id.json",
     f"{table_prefix}_project_id.json",
     f"{table_prefix}_domain_id.json",
-   # f"{table_prefix}_domain.json",
+    # f"{table_prefix}_domain.json",
     f"{table_prefix}_institution_id.json",
     f"{table_prefix}_driving_source_id.json",
     f"{table_prefix}_source_id.json",
