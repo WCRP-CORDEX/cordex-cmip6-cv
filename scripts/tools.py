@@ -14,12 +14,27 @@ filelist = [
     f"{table_prefix}_source_type.json",
     f"{table_prefix}_frequency.json",
     f"{table_prefix}_native_resolution.json",
-    f"{table_prefix}_realm.json",
-    f"{table_prefix}_license.json",
+    # f"{table_prefix}_realm.json",
+    # f"{table_prefix}_license.json",
     f"{table_prefix}_DRS.json",
     f"{table_prefix}_driving_experiment_id.json",
     "mip_era.json",
 ]
+
+
+def process_source_id(entry):
+    source = f"{entry['label_extended']} ({entry['release_year']})"
+    entry["source"] = source
+    del entry["label_extended"]
+    del entry["release_year"]
+    return entry
+
+
+def process_driving_experiment_id(expid, value):
+    return {
+        "driving_experiment_id": expid,
+        "driving_experiment": value,
+    }
 
 
 def create_cv_statics():
@@ -61,6 +76,14 @@ def create_cv(filename=None):
         filename = f"{table_prefix}_CV.json"
 
     cv_tables = read_tables()
+    cv_tables["source_id"] = {
+        k: process_source_id(v) for k, v in cv_tables["source_id"].items()
+    }
+    cv_tables["driving_experiment_id"] = {
+        k: process_driving_experiment_id(k, v)
+        for k, v in cv_tables["driving_experiment_id"].items()
+    }
+
     cv_statics = create_cv_statics()
 
     cv = {"CV": cv_tables | cv_statics}
