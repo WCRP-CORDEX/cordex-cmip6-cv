@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cordex_cv"
+description = "CORDEX CMIP6 CV"
+keywords = ["random", "cool"]
+requires-python = ">=3.8"
+version = "0.1.0"
+
+[project.scripts]
+create-cv = "cordex_cv.cli:create_cv"
+
+[tool.setuptools]
+packages = ["cordex_cv"]

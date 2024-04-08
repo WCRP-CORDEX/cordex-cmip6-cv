@@ -1,6 +1,6 @@
 import json
 import pprint
-from .common import table_prefix
+from .common import table_prefix, read_json, write_json
 
 filelist = [
     f"{table_prefix}_required_global_attributes.json",
@@ -52,19 +52,10 @@ def create_cv_statics():
     return cv_statics
 
 
-def read_json(filename):
-    with open(filename, "r") as f:
-        return json.load(f)
-
-
-def write_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
-
 def read_tables():
     tables = {}
     for f in filelist:
+        print(f"reading: {f}")
         table = read_json(f)
         key = list(table.keys())[0]
         tables[key] = table.get(key)
@@ -88,6 +79,7 @@ def create_cv(filename=None):
 
     cv = {"CV": cv_tables | cv_statics}
 
+    print(f"writing: {filename}")
     write_json(filename, cv)
 
 

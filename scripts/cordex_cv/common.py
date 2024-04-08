@@ -20,12 +20,10 @@ def read_json_url(url):
 
 
 def read_json(filename):
-    with open(filename) as f:
-        return json.loads(f.read())
-    return filename
+    with open(filename, "r") as f:
+        return json.load(f)
 
 
-def write_json(content, filename):
-    with open(filename, "w") as f:
-        json.dump(content, f, indent=4)
-    return filename
+def write_json(filename, data):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)

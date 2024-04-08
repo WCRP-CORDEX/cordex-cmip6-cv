@@ -45,8 +45,10 @@ jobs:
 
     - name: Update controlled vocabulary
       run: |
-        python scripts/create-cv.py
-        mv CORDEX_CV.json tables/Tables
+        cd scripts
+        pip install -e .; cd ..
+        create-cv
+        mv CORDEX-CMIP6_CV.json tables/Tables
 
     - name: Check if there are any changes
       id: verify_diff
@@ -54,13 +56,13 @@ jobs:
         cd tables
         git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
-    - name: Commit and push
-      if: steps.verify_diff.outputs.changed == 'true'
-      run: |
-        cd tables
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        (pre-commit run --all-files) || true
-        git commit Tables/CORDEX_CV.json -m "CV update"
-        git status
-        git push
+        #- name: Commit and push
+        #  if: steps.verify_diff.outputs.changed == 'true'
+        #  run: |
+        #    cd tables
+        #    git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        #    git config --local user.name "github-actions[bot]"
+        #    (pre-commit run --all-files) || true
+        #    git commit Tables/CORDEX_CV.json -m "CV update"
+        #    git status
+        #    git push
