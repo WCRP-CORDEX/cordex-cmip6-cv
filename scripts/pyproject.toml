@@ -8,11 +8,15 @@ description = "CORDEX CMIP6 CV"
 keywords = ["random", "cool"]
 requires-python = ">=3.8"
 version = "0.1.0"
+dependencies = [
+  "pandas",
+]
 
 [project.scripts]
 create-cv = "cordex_cv.cli:create_cv"
 create-domain_id = "cordex_cv.cli:domain_id"
 create-driving_source_id = "cordex_cv.cli:driving_source_id"
+
 
 [tool.setuptools]
 packages = ["cordex_cv"]
