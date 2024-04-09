@@ -1,5 +1,4 @@
 {
-    "fixed": {
         "mip_era": [
             "CMIP6"
         ],
@@ -18,5 +17,4 @@
         "Conventions": [
             "CF-1.11"
         ]
-    }
 }

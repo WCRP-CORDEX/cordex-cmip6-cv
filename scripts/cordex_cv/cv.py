@@ -19,9 +19,10 @@ filelist = [
 ]
 
 
-def process_source_id(entry):
+def process_source_id(entry, license):
     source = f"{entry['label_extended']} ({entry['release_year']})"
     entry["source"] = source
+    entry["license"] = license
     del entry["label_extended"]
     del entry["release_year"]
     return entry
@@ -35,31 +36,30 @@ def process_driving_experiment_id(expid, value):
 
 
 def read_tables():
-    tables = {}
+    table = {}
     for f in filelist:
         print(f"reading: {f}")
-        table = read_json(f)
-        key = list(table.keys())[0]
-        tables[key] = table.get(key)
-    return tables
+        table = table | read_json(f)
+        # key = list(table.keys())[0]
+        # tables[key] = table.get(key)
+    return table
 
 
 def create_cv(filename=None):
     if filename is None:
         filename = f"{table_prefix}_CV.json"
 
-    cv_tables = read_tables()
-    cv_tables["source_id"] = {
-        k: process_source_id(v) for k, v in cv_tables["source_id"].items()
+    cv_table = read_tables()
+    cv_table["source_id"] = {
+        k: process_source_id(v, license=cv_table["license"][0])
+        for k, v in cv_table["source_id"].items()
     }
-    cv_tables["driving_experiment_id"] = {
+    cv_table["driving_experiment_id"] = {
         k: process_driving_experiment_id(k, v)
-        for k, v in cv_tables["driving_experiment_id"].items()
+        for k, v in cv_table["driving_experiment_id"].items()
     }
 
-    cv_fixed = cv_tables["fixed"]
-
-    cv = {"CV": cv_tables | cv_fixed}
+    cv = {"CV": cv_table}
 
     print(f"writing: {filename}")
     write_json(filename, cv)
