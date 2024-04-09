@@ -1,8 +1,8 @@
 import pandas as pd
-from common import domain_table_url, table_prefix, write_json
+from .common import domain_table_url, table_prefix, write_json
 
 
-def create_domain_id_table():
+def create_domain_id():
     """Create domain_id CV from cordex domain table
 
     Creates CV from domains in table:
@@ -10,11 +10,10 @@ def create_domain_id_table():
     main/rotated-latitude-longitude.csv"
 
     """
-    df = pd.read_csv(domain_table_url, index_col="domain_id")
+    df = pd.concat(
+        [pd.read_csv(url, index_col="domain_id") for url in domain_table_url]
+    )
+    print(df)
     df["domain_id"] = df.index
     text = {"domain_id": df[["domain", "domain_id"]].to_dict(orient="index")}
-    write_json(text, f"{table_prefix}_domain_id.json")
-
-
-if __name__ == "__main__":
-    create_domain_id_table()
+    write_json(f"{table_prefix}_domain_id.json", text)

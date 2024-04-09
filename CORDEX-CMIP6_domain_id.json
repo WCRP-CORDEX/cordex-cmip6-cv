@@ -108,14 +108,6 @@
             "domain": "Middle East and North Africa",
             "domain_id": "MNA-12"
         },
-        "GAR-3": {
-            "domain": "Greater Alpine Region",
-            "domain_id": "GAR-3"
-        },
-        "CEU-3": {
-            "domain": "Central Europe",
-            "domain_id": "CEU-3"
-        },
         "SAM-25": {
             "domain": "South America",
             "domain_id": "SAM-25"

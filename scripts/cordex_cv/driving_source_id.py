@@ -1,4 +1,4 @@
-from common import CMIP6_CV_URL, read_json_url, table_prefix, write_json
+from .common import CMIP6_CV_URL, read_json_url, table_prefix, write_json
 
 
 def create_driving_source_attrs(cmip6_source_id):
@@ -38,7 +38,3 @@ def create_driving_source_id():
     )
     driving_source_id["driving_source_id"]["ERA5"] = era5_driving_source_id()
     return write_json(driving_source_id, f"{table_prefix}_driving_source_id.json")
-
-
-if __name__ == "__main__":
-    create_driving_source_id()
