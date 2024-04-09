@@ -41,7 +41,7 @@ body:
         An identifier corresponding to `label` but with forbidden
         characters either removed or replaced by a hyphen (`-`).
         The `source_id` will appear in the ESGF search interface and in filenames
-        a subdirectory names.
+        and subdirectory names.
         Restrict characters used in source_id to letters, numbers and hyphens
         (e.g. NO dots, spaces or underscores are allowed).
         There is a limitation of 25 characters for this field.
@@ -62,6 +62,7 @@ body:
         - ARCM
         - AORCM
         - AGCM
+        - AOGCM
     validations:
       required: true
 
