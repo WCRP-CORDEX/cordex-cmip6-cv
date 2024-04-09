@@ -1,7 +1,6 @@
 import json
 import pytest
-
-from scripts.tools import update_table
+from .tools import update_table
 
 
 def test_update_table():
