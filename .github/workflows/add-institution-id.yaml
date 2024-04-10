@@ -25,8 +25,7 @@ jobs:
       - name: Show info
         run: |
           echo ${{ github.event.label.name }}
-          echo ${{ github.event.client_payload.github.payload.issue }}
-          echo ${{ github.event.client_payload.github.payload.issue }}
+          echo ${{ github.event.client_payload.github.payload.issue.label }}
 
       - name: Install dependencies
         run: |
