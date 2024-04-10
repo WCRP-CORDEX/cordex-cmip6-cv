@@ -1,18 +1,23 @@
 import json
+from os import path as op
 import pytest
-from .tools import update_table
+from cordex_cv import update_table
+
+
+table_dir = op.dirname(op.dirname(op.dirname(op.abspath(__file__))))
 
 
 def test_update_table():
 
     text = '{"institution_id": "GERICS", "institution": "Climate Service Center"}'
     entry = json.loads(text)
+    table_file = op.join(table_dir, "CORDEX-CMIP6_institution_id.json")
     with pytest.raises(Exception):
-        update_table(entry, "CORDEX-CMIP6_institution_id.json", "institution_id")
+        update_table(entry, table_file, "institution_id")
 
     text = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = json.loads(text)
-    update_table(entry, "CORDEX-CMIP6_institution_id.json", "institution_id")
+    update_table(entry, table_file, "institution_id")
 
     text = (
         '{"activity_participation": ["DD"], "cohort": '
@@ -23,9 +28,10 @@ def test_update_table():
         'https://creativecommons.org/licenses/by/4.0/).", "release_year": "2022", '
         '"source_id": "REMO2020", "source_type": "ARCM"}'
     )
+    table_file = op.join(table_dir, "CORDEX-CMIP6_source_id.json")
     entry = json.loads(text)
     with pytest.raises(Exception):
-        update_table(entry, "CORDEX-CMIP6_source_id.json", "source_id")
+        update_table(entry, table_file, "source_id")
 
     text = (
         '{"activity_participation": ["DD"], "cohort": '
@@ -37,4 +43,4 @@ def test_update_table():
         '"source_id": "SUPERMODEL", "source_type": "ARCM"}'
     )
     entry = json.loads(text)
-    update_table(entry, "CORDEX-CMIP6_source_id.json", "source_id")
+    update_table(entry, table_file, "source_id")

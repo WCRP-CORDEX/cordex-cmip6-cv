@@ -1,6 +1,7 @@
 import json
-import pprint
 import sys
+
+from cordex_cv import update_table
 
 print("Number of arguments:", len(sys.argv), "arguments")
 print("Argument List:", str(sys.argv))
@@ -10,20 +11,8 @@ table = "CORDEX-CMIP6_institution_id.json"
 table_name = "institution_id"
 
 
-def update_table(entry):
-    with open(table, "r") as f:
-        current = json.load(f)
-    new_id = entry[table_name]
-    if new_id not in current[table_name]:
-        current[table_name][new_id] = entry
-    else:
-        raise Exception(
-            f"'{new_id}' already in table with value: '{current[table_name][new_id]}'"
-        )
-    pprint.pprint(current)
-    current = dict(sorted(current.items()))
-    with open(table, "w") as f:
-        json.dump(current, f, indent=4)
+def update_institution_id(entry):
+    update_table(entry, table, table_name, style="flat")
 
 
 def get_entries(content):
@@ -32,6 +21,7 @@ def get_entries(content):
 
 if __name__ == "__main__":
     content = sys.argv[1]
+    # content = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = get_entries(content)
     print(entry)
-    update_table(entry, table)
+    update_institution_id(entry)
