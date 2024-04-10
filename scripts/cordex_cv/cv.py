@@ -12,7 +12,6 @@ filelist = [
     f"{table_prefix}_source_id.json",
     f"{table_prefix}_source_type.json",
     f"{table_prefix}_frequency.json",
-    f"{table_prefix}_native_resolution.json",
     f"{table_prefix}_DRS.json",
     f"{table_prefix}_driving_experiment_id.json",
     f"{table_prefix}_fixed.json",
