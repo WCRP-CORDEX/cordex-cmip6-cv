@@ -24,6 +24,7 @@ def process_source_id(entry, license):
     entry["license"] = license
     del entry["label_extended"]
     del entry["release_year"]
+    del entry["further_info_url"]
     return entry
 
 
