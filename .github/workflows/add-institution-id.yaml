@@ -5,7 +5,7 @@ on:
 concurrency: 'main'
 jobs:
   add_institution_id:
-    if: github.event.label.name == 'Register institution-id'
+    #if: github.event.label.name == 'Register institution-id'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -22,6 +22,11 @@ jobs:
         uses: actions/setup-python@v5.1.0
         with:
           python-version: 3.9
+      - name: Show info
+        run: |
+          echo ${{ github.event.label.name }}
+          echo ${{ github.event.client_payload.github.payload.issue }}
+          echo ${{ github.event.client_payload.github.payload.issue }}
 
       - name: Install dependencies
         run: |
