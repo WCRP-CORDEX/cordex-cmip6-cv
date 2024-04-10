@@ -20,8 +20,8 @@ def get_entries(content):
 
 
 if __name__ == "__main__":
-    # content = sys.argv[1]
-    content = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
+    content = sys.argv[1]
+    # content = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = get_entries(content)
     print(entry)
     update_institution_id(entry)
