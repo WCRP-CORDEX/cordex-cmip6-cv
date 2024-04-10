@@ -4,8 +4,8 @@ on:
     types: [register-command]
 concurrency: 'main'
 jobs:
-  add_institution_id:
-    if: github.event.label.name == 'register institution-id'
+  add_source_id:
+    if: github.event.label.name == 'register source-id'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -32,12 +32,12 @@ jobs:
       - uses: stefanbuck/github-issue-parser@v3
         id: issue-parser
         with:
-          template-path: .github/ISSUE_TEMPLATE/institution_id.yaml
+          template-path: .github/ISSUE_TEMPLATE/source_id.yaml
           issue-body: ${{ github.event.client_payload.github.payload.issue.body }}
 
-      - name: Update institution id table
+      - name: Update source id table
         run: |
-          python scripts/update-institution_id.py '${{ steps.issue-parser.outputs.jsonString }}'
+          python scripts/update-source_id.py '${{ steps.issue-parser.outputs.jsonString }}'
 
         #      - name: Create Pull Request
         #        uses: peter-evans/create-pull-request@v5
