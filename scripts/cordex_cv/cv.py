@@ -65,12 +65,15 @@ def create_cv(filename=None):
     write_json(filename, cv)
 
 
-def update_table(entry, filename, table_name):
+def update_table(entry, filename, table_name, style=None):
     with open(filename, "r", encoding="utf8") as f:
         current = json.load(f)
     new_id = entry[table_name]
     if new_id not in current[table_name]:
-        current[table_name][new_id] = entry
+        if style == "flat":
+            current[table_name][new_id] = entry[table_name.replace("_id", "")]
+        else:
+            current[table_name][new_id] = entry
     else:
         print(
             f"'{new_id}' already in table with value: '{current[table_name][new_id]}'"
