@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: 3.9
       - name: Show info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo ${{ github.event.label.name }}
           #echo ${{ github.event.client_payload.github.payload.issue.label }}
