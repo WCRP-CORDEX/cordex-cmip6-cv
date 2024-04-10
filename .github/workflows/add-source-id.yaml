@@ -1,4 +1,4 @@
-name: Process institution id
+name: Process source id
 on:
   repository_dispatch:
     types: [register-command]
