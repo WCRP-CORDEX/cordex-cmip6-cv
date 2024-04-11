@@ -3,10 +3,6 @@ import sys
 
 from cordex_cv import update_table
 
-print("Number of arguments:", len(sys.argv), "arguments")
-print("Argument List:", str(sys.argv))
-
-
 table = "CORDEX-CMIP6_institution_id.json"
 table_name = "institution_id"
 
