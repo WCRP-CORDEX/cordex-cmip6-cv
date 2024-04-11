@@ -1,7 +1,7 @@
 name: Process institution id
 on:
   repository_dispatch:
-    types: [register-command]
+    types: [register2-command]
 concurrency: 'main'
 jobs:
   add_institution_id:
