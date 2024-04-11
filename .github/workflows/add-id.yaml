@@ -47,15 +47,16 @@ jobs:
         id: update
         run: |
           id_added=`python scripts/update-${{ steps.label.outputs.table }}.py '${{ steps.issue-parser.outputs.jsonString }}'`
+          echo $id_added
           echo "id_added=$id_added" >> $GITHUB_OUTPUT
 
-        #      - name: Create Pull Request
-        #        uses: peter-evans/create-pull-request@v5
-        #        with:
-        #          title: add ${{ steps.issue-parser.outputs.issueparser_source_id }}
-        #          commit-message: add-${{ steps.issue-parser.outputs.issueparser_source_id }}
-        #          branch: add-${{ steps.issue-parser.outputs.issueparser_source_id }}
-        #          body: |
-        #            Closes #${{ github.event.issue.number }}
-        #            Request to add ${{ steps.issue-parser.outputs.issueparser_source_id }}
-        #          delete-branch: true
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: add ${{ steps.update.outputs.id_added }}
+          commit-message: add-${{ steps.update.outputs.id_added }}
+          branch: add-${{ steps.update.outputs.id_added }}
+          body: |
+            Closes #${{ github.event.client_payload.github.payload.issue.number }}
+            Request to add ${{ steps.update.outputs.id_added }}
+          delete-branch: true
