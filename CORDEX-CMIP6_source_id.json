@@ -35,6 +35,17 @@
             "release_year": "2022",
             "source_id": "WRF451Q",
             "source_type": "ARCM"
+        },
+        "TEST-MODEL": {
+            "label": "TEST-MODEL2",
+            "label_extended": "My super cool RCM",
+            "source_id": "TEST-MODEL",
+            "source_type": "ARCM",
+            "release_year": "2024",
+            "activity_participation": "DD",
+            "institution_id": "INSTITUTE",
+            "futher_info_url": "https://TEST-MODEL-GO",
+            "license": "CC0"
         }
     }
 }
