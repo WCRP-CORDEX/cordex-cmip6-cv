@@ -1,5 +1,4 @@
 import json
-import pprint
 from .common import table_prefix, read_json, write_json
 
 filelist = [
@@ -79,7 +78,6 @@ def update_table(entry, filename, table_name, style=None):
             f"'{new_id}' already in table with value: '{current[table_name][new_id]}'"
         )
         raise Exception
-    pprint.pprint(current)
     with open(filename, "w", encoding="utf8") as f:
         json.dump(current, f, indent=4)
     return new_id
