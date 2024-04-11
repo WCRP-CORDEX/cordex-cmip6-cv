@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          table=`python labels.py /repos/{owner}/{repo}/issues/${{ github.event.client_payload.github.payload.issue.number }}`
+          table=`python scripts/labels.py /repos/{owner}/{repo}/issues/${{ github.event.client_payload.github.payload.issue.number }}`
           echo $table
           echo "table=$table" >> $GITHUB_OUTPUT
 
