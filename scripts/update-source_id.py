@@ -11,7 +11,7 @@ table_name = "source_id"
 
 
 def update_source_id(entry):
-    update_table(entry, table, table_name)
+    return update_table(entry, table, table_name)
 
 
 def get_entries(content):
@@ -30,5 +30,5 @@ if __name__ == "__main__":
     #    '"source_id": "SUPER-RCM", "source_type": "ARCM"}'
     # )
     entry = get_entries(content)
-    print(entry)
-    update_source_id(entry)
+    new_id = update_source_id(entry)
+    print(new_id)
