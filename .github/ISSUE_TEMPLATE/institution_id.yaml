@@ -1,7 +1,7 @@
 name: Register new institution
 description: Register a new instituion conducting CORDEX-CMIP6 simulations for inclusion into CV.
 title: "institution_id registration of ..."
-labels: ["Register institution-id"]
+labels: ["Register institution_id"]
 body:
 
   - type: markdown
