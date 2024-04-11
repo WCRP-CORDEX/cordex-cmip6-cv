@@ -35,6 +35,20 @@
             "release_year": "2022",
             "source_id": "WRF451Q",
             "source_type": "ARCM"
+        },
+        "TEST-MODEL": {
+            "activity_participation": "DD",
+            "cohort": [
+                "Registered"
+            ],
+            "futher_info_url": "https://TEST-MODEL-GO",
+            "institution_id": "INSTITUTE, GERICS",
+            "label": "TEST-MODEL2",
+            "label_extended": "My super cool RCM",
+            "license": "Creative Commons 1.0 Universal (CC0; https://creativecommons.org/publicdomain/zero/1.0).",
+            "release_year": "2024",
+            "source_id": "TEST-MODEL",
+            "source_type": "ARCM"
         }
     }
 }
