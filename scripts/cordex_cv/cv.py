@@ -82,3 +82,4 @@ def update_table(entry, filename, table_name, style=None):
     pprint.pprint(current)
     with open(filename, "w", encoding="utf8") as f:
         json.dump(current, f, indent=4)
+    return new_id

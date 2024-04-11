@@ -12,7 +12,7 @@ table_name = "institution_id"
 
 
 def update_institution_id(entry):
-    update_table(entry, table, table_name, style="flat")
+    return update_table(entry, table, table_name, style="flat")
 
 
 def get_entries(content):
@@ -23,5 +23,5 @@ if __name__ == "__main__":
     content = sys.argv[1]
     # content = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = get_entries(content)
-    print(entry)
-    update_institution_id(entry)
+    new_id = update_institution_id(entry)
+    print(new_id)

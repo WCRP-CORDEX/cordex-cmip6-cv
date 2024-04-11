@@ -1,11 +1,10 @@
-name: Process source id
+name: Process registration
 on:
   repository_dispatch:
-    types: [register2-command]
+    types: [register-command]
 concurrency: 'main'
 jobs:
-  add_source_id:
-    if: github.event.label.name == 'register source-id'
+  add_id:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -22,6 +21,13 @@ jobs:
         uses: actions/setup-python@v5.1.0
         with:
           python-version: 3.9
+      - name: Show info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo ${{ github.event.label.name }}
+          #echo ${{ github.event.client_payload.github.payload.issue.label }}
+          gh api --jq '.labels.[].name' /repos/{owner}/{repo}/issues/${{ github.event.number }}
 
       - name: Install dependencies
         run: |
@@ -29,15 +35,26 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           cd scripts; pip install -e . --no-deps
 
+      - name: check labels
+        id: label
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          table=`python labels.py /repos/{owner}/{repo}/issues/${{ github.event.client_payload.github.payload.issue.number }}`
+          echo $table
+          echo "table=$table" >> $GITHUB_OUTPUT
+
       - uses: stefanbuck/github-issue-parser@v3
         id: issue-parser
         with:
-          template-path: .github/ISSUE_TEMPLATE/source_id.yaml
+          template-path: .github/ISSUE_TEMPLATE/${{ steps.label.outputs.table }}.yaml
           issue-body: ${{ github.event.client_payload.github.payload.issue.body }}
 
-      - name: Update source id table
+      - name: update table
+        id: update
         run: |
-          python scripts/update-source_id.py '${{ steps.issue-parser.outputs.jsonString }}'
+          id_added=`python scripts/update-${{ steps.label.outputs.table }}.py '${{ steps.issue-parser.outputs.jsonString }}'`
+          echo "id_added=$id_added" >> $GITHUB_OUTPUT
 
         #      - name: Create Pull Request
         #        uses: peter-evans/create-pull-request@v5
