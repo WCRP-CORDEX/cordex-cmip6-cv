@@ -1,7 +1,7 @@
 name: Register a new model
 description: Register a new model (source_id) for the CORDEX-CMIP6 CV.
 title: "source_id registration of ..."
-labels: ["Register source-id"]
+labels: ["Register source_id"]
 body:
 
   - type: markdown
