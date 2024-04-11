@@ -1,8 +1,6 @@
 import json
 from os import path as op
 
-import requests
-
 data_request = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cmip6-data-request/main/tables/cordex-cmip6-data-request-extended.csv"
 
 CMIP6_CV_URL = "https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_CV.json"
@@ -18,6 +16,7 @@ table_prefix = "CORDEX-CMIP6"
 
 
 def read_json_url(url):
+    import requests
     with requests.get(url) as r:
         return r.json()
 
