@@ -1,6 +1,7 @@
 {
     "institution_id": {
         "GERICS": "Climate Service Center Germany, Helmholtz Centre hereon GmbH, Hamburg, Germany",
-        "BCCR-UCAN": "BCCR [Bjerknes Center for Climate Research (BCCR), NORCE Norwegian Research Center, Bergen, Norway]; UCAN [Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain]"
+        "BCCR-UCAN": "BCCR [Bjerknes Center for Climate Research (BCCR), NORCE Norwegian Research Center, Bergen, Norway]; UCAN [Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain]",
+        "INSTITUTE": "Test institution"
     }
 }
