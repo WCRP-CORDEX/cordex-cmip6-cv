@@ -47,6 +47,7 @@ jobs:
         id: update
         run: |
           id_added=`python scripts/update-${{ steps.label.outputs.table }}.py '${{ steps.issue-parser.outputs.jsonString }}'`
+          python scripts/create-html-datatables.py
           echo $id_added
           echo "id_added=$id_added" >> $GITHUB_OUTPUT
 
