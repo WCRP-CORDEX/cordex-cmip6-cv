@@ -14,7 +14,7 @@ on:
 
   push:
     paths:
-      - 'CORDEX_*.json'
+      - 'CORDEX-CMIP6_*.json'
     branches:
       - main
 
