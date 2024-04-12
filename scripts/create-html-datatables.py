@@ -1,7 +1,7 @@
 import json
 
 import pandas as pd
-from common import table_prefix
+from cordex_cv.common import table_prefix
 
 
 def addtag(word, field):
@@ -200,8 +200,8 @@ if __name__ == "__main__":
     for cv in ["source_id", "institution_id"]:
         opts = display_options[cv]
         json2datatable(
-            f"../{table_prefix}_{cv}.json",
-            f"../docs/{table_prefix}_{cv}.html",
+            f"{table_prefix}_{cv}.json",
+            f"docs/{table_prefix}_{cv}.html",
             cv,
             title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
             **opts,

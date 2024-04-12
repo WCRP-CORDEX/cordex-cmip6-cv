@@ -14,6 +14,8 @@ licenses = {
 
 
 def to_list(value):
+    if isinstance(value, list):
+        return value
     return list(map(str.strip, value.split(",")))
 
 
@@ -41,11 +43,11 @@ def get_entries(content):
 if __name__ == "__main__":
     content = sys.argv[1]
     # content = (
-    #    '{"activity_participation": ["DD"], "cohort": '
-    #    '["Registered"], "further_info_url": "https://www.remo-rcm.de", '
-    #    '"institution_id": "GERICS, INSTITUTION", "label": "REMO2020", "label_extended": "REMO '
-    #    'regional model 2020", "license": "CC BY 4.0", '
-    #    '"source_id": "SUPER-RCM", "source_type": "ARCM"}'
+    #   '{"activity_participation": ["DD"], "cohort": '
+    #   '["Registered"], "further_info_url": "https://www.remo-rcm.de", '
+    #   '"institution_id": "GERICS, INSTITUTION", "label": "REMO2020", "label_extended": "REMO '
+    #   'regional model 2020", "license": "CC BY 4.0", '
+    #   '"source_id": "SUPER-RCM", "source_type": "ARCM"}'
     # )
     # content = (
     #    '{"activity_participation": ["DD"], "cohort": '
