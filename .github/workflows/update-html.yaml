@@ -4,9 +4,6 @@ name: update html tables
 # or API.
 on:
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Update html'
 
   push:
     paths:

@@ -4,9 +4,6 @@ name: update controlled vocabulary
 # or API.
 on:
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Update CV'
 
   push:
     paths:
