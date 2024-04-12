@@ -12,6 +12,7 @@
         "driving_source_id",
         "driving_variant_label",
         "frequency",
+        "grid",
         "institution",
         "institution_id",
         "license",
