@@ -35,6 +35,26 @@
             "release_year": "2022",
             "source_id": "WRF451Q",
             "source_type": "ARCM"
+        },
+        "SUPER-RCM2000": {
+            "activity_participation": [
+                "DD",
+                "ESD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://cordex.org/",
+            "institution_id": [
+                "GERICS",
+                "INSTITUTION"
+            ],
+            "label": "SUPER-RCM",
+            "label_extended": "Super RCM can do both DD and ESD",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2024",
+            "source_id": "SUPER-RCM2000",
+            "source_type": "ARCM"
         }
     }
 }
