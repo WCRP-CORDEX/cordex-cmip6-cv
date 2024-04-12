@@ -31,6 +31,6 @@ To view current repository contents in HTML format, point your browser to:
 | `institution_id` | [CORDEX-CMIP6_institution_id.html](https://wcrp-cordex.github.io/cordex-cmip6-cv/CORDEX-CMIP6_institution_id.html) |
 | `source_id` | [CORDEX-CMIP6_source_id.html](https://wcrp-cordex.github.io/cordex-cmip6-cv/CORDEX-CMIP6_source_id.html) |
 
-The CVs build on logic that is described in the [CORDEX-CMIP6 Archiving Specifications for Dynamical Downscaling](http://goo.gl/v1drZl) document.
+The CVs build on logic that is described in the [CORDEX-CMIP6 Archiving Specifications for Dynamical Downscaling](https://doi.org/10.5281/zenodo.10961068) document.
 
 The controlled vocabularies for CORDEX-CMIP6 will be augmented (e.g., as new `institution_id`s and `source_id`s are registered), but there should be no changes in the existing vocabulary that would impair searches of and access to already published data or that would in any way invalidate published data.
