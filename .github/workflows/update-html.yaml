@@ -38,8 +38,7 @@ jobs:
     - name: Check if there are any changes
       id: verify_diff
       run: |
-        cd tables
-        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+        git diff docs/ --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: Commit and push
       if: steps.verify_diff.outputs.changed == 'true'
