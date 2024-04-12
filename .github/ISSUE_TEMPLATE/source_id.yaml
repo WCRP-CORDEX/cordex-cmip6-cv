@@ -108,9 +108,9 @@ body:
       required: true
 
   - type: input
-    id: futher_info_url
+    id: further_info_url
     attributes:
-      label: futher_info_url
+      label: further_info_url
       description: >
         A URL that points to the latest documentation of this model version.
         You can initially register with a general documentation URL for the model,
