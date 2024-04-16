@@ -120,8 +120,8 @@ span.running {color: #009900}
 span.completed {color: black; font-weight: bold}
 span.published {color: #3399FF; font-weight: bold}
 span.warning {color: #FF0000; font-weight: bold}
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
+a:link { color: #3399FF; text-decoration: none; }
+a:visited { color: #3399FF; text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:active { text-decoration: underline; }
 </style>
@@ -185,14 +185,14 @@ display_options = {
             "license",
         ],
         "is_1d": False,
-        "intro": f'{link_header}Registered models. Visit the {cordex_cv_repo} to register or update your model. <span class="warning">This is a test page.</span>',
+        "intro": f'{link_header}List of registered models. Visit the {cordex_cv_repo} to register or update your model.',
         "column_as_link": "source_id",
         "column_as_link_source": "further_info_url",
     },
     "institution_id": {
         "columns": ["institution_id", "institution"],
         "is_1d": True,
-        "intro": f'{link_header}Registered institutions. Visit the {cordex_cv_repo} to register or update your institution details. <span class="warning">This is a test page.</span>',
+        "intro": f'{link_header}List of registered institutions. Visit the {cordex_cv_repo} to register or update your institution details.',
     },
 }
 
