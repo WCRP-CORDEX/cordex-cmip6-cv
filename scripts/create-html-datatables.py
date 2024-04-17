@@ -185,14 +185,14 @@ display_options = {
             "license",
         ],
         "is_1d": False,
-        "intro": f'{link_header}List of registered models. Visit the {cordex_cv_repo} to register or update your model.',
+        "intro": f"{link_header}List of registered models. Visit the {cordex_cv_repo} to register or update your model.",
         "column_as_link": "source_id",
         "column_as_link_source": "further_info_url",
     },
     "institution_id": {
         "columns": ["institution_id", "institution"],
         "is_1d": True,
-        "intro": f'{link_header}List of registered institutions. Visit the {cordex_cv_repo} to register or update your institution details.',
+        "intro": f"{link_header}List of registered institutions. Visit the {cordex_cv_repo} to register or update your institution details.",
     },
 }
 
