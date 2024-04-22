@@ -26,7 +26,12 @@ body:
     id: institution
     attributes:
       label: institution
-      description: Full name, city, country of the institution that is responsible for CORDEX simulations. If several institutions are registered as a single provider, use a semicolon to separate their full names and place them into brackets. E.g. `INST1 [Full name 1, city1, country1]; INST2 [Full name 2, city2, country2]`
+      description: >
+        `Full name, city, country` of the institution that is responsible for CORDEX simulations.
+        A region name (state, province, department, etc.) can be appended in parenthesis to the city name.
+        E.g. `Full name, city (region), country`.
+        If several institutions are registered as a single provider, use a semicolon to separate their full names and place them into brackets.
+        E.g. `INST1 [Full name 1, city1, country1]; INST2 [Full name 2, city2, country2]`
       placeholder: ex. `Climate Service Center Germany, Helmholtz Centre hereon GmbH, Hamburg, Germany`
     validations:
       required: true
