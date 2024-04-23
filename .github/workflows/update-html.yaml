@@ -5,12 +5,12 @@ name: update html tables
 on:
   workflow_dispatch:
 
-  push:
-    paths:
-      - 'CORDEX-CMIP6_source_id.json'
-      - 'CORDEX-CMIP6_institution_id.json'
-    branches:
-      - main
+#  push:
+#    paths:
+#      - 'CORDEX-CMIP6_source_id.json'
+#      - 'CORDEX-CMIP6_institution_id.json'
+#    branches:
+#      - main
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
