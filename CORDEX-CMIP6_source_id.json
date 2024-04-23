@@ -53,6 +53,24 @@
             "release_year": "2023",
             "source_id": "CNRM-ALADIN64E1",
             "source_type": "ARCM"
+        },
+        "HadREM3-GA7-05": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "futher_info_url": "https://view.es-doc.org/?renderMethod=id&project=cordexp&id=43837930-998b-4c0b-b481-f40b4884ddf1&version=1&client=esdoc-search",
+            "institution_id": [
+                "MOHC"
+            ],
+            "label": "HadREM3-GA7-05",
+            "label_extended": "Hadley Centre Regional Model using Global Atmosphere version 7-05",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2018",
+            "source_id": "HadREM3-GA7-05",
+            "source_type": "ARCM"
         }
     }
 }
