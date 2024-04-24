@@ -28,6 +28,7 @@ body:
       label: institution
       description: >
         `Full name, city, country` of the institution that is responsible for CORDEX simulations.
+        Restricted to standard ASCII characters (e.g. avoid accented characters).
         A region name (state, province, department, etc.) can be appended in parenthesis to the city name.
         E.g. `Full name, city (region), country`.
         If several institutions are registered as a single provider, use a semicolon to separate their full names and place them into brackets.
