@@ -72,7 +72,7 @@
             "source_id": "HadREM3-GA7-05",
             "source_type": "ARCM"
         },
-        "CanRCM5": {
+        "CanRCM5-SN": {
             "activity_participation": [
                 "DD"
             ],
@@ -87,7 +87,7 @@
             "label_extended": "Canadian Regional Climate Model version 5",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2024",
-            "source_id": "CanRCM5",
+            "source_id": "CanRCM5-SN",
             "source_type": "ARCM"
         },
         "CRCM5-SN": {
