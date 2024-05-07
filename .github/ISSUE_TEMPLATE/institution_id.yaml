@@ -8,6 +8,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time!
+        Please, read carefully the instructions below each field and check https://wcrp-cordex.github.io/cordex-cmip6-cv/CORDEX-CMIP6_institution_id.html for specific examples.
 
   - type: input
     id: institution_id
@@ -18,7 +19,6 @@ body:
         and providing CORDEX simulations.
         No spaces, dots or underscores are allowed.
         Hyphens are typically used to separate community names from the specific institution performing the run (e.g. COMM-INST), or to separate different institution acronyms partnering to contribute a given simulation (e.g. INST1-INST2).
-      placeholder: ex. `GERICS`
     validations:
       required: true
 
@@ -33,6 +33,5 @@ body:
         E.g. `Full name, city (region), country`.
         If several institutions are registered as a single provider, use a semicolon to separate their full names and place them into brackets.
         E.g. `INST1 [Full name 1, city1, country1]; INST2 [Full name 2, city2, country2]`
-      placeholder: ex. `Climate Service Center Germany, Helmholtz Centre hereon GmbH, Hamburg, Germany`
     validations:
       required: true

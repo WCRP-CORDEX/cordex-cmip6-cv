@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time!
-        Please, read carefully each of the placeholder instructions.
+        Please, read carefully each of the placeholder instructions and check https://wcrp-cordex.github.io/cordex-cmip6-cv/CORDEX-CMIP6_source_id.html for specific examples.
 
   - type: input
     id: label
@@ -19,7 +19,6 @@ body:
         it from other versions used in CORDEX-CMIP6.
         Dots and spaces are allowed to improve legibility and reflect actual
         model names.
-      placeholder: ex. `REMO2020` or `WRF v4.4.2-Q`
     validations:
       required: true
 
@@ -29,7 +28,6 @@ body:
       label: label_extended
       description: >
         A longer description of the model name, possibly including the acronym expanded.
-      placeholder: ex. `Weather Research and Forecasting model version 4.4.2, CORDEX WRF Community configuration Q`
     validations:
       required: true
 
@@ -45,7 +43,6 @@ body:
         Restrict characters used in source_id to letters, numbers and hyphens
         (e.g. NO dots, spaces or underscores are allowed).
         There is a limitation of 25 characters for this field.
-      placeholder: ex. `REMO2020` or `WRF442Q`
     validations:
       required: true
 
@@ -75,7 +72,6 @@ body:
         This should be the year your model was first used in a scientific study.
         This year should reflect the "generation" of models rather than
         distinguishing between closely-related versions.
-      placeholder: ex. `1999` or `2015`
     validations:
       required: false
 
@@ -103,7 +99,6 @@ body:
         specific `source_id`. Additional institutions can be added to the list
         as needed, but only institutions registered may be included.
         See https://github.com/WCRP-CORDEX/cordex-cmip6-cv/blob/main/CORDEX-CMIP6_institution_id.json
-      placeholder: ex. `GERICS` or `NORCE-UCAN` or `HCLIMcom-METNo,HCLIMcom-SMHI`
     validations:
       required: true
 
@@ -116,7 +111,6 @@ body:
         You can initially register with a general documentation URL for the model,
         but it should be updated as detailed information of the exact model
         version registered is published.
-      placeholder: ex. `https://github.com/CORDEX-WRF-community/euro-cordex-cmip6`
     validations:
       required: true
 
