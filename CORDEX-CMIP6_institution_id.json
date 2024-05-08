@@ -8,6 +8,7 @@
         "CNRM-MF": "CNRM [Centre National de Recherches Meteorologiques, Toulouse, France]; MF [Meteo France, Toulouse, France]",
         "BOM": "Bureau of Meteorology, Melbourne, Australia",
         "CCCma": "Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria (British Columbia), Canada",
-        "HCLIMcom-SMHI": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Swedish Meteorological and Hydrological Institute (SMHI), Norrkoping, Sweden"
+        "HCLIMcom-SMHI": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Swedish Meteorological and Hydrological Institute (SMHI), Norrkoping, Sweden",
+        "HCLIMcom-METNo": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Norwegian Meteorological Institute (METNo), Oslo, Norway"
     }
 }
