@@ -8,7 +8,7 @@ table_name = "institution_id"
 
 
 def update_institution_id(entry):
-    return update_table(entry, table, table_name, style="flat")
+    return update_table(entry, table, table_name, style="flat", sort=True)
 
 
 def get_entries(content):
