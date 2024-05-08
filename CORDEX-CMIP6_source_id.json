@@ -90,6 +90,24 @@
             "source_id": "REMO2020",
             "source_type": "ARCM"
         },
+        "SUPERMODEL": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "best-rcm-ever.com",
+            "institution_id": [
+                "TEST"
+            ],
+            "label": "SUPERMODEL",
+            "label_extended": "This is a great model",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2030",
+            "source_id": "SUPERMODEL",
+            "source_type": "ARCM"
+        },
         "WRF451Q": {
             "activity_participation": [
                 "DD"
