@@ -33,7 +33,7 @@ def update_source_id(entry):
     # sort entries
     sorted_entry = OrderedDict(sorted(entry.items()))
 
-    return update_table(sorted_entry, table, table_name)
+    return update_table(sorted_entry, table, table_name, sort=True)
 
 
 def get_entries(content):

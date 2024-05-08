@@ -17,7 +17,7 @@ def test_update_table():
 
     text = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
     entry = json.loads(text)
-    update_table(entry, table_file, "institution_id")
+    update_table(entry, table_file, "institution_id", sort=True)
 
     text = (
         '{"activity_participation": ["DD"], "cohort": '
@@ -43,4 +43,4 @@ def test_update_table():
         '"source_id": "SUPERMODEL", "source_type": "ARCM"}'
     )
     entry = json.loads(text)
-    update_table(entry, table_file, "source_id")
+    update_table(entry, table_file, "source_id", sort=True)

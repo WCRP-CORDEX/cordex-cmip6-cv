@@ -1,5 +1,5 @@
 import json
-from .common import table_prefix, read_json, write_json
+from .common import sort_dict, table_prefix, read_json, write_json
 
 filelist = [
     f"{table_prefix}_required_global_attributes.json",
@@ -64,7 +64,7 @@ def create_cv(filename=None):
     write_json(filename, cv)
 
 
-def update_table(entry, filename, table_name, style=None):
+def update_table(entry, filename, table_name, style=None, sort=False):
     with open(filename, "r", encoding="utf8") as f:
         current = json.load(f)
     new_id = entry[table_name]
@@ -78,6 +78,10 @@ def update_table(entry, filename, table_name, style=None):
             f"'{new_id}' already in table with value: '{current[table_name][new_id]}'"
         )
         raise Exception
+
+    if sort is True:
+        current[table_name] = sort_dict(current[table_name])
+
     with open(filename, "w", encoding="utf8") as f:
         json.dump(current, f, indent=4)
     return new_id

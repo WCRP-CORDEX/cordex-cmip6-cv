@@ -15,6 +15,11 @@ table_dir = op.join(op.dirname(op.dirname(__file__)), "Tables")
 table_prefix = "CORDEX-CMIP6"
 
 
+def sort_dict(d):
+    """sort a dictionary by keys"""
+    return dict(sorted(d.items()))
+
+
 def read_json_url(url):
     import requests
 
