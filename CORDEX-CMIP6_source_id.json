@@ -54,6 +54,26 @@
             "source_id": "CanRCM5-SN",
             "source_type": "ARCM"
         },
+        "HCLIM43-ALADIN": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.smhi.se/en/research/research-departments/climate-research-at-the-rossby-centre/harmonie-1.135580",
+            "institution_id": [
+                "HCLIMcom-DMI",
+                "HCLIMcom-METNo",
+                "HCLIMcom-SMHI"
+            ],
+            "label": "HCLIM43-ALADIN",
+            "label_extended": "HARMONIE Climate model cycle 43 with ALADIN physics",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2022",
+            "source_id": "HCLIM43-ALADIN",
+            "source_type": "ARCM"
+        },
         "HadREM3-GA7-05": {
             "activity_participation": [
                 "DD"
