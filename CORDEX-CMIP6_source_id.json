@@ -18,6 +18,24 @@
             "source_id": "CCAM-v2105",
             "source_type": "AGCM"
         },
+        "CCAM-v2112": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://research.csiro.au/ccam/scientific-description/",
+            "institution_id": [
+                "UQ-DEC"
+            ],
+            "label": "CCAM v2112",
+            "label_extended": "Conformal Cubic Atmospheric Model version 2112",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2022",
+            "source_id": "CCAM-v2112",
+            "source_type": "AGCM"
+        },
         "CCAMoc-v2112": {
             "activity_participation": [
                 "DD"
