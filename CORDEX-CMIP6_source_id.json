@@ -1,5 +1,23 @@
 {
     "source_id": {
+        "CCAM-v2105": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://research.csiro.au/ccam/scientific-description/",
+            "institution_id": [
+                "UQ-DEC"
+            ],
+            "label": "CCAM v2105",
+            "label_extended": "Conformal Cubic Atmospheric Model version 2105",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2022",
+            "source_id": "CCAM-v2105",
+            "source_type": "AGCM"
+        },
         "CNRM-ALADIN64E1": {
             "activity_participation": [
                 "DD"
