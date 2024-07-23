@@ -164,6 +164,24 @@
             "source_id": "REMO2020",
             "source_type": "ARCM"
         },
+        "RegCM5-0": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JD038199",
+            "institution_id": [
+                "ICTP"
+            ],
+            "label": "RegCM V5 MOLOCH",
+            "label_extended": "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2023",
+            "source_id": "RegCM5-0",
+            "source_type": "ARCM"
+        },
         "WRF451Q": {
             "activity_participation": [
                 "DD"
