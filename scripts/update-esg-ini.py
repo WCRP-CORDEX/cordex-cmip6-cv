@@ -1,12 +1,15 @@
 import yaml
 import json
 
-def get_field(file_label, field):
+def get_field(file_label, field, is_map = None):
     with open(f'../CORDEX-CMIP6_{file_label}.json', 'r') as file:
         data = json.load(file)
     rval = data[field] 
     if type(rval) == dict:
-        return(', '.join(sorted(rval.keys())))
+        if is_map:
+            return([f'    {x[0]:<27} | {x[1]}\n' for x in rval.items()])
+        else:
+            return(', '.join(sorted(rval.keys())))
     elif type(rval) == list:
         return(rval[0])
 
@@ -20,16 +23,30 @@ def update_ini_file(ini_content, map_data):
     in the YAML config file
     """
     updated_ini = []
+    skip_map = False
     for line in ini_content:
         if "=" in line:
+            skip_map = False
             key, value = line.split("=", 1)
             key = key.strip()
             value = value.strip()
             if key in map_data.keys():
-                new_value = get_field(map_data[key]['file_label'], map_data[key]['field'])
-                updated_ini.append(f"{key} = {new_value}\n")
+                is_map = map_data[key].get('is_map', None)
+                new_value = get_field(
+                    map_data[key]['file_label'],
+                    map_data[key].get('field', map_data[key]['file_label']),
+                    is_map
+                    )
+                if is_map:
+                    updated_ini.append(line)
+                    updated_ini.extend(new_value)
+                    skip_map = True
+                else:
+                    updated_ini.append(f"{key} = {new_value}\n")
             else:
                 updated_ini.append(line)
+        elif "|" in line and skip_map:
+            continue
         else:
             updated_ini.append(line)
     return (updated_ini)
