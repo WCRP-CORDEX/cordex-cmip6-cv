@@ -146,6 +146,24 @@
             "source_id": "HadREM3-GA7-05",
             "source_type": "ARCM"
         },
+        "RACMO23E": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://cdn.knmi.nl/system/data_center_publications/files/000/071/902/original/KNMI23_climate_scenarios_scientific_report_WR23-02.pdf",
+            "institution_id": [
+                "KNMI"
+            ],
+            "label": "RACMO23E",
+            "label_extended": "The KNMI Regional Climate Model RACMO, version 23E",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2022",
+            "source_id": "RACMO23E",
+            "source_type": "ARCM"
+        },
         "REMO2020": {
             "activity_participation": [
                 "DD"
