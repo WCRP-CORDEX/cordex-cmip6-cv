@@ -166,9 +166,9 @@ a:active { text-decoration: underline; }
 cvs = ["source_id", "institution_id"]
 
 link_header = (
-    "> "
+    "\n&gt; "
     + " · ".join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in cvs])
-    + "<p>"
+    + "\n<p>"
 )
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
 display_options = {
