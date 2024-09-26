@@ -52,11 +52,12 @@ def update_ini_file(ini_content, map_data):
     return (updated_ini)
 
 if __name__ == '__main__':
-    with open('../esg.cordex-cmip6.ini', 'r') as file:
+    ini_file = '../docs/esg.cordex-cmip6.ini'
+    with open(ini_file, 'r') as file:
         ini_content = file.readlines()
-    map_data = read_map('../esg-ini-sources.yaml')   
+    map_data = read_map('esg-ini-sources.yaml')   
     updated_ini_content = update_ini_file(ini_content, map_data)
-    with open('../esg.cordex-cmip6.ini', 'w') as file:
+    with open(ini_file, 'w') as file:
         file.writelines(updated_ini_content)
 
 
