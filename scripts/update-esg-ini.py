@@ -1,13 +1,17 @@
 import yaml
 import json
+from icecream import ic
 
-def get_field(file_label, field, is_map = None):
+def get_field(file_label, field, is_map = False, is_cohort = False):
     with open(f'../CORDEX-CMIP6_{file_label}.json', 'r') as file:
         data = json.load(file)
     rval = data[field] 
     if type(rval) == dict:
         if is_map:
-            return([f'    {x[0]:<27} | {x[1]}\n' for x in rval.items()])
+            if is_cohort:
+                return([f'    {x[0]:<27} | Registered\n' for x in rval.items()])
+            else:
+                return([f'    {x[0]:<27} | {x[1]}\n' for x in rval.items()])
         else:
             return(', '.join(sorted(rval.keys())))
     elif type(rval) == list:
@@ -31,11 +35,13 @@ def update_ini_file(ini_content, map_data):
             key = key.strip()
             value = value.strip()
             if key in map_data.keys():
-                is_map = map_data[key].get('is_map', None)
+                ic(key)
+                is_map = map_data[key].get('is_map', False)
+                is_cohort = map_data[key].get('is_cohort', False)
                 new_value = get_field(
                     map_data[key]['file_label'],
                     map_data[key].get('field', map_data[key]['file_label']),
-                    is_map
+                    is_map, is_cohort
                     )
                 if is_map:
                     updated_ini.append(line)
