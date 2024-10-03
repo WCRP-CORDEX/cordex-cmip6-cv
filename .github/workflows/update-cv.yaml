@@ -43,6 +43,10 @@ jobs:
         create-cv
         mv CORDEX-CMIP6_CV.json tables/Tables
 
+    - name: Create JSON schema
+      run: |
+        python scripts/create-json-schema.py
+
     - name: Check if there are any changes
       id: verify_diff
       run: |
@@ -52,10 +56,10 @@ jobs:
     - name: Commit and push
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
-        cd tables
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         (pre-commit run --all-files) || true
-        git commit Tables/CORDEX-CMIP6_CV.json -m "CV update"
+        git commit tables/Tables/CORDEX-CMIP6_CV.json -m "CV update"
+        git commit cmip6-cordex-global-attrs-schema.json -m "JSON schema update"
         git status
         git push
