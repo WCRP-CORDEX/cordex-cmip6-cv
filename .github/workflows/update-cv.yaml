@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - 'CORDEX-CMIP6_*.json'
+      - 'scripts/*.py'
     branches:
       - main
 
