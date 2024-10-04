@@ -21,6 +21,7 @@ def era5_driving_source_id():
     return dict(
         driving_institution_id=["ECMWF"],
         driving_source_id="ERA5",
+        driving_source="ECMWF Reanalysis v5",
         driving_experiment_id=["evaluation"],
     )
 
