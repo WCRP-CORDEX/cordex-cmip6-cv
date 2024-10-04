@@ -22,7 +22,8 @@ Any missing or incorrect global attribute will raise a `ValidationError`.
 
 DIR = Path(".")
 
-def make_global_attrs_schema(prefix : str=None, enum: bool=False) -> dict:
+
+def make_global_attrs_schema(prefix: str = None, enum: bool = False) -> dict:
     """Create a JSON schema for netCDF global attributes from the JSON CVs.
 
     Parameters
@@ -78,7 +79,7 @@ def make_global_attrs_schema(prefix : str=None, enum: bool=False) -> dict:
     return schema
 
 
-def cv_to_property(cv: dict, enum: bool=False) -> dict:
+def cv_to_property(cv: dict, enum: bool = False) -> dict:
     """Convert a CV to a JSON schema property.
 
     Parameters
