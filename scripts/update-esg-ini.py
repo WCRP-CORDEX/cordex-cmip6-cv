@@ -7,7 +7,7 @@ def get_field(file_label, field, is_map=False, is_cohort=False):
     with open(f"../CORDEX-CMIP6_{file_label}.json", "r") as file:
         data = json.load(file)
     rval = data[field]
-    if type(rval) == dict:
+    if isinstance(rval, dict):
         if is_map:
             if is_cohort:
                 return [f"    {x[0]:<27} | Registered\n" for x in rval.items()]
@@ -15,7 +15,7 @@ def get_field(file_label, field, is_map=False, is_cohort=False):
                 return [f"    {x[0]:<27} | {x[1]}\n" for x in rval.items()]
         else:
             return ", ".join(sorted(rval.keys()))
-    elif type(rval) == list:
+    elif isinstance(rval, list):
         return rval[0]
 
 
