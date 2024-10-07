@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 
 """
 # Export the CVs to JSON-schema.
@@ -19,8 +18,6 @@ jsonschema.validate(ds.attrs, schema)
 
 Any missing or incorrect global attribute will raise a `ValidationError`.
 """
-
-DIR = Path(".")
 
 
 def make_global_attrs_schema(prefix: str = None, enum: bool = False) -> dict:
@@ -119,12 +116,13 @@ def cv_to_property(cv: dict, enum: bool = False) -> dict:
 
 def read_cv(key: str) -> dict:
     """Read a CV file and return it as a dictionary."""
-    path = DIR / f"CORDEX-CMIP6_{key}.json"
+    path = f"CORDEX-CMIP6_{key}.json"
     with open(path) as f:
         return json.load(f)
 
 
-if __name__ == "__main__":
+def create_json_schema():
+    from .common import write_json
+
     schema = make_global_attrs_schema(prefix="cordex6", enum=True)
-    with open("cmip6-cordex-global-attrs-schema.json", "w") as f:
-        json.dump(schema, f, indent=2)
+    write_json("cmip6-cordex-global-attrs-schema.json", schema)
