@@ -38,4 +38,4 @@ def create_driving_source_id():
         driving_source_id=create_driving_source_attrs(cmip6_cv["CV"]["source_id"])
     )
     driving_source_id["driving_source_id"]["ERA5"] = era5_driving_source_id()
-    return write_json(driving_source_id, f"{table_prefix}_driving_source_id.json")
+    return write_json(f"{table_prefix}_driving_source_id.json", driving_source_id)
