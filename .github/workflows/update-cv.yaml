@@ -46,7 +46,7 @@ jobs:
 
     - name: Create JSON schema
       run: |
-        python scripts/create-json-schema.py
+        create-json-schema
 
     - name: Check if there are any changes
       id: verify_diff
