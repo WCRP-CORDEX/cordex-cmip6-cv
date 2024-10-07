@@ -221,6 +221,24 @@
             "source_id": "RegCM5-0",
             "source_type": "ARCM"
         },
+        "TSMP1-140-E": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://github.com/HPSCTerrSys/TSMP",
+            "institution_id": [
+                "CLMcom-FZJ"
+            ],
+            "label": "TSMP1 v1.4.0-E",
+            "label_extended": "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2023",
+            "source_id": "TSMP1-140-E",
+            "source_type": "ARCM"
+        },
         "WRF451Q": {
             "activity_participation": [
                 "DD"
