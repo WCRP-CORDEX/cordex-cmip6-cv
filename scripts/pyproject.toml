@@ -16,6 +16,7 @@ dependencies = [
 create-cv = "cordex_cv.cli:create_cv"
 create-domain_id = "cordex_cv.cli:domain_id"
 create-driving_source_id = "cordex_cv.cli:driving_source_id"
+create-json-schema = "cordex_cv.cli:json_schema"
 
 
 [tool.setuptools]
