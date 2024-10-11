@@ -3,7 +3,7 @@ import json
 from icecream import ic
 
 
-def get_field(file_label, field, is_map=False, is_cohort=False):
+def get_field(file_label, field, is_map=False, map_field='', is_cohort=False):
     with open(f"../CORDEX-CMIP6_{file_label}.json", "r") as file:
         data = json.load(file)
     rval = data[field]
@@ -11,6 +11,8 @@ def get_field(file_label, field, is_map=False, is_cohort=False):
         if is_map:
             if is_cohort:
                 return [f"    {x[0]:<27} | Registered\n" for x in rval.items()]
+            elif map_field:
+                return [f"    {x[0]:<27} | {x[1][map_field]}\n" for x in sorted(rval.items())]
             else:
                 return [f"    {x[0]:<27} | {x[1]}\n" for x in rval.items()]
         else:
@@ -41,10 +43,12 @@ def update_ini_file(ini_content, map_data):
                 ic(key)
                 is_map = map_data[key].get("is_map", False)
                 is_cohort = map_data[key].get("is_cohort", False)
+                map_field = map_data[key].get("map_field", "")
                 new_value = get_field(
                     map_data[key]["file_label"],
                     map_data[key].get("field", map_data[key]["file_label"]),
                     is_map,
+                    map_field,
                     is_cohort,
                 )
                 if is_map:

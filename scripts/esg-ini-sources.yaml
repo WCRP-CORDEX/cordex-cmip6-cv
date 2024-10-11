@@ -1,6 +1,11 @@
 activity_id_options:
   file_label: activity_id
 
+domain_description_map:
+  file_label: domain_id
+  is_map: true
+  map_field: domain
+
 domain_id_options:
   file_label: domain_id
 
