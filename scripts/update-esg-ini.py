@@ -3,7 +3,7 @@ import json
 from icecream import ic
 
 
-def get_field(file_label, field, is_map=False, map_field='', is_cohort=False):
+def get_field(file_label, field, is_map=False, map_field="", is_cohort=False):
     with open(f"../CORDEX-CMIP6_{file_label}.json", "r") as file:
         data = json.load(file)
     rval = data[field]
@@ -12,7 +12,10 @@ def get_field(file_label, field, is_map=False, map_field='', is_cohort=False):
             if is_cohort:
                 return [f"    {x[0]:<27} | Registered\n" for x in rval.items()]
             elif map_field:
-                return [f"    {x[0]:<27} | {x[1][map_field]}\n" for x in sorted(rval.items())]
+                return [
+                    f"    {x[0]:<27} | {x[1][map_field]}\n"
+                    for x in sorted(rval.items())
+                ]
             else:
                 return [f"    {x[0]:<27} | {x[1]}\n" for x in rval.items()]
         else:
