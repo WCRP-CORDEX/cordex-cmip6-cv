@@ -12,12 +12,12 @@ domain_id_options:
 driving_experiment_id_options:
   file_label: driving_experiment_id
 
-driving_source_id_options:
-  file_label: driving_source_id
-
-experiment_title_map:
+driving_experiment_title_map:
   file_label: driving_experiment_id
   is_map: true
+
+driving_source_id_options:
+  file_label: driving_source_id
 
 frequency_options:
   file_label: frequency
