@@ -125,4 +125,4 @@ def create_json_schema():
     from .common import write_json
 
     schema = make_global_attrs_schema(prefix="cordex6", enum=True)
-    write_json("cmip6-cordex-global-attrs-schema.json", schema)
+    write_json("global_attrs_schema.json", schema)
