@@ -122,7 +122,7 @@ def read_cv(key: str) -> dict:
 
 
 def create_json_schema():
-    from .common import write_json, table_prefix
+    from .common import write_json
 
     schema = make_global_attrs_schema(prefix="cordex6", enum=True)
-    write_json(f"{table_prefix}_global_attrs_schema.json", schema)
+    write_json("global_attrs_schema.json", schema)
