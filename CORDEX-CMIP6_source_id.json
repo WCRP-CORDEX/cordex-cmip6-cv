@@ -1,5 +1,23 @@
 {
     "source_id": {
+        "BARPA-R1-NN": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "http://www.bom.gov.au/research/publications/researchreports/BRR-069.pdf",
+            "institution_id": [
+                "BOM"
+            ],
+            "label": "BARPA-R1-NN",
+            "label_extended": "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2022",
+            "source_id": "BARPA-R1-NN",
+            "source_type": "ARCM"
+        },
         "CCAM-v2105": {
             "activity_participation": [
                 "DD"
