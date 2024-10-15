@@ -46,6 +46,6 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         (pre-commit run --all-files) || true
-        git commit cmip6-cordex-global-attrs-schema.json -m "JSON schema update"
+        git commit global_attrs_schema.json -m "JSON schema update"
         git status
         git push
