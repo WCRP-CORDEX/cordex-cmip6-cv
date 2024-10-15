@@ -358,6 +358,7 @@
         },
         "cordex6:source_id": {
             "enum": [
+                "ALARO1-SFX",
                 "BARPA-R1-NN",
                 "CCAM-v2105",
                 "CCAM-v2112",
