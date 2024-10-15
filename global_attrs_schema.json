@@ -357,17 +357,22 @@
         },
         "cordex6:source_id": {
             "enum": [
+                "BARPA-R1-NN",
                 "CCAM-v2105",
                 "CCAM-v2112",
                 "CCAMoc-v2112",
                 "CNRM-ALADIN64E1",
                 "CRCM5-SN",
                 "CanRCM5-SN",
+                "GCOAST-AHOI1-1",
+                "GCOAST-AHOI2-1",
+                "GCOAST-AHOIB1-1",
                 "HCLIM43-ALADIN",
                 "HadREM3-GA7-05",
                 "ICON-CLM-202407-1-1",
                 "RACMO23E",
                 "REMO2020",
+                "ROAM-NBS",
                 "RegCM5-0",
                 "TSMP1-140-E",
                 "WRF451Q"
