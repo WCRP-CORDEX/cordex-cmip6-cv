@@ -312,6 +312,7 @@
         },
         "cordex6:institution_id": {
             "enum": [
+                "BAS",
                 "BCCR-UCAN",
                 "BOM",
                 "CCCma",
