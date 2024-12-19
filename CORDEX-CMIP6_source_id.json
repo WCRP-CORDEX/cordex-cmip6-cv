@@ -90,6 +90,24 @@
             "source_id": "CCAMoc-v2112",
             "source_type": "AOGCM"
         },
+        "CCLM6-0-1-URB": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.clm-community.eu/COSMO-CLM/Overview",
+            "institution_id": [
+                "CLMcom-CMCC"
+            ],
+            "label": "CCLM6-0-1-URB",
+            "label_extended": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2021",
+            "source_id": "CCLM6-0-1-URB",
+            "source_type": "ARCM"
+        },
         "CCLM6-0-1-URB-ESG": {
             "activity_participation": [
                 "DD"
