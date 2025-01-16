@@ -192,7 +192,7 @@
                 "CCCma"
             ],
             "label": "CanRCM5-SN",
-            "label_extended": "Canadian Regional Climate Model version 5",
+            "label_extended": "Canadian Regional Climate Model version 5, with spectral nudging",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2024",
             "source_id": "CanRCM5-SN",
