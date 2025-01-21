@@ -90,6 +90,29 @@
             "source_id": "CCAMoc-v2112",
             "source_type": "AOGCM"
         },
+        "CCLM6-0-1": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.clm-community.eu/COSMO-CLM/Overview",
+            "institution_id": [
+                "CLMcom-CMCC",
+                "CLMcom-FZJ",
+                "CLMcom-Hereon",
+                "CLMcom-IMWM",
+                "CLMcom-KIT",
+                "CLMcom-LIST"
+            ],
+            "label": "CCLM6-0-1",
+            "label_extended": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2021",
+            "source_id": "CCLM6-0-1",
+            "source_type": "ARCM"
+        },
         "CCLM6-0-1-URB": {
             "activity_participation": [
                 "DD"
