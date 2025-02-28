@@ -149,6 +149,24 @@
             "source_id": "CCLM6-0-1-URB-ESG",
             "source_type": "ARCM"
         },
+        "CNRM-ALADIN64C1": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.umr-cnrm.fr/spip.php?article125&lang=en",
+            "institution_id": [
+                "CNRM"
+            ],
+            "label": "CNRM-ALADIN64C1",
+            "label_extended": "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2025",
+            "source_id": "CNRM-ALADIN64C1",
+            "source_type": "ARCM"
+        },
         "CNRM-ALADIN64E1": {
             "activity_participation": [
                 "DD"
