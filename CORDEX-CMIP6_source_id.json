@@ -185,6 +185,24 @@
             "source_id": "CNRM-ALADIN64P1",
             "source_type": "ARCM"
         },
+        "CNRM-RCSM6": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.umr-cnrm.fr/spip.php?article1098",
+            "institution_id": [
+                "CNRM"
+            ],
+            "label": "CNRM-RCSM version 6",
+            "label_extended": "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2019",
+            "source_id": "CNRM-RCSM6",
+            "source_type": "AORCM"
+        },
         "CNRM-RCSM6B": {
             "activity_participation": [
                 "DD"
