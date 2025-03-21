@@ -359,7 +359,7 @@
         },
         "cordex6:project_id": {
             "enum": [
-                "CORDEX"
+                "CORDEX-CMIP6"
             ]
         },
         "cordex6:source": {
