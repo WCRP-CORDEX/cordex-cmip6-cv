@@ -394,10 +394,12 @@
             ],
             "further_info_url": "https://www.clm-community.eu/ICON-CLM/",
             "institution_id": [
-                "CLMcom-DWD",
-                "CLMcom-KIT",
+                "CLMcom-BTU",
                 "CLMcom-CMCC",
-                "CLMcom-GERICS"
+                "CLMcom-DWD",
+                "CLMcom-GERICS",
+                "CLMcom-Hereon",
+                "CLMcom-KIT"
             ],
             "label": "ICON-CLM-202407-1-1",
             "label_extended": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1",
