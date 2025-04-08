@@ -482,7 +482,7 @@
             "source_id": "RACMO24P",
             "source_type": "ARCM"
         },
-        "REMO2020": {
+        "REMO2020-2-2": {
             "activity_participation": [
                 "DD"
             ],
@@ -493,11 +493,11 @@
             "institution_id": [
                 "GERICS"
             ],
-            "label": "REMO2020",
-            "label_extended": "REMO regional model",
+            "label": "REMO2020-2-2",
+            "label_extended": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake)",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
-            "release_year": "2022",
-            "source_id": "REMO2020",
+            "release_year": "2023",
+            "source_id": "REMO2020-2-2",
             "source_type": "ARCM"
         },
         "ROAM-NBS": {
