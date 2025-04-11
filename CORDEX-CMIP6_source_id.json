@@ -536,6 +536,24 @@
             "source_id": "ROAM-NBS",
             "source_type": "AORCM"
         },
+        "RegCM-ES1-1": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://doi.org/10.1029/2019MS001812",
+            "institution_id": [
+                "ICTP"
+            ],
+            "label": "RegCM-ES v1.1",
+            "label_extended": "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2025",
+            "source_id": "RegCM-ES1-1",
+            "source_type": "AORCM"
+        },
         "RegCM5-0": {
             "activity_participation": [
                 "DD"
