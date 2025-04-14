@@ -500,6 +500,24 @@
             "source_id": "REMO2020-2-2",
             "source_type": "ARCM"
         },
+        "REMO2020-2-2-MR2": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.remo-rcm.de",
+            "institution_id": [
+                "GERICS"
+            ],
+            "label": "REMO2020 v2.2 MERRA-2",
+            "label_extended": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MERRA-2 aerosol climatology and Fresh-water Lake model (FLake)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2023",
+            "source_id": "REMO2020-2-2-MR2",
+            "source_type": "ARCM"
+        },
         "REMO2020-2-2-iMove": {
             "activity_participation": [
                 "DD"
