@@ -518,7 +518,7 @@
             "source_id": "REMO2020-2-2-MR2",
             "source_type": "ARCM"
         },
-        "REMO2020-2-2-iMove": {
+        "REMO2020-2-2-iMOVE": {
             "activity_participation": [
                 "DD"
             ],
@@ -529,11 +529,11 @@
             "institution_id": [
                 "GERICS"
             ],
-            "label": "REMO2020 v2.2 iMove",
-            "label_extended": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMove, static)",
+            "label": "REMO2020 v2.2 iMOVE",
+            "label_extended": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static)",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2023",
-            "source_id": "REMO2020-2-2-iMove",
+            "source_id": "REMO2020-2-2-iMOVE",
             "source_type": "ARCM"
         },
         "ROAM-NBS": {
