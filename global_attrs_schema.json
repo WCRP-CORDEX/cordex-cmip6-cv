@@ -311,6 +311,7 @@
         },
         "cordex6:institution_id": {
             "enum": [
+                "AUTH",
                 "BAS",
                 "BCCR-UCAN",
                 "BOM",
