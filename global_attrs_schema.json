@@ -415,7 +415,8 @@
                 "RegCM-ES1-1",
                 "RegCM5-0",
                 "TSMP1-140-E",
-                "WRF451Q"
+                "WRF451Q",
+                "WRF461T-SN"
             ]
         },
         "cordex6:source_type": {
