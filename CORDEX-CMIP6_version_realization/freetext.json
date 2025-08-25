@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "freetext",
+    "type": "regex",
+    "regex": "^v\\d+-r\\d+$"
+} 

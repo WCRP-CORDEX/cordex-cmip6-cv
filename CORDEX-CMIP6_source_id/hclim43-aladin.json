@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hclim43-aladin",
+    "type": "source"
+}
