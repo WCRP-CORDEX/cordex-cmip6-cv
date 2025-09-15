@@ -7,57 +7,57 @@
       "separator": "/",
       "parts": [
         {
-          "collection_id": "CORDEX-CMIP6_activity_id",
+          "collection_id": "activity_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_domain_id",
+          "collection_id": "domain_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_institution_id",
+          "collection_id": "institution_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_source_id",
+          "collection_id": "driving_source_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_experiment_id",
+          "collection_id": "driving_experiment_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_variant_label",
+          "collection_id": "driving_variant_label",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_source_id",
+          "collection_id": "source_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_version_realization",
+          "collection_id": "version_realization",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_frequency",
+          "collection_id": "frequency",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_variable_id",
+          "collection_id": "variable_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_version",
+          "collection_id": "version",
           "is_required": true,
           "kind": "collection"
         }
@@ -72,52 +72,52 @@
       },
       "parts": [
         {
-          "collection_id": "CORDEX-CMIP6_variable_id",
+          "collection_id": "variable_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_domain_id",
+          "collection_id": "domain_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_source_id",
+          "collection_id": "driving_source_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_experiment_id",
+          "collection_id": "driving_experiment_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_variant_label",
+          "collection_id": "driving_variant_label",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_institution_id",
+          "collection_id": "institution_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_source_id",
+          "collection_id": "source_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_version_realization",
+          "collection_id": "version_realization",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_frequency",
+          "collection_id": "frequency",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_time_range",
+          "collection_id": "time_range",
           "is_required": false,
           "kind": "collection"
         }
@@ -128,32 +128,32 @@
       "separator": ".",
       "parts": [
         {
-          "collection_id": "CORDEX-CMIP6_domain_id",
+          "collection_id": "domain_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_institution_id",
+          "collection_id": "institution_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_source_id",
+          "collection_id": "driving_source_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_experiment_id",
+          "collection_id": "driving_experiment_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_driving_institution_id",
+          "collection_id": "driving_institution_id",
           "is_required": true,
           "kind": "collection"
         },
         {
-          "collection_id": "CORDEX-CMIP6_frequency",
+          "collection_id": "frequency",
           "is_required": true,
           "kind": "collection"
         }
@@ -163,123 +163,123 @@
   "global_attributes_specs": {
     "specs": {
       "activity_id": {
-        "source_collection": "CORDEX-CMIP6_activity_id",
+        "source_collection": "activity_id",
         "value_type": "string"
       },
       "comment": {
-        "source_collection": "CORDEX-CMIP6_comment",
+        "source_collection": "comment",
         "value_type": "string"
       },
       "contact": {
-        "source_collection": "CORDEX-CMIP6_contact",
+        "source_collection": "contact",
         "value_type": "string"
       },
       "Conventions": {
-        "source_collection": "CORDEX-CMIP6_Conventions",
+        "source_collection": "conventions",
         "value_type": "string"
       },
       "creation_date": {
-        "source_collection": "CORDEX-CMIP6_creation_date",
+        "source_collection": "creation_date",
         "value_type": "string"
       },
       "domain": {
-        "source_collection": "CORDEX-CMIP6_domain_id",
+        "source_collection": "domain_id",
         "value_type": "string",
         "specific_key": "description"
       },
       "domain_id": {
-        "source_collection": "CORDEX-CMIP6_domain_id",
+        "source_collection": "domain_id",
         "value_type": "string"
       },
       "driving_experiment": {
-        "source_collection": "CORDEX-CMIP6_driving_experiment_id",
+        "source_collection": "driving_experiment_id",
         "value_type": "string",
         "specific_key": "experiment"
       },
       "driving_experiment_id": {
-        "source_collection": "CORDEX-CMIP6_driving_experiment_id",
+        "source_collection": "driving_experiment_id",
         "value_type": "string"
       },
       "driving_institution_id": {
-        "source_collection": "CORDEX-CMIP6_driving_institution_id",
+        "source_collection": "driving_institution_id",
         "value_type": "string"
       },
       "driving_source_id": {
-        "source_collection": "CORDEX-CMIP6_driving_source_id",
+        "source_collection": "driving_source_id",
         "value_type": "string"
       },
       "driving_variant_label": {
-        "source_collection": "CORDEX-CMIP6_driving_variant_label",
+        "source_collection": "driving_variant_label",
         "value_type": "string"
       },
       "frequency": {
-        "source_collection": "CORDEX-CMIP6_frequency",
+        "source_collection": "frequency",
         "value_type": "string"
       },
       "grid": {
-        "source_collection": "CORDEX-CMIP6_grid",
+        "source_collection": "grid",
         "value_type": "string"
       },
       "history": {
-        "source_collection": "CORDEX-CMIP6_history",
+        "source_collection": "history",
         "value_type": "string"
       },
       "institution": {
-        "source_collection": "CORDEX-CMIP6_institution_id",
+        "source_collection": "institution_id",
         "value_type": "string",
         "specific_key": "name"
       },
       "institution_id": {
-        "source_collection": "CORDEX-CMIP6_institution_id",
+        "source_collection": "institution_id",
         "value_type": "string"
       },
       "license": {
-        "source_collection": "CORDEX-CMIP6_license",
+        "source_collection": "license",
         "value_type": "string"
       },
       "mip_era": {
-        "source_collection": "CORDEX-CMIP6_mip_era",
+        "source_collection": "mip_era",
         "value_type": "string"
       },
       "product": {
-        "source_collection": "CORDEX-CMIP6_product",
+        "source_collection": "product",
         "value_type": "string"
       },
       "project_id": {
-        "source_collection": "CORDEX-CMIP6_project_id",
+        "source_collection": "project_id",
         "value_type": "string"
       },
       "references": {
-        "source_collection": "CORDEX-CMIP6_references",
+        "source_collection": "references",
         "value_type": "string"
       },
       "source": {
-        "source_collection": "CORDEX-CMIP6_source_id",
+        "source_collection": "source_id",
         "value_type": "string",
         "specific_key": "label_extended"
       },
       "source_id": {
-        "source_collection": "CORDEX-CMIP6_source_id",
+        "source_collection": "source_id",
         "value_type": "string"
       },
       "source_type": {
-        "source_collection": "CORDEX-CMIP6_source_type",
+        "source_collection": "source_type",
         "value_type": "string"
       },
       "tracking_id": {
-        "source_collection": "CORDEX-CMIP6_tracking_id",
+        "source_collection": "tracking_id",
         "value_type": "string"
       },
       "variable_id": {
-        "source_collection": "CORDEX-CMIP6_variable_id",
+        "source_collection": "variable_id",
         "value_type": "string"
       },
       "version_realization": {
-        "source_collection": "CORDEX-CMIP6_version_realization",
+        "source_collection": "version_realization",
         "value_type": "string"
       },
       "version_realization_info": {
-        "source_collection": "CORDEX-CMIP6_version_realization_info",
+        "source_collection": "version_realization_info",
         "value_type": "string"
       }
     }
