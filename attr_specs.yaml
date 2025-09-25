@@ -1,0 +1,126 @@
+# Global attributes specification for CORDEX-CMIP6 netCDF files
+
+- source_collection: activity_id
+  is_required: true
+  value_type: string
+
+- source_collection: comment
+  is_required: false
+  value_type: string
+
+- source_collection: contact
+  is_required: false
+  value_type: string
+
+- source_collection: conventions
+  field_name: Conventions
+  is_required: true
+  value_type: string
+
+- source_collection: creation_date
+  is_required: false
+  value_type: string
+
+- source_collection: domain_id
+  specific_key: description
+  field_name: domain
+  is_required: true
+  value_type: string
+
+- source_collection: domain_id
+  is_required: true
+  value_type: string
+
+- source_collection: driving_experiment_id
+  specific_key: experiment
+  field_name: driving_experiment
+  is_required: true
+  value_type: string
+
+- source_collection: driving_experiment_id
+  is_required: true
+  value_type: string
+
+- source_collection: driving_institution_id
+  is_required: true
+  value_type: string
+
+- source_collection: driving_source_id
+  is_required: true
+  value_type: string
+
+- source_collection: driving_variant_label
+  is_required: true
+  value_type: string
+
+- source_collection: frequency
+  is_required: true
+  value_type: string
+
+- source_collection: grid
+  is_required: false
+  value_type: string
+
+- source_collection: history
+  is_required: false
+  value_type: string
+
+- source_collection: institution_id
+  specific_key: name
+  field_name: institution
+  is_required: true
+  value_type: string
+
+- source_collection: institution_id
+  is_required: true
+  value_type: string
+
+- source_collection: license
+  is_required: false
+  value_type: string
+
+- source_collection: mip_era
+  is_required: true
+  value_type: string
+
+- source_collection: product
+  is_required: false
+  value_type: string
+
+- source_collection: project_id
+  is_required: true
+  value_type: string
+
+- source_collection: references
+  is_required: false
+  value_type: string
+
+- source_collection: source_id
+  specific_key: label_extended
+  field_name: source
+  is_required: true
+  value_type: string
+
+- source_collection: source_id
+  is_required: true
+  value_type: string
+
+- source_collection: source_type
+  is_required: false
+  value_type: string
+
+- source_collection: tracking_id
+  is_required: false
+  value_type: string
+
+- source_collection: variable_id
+  is_required: true
+  value_type: string
+
+- source_collection: version_realization
+  is_required: true
+  value_type: string
+
+- source_collection: version_realization_info
+  is_required: false
+  value_type: string
