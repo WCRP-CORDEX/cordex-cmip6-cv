@@ -18,7 +18,10 @@ filelist = [
 
 
 def process_source_id(entry, license):
-    source = f"{entry['label_extended']} ({entry['release_year']})"
+    source = [
+        f"{entry['label_extended']} ({entry['release_year']})",
+        entry["label_extended"],
+    ]
     entry["source"] = source
     entry["license"] = license
     del entry["label_extended"]
