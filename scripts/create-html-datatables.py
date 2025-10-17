@@ -89,22 +89,26 @@ def json2datatable(
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-<script type="text/javascript">
-$(document).ready( function () {
-    $('#table_id').DataTable({
-    });
-} );
-</script>
-"""
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>"""
     )
     if title:
         fp.write(f"<title>{title}</title>")
     fp.write(
         """
 <style>
+body {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 600px;
+}
+tr:hover {background-color:#f5f5f5;}
+th, td {text-align: left; padding: 2px;}
+table {border-collapse: collapse;}
 span.tag {
   background-color: #c5def5;
   padding: 0 10px;
@@ -115,22 +119,50 @@ span.tag {
   border-radius: 2em;
 }
 span.selected {color: #3399FF}
-span.planned {color: #FF9999}
-span.running {color: #009900}
-span.completed {color: black; font-weight: bold}
+span.planned {color: #F54d4d; font-weight: bold}
+span.running {color: #009900; font-weight: bold}
+span.completed {color: #17202a; font-weight: bold}
 span.published {color: #3399FF; font-weight: bold}
 span.warning {color: #FF0000; font-weight: bold}
-a:link { color: #3399FF; text-decoration: none; }
-a:visited { color: #3399FF; text-decoration: none; }
+a {color: DodgerBlue}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:active { text-decoration: underline; }
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.nav-button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: #0969da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.nav-button:hover {
+  background-color: #0969da;
+  color: white;
+  text-decoration: none;
+}
 </style>
 </head>
 <body>
 """
     )
     if title:
-        fp.write(f"<h1>{title}</h1>")
+        fp.write(f"""
+<div class="logo">
+   <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png" 
+        alt="CORDEX Logo" >
+   <h1>{title}</h1>
+</div>
+    """
+    )
     if intro:
         fp.write(f"{intro}<p>")
     fp.write(
@@ -157,6 +189,70 @@ a:active { text-decoration: underline; }
         """
     </tbody>
 </table>
+
+<script>
+    // URL parameter helpers
+    function getParam(name) {
+        var urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name) || '';
+    }
+    
+    function setParam(name, value) {
+        var url = new URL(window.location);
+        if (value && value !== '') {
+            url.searchParams.set(name, value);
+        } else {
+            url.searchParams.delete(name);
+        }
+        window.history.replaceState({}, '', url);
+    }
+
+    $(document).ready(function() {
+        // Get initial values from URL
+        var initialSearch = getParam('search');
+        var initialLength = parseInt(getParam('length')) || 20;
+        var initialOrder = getParam('order');
+        
+        var initialOrderArray = [[0, 'asc']]; // default
+        if (initialOrder) {
+            try {
+                initialOrderArray = JSON.parse(initialOrder);
+            } catch (e) {
+                console.log('Could not parse order parameter');
+            }
+        }
+        
+        // Initialize DataTable with URL parameters
+        var table = $('#table_id').DataTable({
+            pageLength: initialLength,
+            lengthMenu: [20, 50, 100, 200, 500],
+            order: initialOrderArray,
+            searching: true
+        });
+        
+        // Set initial search if provided
+        if (initialSearch) {
+            table.search(initialSearch).draw();
+        }
+        
+        // Update URL when search changes
+        table.on('search.dt', function() {
+            var searchValue = table.search();
+            setParam('search', searchValue);
+        });
+        
+        // Update URL when page length changes
+        table.on('length.dt', function(e, settings, len) {
+            setParam('length', len == 20 ? '' : len);
+        });
+        
+        // Update URL when column order changes
+        table.on('order.dt', function() {
+            var currentOrder = table.order();
+            setParam('order', JSON.stringify(currentOrder));
+        });
+    });
+</script>
 </body>
 </html>"""
     )
@@ -166,9 +262,9 @@ a:active { text-decoration: underline; }
 cvs = ["source_id", "institution_id"]
 
 link_header = (
-    "\n&gt; "
-    + " · ".join([f'<a href="{table_prefix}_{x}.html">{x} table</a>' for x in cvs])
-    + "\n<p>"
+    "\n<div style='text-align: center; margin: 1em 0;'>"
+    + "".join([f'<a class="nav-button" href="{table_prefix}_{x}.html">{x}</a>' for x in cvs])
+    + "</div>\n"
 )
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
 display_options = {
@@ -203,6 +299,6 @@ if __name__ == "__main__":
             f"{table_prefix}_{cv}.json",
             f"docs/{table_prefix}_{cv}.html",
             cv,
-            title=f"WCRP-CORDEX CORDEX-CMIP6 CV {cv}",
+            title=f"CORDEX-CMIP6 CV · {cv}",
             **opts,
         )
