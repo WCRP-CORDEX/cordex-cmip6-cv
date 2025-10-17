@@ -155,14 +155,15 @@ a:active { text-decoration: underline; }
 """
     )
     if title:
-        fp.write(f"""
+        fp.write(
+            f"""
 <div class="logo">
-   <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png" 
+   <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png"
         alt="CORDEX Logo" >
    <h1>{title}</h1>
 </div>
     """
-    )
+        )
     if intro:
         fp.write(f"{intro}<p>")
     fp.write(
@@ -196,7 +197,7 @@ a:active { text-decoration: underline; }
         var urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name) || '';
     }
-    
+
     function setParam(name, value) {
         var url = new URL(window.location);
         if (value && value !== '') {
@@ -212,7 +213,7 @@ a:active { text-decoration: underline; }
         var initialSearch = getParam('search');
         var initialLength = parseInt(getParam('length')) || 20;
         var initialOrder = getParam('order');
-        
+
         var initialOrderArray = [[0, 'asc']]; // default
         if (initialOrder) {
             try {
@@ -221,7 +222,7 @@ a:active { text-decoration: underline; }
                 console.log('Could not parse order parameter');
             }
         }
-        
+
         // Initialize DataTable with URL parameters
         var table = $('#table_id').DataTable({
             pageLength: initialLength,
@@ -229,23 +230,23 @@ a:active { text-decoration: underline; }
             order: initialOrderArray,
             searching: true
         });
-        
+
         // Set initial search if provided
         if (initialSearch) {
             table.search(initialSearch).draw();
         }
-        
+
         // Update URL when search changes
         table.on('search.dt', function() {
             var searchValue = table.search();
             setParam('search', searchValue);
         });
-        
+
         // Update URL when page length changes
         table.on('length.dt', function(e, settings, len) {
             setParam('length', len == 20 ? '' : len);
         });
-        
+
         // Update URL when column order changes
         table.on('order.dt', function() {
             var currentOrder = table.order();
@@ -263,7 +264,9 @@ cvs = ["source_id", "institution_id"]
 
 link_header = (
     "\n<div style='text-align: center; margin: 1em 0;'>"
-    + "".join([f'<a class="nav-button" href="{table_prefix}_{x}.html">{x}</a>' for x in cvs])
+    + "".join(
+        [f'<a class="nav-button" href="{table_prefix}_{x}.html">{x}</a>' for x in cvs]
+    )
     + "</div>\n"
 )
 cordex_cv_repo = '<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cv">CORDEX-CMIP6 CV repository</a>'
