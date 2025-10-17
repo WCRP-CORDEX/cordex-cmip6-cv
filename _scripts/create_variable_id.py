@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 
 import esgvoc.api as ev
-import requests
 
 # URLs of the JSON files on GitHub
 json_folder = "_scripts/cordex-cmip6-cmor-tables/Tables"
