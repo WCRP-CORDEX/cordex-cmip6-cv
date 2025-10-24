@@ -18,7 +18,7 @@
   value_type: string
 
 - source_collection: creation_date
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: domain_id
@@ -116,7 +116,7 @@
   value_type: string
 
 - source_collection: tracking_id
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: variable_id
