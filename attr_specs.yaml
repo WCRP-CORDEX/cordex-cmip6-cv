@@ -9,7 +9,7 @@
   value_type: string
 
 - source_collection: contact
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: conventions
@@ -49,6 +49,12 @@
   is_required: true
   value_type: string
 
+- source_collection: driving_source_id
+  specific_key: source
+  field_name: driving_source
+  is_required: false
+  value_type: string
+
 - source_collection: driving_variant_label
   is_required: true
   value_type: string
@@ -58,7 +64,7 @@
   value_type: string
 
 - source_collection: grid
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: history
@@ -76,7 +82,7 @@
   value_type: string
 
 - source_collection: license
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: mip_era
@@ -84,7 +90,7 @@
   value_type: string
 
 - source_collection: product
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: project_id
@@ -106,7 +112,7 @@
   value_type: string
 
 - source_collection: source_type
-  is_required: false
+  is_required: true
   value_type: string
 
 - source_collection: tracking_id

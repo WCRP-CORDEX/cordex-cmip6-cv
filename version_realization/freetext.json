@@ -3,4 +3,4 @@
     "id": "freetext",
     "type": "regex",
     "regex": "^v\\d+-r\\d+$"
-} 
+}
