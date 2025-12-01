@@ -1,4 +1,5 @@
 import json
+import re
 from .common import sort_dict, table_prefix, read_json, write_json
 
 filelist = [
@@ -37,6 +38,47 @@ def process_driving_experiment_id(expid, value):
     }
 
 
+def process_drs(drs):
+    """
+    Transform DRS templates for CMOR 3.12+ compatibility.
+    
+    CMOR 3.12+ adds separators, time_range, and file extensions internally,
+    so templates should only contain the ordered list of variable placeholders.
+    
+    Args:
+        drs: Dictionary with directory_path_template and filename_template
+        
+    Returns:
+        Transformed DRS dictionary compatible with CMOR 3.12+
+    """
+    processed_drs = {}
+    
+    # Process directory_path_template: remove / separators between placeholders
+    if "directory_path_template" in drs:
+        template = drs["directory_path_template"]
+        # Remove forward slashes that separate placeholders (but keep content inside <>)
+        processed_drs["directory_path_template"] = template.replace("/", "")
+    
+    # Process filename_template: remove _ separators, [_<time_range>], and .nc
+    if "filename_template" in drs:
+        template = drs["filename_template"]
+        
+        # First, remove [_<time_range>] placeholder (CMOR adds this automatically)
+        template = re.sub(r'\[_<time_range>\]', '', template)
+        
+        # Remove .nc extension (CMOR adds this automatically)
+        template = template.replace(".nc", "")
+        
+        # Remove underscores that are between placeholders (outside of <>)
+        # This regex matches underscore that is not inside angle brackets
+        # We replace underscores that separate <...> patterns
+        template = re.sub(r'>_<', '><', template)
+        
+        processed_drs["filename_template"] = template
+    
+    return processed_drs
+
+
 def read_tables():
     table = {}
     for f in filelist:
@@ -60,6 +102,10 @@ def create_cv(filename=None):
         k: process_driving_experiment_id(k, v)
         for k, v in cv_table["driving_experiment_id"].items()
     }
+    
+    # Transform DRS templates for CMOR 3.12+ compatibility
+    if "DRS" in cv_table:
+        cv_table["DRS"] = process_drs(cv_table["DRS"])
 
     cv = {"CV": cv_table}
 
