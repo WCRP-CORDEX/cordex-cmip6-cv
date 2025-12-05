@@ -130,7 +130,7 @@ dataset_properties:
     is_required: true
 
   - source_collection: version
-    source_collection_term: creation_date
+    source_collection_term: creationdate
     catalog_field_value_type: string
     is_required: true
 
@@ -138,3 +138,4 @@ file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
     is_required: true
+
