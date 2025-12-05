@@ -90,6 +90,24 @@
             "source_id": "CCAMoc-v2112",
             "source_type": "AOGCM"
         },
+        "CCLM5-0-9-NEMOMED12-3-6": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.clm-community.eu/COSMO-CLM/Overview/",
+            "institution_id": [
+                "CLMcom-GUF"
+            ],
+            "label": "CCLM5-0-9-NEMOMED12-3-6",
+            "label_extended": "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain.",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2021",
+            "source_id": "CCLM5-0-9-NEMOMED12-3-6",
+            "source_type": "AORCM"
+        },
         "CCLM6-0-1": {
             "activity_participation": [
                 "DD"
