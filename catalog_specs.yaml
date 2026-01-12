@@ -1,4 +1,4 @@
-version: v3.0.0
+version: v3.1.0
 
 catalog_properties:
   name: stac
@@ -6,9 +6,25 @@ catalog_properties:
   extensions:
     - name: file
       version: v2.1.0
+    - name: alternate-assets
+      version: v1.2.0
 
 dataset_properties:
   - source_collection: activity_id
+    catalog_field_value_type: string_array
+    is_required: true
+
+  - source_collection: contact
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: conventions
+    catalog_field_value_type: string_array
+    is_required: false
+
+  - source_collection: domain_id
+    source_collection_key: description
+    catalog_field_name: domain
     catalog_field_value_type: string
     is_required: true
 
@@ -16,7 +32,16 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: institution_id
+  - source_collection: null
+    catalog_field_name: driving_experiment
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: driving_experiment_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: driving_institution_id
     catalog_field_value_type: string
     is_required: true
 
@@ -24,19 +49,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: driving_experiment_id
-    catalog_field_value_type: string
-    is_required: true
-
   - source_collection: driving_variant_label
-    catalog_field_value_type: string
-    is_required: true
-
-  - source_collection: source_id
-    catalog_field_value_type: string
-    is_required: true
-
-  - source_collection: version_realization
     catalog_field_value_type: string
     is_required: true
 
@@ -44,11 +57,21 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable_id
+  - source_collection: grid
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: version
+  - source_collection: institution_id
+    source_collection_key: description
+    catalog_field_name: institution
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: institution_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: license
     catalog_field_value_type: string
     is_required: true
 
@@ -56,29 +79,63 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: project_id
+  - source_collection: tracking_id
+    catalog_field_name: pid
     catalog_field_value_type: string
     is_required: true
 
   - source_collection: product
     catalog_field_value_type: string
-    is_required: false
+    is_required: true
 
-  - source_collection: source_type
-    catalog_field_value_type: string
-    is_required: false
-
-  - source_collection: tracking_id
-    catalog_field_name: pid
-    catalog_field_value_type: string
-    is_required: false
-
-  - source_collection: driving_institution_id
+  - source_collection: project_id
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: time_range
+  - source_collection: source_id
     catalog_field_value_type: string
-    is_required: false
+    is_required: true
 
-file_properties: []
+  - source_collection: source_type
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: variable_id
+    source_collection_key: standard_name
+    catalog_field_name: variable_cf_standard_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: variable_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: variable_long_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: variable_id
+    source_collection_key: units
+    catalog_field_name: variable_units
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: version_realization
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: version_realization_info
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: version
+    source_collection_term: creationdate
+    catalog_field_value_type: string
+    is_required: true
+
+file_properties:
+  - source_collection: tracking_id
+    catalog_field_value_type: string
+    is_required: true
+
