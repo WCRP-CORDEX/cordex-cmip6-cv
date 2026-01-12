@@ -536,6 +536,25 @@
             "source_id": "ICON-CLM-202407-1-2",
             "source_type": "ARCM"
         },
+        "ICON-CLM-202407-1-3": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://github.com/C2SM/icon-clm_patch",
+            "institution_id": [
+                "CLMcom-ETH",
+                "CLMcom-IMWM"
+            ],
+            "label": "ICON-CLM-202407-1-3",
+            "label_extended": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-3",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2025",
+            "source_id": "ICON-CLM-202407-1-3",
+            "source_type": "ARCM"
+        },
         "MedX-CM": {
             "activity_participation": [
                 "DD"
