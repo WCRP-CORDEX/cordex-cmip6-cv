@@ -3,7 +3,6 @@ from os import path as op
 import pytest
 from cordex_cv import update_table
 
-
 table_dir = op.dirname(op.dirname(op.dirname(op.abspath(__file__))))
 
 
