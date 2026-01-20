@@ -96,8 +96,7 @@ def json2datatable(
     )
     if title:
         fp.write(f"<title>{title}</title>")
-    fp.write(
-        """
+    fp.write("""
 <style>
 body {
   font-family: "Montserrat", sans-serif;
@@ -152,42 +151,34 @@ a:active { text-decoration: underline; }
 </style>
 </head>
 <body>
-"""
-    )
+""")
     if title:
-        fp.write(
-            f"""
+        fp.write(f"""
 <div class="logo">
    <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png"
         alt="CORDEX Logo" >
    <h1>{title}</h1>
 </div>
-    """
-        )
+    """)
     if intro:
         fp.write(f"{intro}<p>")
-    fp.write(
-        """
+    fp.write("""
 <table id="table_id" class="display">
     <thead>
         <tr>
-"""
-    )
+""")
     [fp.write(f"              <th>{field_names[x]}</th>\n") for x in df]
-    fp.write(
-        """
+    fp.write("""
         </tr>
     </thead>
     <tbody>
-"""
-    )
+""")
     for idx, row in df.iterrows():
         fp.write("        <tr>\n")
         for field, item in zip(df.columns, row):
             fp.write(f"            <td>{delistify(item)}</td>\n")
         fp.write("        </tr>\n")
-    fp.write(
-        """
+    fp.write("""
     </tbody>
 </table>
 
@@ -255,8 +246,7 @@ a:active { text-decoration: underline; }
     });
 </script>
 </body>
-</html>"""
-    )
+</html>""")
     fp.close()
 
 
