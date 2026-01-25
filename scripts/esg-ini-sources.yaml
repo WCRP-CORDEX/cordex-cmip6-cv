@@ -1,0 +1,38 @@
+activity_id_options:
+  file_label: activity_id
+
+domain_description_map:
+  file_label: domain_id
+  is_map: true
+  map_field: domain
+
+domain_id_options:
+  file_label: domain_id
+
+driving_experiment_id_options:
+  file_label: driving_experiment_id
+
+driving_experiment_title_map:
+  file_label: driving_experiment_id
+  is_map: true
+
+driving_source_id_options:
+  file_label: driving_source_id
+
+frequency_options:
+  file_label: frequency
+
+institution_id_options:
+  file_label: institution_id
+
+mip_era_options:
+  file_label: fixed
+  field: mip_era
+
+model_cohort_map:
+  file_label: source_id
+  is_map: true
+  is_cohort: true
+
+source_id_options:
+  file_label: source_id
