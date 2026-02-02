@@ -1,6 +1,6 @@
 {
     "DRS":{
         "directory_path_template":"<project_id><activity_id><domain_id><institution_id><driving_source_id><driving_experiment_id><driving_variant_label><source_id><version_realization><frequency><variable_id><version>",
-        "filename_template":"<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><version_realization><frequency>"
+        "filename_template":"<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><version_realization><frequency>.nc"
     }
 }
