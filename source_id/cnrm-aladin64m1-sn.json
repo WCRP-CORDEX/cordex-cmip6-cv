@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cnrm-aladin64m1-sn",
+    "type": "source"
+}
