@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "era-5",
+    "id": "era5",
     "type": "source"
 }
