@@ -1,4 +1,4 @@
-version: v3.1.1
+version: v3.1.2
 
 catalog_properties:
   name: stac
@@ -137,3 +137,9 @@ file_properties:
     catalog_field_value_type: string
     is_required: true
 
+link_properties:
+  - rel: related
+    link_pattern: "^https?://errata.esgf.io/.*$"
+    link_type: "text/html"
+    title: "Errata issue"
+    is_required: false
