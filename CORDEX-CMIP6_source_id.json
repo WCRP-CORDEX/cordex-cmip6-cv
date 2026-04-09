@@ -664,7 +664,7 @@
             "source_id": "RACMO23E",
             "source_type": "ARCM"
         },
-        "RACMO24P": {
+        "RACMO24p-NN": {
             "activity_participation": [
                 "DD"
             ],
@@ -675,11 +675,11 @@
             "institution_id": [
                 "UU-IMAU"
             ],
-            "label": "RACMO24P",
+            "label": "RACMO24p-NN",
             "label_extended": "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2024",
-            "source_id": "RACMO24P",
+            "source_id": "RACMO24p-NN",
             "source_type": "ARCM"
         },
         "REMO2020-2-2": {
