@@ -36,7 +36,7 @@
             "source_id": "BARPA-R1-NN",
             "source_type": "ARCM"
         },
-        "CCAM-2307conv17-SN": {
+        "CCAM-v2307conv17-SN": {
             "activity_participation": [
                 "DD"
             ],
@@ -47,14 +47,14 @@
             "institution_id": [
                 "UNSW-CCRC"
             ],
-            "label": "CCAM-2307conv17-SN",
+            "label": "CCAM-v2307conv17-SN",
             "label_extended": "Conformal Cubic Atmospheric Model version 2307 configuration 2017, with spectral nudging",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2023",
-            "source_id": "CCAM-2307conv17-SN",
+            "source_id": "CCAM-v2307conv17-SN",
             "source_type": "AGCM"
         },
-        "CCAM-2307conv21-SN": {
+        "CCAM-v2307conv21-SN": {
             "activity_participation": [
                 "DD"
             ],
@@ -65,14 +65,14 @@
             "institution_id": [
                 "UNSW-CCRC"
             ],
-            "label": "CCAM-2307conv21-SN",
+            "label": "CCAM-v2307conv21-SN",
             "label_extended": "Conformal Cubic Atmospheric Model version 2307 configuration 2021, with spectral nudging",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2023",
-            "source_id": "CCAM-2307conv21-SN",
+            "source_id": "CCAM-v2307conv21-SN",
             "source_type": "AGCM"
         },
-        "CCAM-2507-SN": {
+        "CCAM-v2507-SN": {
             "activity_participation": [
                 "DD"
             ],
@@ -83,11 +83,11 @@
             "institution_id": [
                 "UNSW-CCRC"
             ],
-            "label": "CCAM-2507-SN",
+            "label": "CCAM-v2507-SN",
             "label_extended": "Conformal Cubic Atmospheric Model version 2507 with spectral nudging",
             "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
             "release_year": "2025",
-            "source_id": "CCAM-2507-SN",
+            "source_id": "CCAM-v2507-SN",
             "source_type": "AGCM"
         },
         "CCAM-v2105": {
