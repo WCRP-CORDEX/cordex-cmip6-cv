@@ -2,7 +2,7 @@
 
 - source_collection: activity_id
   is_required: true
-  attr_field_value_type: string
+  attr_field_value_type: string_array
 
 - source_collection: comment
   is_required: false
