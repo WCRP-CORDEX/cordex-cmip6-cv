@@ -2,7 +2,7 @@
   "activity_id": {
     "DD": "Dynamical downscaling on standard CORDEX continental domains (CORDEX-Domain)",
     "ESD": "Empirical-statistical downscaling",
-    "FPS-URB-RCC": "Flagship Pilot Study (FPS) URBan environments and Regional Climate Change (RCC)",
+    "FPS-URB-RCC": "Flagship Pilot Study (FPS) URBan environments and Regional Climate Change",
     "CPRCM": "Convection-Permitting Regional Climate Modelling"
    }
 }
