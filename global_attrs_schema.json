@@ -8,7 +8,9 @@
         "cordex6:activity_id": {
             "enum": [
                 "DD",
-                "ESD"
+                "ESD",
+                "FPS-URB-RCC",
+                "CPRCM"
             ]
         },
         "cordex6:contact": {
