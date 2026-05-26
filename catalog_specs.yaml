@@ -13,7 +13,7 @@ catalog_properties:
 
 dataset_properties:
   - source_collection: activity_id
-    catalog_field_value_type: string
+    catalog_field_value_type: string_array
     is_required: true
 
   - source_collection: contact
