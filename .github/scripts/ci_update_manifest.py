@@ -54,7 +54,9 @@ def main():
     manifest["release_notes"] = changelog + "\n"
 
     with open(args.manifest, "w") as f:
-        yaml.dump(manifest, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        yaml.dump(
+            manifest, f, default_flow_style=False, sort_keys=False, allow_unicode=True
+        )
 
     print(f"Updated manifest to version {args.version}")
 

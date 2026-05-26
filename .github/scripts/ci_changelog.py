@@ -30,8 +30,12 @@ EXCLUDE_PATTERNS = [
 def get_diff(base_sha):
     """Run git diff and return the name-status output."""
     cmd = [
-        "git", "diff", "--name-status", "--diff-filter=ACDMR",
-        f"{base_sha}..HEAD", "--",
+        "git",
+        "diff",
+        "--name-status",
+        "--diff-filter=ACDMR",
+        f"{base_sha}..HEAD",
+        "--",
     ] + EXCLUDE_PATTERNS
 
     result = subprocess.run(cmd, capture_output=True, text=True, check=True)

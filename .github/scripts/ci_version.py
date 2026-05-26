@@ -58,12 +58,20 @@ def main():
     parser = argparse.ArgumentParser(description="CI version helper")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("fetch-current", help="Read registry JSON from stdin, print current version")
-    sub.add_parser("fetch-universe", help="Read registry JSON from stdin, print universe version")
+    sub.add_parser(
+        "fetch-current", help="Read registry JSON from stdin, print current version"
+    )
+    sub.add_parser(
+        "fetch-universe", help="Read registry JSON from stdin, print universe version"
+    )
 
     next_parser = sub.add_parser("compute-next", help="Compute next semver version")
-    next_parser.add_argument("--current", required=True, help="Current version (e.g. 1.2.3)")
-    next_parser.add_argument("--bump", required=True, choices=["major", "minor", "patch"])
+    next_parser.add_argument(
+        "--current", required=True, help="Current version (e.g. 1.2.3)"
+    )
+    next_parser.add_argument(
+        "--bump", required=True, choices=["major", "minor", "patch"]
+    )
 
     args = parser.parse_args()
 
