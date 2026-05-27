@@ -9,8 +9,10 @@ esgvoc:
 release_notes: |
   - attr_specs.yaml: updated
   - catalog_specs.yaml: updated
+  - version_realization: updated collection model
   - activity_id: 2 added
   - institution_id: 4 added
+  - license: 1 modified, 1 removed
   - source_id: 4 added
   - tracking_id: 1 added
   - version_realization: 1 added, 1 removed
