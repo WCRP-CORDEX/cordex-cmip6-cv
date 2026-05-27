@@ -1,8 +1,9 @@
 {
-    "@context": {
-        "id": "@id",
-        "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/regex/",
-        "@vocab": "http://schema.org/"
-    }
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/variant_label/",
+    "@vocab": "http://schema.org/",
+    "variant_label": "https: //esgvoc.ipsl.fr/resource/universe/variant_label"
+  }
 }
