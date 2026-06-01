@@ -2,9 +2,13 @@ schema_version: '1'
 project:
   id: cordex-cmip6
   name: CORDEX-CMIP6 Controlled Vocabulary
-cv_version: 1.0.0
-universe_version: 1.0.0
+cv_version: 1.2.0
+universe_version: 1.0.7
 esgvoc:
   min_version: 4.0.0
 release_notes: |
-  Initial manifest.
+  - attr_specs.yaml: updated
+  - catalog_specs.yaml: updated
+  - drs_specs.yaml: updated
+  - license: updated collection model
+  - license: 1 modified
