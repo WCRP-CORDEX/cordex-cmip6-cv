@@ -2,9 +2,9 @@ schema_version: '1'
 project:
   id: cordex-cmip6
   name: CORDEX-CMIP6 Controlled Vocabulary
-cv_version: 1.1.2
-universe_version: 1.0.6
+cv_version: 1.0.0
+universe_version: 1.0.0
 esgvoc:
   min_version: 4.0.0
 release_notes: |
-  Rebuild for universe 1.0.6 (no local CV changes).
+  Initial manifest.
