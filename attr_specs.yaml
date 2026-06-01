@@ -1,8 +1,13 @@
 # NETCDF GLOBAL ATTRIBUTES SPECIFICATIONS
 
 - source_collection: activity_id
+<<<<<<< HEAD
   attr_field_value_type: string
   is_required: true
+=======
+  is_required: true
+  attr_field_value_type: string_array
+>>>>>>> 7d2670554cb7546c8a7dbd1014ffd3fd5cf6885e
 
 - source_collection: comment
   attr_field_value_type: string
