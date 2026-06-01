@@ -1,6 +1,5 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "cc_by_4.0",
-  "type": "license",
-  "more_info": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use/"
+    "@context": "000_context.jsonld",
+    "id": "cordex-cmip6-terms-of-use",
+    "type": "regex"
 }
