@@ -1,14 +1,8 @@
 {
     "@context": {
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/license/",
-        "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
-        "license": {
-            "@id": "https://schema.org/license"
-        },
-        "url": {
-            "@id": "https://schema.org/url"
-        }
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/regex/",
+        "regex": "https://esgvoc.ipsl.fr/resource/universe/regex"
     }
 }
