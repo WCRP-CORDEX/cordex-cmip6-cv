@@ -442,7 +442,8 @@
                 "TSMP1-140-E",
                 "WRF451Q",
                 "WRF461S-SN",
-                "WRF461T-SN"
+                "WRF461T-SN",
+                "WRF461U"
             ]
         },
         "cordex6:source_type": {
