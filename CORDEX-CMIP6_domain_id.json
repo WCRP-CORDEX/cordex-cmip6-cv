@@ -1,212 +1,316 @@
 {
     "domain_id": {
-        "SAM-50": {
-            "domain": "South America",
-            "domain_id": "SAM-50"
-        },
-        "CAM-50": {
-            "domain": "Central America",
-            "domain_id": "CAM-50"
-        },
-        "NAM-50": {
-            "domain": "North America",
-            "domain_id": "NAM-50"
-        },
-        "EUR-50": {
-            "domain": "Europe",
-            "domain_id": "EUR-50"
-        },
-        "AFR-50": {
-            "domain": "Africa",
-            "domain_id": "AFR-50"
-        },
-        "WAS-50": {
-            "domain": "South Asia",
-            "domain_id": "WAS-50"
-        },
-        "EAS-50": {
-            "domain": "East Asia",
-            "domain_id": "EAS-50"
-        },
-        "CAS-50": {
-            "domain": "Central Asia",
-            "domain_id": "CAS-50"
-        },
-        "AUS-50": {
-            "domain": "Australasia",
-            "domain_id": "AUS-50"
-        },
-        "MED-50": {
-            "domain": "Mediterranean",
-            "domain_id": "MED-50"
-        },
-        "MNA-50": {
-            "domain": "Middle East and North Africa",
-            "domain_id": "MNA-50"
-        },
-        "MNA-25": {
-            "domain": "Middle East and North Africa",
-            "domain_id": "MNA-25"
-        },
-        "SAM-12": {
-            "domain": "South America",
-            "domain_id": "SAM-12"
-        },
-        "CAM-12": {
-            "domain": "Central America",
-            "domain_id": "CAM-12"
-        },
-        "NAM-12": {
-            "domain": "North America",
-            "domain_id": "NAM-12"
-        },
-        "EUR-12": {
-            "domain": "Europe",
-            "domain_id": "EUR-12"
-        },
         "AFR-12": {
             "domain": "Africa",
             "domain_id": "AFR-12"
         },
-        "WAS-12": {
-            "domain": "South Asia",
-            "domain_id": "WAS-12"
-        },
-        "EAS-12": {
-            "domain": "East Asia",
-            "domain_id": "EAS-12"
-        },
-        "CAS-12": {
-            "domain": "Central Asia",
-            "domain_id": "CAS-12"
-        },
-        "AUS-12": {
-            "domain": "Australasia",
-            "domain_id": "AUS-12"
-        },
-        "ANT-12": {
-            "domain": "Antarctica",
-            "domain_id": "ANT-12"
-        },
-        "ARC-12": {
-            "domain": "Arctic",
-            "domain_id": "ARC-12"
-        },
-        "MED-12": {
-            "domain": "Mediterranean",
-            "domain_id": "MED-12"
-        },
-        "MNA-12": {
-            "domain": "Middle East and North Africa",
-            "domain_id": "MNA-12"
-        },
-        "SAM-25": {
-            "domain": "South America",
-            "domain_id": "SAM-25"
-        },
-        "CAM-25": {
-            "domain": "Central America",
-            "domain_id": "CAM-25"
-        },
-        "NAM-25": {
-            "domain": "North America",
-            "domain_id": "NAM-25"
-        },
-        "EUR-25": {
-            "domain": "Europe",
-            "domain_id": "EUR-25"
+        "AFR-18": {
+            "domain": "Africa",
+            "domain_id": "AFR-18"
         },
         "AFR-25": {
             "domain": "Africa",
             "domain_id": "AFR-25"
         },
-        "WAS-25": {
-            "domain": "South Asia",
-            "domain_id": "WAS-25"
-        },
-        "EAS-25": {
-            "domain": "East Asia",
-            "domain_id": "EAS-25"
-        },
-        "CAS-25": {
-            "domain": "Central Asia",
-            "domain_id": "CAS-25"
-        },
-        "AUS-25": {
-            "domain": "Australasia",
-            "domain_id": "AUS-25"
-        },
-        "SEA-25": {
-            "domain": "South East Asia",
-            "domain_id": "SEA-25"
-        },
-        "SEA-12": {
-            "domain": "South East Asia",
-            "domain_id": "SEA-12"
-        },
-        "SAM-50i": {
-            "domain": "South America",
-            "domain_id": "SAM-50i"
-        },
-        "CAM-50i": {
-            "domain": "Central America",
-            "domain_id": "CAM-50i"
-        },
-        "NAM-50i": {
-            "domain": "North America",
-            "domain_id": "NAM-50i"
-        },
-        "EUR-50i": {
-            "domain": "Europe",
-            "domain_id": "EUR-50i"
+        "AFR-50": {
+            "domain": "Africa",
+            "domain_id": "AFR-50"
         },
         "AFR-50i": {
             "domain": "Africa",
             "domain_id": "AFR-50i"
         },
-        "WAS-50i": {
-            "domain": "South Asia",
-            "domain_id": "WAS-50i"
+        "ANT-12": {
+            "domain": "Antarctica",
+            "domain_id": "ANT-12"
         },
-        "EAS-50i": {
-            "domain": "East Asia",
-            "domain_id": "EAS-50i"
-        },
-        "CAS-50i": {
-            "domain": "Central Asia",
-            "domain_id": "CAS-50i"
-        },
-        "AUS-50i": {
-            "domain": "Australasia",
-            "domain_id": "AUS-50i"
+        "ANT-12i": {
+            "domain": "Antarctica",
+            "domain_id": "ANT-12i"
         },
         "ANT-50i": {
             "domain": "Antarctica",
             "domain_id": "ANT-50i"
         },
+        "ARC-12": {
+            "domain": "Arctic",
+            "domain_id": "ARC-12"
+        },
+        "ARC-12i": {
+            "domain": "Arctic",
+            "domain_id": "ARC-12i"
+        },
         "ARC-50i": {
             "domain": "Arctic",
             "domain_id": "ARC-50i"
         },
-        "MED-50i": {
-            "domain": "Mediterranean",
-            "domain_id": "MED-50i"
+        "AUS-12": {
+            "domain": "Australasia",
+            "domain_id": "AUS-12"
         },
-        "MNA-50i": {
-            "domain": "Middle East and North Africa",
-            "domain_id": "MNA-50i"
+        "AUS-12i": {
+            "domain": "Australasia",
+            "domain_id": "AUS-12i"
         },
-        "MNA-25i": {
-            "domain": "Middle East and North Africa",
-            "domain_id": "MNA-25i"
+        "AUS-20i": {
+            "domain": "Australasia",
+            "domain_id": "AUS-20i"
+        },
+        "AUS-25": {
+            "domain": "Australasia",
+            "domain_id": "AUS-25"
+        },
+        "AUS-25i": {
+            "domain": "Australasia",
+            "domain_id": "AUS-25i"
+        },
+        "AUS-50": {
+            "domain": "Australasia",
+            "domain_id": "AUS-50"
+        },
+        "AUS-50i": {
+            "domain": "Australasia",
+            "domain_id": "AUS-50i"
+        },
+        "CAM-12": {
+            "domain": "Central America",
+            "domain_id": "CAM-12"
+        },
+        "CAM-12i": {
+            "domain": "Central America",
+            "domain_id": "CAM-12i"
+        },
+        "CAM-18": {
+            "domain": "Central America",
+            "domain_id": "CAM-18"
+        },
+        "CAM-25": {
+            "domain": "Central America",
+            "domain_id": "CAM-25"
+        },
+        "CAM-25i": {
+            "domain": "Central America",
+            "domain_id": "CAM-25i"
+        },
+        "CAM-50": {
+            "domain": "Central America",
+            "domain_id": "CAM-50"
+        },
+        "CAM-50i": {
+            "domain": "Central America",
+            "domain_id": "CAM-50i"
+        },
+        "CAS-12": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-12"
+        },
+        "CAS-12i": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-12i"
+        },
+        "CAS-25": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-25"
+        },
+        "CAS-25i": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-25i"
+        },
+        "CAS-50": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-50"
+        },
+        "CAS-50i": {
+            "domain": "Central Asia",
+            "domain_id": "CAS-50i"
+        },
+        "EAS-12": {
+            "domain": "East Asia",
+            "domain_id": "EAS-12"
+        },
+        "EAS-12i": {
+            "domain": "East Asia",
+            "domain_id": "EAS-12i"
+        },
+        "EAS-25": {
+            "domain": "East Asia",
+            "domain_id": "EAS-25"
+        },
+        "EAS-25i": {
+            "domain": "East Asia",
+            "domain_id": "EAS-25i"
+        },
+        "EAS-50": {
+            "domain": "East Asia",
+            "domain_id": "EAS-50"
+        },
+        "EAS-50i": {
+            "domain": "East Asia",
+            "domain_id": "EAS-50i"
+        },
+        "EUR-12": {
+            "domain": "Europe",
+            "domain_id": "EUR-12"
         },
         "EUR-12i": {
             "domain": "Europe",
             "domain_id": "EUR-12i"
         },
+        "EUR-25": {
+            "domain": "Europe",
+            "domain_id": "EUR-25"
+        },
+        "EUR-25i": {
+            "domain": "Europe",
+            "domain_id": "EUR-25i"
+        },
+        "EUR-50": {
+            "domain": "Europe",
+            "domain_id": "EUR-50"
+        },
+        "EUR-50i": {
+            "domain": "Europe",
+            "domain_id": "EUR-50i"
+        },
+        "MED-12": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-12"
+        },
+        "MED-12i": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-12i"
+        },
+        "MED-25": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-25"
+        },
+        "MED-25i": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-25i"
+        },
+        "MED-50": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-50"
+        },
+        "MED-50i": {
+            "domain": "Mediterranean",
+            "domain_id": "MED-50i"
+        },
+        "MNA-12": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-12"
+        },
+        "MNA-12i": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-12i"
+        },
+        "MNA-25": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-25"
+        },
+        "MNA-25i": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-25i"
+        },
+        "MNA-50": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-50"
+        },
+        "MNA-50i": {
+            "domain": "Middle East and North Africa",
+            "domain_id": "MNA-50i"
+        },
+        "NAM-12": {
+            "domain": "North America",
+            "domain_id": "NAM-12"
+        },
+        "NAM-12i": {
+            "domain": "North America",
+            "domain_id": "NAM-12i"
+        },
+        "NAM-25": {
+            "domain": "North America",
+            "domain_id": "NAM-25"
+        },
+        "NAM-25i": {
+            "domain": "North America",
+            "domain_id": "NAM-25i"
+        },
+        "NAM-50": {
+            "domain": "North America",
+            "domain_id": "NAM-50"
+        },
+        "NAM-50i": {
+            "domain": "North America",
+            "domain_id": "NAM-50i"
+        },
+        "SAM-12": {
+            "domain": "South America",
+            "domain_id": "SAM-12"
+        },
+        "SAM-12i": {
+            "domain": "South America",
+            "domain_id": "SAM-12i"
+        },
+        "SAM-25": {
+            "domain": "South America",
+            "domain_id": "SAM-25"
+        },
+        "SAM-25i": {
+            "domain": "South America",
+            "domain_id": "SAM-25i"
+        },
+        "SAM-50": {
+            "domain": "South America",
+            "domain_id": "SAM-50"
+        },
+        "SAM-50i": {
+            "domain": "South America",
+            "domain_id": "SAM-50i"
+        },
+        "SEA-12": {
+            "domain": "South East Asia",
+            "domain_id": "SEA-12"
+        },
+        "SEA-12i": {
+            "domain": "South East Asia",
+            "domain_id": "SEA-12i"
+        },
+        "SEA-25": {
+            "domain": "South East Asia",
+            "domain_id": "SEA-25"
+        },
         "SEA-25i": {
             "domain": "South East Asia",
             "domain_id": "SEA-25i"
+        },
+        "WAS-12": {
+            "domain": "South Asia",
+            "domain_id": "WAS-12"
+        },
+        "WAS-12i": {
+            "domain": "South Asia",
+            "domain_id": "WAS-12i"
+        },
+        "WAS-18": {
+            "domain": "South Asia",
+            "domain_id": "WAS-18"
+        },
+        "WAS-25": {
+            "domain": "South Asia",
+            "domain_id": "WAS-25"
+        },
+        "WAS-25i": {
+            "domain": "South Asia",
+            "domain_id": "WAS-25i"
+        },
+        "WAS-50": {
+            "domain": "South Asia",
+            "domain_id": "WAS-50"
+        },
+        "WAS-50i": {
+            "domain": "South Asia",
+            "domain_id": "WAS-50i"
         }
     }
 }
