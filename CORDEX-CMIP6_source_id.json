@@ -904,6 +904,24 @@
             "source_id": "WRF451Q",
             "source_type": "ARCM"
         },
+        "WRF451V": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://github.com/SMN-SENAMHI/CORDEX-CMIP6-SENAMHI",
+            "institution_id": [
+                "SENAMHI-PER"
+            ],
+            "label": "WRF v4.5.1-V",
+            "label_extended": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration V",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2023",
+            "source_id": "WRF451V",
+            "source_type": "ARCM"
+        },
         "WRF461S-SN": {
             "activity_participation": [
                 "DD"
