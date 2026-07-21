@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rhop_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "rhop_tavg-u-hxy-sea",
+  "cf_standard_name": "sea_water_potential_density",
+  "cf_units": "kg m-3",
+  "long_name": "Sea Water Potential Density",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.rhop",
+    "day.rhop"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ssa1000aer_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ssa1000aer_tavg-u-hxy-u",
+  "cf_standard_name": "single_scattering_albedo_in_air_due_to_ambient_aerosol_particles",
+  "cf_units": "1",
+  "long_name": "Aerosol Single Scattering Albedo at 1000 nm",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.ssa1000aer",
+    "day.ssa1000aer"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

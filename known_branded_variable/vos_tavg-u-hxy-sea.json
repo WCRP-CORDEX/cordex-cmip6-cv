@@ -1,0 +1,32 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vos_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "vos_tavg-u-hxy-sea",
+  "cf_standard_name": "surface_northward_sea_water_velocity",
+  "cf_units": "m s-1",
+  "long_name": "Surface Y Velocity",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "day.vos"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ],
+  "positive_direction": ""
+}

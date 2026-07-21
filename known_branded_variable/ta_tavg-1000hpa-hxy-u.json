@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta_tavg-1000hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ta_tavg-1000hPa-hxy-u",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "long_name": "Air Temperature at 1000hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "p1000"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.ta1000",
+    "day.ta1000"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

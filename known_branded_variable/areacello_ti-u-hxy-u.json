@@ -1,0 +1,31 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "areacello_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "areacello_ti-u-hxy-u",
+  "cf_standard_name": "cell_area",
+  "cf_units": "m2",
+  "long_name": "Grid-Cell Area for Ocean Variables",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: sum"
+  ],
+  "cell_measures": [],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "fx.areacello"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

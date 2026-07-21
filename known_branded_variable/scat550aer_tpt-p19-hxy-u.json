@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "scat550aer_tpt-p19-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "scat550aer_tpt-p19-hxy-u",
+  "cf_standard_name": "volume_scattering_coefficient_in_air_due_to_ambient_aerosol_particles",
+  "cf_units": "m-1",
+  "long_name": "Aerosol Scattering Coefficient",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "plev19"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "3hr.scat550aer"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hr"
+  ],
+  "positive_direction": ""
+}

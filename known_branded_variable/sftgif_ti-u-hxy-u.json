@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftgif_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "sftgif_ti-u-hxy-u",
+  "cf_standard_name": "land_ice_area_fraction",
+  "cf_units": "%",
+  "long_name": "Percentage of the Grid Cell Covered by Glacier",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "fx.sftgif"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

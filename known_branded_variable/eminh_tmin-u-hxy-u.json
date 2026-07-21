@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "eminh_tmin-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "eminh_tmin-u-hxy-u",
+  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_ammonia_due_to_emission",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Total Emission Rate of Ammonia",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean time: minimum"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.eminh3",
+    "day.eminh3"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": "up"
+}

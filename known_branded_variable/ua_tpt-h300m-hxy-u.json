@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ua_tpt-h300m-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ua_tpt-h300m-hxy-u",
+  "cf_standard_name": "eastward_wind",
+  "cf_units": "m s-1",
+  "long_name": "Eastward Wind at 300m",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "height300m"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "1hr.ua300m"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}

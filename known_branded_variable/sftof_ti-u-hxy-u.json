@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftof_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "sftof_ti-u-hxy-u",
+  "cf_standard_name": "sea_area_fraction",
+  "cf_units": "%",
+  "long_name": "Sea Area Percentage",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "fx.sftof"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

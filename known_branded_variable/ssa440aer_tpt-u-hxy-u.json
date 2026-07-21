@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ssa440aer_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ssa440aer_tpt-u-hxy-u",
+  "cf_standard_name": "single_scattering_albedo_in_air_due_to_ambient_aerosol_particles",
+  "cf_units": "1",
+  "long_name": "Aerosol Single Scattering Albedo at 440 nm",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "3hr.ssa440aer"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hr"
+  ],
+  "positive_direction": ""
+}

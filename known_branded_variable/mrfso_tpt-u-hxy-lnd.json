@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrfso_tpt-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "mrfso_tpt-u-hxy-lnd",
+  "cf_standard_name": "soil_frozen_water_content",
+  "cf_units": "kg m-2",
+  "long_name": "Soil Frozen Water Content",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean where land time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.mrfso"
+  ],
+  "table_id": [
+    "6hr"
+  ],
+  "frequency": [
+    "6hr"
+  ],
+  "positive_direction": ""
+}

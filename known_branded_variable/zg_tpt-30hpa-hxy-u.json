@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zg_tpt-30hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "zg_tpt-30hPa-hxy-u",
+  "cf_standard_name": "geopotential_height",
+  "cf_units": "m",
+  "long_name": "Geopotential Height at 30hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "p30"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.zg30",
+    "3hr.zg30"
+  ],
+  "table_id": [
+    "6hr",
+    "3hr"
+  ],
+  "frequency": [
+    "6hr",
+    "3hr"
+  ],
+  "positive_direction": ""
+}

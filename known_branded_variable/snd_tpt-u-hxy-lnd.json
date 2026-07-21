@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "snd_tpt-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "snd_tpt-u-hxy-lnd",
+  "cf_standard_name": "surface_snow_thickness",
+  "cf_units": "m",
+  "long_name": "Snow Depth",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean where land time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.snd"
+  ],
+  "table_id": [
+    "6hr"
+  ],
+  "frequency": [
+    "6hr"
+  ],
+  "positive_direction": ""
+}

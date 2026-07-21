@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clh_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "clh_tavg-u-hxy-u",
+  "cf_standard_name": "cloud_area_fraction_in_atmosphere_layer",
+  "cf_units": "%",
+  "long_name": "High Level Cloud Fraction",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.clh",
+    "day.clh",
+    "6hr.clh"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": ""
+}

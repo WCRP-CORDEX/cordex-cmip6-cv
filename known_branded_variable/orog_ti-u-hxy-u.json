@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "orog_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "orog_ti-u-hxy-u",
+  "cf_standard_name": "surface_altitude",
+  "cf_units": "m",
+  "long_name": "Surface Altitude",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "fx.orog"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

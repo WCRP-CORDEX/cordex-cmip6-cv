@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tob_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "tob_tavg-u-hxy-sea",
+  "cf_standard_name": "sea_water_potential_temperature_at_sea_floor",
+  "cf_units": "degC",
+  "long_name": "Sea Water Potential Temperature at Sea Floor",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.tob",
+    "day.tob"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

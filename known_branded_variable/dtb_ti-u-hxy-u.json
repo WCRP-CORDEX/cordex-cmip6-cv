@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dtb_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "dtb_ti-u-hxy-u",
+  "cf_standard_name": "bedrock_depth_below_ground_level",
+  "cf_units": "m",
+  "long_name": "Depth to Bedrock",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "fx.dtb"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

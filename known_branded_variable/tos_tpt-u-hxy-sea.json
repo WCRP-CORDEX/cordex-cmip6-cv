@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tos_tpt-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "tos_tpt-u-hxy-sea",
+  "cf_standard_name": "sea_surface_temperature",
+  "cf_units": "degC",
+  "long_name": "Sea Surface Temperature",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: point"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "1hr.tos"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}

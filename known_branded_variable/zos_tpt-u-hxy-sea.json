@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zos_tpt-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "zos_tpt-u-hxy-sea",
+  "cf_standard_name": "sea_surface_height_above_geoid",
+  "cf_units": "m",
+  "long_name": "Sea Surface Height Above Geoid",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: point"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "1hr.zos"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}

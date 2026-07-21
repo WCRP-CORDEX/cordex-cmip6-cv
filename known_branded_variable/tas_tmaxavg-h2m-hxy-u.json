@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tas_tmaxavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "tas_tmaxavg-h2m-hxy-u",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "long_name": "Daily Maximum Near-Surface Air Temperature",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "height2m"
+  ],
+  "cell_methods": [
+    "area: mean time: maximum within days time: mean over days"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.tasmax"
+  ],
+  "table_id": [
+    "mon"
+  ],
+  "frequency": [
+    "mon"
+  ],
+  "positive_direction": ""
+}

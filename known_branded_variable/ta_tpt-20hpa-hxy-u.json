@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta_tpt-20hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ta_tpt-20hPa-hxy-u",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "long_name": "Air Temperature at 20hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "p20"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.ta20",
+    "3hr.ta20"
+  ],
+  "table_id": [
+    "6hr",
+    "3hr"
+  ],
+  "frequency": [
+    "6hr",
+    "3hr"
+  ],
+  "positive_direction": ""
+}

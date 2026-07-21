@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thetao_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "thetao_tavg-ol-hxy-sea",
+  "cf_standard_name": "sea_water_potential_temperature",
+  "cf_units": "degC",
+  "long_name": "Sea Water Potential Temperature",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello volume: volcello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.thetao",
+    "day.thetao"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

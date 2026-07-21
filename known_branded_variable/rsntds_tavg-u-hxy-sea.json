@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsntds_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "rsntds_tavg-u-hxy-sea",
+  "cf_standard_name": "net_downward_shortwave_flux_at_sea_water_surface",
+  "cf_units": "W m-2",
+  "long_name": "Net Downward Shortwave Radiation at Sea Water Surface",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.rsntds",
+    "day.rsntds"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": "down"
+}

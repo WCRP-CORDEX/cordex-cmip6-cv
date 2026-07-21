@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "difvho_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "difvho_tavg-ol-hxy-sea",
+  "cf_standard_name": "ocean_vertical_heat_diffusivity",
+  "cf_units": "m2 s-1",
+  "long_name": "Vertical Eddy Diffusivity",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time2"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello volume: volcello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "day.difvho"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ],
+  "positive_direction": ""
+}

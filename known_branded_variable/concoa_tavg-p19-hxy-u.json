@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "concoa_tavg-p19-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "concoa_tavg-p19-hxy-u",
+  "cf_standard_name": "mass_concentration_of_particulate_organic_matter_dry_aerosol_particles_in_air",
+  "cf_units": "kg m-3",
+  "long_name": "Concentration of Organic Matter",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "plev19"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.concoa",
+    "day.concoa"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

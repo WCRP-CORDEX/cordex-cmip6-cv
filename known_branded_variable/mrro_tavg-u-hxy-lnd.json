@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrro_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "mrro_tavg-u-hxy-lnd",
+  "cf_standard_name": "runoff_flux",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Total Runoff",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where land time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.mrro",
+    "day.mrro",
+    "6hr.mrro"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": ""
+}

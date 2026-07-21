@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sednh_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "sednh_tavg-u-hxy-u",
+  "cf_standard_name": "minus_tendency_of_atmosphere_mass_content_of_ammonium_dry_aerosol_particles_due_to_dry_deposition",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Sedimentation Rate of Ammonium",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.sednh4",
+    "day.sednh4",
+    "1hr.sednh4"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "1hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "1hr"
+  ],
+  "positive_direction": "down"
+}

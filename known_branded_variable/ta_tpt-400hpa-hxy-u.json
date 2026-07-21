@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta_tpt-400hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ta_tpt-400hPa-hxy-u",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "long_name": "Air Temperature at 400hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "p400"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.ta400",
+    "3hr.ta400"
+  ],
+  "table_id": [
+    "6hr",
+    "3hr"
+  ],
+  "frequency": [
+    "6hr",
+    "3hr"
+  ],
+  "positive_direction": ""
+}

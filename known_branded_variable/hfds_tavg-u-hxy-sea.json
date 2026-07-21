@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfds_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "hfds_tavg-u-hxy-sea",
+  "cf_standard_name": "surface_downward_heat_flux_in_sea_water",
+  "cf_units": "W m-2",
+  "long_name": "Downward Heat Flux at Sea Water Surface",
+  "data_type": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.hfds",
+    "day.hfds"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": "down"
+}

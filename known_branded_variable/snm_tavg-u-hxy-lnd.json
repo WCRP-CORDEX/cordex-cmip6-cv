@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "snm_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "snm_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_snow_melt_flux",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Surface Snow Melt",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where land time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.snm",
+    "day.snm",
+    "6hr.snm"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": ""
+}
