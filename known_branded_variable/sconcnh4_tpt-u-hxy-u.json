@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sconcnh4_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "sconcnh4_tpt-u-hxy-u",
+  "cf_standard_name": "mass_concentration_of_ammonium_dry_aerosol_particles_in_air",
+  "cf_units": "kg m-3",
+  "long_name": "Surface Concentration of Ammonium",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "1hr.sconcnh4"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}
