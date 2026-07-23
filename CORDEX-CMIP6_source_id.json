@@ -638,6 +638,7 @@
             "further_info_url": "https://www.clm-community.eu",
             "institution_id": [
                 "CLMcom-DWD",
+                "CLMcom-GERICS",
                 "CLMcom-Hereon",
                 "CLMcom-KIT",
                 "CLMcom-BTU"
@@ -967,6 +968,7 @@
             ],
             "further_info_url": "https://github.com/CORDEX-WRF-community/cordex-core-cmip6",
             "institution_id": [
+                "CESGA",
                 "CYI",
                 "IDL-FCUL",
                 "IFCA",
