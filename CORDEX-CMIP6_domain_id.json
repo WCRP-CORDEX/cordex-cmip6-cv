@@ -20,6 +20,10 @@
             "domain": "Africa",
             "domain_id": "AFR-50i"
         },
+        "ALPX-3": {
+            "domain": "Alps Extended",
+            "domain_id": "ALPX-3"
+        },
         "ANT-12": {
             "domain": "Antarctica",
             "domain_id": "ANT-12"
@@ -123,6 +127,10 @@
         "CAS-50i": {
             "domain": "Central Asia",
             "domain_id": "CAS-50i"
+        },
+        "CEUX-3": {
+            "domain": "Central Europe Extended",
+            "domain_id": "CEUX-3"
         },
         "EAS-12": {
             "domain": "East Asia",
@@ -243,6 +251,14 @@
         "NAM-50i": {
             "domain": "North America",
             "domain_id": "NAM-50i"
+        },
+        "NSEA-3": {
+            "domain": "North Sea",
+            "domain_id": "NSEA-3"
+        },
+        "PARIS-3": {
+            "domain": "Paris",
+            "domain_id": "PARIS-3"
         },
         "SAM-12": {
             "domain": "South America",
