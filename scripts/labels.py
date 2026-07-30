@@ -3,7 +3,7 @@ import sys
 
 issue = sys.argv[1]
 command = ["gh", "api", "--jq", ".labels.[].name", issue]
-result = subprocess.run(command, stdout=subprocess.PIPE)
+result = subprocess.run(command, stdout=subprocess.PIPE, check=False)
 labels = result.stdout.decode("utf-8").splitlines()
 
 for lb in labels:

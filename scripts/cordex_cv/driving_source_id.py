@@ -18,12 +18,12 @@ def create_driving_source_attrs(cmip6_source_id):
 
 
 def era5_driving_source_id():
-    return dict(
-        driving_institution_id=["ECMWF"],
-        driving_source_id="ERA5",
-        driving_source="ECMWF Reanalysis v5",
-        driving_experiment_id=["evaluation"],
-    )
+    return {
+        "driving_institution_id": ["ECMWF"],
+        "driving_source_id": "ERA5",
+        "driving_source": "ECMWF Reanalysis v5",
+        "driving_experiment_id": ["evaluation"],
+    }
 
 
 def create_driving_source_id():
@@ -34,8 +34,8 @@ def create_driving_source_id():
 
     """
     cmip6_cv = read_json_url(CMIP6_CV_URL)
-    driving_source_id = dict(
-        driving_source_id=create_driving_source_attrs(cmip6_cv["CV"]["source_id"])
-    )
+    driving_source_id = {
+        "driving_source_id": create_driving_source_attrs(cmip6_cv["CV"]["source_id"])
+    }
     driving_source_id["driving_source_id"]["ERA5"] = era5_driving_source_id()
     return write_json(f"{table_prefix}_driving_source_id.json", driving_source_id)

@@ -2,7 +2,7 @@ import json
 from os import path as op
 
 import pytest
-from cordex_cv import update_table
+from cordex_cv import DuplicateEntryError, update_table
 
 table_dir = op.dirname(op.dirname(op.dirname(op.abspath(__file__))))
 
@@ -12,7 +12,7 @@ def test_update_table():
     text = '{"institution_id": "GERICS", "institution": "Climate Service Center"}'
     entry = json.loads(text)
     table_file = op.join(table_dir, "CORDEX-CMIP6_institution_id.json")
-    with pytest.raises(Exception):
+    with pytest.raises(DuplicateEntryError):
         update_table(entry, table_file, "institution_id")
 
     text = '{"institution_id": "INSTITUTE", "institution": "My institute"}'
@@ -30,7 +30,7 @@ def test_update_table():
     )
     table_file = op.join(table_dir, "CORDEX-CMIP6_source_id.json")
     entry = json.loads(text)
-    with pytest.raises(Exception):
+    with pytest.raises(DuplicateEntryError):
         update_table(entry, table_file, "source_id")
 
     text = (
