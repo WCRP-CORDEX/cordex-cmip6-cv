@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sitemptop",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Report surface temperature of snow where snow covers the sea ice.",
+    "long_name": "Surface Temperature of Sea Ice"
 }

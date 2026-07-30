@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrsfl",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "in each soil layer, the mass of water in ice phase.  Reported as 'missing' for grid cells occupied entirely by 'sea'"
 }

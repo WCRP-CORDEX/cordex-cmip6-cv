@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "wetno3",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Wet Deposition Rate of Nitrate"
 }

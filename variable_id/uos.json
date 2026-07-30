@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "uos",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface X Velocity",
+    "standard_name": "surface_eastward_sea_water_velocity"
 }

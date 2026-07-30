@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "zg10",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Geopotential height on the 10hPa surface",
+    "long_name": "Geopotential Height at 10hPa"
 }

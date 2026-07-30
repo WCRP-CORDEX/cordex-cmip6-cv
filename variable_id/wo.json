@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "wo",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "A velocity is a vector quantity. 'Upward' indicates a vector component which is positive when directed upward (negative downward).",
+    "long_name": "Sea Water Upward Velocity"
 }

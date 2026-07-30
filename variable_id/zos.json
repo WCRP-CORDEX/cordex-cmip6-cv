@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "zos",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "This is the dynamic sea level, so should have zero global area mean. It should not include inverse barometer depressions from sea ice."
 }

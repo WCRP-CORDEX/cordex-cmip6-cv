@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rluscsaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface Upwelling Clear-Sky, Aerosol-Free Longwave Radiation"
 }

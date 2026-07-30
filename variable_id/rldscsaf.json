@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rldscsaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface Downwelling Clear-Sky, Aerosol-Free Longwave Radiation",
+    "standard_name": "surface_downwelling_longwave_flux_in_air_assuming_clear_sky"
 }

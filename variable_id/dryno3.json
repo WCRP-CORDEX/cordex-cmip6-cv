@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "dryno3",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "long_name": "Dry Deposition Rate of Nitrate",
+    "standard_name": "tendency_of_atmosphere_mass_content_of_nitrate_dry_aerosol_particles_due_to_dry_deposition",
+    "units": "kg m-2 s-1"
 }

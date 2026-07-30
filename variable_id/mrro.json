@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrro",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "The total run-off (including drainage through the base of the soil model) per unit area leaving the land portion of the grid cell.",
+    "long_name": "Total Runoff"
 }

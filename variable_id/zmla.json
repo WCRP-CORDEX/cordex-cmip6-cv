@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "zmla",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "The atmosphere boundary layer thickness is the 'depth' or 'height' of the (atmosphere) planetary boundary layer.",
+    "long_name": "Height of Boundary Layer"
 }

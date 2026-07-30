@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrfsos",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Frozen Water Content in Upper Portion of Soil Column"
 }

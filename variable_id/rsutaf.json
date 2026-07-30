@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsutaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "standard_name": "toa_outgoing_shortwave_flux_assuming_no_aerosol"
 }

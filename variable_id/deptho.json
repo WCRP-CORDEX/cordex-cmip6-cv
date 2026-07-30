@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "deptho",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Ocean bathymetry. Reported here is the sea floor depth for present day relative to z=0 geoid. Reported as missing for land grid cells."
 }

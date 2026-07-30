@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "emiso4",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "daily output only if daily variations in emissions",
+    "long_name": "Total Emission Rate of Sulfate"
 }

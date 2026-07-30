@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "od550nh4",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "1hr optional (considered for Tier1)"
 }
