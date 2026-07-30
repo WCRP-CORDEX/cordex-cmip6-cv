@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrsos_tpt-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "mrsos_tpt-u-hxy-lnd",
+  "cf_standard_name": "mass_content_of_water_in_soil_layer",
+  "cf_units": "kg m-2",
+  "long_name": "Moisture in Upper Portion of Soil Column",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean where land time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "3hr.mrsos",
+    "1hr.mrsos"
+  ],
+  "table_id": [
+    "3hr",
+    "1hr"
+  ],
+  "frequency": [
+    "3hr",
+    "1hr"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "toz_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "toz_tavg-u-hxy-u",
+  "cf_standard_name": "equivalent_thickness_at_stp_of_atmosphere_ozone_content",
+  "cf_units": "m",
+  "long_name": "Total Column Ozone",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.toz",
+    "day.toz"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

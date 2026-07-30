@@ -1,0 +1,31 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "areacella_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "areacella_ti-u-hxy-u",
+  "cf_standard_name": "cell_area",
+  "cf_units": "m2",
+  "long_name": "Atmosphere Grid-Cell Area",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: sum"
+  ],
+  "cell_measures": [],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "fx.areacella"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

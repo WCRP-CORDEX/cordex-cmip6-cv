@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsdsaf_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "rsdsaf_tavg-u-hxy-u",
+  "cf_standard_name": "surface_downwelling_shortwave_flux_in_air",
+  "cf_units": "W m-2",
+  "long_name": "Surface Downwelling Aerosol-Free Shortwave Radiation",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.rsdsaf",
+    "day.rsdsaf",
+    "6hr.rsdsaf"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": "down"
+}

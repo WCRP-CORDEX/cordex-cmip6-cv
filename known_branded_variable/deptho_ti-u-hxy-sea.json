@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "deptho_ti-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "deptho_ti-u-hxy-sea",
+  "cf_standard_name": "sea_floor_depth_below_geoid",
+  "cf_units": "m",
+  "long_name": "Sea Floor Depth Below Geoid",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean where sea"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "fx.deptho"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

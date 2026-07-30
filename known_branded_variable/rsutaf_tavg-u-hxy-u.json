@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsutaf_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "rsutaf_tavg-u-hxy-u",
+  "cf_standard_name": "toa_outgoing_shortwave_flux_assuming_no_aerosol",
+  "cf_units": "W m-2",
+  "long_name": "TOA Outgoing Aerosol-Free Shortwave Radiation",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.rsutaf",
+    "day.rsutaf",
+    "6hr.rsutaf"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": "up"
+}

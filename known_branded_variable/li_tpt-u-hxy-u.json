@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "li_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "li_tpt-u-hxy-u",
+  "cf_standard_name": "temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface",
+  "cf_units": "K",
+  "long_name": "Lifted Index",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "1hr.li"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}

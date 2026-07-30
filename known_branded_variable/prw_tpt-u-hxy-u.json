@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "prw_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "prw_tpt-u-hxy-u",
+  "cf_standard_name": "atmosphere_mass_content_of_water_vapor",
+  "cf_units": "kg m-2",
+  "long_name": "Water Vapor Path",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "3hr.prw",
+    "1hr.prw"
+  ],
+  "table_id": [
+    "3hr",
+    "1hr"
+  ],
+  "frequency": [
+    "3hr",
+    "1hr"
+  ],
+  "positive_direction": ""
+}

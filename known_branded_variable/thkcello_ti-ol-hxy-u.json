@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thkcello_ti-ol-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "thkcello_ti-ol-hxy-u",
+  "cf_standard_name": "cell_thickness",
+  "cf_units": "m",
+  "long_name": "Ocean Model Cell Thickness",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel"
+  ],
+  "cell_methods": [
+    "area: mean"
+  ],
+  "cell_measures": [
+    "area: areacello volume: volcello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "fx.thkcello"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "psl_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "psl_tpt-u-hxy-u",
+  "cf_standard_name": "air_pressure_at_mean_sea_level",
+  "cf_units": "Pa",
+  "long_name": "Sea Level Pressure",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "3hr.psl",
+    "1hr.psl"
+  ],
+  "table_id": [
+    "3hr",
+    "1hr"
+  ],
+  "frequency": [
+    "3hr",
+    "1hr"
+  ],
+  "positive_direction": ""
+}

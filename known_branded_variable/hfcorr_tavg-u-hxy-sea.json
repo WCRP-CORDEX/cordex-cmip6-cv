@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfcorr_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "hfcorr_tavg-u-hxy-sea",
+  "cf_standard_name": "heat_flux_correction",
+  "cf_units": "W m-2",
+  "long_name": "Heat Flux Correction",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.hfcorr",
+    "day.hfcorr"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": "down"
+}

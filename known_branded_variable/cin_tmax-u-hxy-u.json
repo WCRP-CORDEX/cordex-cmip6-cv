@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cin_tmax-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "cin_tmax-u-hxy-u",
+  "cf_standard_name": "atmosphere_convective_inhibition_wrt_surface",
+  "cf_units": "J kg-1",
+  "long_name": "Daily Maximum Convective Inhibition",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean time: maximum"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "day.cinmax"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ],
+  "positive_direction": ""
+}

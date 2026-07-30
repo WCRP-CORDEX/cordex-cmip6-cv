@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfcwind_tmax-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "sfcWind_tmax-h10m-hxy-u",
+  "cf_standard_name": "wind_speed",
+  "cf_units": "m s-1",
+  "long_name": "Daily Maximum Near-Surface Wind Speed",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "height10m"
+  ],
+  "cell_methods": [
+    "area: mean time: maximum"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "day.sfcWindmax"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ],
+  "positive_direction": ""
+}

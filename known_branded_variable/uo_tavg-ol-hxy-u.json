@@ -1,0 +1,35 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "uo_tavg-ol-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "uo_tavg-ol-hxy-u",
+  "cf_standard_name": "sea_water_x_velocity",
+  "cf_units": "m s-1",
+  "long_name": "Sea Water X Velocity",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": [
+    "time: mean"
+  ],
+  "cell_measures": [
+    "--OPT"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.uo"
+  ],
+  "table_id": [
+    "mon"
+  ],
+  "frequency": [
+    "mon"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "volcello_ti-ol-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "volcello_ti-ol-hxy-u",
+  "cf_standard_name": "ocean_volume",
+  "cf_units": "m3",
+  "long_name": "Ocean Grid-Cell Volume",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel"
+  ],
+  "cell_methods": [
+    "area: sum"
+  ],
+  "cell_measures": [
+    "area: areacello volume: volcello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "fx.volcello"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "od870no3_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "od870no3_tavg-u-hxy-u",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_nitrate_ambient_aerosol_particles",
+  "cf_units": "1",
+  "long_name": "Nitrate Aerosol Optical Thickness at 870nm",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.od870no3",
+    "day.od870no3"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

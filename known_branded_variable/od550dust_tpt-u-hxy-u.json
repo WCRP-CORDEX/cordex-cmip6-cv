@@ -1,0 +1,34 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "od550dust_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "od550dust_tpt-u-hxy-u",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_dust_ambient_aerosol_particles",
+  "cf_units": "1",
+  "long_name": "Dust Aerosol Optical Thickness at 550nm",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "1hr.od550dust"
+  ],
+  "table_id": [
+    "1hr"
+  ],
+  "frequency": [
+    "1hr"
+  ],
+  "positive_direction": ""
+}

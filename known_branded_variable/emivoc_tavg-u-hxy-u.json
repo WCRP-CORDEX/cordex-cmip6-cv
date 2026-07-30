@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "emivoc_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "emivoc_tavg-u-hxy-u",
+  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_nmvoc_due_to_emission",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Total Emission Rate of NMVOC",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.emivoc",
+    "day.emivoc"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": "up"
+}

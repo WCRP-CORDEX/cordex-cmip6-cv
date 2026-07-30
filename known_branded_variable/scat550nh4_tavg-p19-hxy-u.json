@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "scat550nh4_tavg-p19-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "scat550nh4_tavg-p19-hxy-u",
+  "cf_standard_name": "volume_scattering_coefficient_in_air_due_to_ambient_aerosol_particles",
+  "cf_units": "m-1",
+  "long_name": "Ammonium Aerosol Scattering Coefficient",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "plev19"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "aerosol"
+  ],
+  "compound_name": [
+    "mon.scat550nh4",
+    "day.scat550nh4"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

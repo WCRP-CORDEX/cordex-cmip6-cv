@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "friver_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "friver_tavg-u-hxy-sea",
+  "cf_standard_name": "water_flux_into_sea_water_from_rivers",
+  "cf_units": "kg m-2 s-1",
+  "long_name": "Water Flux into Sea Water from Rivers",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.friver",
+    "day.friver"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ua_tpt-30hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "ua_tpt-30hPa-hxy-u",
+  "cf_standard_name": "eastward_wind",
+  "cf_units": "m s-1",
+  "long_name": "Eastward Wind at 30hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "p30"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.ua30",
+    "3hr.ua30"
+  ],
+  "table_id": [
+    "6hr",
+    "3hr"
+  ],
+  "frequency": [
+    "6hr",
+    "3hr"
+  ],
+  "positive_direction": ""
+}

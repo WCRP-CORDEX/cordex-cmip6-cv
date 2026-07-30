@@ -1,0 +1,33 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrsofc_ti-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "mrsofc_ti-u-hxy-lnd",
+  "cf_standard_name": "soil_moisture_content_at_field_capacity",
+  "cf_units": "kg m-2",
+  "long_name": "Capacity of Soil to Store Water  (Field Capacity)",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": [
+    "area: mean where land"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "fx.mrsofc"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ],
+  "positive_direction": ""
+}

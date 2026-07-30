@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cape_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "cape_tavg-u-hxy-u",
+  "cf_standard_name": "atmosphere_convective_available_potential_energy_wrt_surface",
+  "cf_units": "J kg-1",
+  "long_name": "Convective Available Potential Energy",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.cape",
+    "day.cape"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

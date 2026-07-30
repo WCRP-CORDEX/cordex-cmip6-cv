@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sos_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "sos_tavg-u-hxy-sea",
+  "cf_standard_name": "sea_surface_salinity",
+  "cf_units": "0.001",
+  "long_name": "Sea Surface Salinity",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where sea time: mean"
+  ],
+  "cell_measures": [
+    "area: areacello"
+  ],
+  "realm": [
+    "ocean"
+  ],
+  "compound_name": [
+    "mon.sos",
+    "day.sos"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}

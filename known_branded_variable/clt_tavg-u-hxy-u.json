@@ -1,0 +1,43 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clt_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "clt_tavg-u-hxy-u",
+  "cf_standard_name": "cloud_area_fraction",
+  "cf_units": "%",
+  "long_name": "Total Cloud Cover Percentage",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.clt",
+    "day.clt",
+    "3hr.clt",
+    "1hr.clt"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "3hr",
+    "1hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "3hr",
+    "1hr"
+  ],
+  "positive_direction": ""
+}

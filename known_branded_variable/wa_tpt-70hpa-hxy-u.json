@@ -1,0 +1,38 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wa_tpt-70hpa-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "wa_tpt-70hPa-hxy-u",
+  "cf_standard_name": "upward_air_velocity",
+  "cf_units": "m s-1",
+  "long_name": "Upward Air Velocity at 70hPa",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "p70"
+  ],
+  "cell_methods": [
+    "area: mean time: point"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "6hr.wa70",
+    "3hr.wa70"
+  ],
+  "table_id": [
+    "6hr",
+    "3hr"
+  ],
+  "frequency": [
+    "6hr",
+    "3hr"
+  ],
+  "positive_direction": "up"
+}

@@ -1,0 +1,40 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsutcs_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "rsutcs_tavg-u-hxy-u",
+  "cf_standard_name": "toa_outgoing_shortwave_flux_assuming_clear_sky",
+  "cf_units": "W m-2",
+  "long_name": "TOA Outgoing Clear-Sky Shortwave Radiation",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: time: mean"
+  ],
+  "cell_measures": [
+    "area: areacella"
+  ],
+  "realm": [
+    "atmos"
+  ],
+  "compound_name": [
+    "mon.rsutcs",
+    "day.rsutcs",
+    "6hr.rsutcs"
+  ],
+  "table_id": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ],
+  "positive_direction": "up"
+}

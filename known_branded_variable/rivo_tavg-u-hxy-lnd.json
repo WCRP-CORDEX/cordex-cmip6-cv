@@ -1,0 +1,37 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rivo_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "rivo_tavg-u-hxy-lnd",
+  "cf_standard_name": "outgoing_water_volume_transport_along_river_channel",
+  "cf_units": "m3 s-1",
+  "long_name": "River Discharge",
+  "data_type": "real",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": [
+    "area: mean where land time: mean"
+  ],
+  "cell_measures": [
+    "area: areacellr"
+  ],
+  "realm": [
+    "river"
+  ],
+  "compound_name": [
+    "mon.rivo",
+    "day.rivo"
+  ],
+  "table_id": [
+    "mon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ],
+  "positive_direction": ""
+}
