@@ -1,0 +1,6 @@
+{
+  "id": "prc_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Convective precipitation at surface; includes both liquid and solid phases."
+}

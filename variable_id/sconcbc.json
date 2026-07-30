@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sconcbc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface Concentration of Black Carbon",
+    "standard_name": "mass_concentration_of_elemental_carbon_dry_aerosol_particles_in_air"
 }

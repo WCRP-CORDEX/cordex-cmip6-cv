@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sedso4",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "only if sedimentation is applied for this aerosol"
 }

@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "ta500",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Temperature on the 500 hPa surface",
+    "long_name": "Air Temperature at 500hPa"
 }

@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "hfcorr",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Flux correction is also called 'flux adjustment'. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, 'flux' implies per unit area, called 'flux density' in physics.",
+    "long_name": "Heat Flux Correction"
 }

@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "ts",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Temperature of the lower boundary of the atmosphere"
 }

@@ -1,0 +1,11 @@
+{
+  "id": "abs550aer_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "1hr optional (considered for Tier1)",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ]
+}

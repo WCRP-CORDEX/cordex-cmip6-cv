@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "tas",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "near-surface (usually, 2 meter) air temperature",
+    "long_name": "Near-Surface Air Temperature"
 }

@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrros",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "The total surface run off leaving the land portion of the grid cell (excluding drainage through the base of the soil model)."
 }

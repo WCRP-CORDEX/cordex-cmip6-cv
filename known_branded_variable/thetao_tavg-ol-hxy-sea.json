@@ -1,0 +1,6 @@
+{
+  "id": "thetao_tavg-ol-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Diagnostic should be contributed even for models using conservative temperature as prognostic field."
+}

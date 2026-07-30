@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsds",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Surface solar irradiance for UV calculations.",
+    "long_name": "Surface Downwelling Shortwave Radiation"
 }

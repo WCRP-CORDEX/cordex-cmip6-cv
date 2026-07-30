@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "ext550dust",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Dust Aerosol Extinction Coefficient",
+    "standard_name": "volume_extinction_coefficient_in_air_due_to_ambient_aerosol"
 }

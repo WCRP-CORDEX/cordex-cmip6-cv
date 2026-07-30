@@ -1,0 +1,11 @@
+{
+  "id": "mlotst_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Sigma T is potential density referenced to ocean surface.",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ]
+}

@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sftlaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Percentage of the Grid Cell Occupied by Lake",
+    "units": "%"
 }

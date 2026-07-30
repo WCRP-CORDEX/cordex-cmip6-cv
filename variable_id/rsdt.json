@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsdt",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Shortwave radiation incident at the top of the atmosphere"
 }

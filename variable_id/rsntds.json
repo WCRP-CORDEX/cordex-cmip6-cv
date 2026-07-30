@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsntds",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "This is the flux into the surface of liquid sea water only. This excludes shortwave flux absorbed by sea ice, but includes any light that passes through the ice and is absorbed by the ocean."
 }

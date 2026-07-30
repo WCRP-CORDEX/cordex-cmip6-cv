@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "emivoc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "daily output only if daily variations in emissions"
 }

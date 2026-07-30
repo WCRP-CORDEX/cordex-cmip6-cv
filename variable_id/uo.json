@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "uo",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Prognostic x-ward velocity component resolved by the model."
 }

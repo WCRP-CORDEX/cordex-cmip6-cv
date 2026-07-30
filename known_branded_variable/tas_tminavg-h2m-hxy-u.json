@@ -1,0 +1,12 @@
+{
+  "id": "tas_tminavg-h2m-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "minimum near-surface (usually, 2 meter) air temperature (add cell_method attribute 'time: min')",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "height2m"
+  ]
+}

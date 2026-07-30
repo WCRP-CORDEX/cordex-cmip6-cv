@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "scat550bc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Black Carbon Aerosol Scattering Coefficient",
+    "standard_name": "volume_scattering_coefficient_in_air_due_to_ambient_aerosol_particles"
 }

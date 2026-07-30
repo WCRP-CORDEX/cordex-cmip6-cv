@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "zg250",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Geopotential Height at 250hPa"
 }

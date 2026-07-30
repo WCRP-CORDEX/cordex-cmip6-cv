@@ -1,0 +1,8 @@
+{
+  "id": "vos_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "",
+  "cf_standard_name": "surface_northward_sea_water_velocity",
+  "cell_measures": ""
+}

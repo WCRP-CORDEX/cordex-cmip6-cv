@@ -1,0 +1,8 @@
+{
+  "id": "dryno3_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "",
+  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_nitrate_dry_aerosol_particles_due_to_dry_deposition",
+  "positive_direction": "down"
+}
