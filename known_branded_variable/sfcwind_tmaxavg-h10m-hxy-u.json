@@ -1,0 +1,12 @@
+{
+  "id": "sfcwind_tmaxavg-h10m-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Daily maximum near-surface (usually, 10 meters) wind speed.",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "height10m"
+  ]
+}

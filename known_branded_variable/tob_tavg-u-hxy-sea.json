@@ -1,0 +1,6 @@
+{
+  "id": "tob_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Potential temperature at the ocean bottom-most grid cell."
+}

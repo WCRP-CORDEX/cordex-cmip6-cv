@@ -1,0 +1,6 @@
+{
+  "id": "mrro_tavg-u-hxy-lnd",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "The total run-off (including drainage through the base of the soil model) per unit area leaving the land portion of the grid cell."
+}

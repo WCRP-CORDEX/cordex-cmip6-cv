@@ -1,0 +1,6 @@
+{
+  "id": "tsl_tavg-sl-hxy-lnd",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Temperature of soil. Reported as missing for grid cells with no land."
+}

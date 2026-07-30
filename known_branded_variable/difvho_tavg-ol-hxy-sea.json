@@ -1,0 +1,12 @@
+{
+  "id": "difvho_tavg-ol-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time2"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "od550soa_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol_particles",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ]
+}

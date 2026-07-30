@@ -1,0 +1,6 @@
+{
+  "id": "rlutcs_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Upwelling clear-sky longwave radiation at top of atmosphere"
+}

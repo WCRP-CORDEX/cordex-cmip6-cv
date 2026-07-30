@@ -1,0 +1,8 @@
+{
+  "id": "wo_tavg-ol-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "A velocity is a vector quantity. 'Upward' indicates a vector component which is positive when directed upward (negative downward).",
+  "cell_measures": "--OPT",
+  "positive_direction": "up"
+}

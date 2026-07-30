@@ -1,0 +1,6 @@
+{
+  "id": "siconca_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Percentage of grid cell covered by sea ice"
+}

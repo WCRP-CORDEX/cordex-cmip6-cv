@@ -1,0 +1,6 @@
+{
+  "id": "mrros_tavg-u-hxy-lnd",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "The total surface run off leaving the land portion of the grid cell (excluding drainage through the base of the soil model)."
+}

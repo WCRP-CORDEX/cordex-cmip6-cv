@@ -1,0 +1,6 @@
+{
+  "id": "mrsofc_ti-u-hxy-lnd",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "The bulk water content retained by the soil at -33 J/kg of suction pressure, expressed as mass per unit land area; report as missing where there is no land"
+}

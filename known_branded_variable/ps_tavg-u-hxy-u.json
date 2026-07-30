@@ -1,0 +1,6 @@
+{
+  "id": "ps_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "sftof_ti-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "This is the area fraction at the ocean surface."
+}

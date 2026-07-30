@@ -1,0 +1,6 @@
+{
+  "id": "hfds_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "This is the net flux of heat entering the liquid water column through its upper surface (excluding any 'flux adjustment') ."
+}
