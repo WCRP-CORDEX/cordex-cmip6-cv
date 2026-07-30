@@ -1,5 +1,5 @@
-import sys
 import subprocess
+import sys
 
 issue = sys.argv[1]
 command = ["gh", "api", "--jq", ".labels.[].name", issue]

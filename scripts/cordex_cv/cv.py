@@ -1,5 +1,6 @@
 import json
-from .common import sort_dict, table_prefix, read_json, write_json
+
+from .common import read_json, sort_dict, table_prefix, write_json
 
 filelist = [
     f"{table_prefix}_required_global_attributes.json",

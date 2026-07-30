@@ -1,4 +1,5 @@
 import pandas as pd
+
 from .common import domain_table_url, table_prefix, write_json
 
 

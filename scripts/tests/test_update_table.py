@@ -1,5 +1,6 @@
 import json
 from os import path as op
+
 import pytest
 from cordex_cv import update_table
 

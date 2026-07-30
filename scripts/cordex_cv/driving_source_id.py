@@ -11,7 +11,7 @@ def create_driving_source_attrs(cmip6_source_id):
     for source_id, attrs in cmip6_source_id.items():
         new_attrs = {}
         for attr, v in attrs.items():
-            if attr in keep_rename.keys():
+            if attr in keep_rename:
                 new_attrs[keep_rename[attr]] = v
         driving_source_id[source_id] = new_attrs
     return driving_source_id
