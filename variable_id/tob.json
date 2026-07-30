@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "tob",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Potential temperature at the ocean bottom-most grid cell.",
+    "units": "degC"
 }

@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "vas",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Northward component of the near surface wind"
 }

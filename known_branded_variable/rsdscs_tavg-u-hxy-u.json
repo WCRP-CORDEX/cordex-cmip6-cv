@@ -1,0 +1,6 @@
+{
+  "id": "rsdscs_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Surface solar irradiance clear sky for UV calculations"
+}

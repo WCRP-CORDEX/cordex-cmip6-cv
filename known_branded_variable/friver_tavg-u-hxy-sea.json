@@ -1,0 +1,6 @@
+{
+  "id": "friver_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "computed as the river flux of water into the ocean divided by the area of the ocean portion of the grid cell."
+}

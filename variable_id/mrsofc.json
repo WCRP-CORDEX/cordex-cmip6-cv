@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrsofc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "The bulk water content retained by the soil at -33 J/kg of suction pressure, expressed as mass per unit land area; report as missing where there is no land",
+    "long_name": "Capacity of Soil to Store Water  (Field Capacity)"
 }

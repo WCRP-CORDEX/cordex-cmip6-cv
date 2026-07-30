@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sedbc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "only if sedimentation is applied for this aerosol",
+    "long_name": "Sedimentation Rate of Black Carbon",
+    "standard_name": "minus_tendency_of_atmosphere_mass_content_of_elemental_carbon_dry_aerosol_particles_due_to_dry_deposition"
 }

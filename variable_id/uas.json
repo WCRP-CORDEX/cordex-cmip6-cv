@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "uas",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Eastward component of the near-surface (usually, 10 meters)  wind"
 }

@@ -1,0 +1,7 @@
+{
+  "id": "emivoc_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "daily output only if daily variations in emissions",
+  "positive_direction": "up"
+}

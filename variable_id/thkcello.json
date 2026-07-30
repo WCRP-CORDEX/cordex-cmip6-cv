@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "thkcello",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "'Thickness' means the vertical extent of a layer. 'Cell' refers to a model grid-cell."
 }

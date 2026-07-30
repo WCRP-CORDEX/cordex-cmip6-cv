@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "scat550aer",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Aerosol Scattering Coefficient"
 }

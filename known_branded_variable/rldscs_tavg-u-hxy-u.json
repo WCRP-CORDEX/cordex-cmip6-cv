@@ -1,0 +1,6 @@
+{
+  "id": "rldscs_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Surface downwelling clear-sky longwave radiation"
+}

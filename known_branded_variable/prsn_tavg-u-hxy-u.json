@@ -1,0 +1,6 @@
+{
+  "id": "prsn_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "At surface; includes precipitation of all forms of water in the solid phase"
+}

@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsusaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface Upwelling Aerosol-Free Shortwave Radiation",
+    "standard_name": "surface_upwelling_shortwave_flux_in_air"
 }

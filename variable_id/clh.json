@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "clh",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "High Level Cloud Fraction"
 }

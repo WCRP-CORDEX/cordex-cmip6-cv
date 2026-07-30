@@ -1,0 +1,7 @@
+{
+  "id": "sithick_tavg-u-hxy-si",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Actual (floe) thickness of sea ice (NOT volume divided by grid area as was done in CMIP5)",
+  "cell_methods": "area: time: mean where sea_ice (comment: mask=siconc)"
+}

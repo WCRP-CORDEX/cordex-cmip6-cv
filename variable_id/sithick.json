@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sithick",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Actual (floe) thickness of sea ice (NOT volume divided by grid area as was done in CMIP5)",
+    "long_name": "Sea Ice Thickness"
 }

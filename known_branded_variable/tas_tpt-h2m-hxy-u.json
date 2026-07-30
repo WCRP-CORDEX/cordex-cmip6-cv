@@ -1,0 +1,6 @@
+{
+  "id": "tas_tpt-h2m-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "near-surface (usually, 2 meter) air temperature"
+}

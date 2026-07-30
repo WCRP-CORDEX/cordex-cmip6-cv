@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "od550so4",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "1hr optional (considered for Tier1)",
+    "long_name": "Sulfate Aerosol Optical Thickness at 550nm"
 }

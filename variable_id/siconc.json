@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "siconc",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Percentage of grid cell covered by sea ice",
+    "units": "%"
 }

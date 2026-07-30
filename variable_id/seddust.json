@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "seddust",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "only if sedimentation is applied for this aerosol",
+    "long_name": "Sedimentation Rate of Dust",
+    "standard_name": "minus_tendency_of_atmosphere_mass_content_of_dust_dry_aerosol_particles_due_to_dry_deposition"
 }

@@ -1,0 +1,7 @@
+{
+  "id": "rsutaf_tavg-u-hxy-u",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "",
+  "cf_standard_name": "toa_outgoing_shortwave_flux_assuming_no_aerosol"
+}

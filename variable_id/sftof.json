@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "sftof",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "This is the area fraction at the ocean surface.",
+    "units": "%"
 }

@@ -1,5 +1,8 @@
 {
-    "@context": "000_context.jsonld",
     "id": "rsdsaf",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "",
+    "long_name": "Surface Downwelling Aerosol-Free Shortwave Radiation",
+    "standard_name": "surface_downwelling_shortwave_flux_in_air"
 }

@@ -1,0 +1,7 @@
+{
+  "id": "tauuo_tavg-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "This is the stress on the liquid ocean from overlying atmosphere, sea ice, ice shelf, etc.",
+  "cell_measures": ""
+}

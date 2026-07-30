@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "abs550aer",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "1hr optional (considered for Tier1)",
+    "long_name": "Ambient Aerosol Absorption Optical Thickness at 550 nm"
 }

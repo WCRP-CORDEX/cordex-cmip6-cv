@@ -1,0 +1,6 @@
+{
+  "id": "tos_tpt-u-hxy-sea",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Temperature of upper boundary of the liquid ocean, including temperatures below sea-ice and floating ice shelves."
+}

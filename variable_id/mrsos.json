@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mrsos",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "The mass of water in all phases in the upper 10cm of the  soil layer.",
+    "long_name": "Moisture in Upper Portion of Soil Column"
 }

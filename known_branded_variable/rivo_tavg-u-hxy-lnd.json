@@ -1,0 +1,6 @@
+{
+  "id": "rivo_tavg-u-hxy-lnd",
+  "@context": "000_context.jsonld",
+  "type": "known_branded_variable",
+  "description": "Outflow of River Water from Cell"
+}

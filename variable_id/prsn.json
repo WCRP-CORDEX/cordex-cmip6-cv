@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "prsn",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "At surface; includes precipitation of all forms of water in the solid phase"
 }

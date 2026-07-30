@@ -1,5 +1,7 @@
 {
-    "@context": "000_context.jsonld",
     "id": "mlotst",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Sigma T is potential density referenced to ocean surface.",
+    "long_name": "Ocean Mixed Layer Thickness Defined by Sigma T"
 }

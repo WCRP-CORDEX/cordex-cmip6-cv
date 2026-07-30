@@ -1,5 +1,6 @@
 {
-    "@context": "000_context.jsonld",
     "id": "tsl",
-    "type": "variable"
+    "@context": "000_context.jsonld",
+    "type": "variable",
+    "description": "Temperature of soil. Reported as missing for grid cells with no land."
 }
