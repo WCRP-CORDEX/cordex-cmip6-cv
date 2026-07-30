@@ -20,7 +20,7 @@ Any missing or incorrect global attribute will raise a `ValidationError`.
 """
 
 
-def make_global_attrs_schema(prefix: str = None, enum: bool = False) -> dict:
+def make_global_attrs_schema(prefix: str | None = None, enum: bool = False) -> dict:
     """Create a JSON schema for netCDF global attributes from the JSON CVs.
 
     Parameters

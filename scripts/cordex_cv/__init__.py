@@ -1,9 +1,10 @@
-from .cv import create_cv, update_table
+from .cv import DuplicateEntryError, create_cv, update_table
 from .cv2schema import create_json_schema
 from .domain_id import create_domain_id
 from .driving_source_id import create_driving_source_id
 
 __all__ = [
+    "DuplicateEntryError",
     "create_cv",
     "create_domain_id",
     "create_driving_source_id",

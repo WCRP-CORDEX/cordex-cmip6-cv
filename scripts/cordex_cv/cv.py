@@ -2,6 +2,11 @@ import json
 
 from .common import read_json, sort_dict, table_prefix, write_json
 
+
+class DuplicateEntryError(Exception):
+    pass
+
+
 filelist = [
     f"{table_prefix}_required_global_attributes.json",
     f"{table_prefix}_activity_id.json",
@@ -81,7 +86,7 @@ def update_table(entry, filename, table_name, style=None, sort=False):
         print(
             f"'{new_id}' already in table with value: '{current[table_name][new_id]}'"
         )
-        raise Exception
+        raise DuplicateEntryError
 
     if sort is True:
         current[table_name] = sort_dict(current[table_name])

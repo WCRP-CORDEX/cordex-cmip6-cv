@@ -46,13 +46,19 @@ def json2datatable(
     top_level,
     title="",
     intro="",
-    columns=[],
-    linearize_columns=[],
-    rename_fields={},
+    columns=None,
+    linearize_columns=None,
+    rename_fields=None,
     is_1d=False,
     column_as_link="",
     column_as_link_source="",
 ):
+    if columns is None:
+        columns = []
+    if linearize_columns is None:
+        linearize_columns = []
+    if rename_fields is None:
+        rename_fields = {}
     with open(jsonfile) as f:
         data = json.load(f)
     if top_level:
@@ -80,174 +86,173 @@ def json2datatable(
             df.drop(columns=column_as_link_source, inplace=True)
     field_names = dict(zip(df.columns, df.columns))
     field_names.update(rename_fields)
-    fp = open(htmlout, "w")
-    fp.write(
-        """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta name="author" content="J. Fernandez" />
-<meta name="keywords" content="HTML, CSS, JavaScript" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>"""
-    )
-    if title:
-        fp.write(f"<title>{title}</title>")
-    fp.write("""
-<style>
-body {
-  font-family: "Montserrat", sans-serif;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 600px;
-}
-tr:hover {background-color:#f5f5f5;}
-th, td {text-align: left; padding: 2px;}
-table {border-collapse: collapse;}
-span.tag {
-  background-color: #c5def5;
-  padding: 0 10px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 22px !important;
-  border: 1px solid transparent;
-  border-radius: 2em;
-}
-span.selected {color: #3399FF}
-span.planned {color: #F54d4d; font-weight: bold}
-span.running {color: #009900; font-weight: bold}
-span.completed {color: #17202a; font-weight: bold}
-span.published {color: #3399FF; font-weight: bold}
-span.warning {color: #FF0000; font-weight: bold}
-a {color: DodgerBlue}
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:active { text-decoration: underline; }
-.logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.nav-button {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 0 4px;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  color: #0969da;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.nav-button:hover {
-  background-color: #0969da;
-  color: white;
-  text-decoration: none;
-}
-</style>
-</head>
-<body>
-""")
-    if title:
-        fp.write(f"""
-<div class="logo">
-   <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png"
-        alt="CORDEX Logo" >
-   <h1>{title}</h1>
-</div>
+    with open(htmlout, "w") as fp:
+        fp.write(
+            """<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta name="author" content="J. Fernandez" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>"""
+        )
+        if title:
+            fp.write(f"<title>{title}</title>")
+        fp.write("""
+    <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 600px;
+    }
+    tr:hover {background-color:#f5f5f5;}
+    th, td {text-align: left; padding: 2px;}
+    table {border-collapse: collapse;}
+    span.tag {
+      background-color: #c5def5;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 22px !important;
+      border: 1px solid transparent;
+      border-radius: 2em;
+    }
+    span.selected {color: #3399FF}
+    span.planned {color: #F54d4d; font-weight: bold}
+    span.running {color: #009900; font-weight: bold}
+    span.completed {color: #17202a; font-weight: bold}
+    span.published {color: #3399FF; font-weight: bold}
+    span.warning {color: #FF0000; font-weight: bold}
+    a {color: DodgerBlue}
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:active { text-decoration: underline; }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .nav-button {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 0 4px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      color: #0969da;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #0969da;
+      color: white;
+      text-decoration: none;
+    }
+    </style>
+    </head>
+    <body>
     """)
-    if intro:
-        fp.write(f"{intro}<p>")
-    fp.write("""
-<table id="table_id" class="display">
-    <thead>
-        <tr>
-""")
-    [fp.write(f"              <th>{field_names[x]}</th>\n") for x in df]
-    fp.write("""
-        </tr>
-    </thead>
-    <tbody>
-""")
-    for idx, row in df.iterrows():
-        fp.write("        <tr>\n")
-        for field, item in zip(df.columns, row):
-            fp.write(f"            <td>{delistify(item)}</td>\n")
-        fp.write("        </tr>\n")
-    fp.write("""
-    </tbody>
-</table>
+        if title:
+            fp.write(f"""
+    <div class="logo">
+       <img src="https://cordex.org/wp-content/uploads/2025/02/CORDEX_RGB_logo_baseline_positive-300x133.png"
+            alt="CORDEX Logo" >
+       <h1>{title}</h1>
+    </div>
+        """)
+        if intro:
+            fp.write(f"{intro}<p>")
+        fp.write("""
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+    """)
+        [fp.write(f"              <th>{field_names[x]}</th>\n") for x in df]
+        fp.write("""
+            </tr>
+        </thead>
+        <tbody>
+    """)
+        for idx, row in df.iterrows():
+            fp.write("        <tr>\n")
+            for field, item in zip(df.columns, row):
+                fp.write(f"            <td>{delistify(item)}</td>\n")
+            fp.write("        </tr>\n")
+        fp.write("""
+        </tbody>
+    </table>
 
-<script>
-    // URL parameter helpers
-    function getParam(name) {
-        var urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(name) || '';
-    }
-
-    function setParam(name, value) {
-        var url = new URL(window.location);
-        if (value && value !== '') {
-            url.searchParams.set(name, value);
-        } else {
-            url.searchParams.delete(name);
+    <script>
+        // URL parameter helpers
+        function getParam(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name) || '';
         }
-        window.history.replaceState({}, '', url);
-    }
 
-    $(document).ready(function() {
-        // Get initial values from URL
-        var initialSearch = getParam('search');
-        var initialLength = parseInt(getParam('length')) || 20;
-        var initialOrder = getParam('order');
-
-        var initialOrderArray = [[0, 'asc']]; // default
-        if (initialOrder) {
-            try {
-                initialOrderArray = JSON.parse(initialOrder);
-            } catch (e) {
-                console.log('Could not parse order parameter');
+        function setParam(name, value) {
+            var url = new URL(window.location);
+            if (value && value !== '') {
+                url.searchParams.set(name, value);
+            } else {
+                url.searchParams.delete(name);
             }
+            window.history.replaceState({}, '', url);
         }
 
-        // Initialize DataTable with URL parameters
-        var table = $('#table_id').DataTable({
-            pageLength: initialLength,
-            lengthMenu: [20, 50, 100, 200, 500],
-            order: initialOrderArray,
-            searching: true
-        });
+        $(document).ready(function() {
+            // Get initial values from URL
+            var initialSearch = getParam('search');
+            var initialLength = parseInt(getParam('length')) || 20;
+            var initialOrder = getParam('order');
 
-        // Set initial search if provided
-        if (initialSearch) {
-            table.search(initialSearch).draw();
-        }
+            var initialOrderArray = [[0, 'asc']]; // default
+            if (initialOrder) {
+                try {
+                    initialOrderArray = JSON.parse(initialOrder);
+                } catch (e) {
+                    console.log('Could not parse order parameter');
+                }
+            }
 
-        // Update URL when search changes
-        table.on('search.dt', function() {
-            var searchValue = table.search();
-            setParam('search', searchValue);
-        });
+            // Initialize DataTable with URL parameters
+            var table = $('#table_id').DataTable({
+                pageLength: initialLength,
+                lengthMenu: [20, 50, 100, 200, 500],
+                order: initialOrderArray,
+                searching: true
+            });
 
-        // Update URL when page length changes
-        table.on('length.dt', function(e, settings, len) {
-            setParam('length', len == 20 ? '' : len);
-        });
+            // Set initial search if provided
+            if (initialSearch) {
+                table.search(initialSearch).draw();
+            }
 
-        // Update URL when column order changes
-        table.on('order.dt', function() {
-            var currentOrder = table.order();
-            setParam('order', JSON.stringify(currentOrder));
+            // Update URL when search changes
+            table.on('search.dt', function() {
+                var searchValue = table.search();
+                setParam('search', searchValue);
+            });
+
+            // Update URL when page length changes
+            table.on('length.dt', function(e, settings, len) {
+                setParam('length', len == 20 ? '' : len);
+            });
+
+            // Update URL when column order changes
+            table.on('order.dt', function() {
+                var currentOrder = table.order();
+                setParam('order', JSON.stringify(currentOrder));
+            });
         });
-    });
-</script>
-</body>
-</html>""")
-    fp.close()
+    </script>
+    </body>
+    </html>""")
 
 
 cvs = ["source_id", "institution_id"]
