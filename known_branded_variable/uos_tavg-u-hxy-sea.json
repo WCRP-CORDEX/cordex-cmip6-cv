@@ -3,6 +3,5 @@
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
   "description": "",
-  "cf_standard_name": "surface_eastward_sea_water_velocity",
-  "cell_measures": ""
+  "cf_standard_name": "surface_eastward_sea_water_velocity"
 }
