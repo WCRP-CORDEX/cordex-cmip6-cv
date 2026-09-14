@@ -132,7 +132,7 @@ dataset_properties:
 
   - source_collection: version_realization_info
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
 
 file_properties:
   - source_collection: tracking_id
