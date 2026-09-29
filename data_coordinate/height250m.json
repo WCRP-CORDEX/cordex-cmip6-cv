@@ -1,0 +1,6 @@
+{
+  "id": "height250m",
+  "@context": "000_context.jsonld",
+  "type": "data_coordinate",
+  "long_name": "height"
+}
