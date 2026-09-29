@@ -2,5 +2,6 @@
   "id": "tauv_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Surface Downward Northward Wind Stress",
   "description": "Downward northward wind stress at the surface"
 }

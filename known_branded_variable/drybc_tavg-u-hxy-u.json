@@ -2,6 +2,7 @@
   "id": "drybc_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Dry Deposition Rate of Black Carbon",
   "description": "",
   "positive_direction": "down"
 }

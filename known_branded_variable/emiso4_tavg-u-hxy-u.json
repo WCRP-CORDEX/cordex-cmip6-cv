@@ -2,6 +2,7 @@
   "id": "emiso4_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Total Emission Rate of Sulfate",
   "description": "daily output only if daily variations in emissions",
   "positive_direction": "up"
 }

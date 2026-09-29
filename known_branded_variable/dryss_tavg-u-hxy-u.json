@@ -2,6 +2,7 @@
   "id": "dryss_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Dry Deposition Rate of Sea-Salt",
   "description": "",
   "positive_direction": "down"
 }

@@ -2,5 +2,6 @@
   "id": "clwvi_tpt-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Condensed Water Path",
   "description": ""
 }

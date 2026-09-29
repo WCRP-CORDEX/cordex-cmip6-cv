@@ -2,5 +2,6 @@
   "id": "rsds_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Surface Downwelling Shortwave Radiation",
   "description": "Surface solar irradiance for UV calculations."
 }

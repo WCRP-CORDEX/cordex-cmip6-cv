@@ -2,5 +2,6 @@
   "id": "vas_tavg-h10m-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Northward Near-Surface Wind",
   "description": "Northward component of the near surface wind"
 }

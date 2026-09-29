@@ -2,5 +2,6 @@
   "id": "uas_tpt-h10m-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Eastward Near-Surface Wind",
   "description": ""
 }

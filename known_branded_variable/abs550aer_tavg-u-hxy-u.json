@@ -2,6 +2,7 @@
   "id": "abs550aer_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Ambient Aerosol Absorption Optical Thickness at 550 nm",
   "description": "1hr optional (considered for Tier1)",
   "dimensions": [
     "longitude",

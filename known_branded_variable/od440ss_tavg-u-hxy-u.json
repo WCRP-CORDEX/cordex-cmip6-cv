@@ -1,5 +1,6 @@
 {
   "id": "od440ss_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Sea-Salt Aerosol Optical Thickness at 440nm"
 }

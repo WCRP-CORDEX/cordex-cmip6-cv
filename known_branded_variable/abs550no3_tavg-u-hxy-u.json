@@ -2,6 +2,7 @@
   "id": "abs550no3_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Nitrate Aerosol Absorption Optical Thickness at 550 nm",
   "description": "",
   "dimensions": [
     "longitude",

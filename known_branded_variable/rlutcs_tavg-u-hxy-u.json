@@ -2,5 +2,6 @@
   "id": "rlutcs_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "TOA Outgoing Clear-Sky Longwave Radiation",
   "description": "Upwelling clear-sky longwave radiation at top of atmosphere"
 }

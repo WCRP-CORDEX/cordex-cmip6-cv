@@ -1,5 +1,6 @@
 {
   "id": "snw_tpt-u-hxy-lnd",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Surface Snow Amount"
 }

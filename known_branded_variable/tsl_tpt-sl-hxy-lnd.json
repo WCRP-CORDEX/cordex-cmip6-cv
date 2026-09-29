@@ -1,5 +1,6 @@
 {
   "id": "tsl_tpt-sl-hxy-lnd",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Temperature of Soil"
 }

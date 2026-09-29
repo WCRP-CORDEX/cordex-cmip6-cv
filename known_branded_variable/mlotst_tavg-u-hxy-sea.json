@@ -2,6 +2,7 @@
   "id": "mlotst_tavg-u-hxy-sea",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Ocean Mixed Layer Thickness Defined by Sigma T",
   "description": "Sigma T is potential density referenced to ocean surface.",
   "dimensions": [
     "longitude",
