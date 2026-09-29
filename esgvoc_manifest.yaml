@@ -2,10 +2,11 @@ schema_version: '1'
 project:
   id: cordex-cmip6
   name: CORDEX-CMIP6 Controlled Vocabulary
-cv_version: 2.1.0
-universe_version: 3.2.5
+cv_version: 3.0.0
+universe_version: 3.2.6
 esgvoc:
   min_version: 6.2.0
 release_notes: |
-  - catalog_specs.yaml: updated
-  - known_branded_variable: 4 modified
+  - data_coordinate: new collection model
+  - data_coordinate: 36 added
+  - known_branded_variable: 603 modified
