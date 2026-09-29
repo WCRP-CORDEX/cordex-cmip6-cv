@@ -5,7 +5,7 @@ project:
 cv_version: 2.0.0
 universe_version: 1.0.27
 esgvoc:
-  min_version: 4.0.0
+  min_version: 6.2.0
 release_notes: |
   - known_branded_variable: new collection model
   - domain_id: 4 added
