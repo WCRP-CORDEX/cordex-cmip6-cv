@@ -1,5 +1,6 @@
 {
   "id": "eminox_tmin-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Total Emission Rate of NOx"
 }

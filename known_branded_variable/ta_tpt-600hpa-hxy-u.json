@@ -1,5 +1,6 @@
 {
   "id": "ta_tpt-600hpa-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Air Temperature at 600hPa"
 }

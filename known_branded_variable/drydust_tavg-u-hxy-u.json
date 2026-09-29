@@ -2,6 +2,7 @@
   "id": "drydust_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Dry Deposition Rate of Dust",
   "description": "",
   "positive_direction": "down"
 }

@@ -1,5 +1,6 @@
 {
   "id": "zg_tpt-300hpa-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Geopotential Height at 300hPa"
 }

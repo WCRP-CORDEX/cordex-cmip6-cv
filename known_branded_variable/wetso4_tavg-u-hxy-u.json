@@ -2,6 +2,7 @@
   "id": "wetso4_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Wet Deposition Rate of Sulfate",
   "description": "",
   "positive_direction": "down"
 }

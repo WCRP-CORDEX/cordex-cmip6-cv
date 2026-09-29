@@ -1,5 +1,6 @@
 {
   "id": "ssa350aer_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Aerosol Single Scattering Albedo at 350 nm"
 }

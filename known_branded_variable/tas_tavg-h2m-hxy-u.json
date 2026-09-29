@@ -2,5 +2,6 @@
   "id": "tas_tavg-h2m-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Near-Surface Air Temperature",
   "description": "near-surface (usually, 2 meter) air temperature"
 }

@@ -1,5 +1,6 @@
 {
   "id": "ext550so4_tavg-p19-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Sulfate Aerosol Extinction Coefficient"
 }

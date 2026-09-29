@@ -2,5 +2,6 @@
   "id": "uas_tavg-h10m-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Eastward Near-Surface Wind",
   "description": "Eastward component of the near-surface (usually, 10 meters)  wind"
 }

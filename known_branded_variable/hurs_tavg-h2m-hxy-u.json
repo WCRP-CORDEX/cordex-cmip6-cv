@@ -2,5 +2,6 @@
   "id": "hurs_tavg-h2m-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Near-Surface Relative Humidity",
   "description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C."
 }
