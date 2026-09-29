@@ -1,5 +1,6 @@
 {
   "id": "hus_tavg-150hpa-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Specific Humidity at 150hPa"
 }

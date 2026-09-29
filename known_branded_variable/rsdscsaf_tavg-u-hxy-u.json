@@ -1,5 +1,6 @@
 {
   "id": "rsdscsaf_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Surface Downwelling Clear-Sky, Aerosol-Free Shortwave Radiation"
 }

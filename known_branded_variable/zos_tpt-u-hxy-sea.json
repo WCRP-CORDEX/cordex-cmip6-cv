@@ -1,5 +1,6 @@
 {
   "id": "zos_tpt-u-hxy-sea",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Sea Surface Height Above Geoid"
 }

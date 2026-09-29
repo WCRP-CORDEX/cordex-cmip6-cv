@@ -2,5 +2,6 @@
   "id": "tauvo_tavg-u-hxy-sea",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Sea Water Surface Downward Y Stress",
   "description": "This is the stress on the liquid ocean from overlying atmosphere, sea ice, ice shelf, etc."
 }

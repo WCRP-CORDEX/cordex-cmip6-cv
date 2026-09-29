@@ -1,0 +1,6 @@
+{
+  "id": "typeurban",
+  "@context": "000_context.jsonld",
+  "type": "data_coordinate",
+  "long_name": "Urban area type"
+}

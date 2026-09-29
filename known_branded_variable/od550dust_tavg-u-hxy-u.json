@@ -2,6 +2,7 @@
   "id": "od550dust_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Dust Aerosol Optical Thickness at 550nm",
   "description": "1hr optional (considered for Tier1)",
   "dimensions": [
     "longitude",

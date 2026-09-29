@@ -2,5 +2,6 @@
   "id": "rsuscs_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Surface Upwelling Clear-Sky Shortwave Radiation",
   "description": "Surface Upwelling Clear-sky Shortwave Radiation"
 }

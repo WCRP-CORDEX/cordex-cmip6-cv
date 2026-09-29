@@ -2,6 +2,7 @@
   "id": "od550lt1aer_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Ambient Fine Aerosol Optical Thickness at 550nm",
   "description": "",
   "dimensions": [
     "longitude",

@@ -1,5 +1,6 @@
 {
   "id": "abs350bc_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Black Carbon Aerosol Absorption Optical Thickness at 350 nm"
 }

@@ -1,5 +1,6 @@
 {
   "id": "sitemptop_tavg-u-hxy-si",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Surface Temperature of Sea Ice"
 }

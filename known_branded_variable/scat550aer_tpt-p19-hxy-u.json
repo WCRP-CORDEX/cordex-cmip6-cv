@@ -1,5 +1,6 @@
 {
   "id": "scat550aer_tpt-p19-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Aerosol Scattering Coefficient"
 }

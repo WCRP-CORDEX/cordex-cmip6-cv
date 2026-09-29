@@ -1,5 +1,6 @@
 {
   "id": "od550soa_tpt-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Secondary Organic Aerosol Optical Thickness at 550nm"
 }

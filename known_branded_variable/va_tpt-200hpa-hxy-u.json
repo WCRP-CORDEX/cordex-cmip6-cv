@@ -2,5 +2,6 @@
   "id": "va_tpt-200hpa-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Northward Wind at 200hPa",
   "description": ""
 }

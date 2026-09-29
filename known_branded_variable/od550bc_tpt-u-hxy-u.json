@@ -1,5 +1,6 @@
 {
   "id": "od550bc_tpt-u-hxy-u",
   "@context": "000_context.jsonld",
-  "type": "known_branded_variable"
+  "type": "known_branded_variable",
+  "long_name": "Black Carbon Aerosol Optical Thickness at 550nm"
 }

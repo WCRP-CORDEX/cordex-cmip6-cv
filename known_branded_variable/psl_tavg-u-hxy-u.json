@@ -2,5 +2,6 @@
   "id": "psl_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Sea Level Pressure",
   "description": "Sea Level Pressure"
 }

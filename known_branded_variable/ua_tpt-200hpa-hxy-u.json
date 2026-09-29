@@ -2,5 +2,6 @@
   "id": "ua_tpt-200hpa-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "Eastward Wind at 200hPa",
   "description": ""
 }

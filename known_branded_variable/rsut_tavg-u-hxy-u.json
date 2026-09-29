@@ -2,5 +2,6 @@
   "id": "rsut_tavg-u-hxy-u",
   "@context": "000_context.jsonld",
   "type": "known_branded_variable",
+  "long_name": "TOA Outgoing Shortwave Radiation",
   "description": "at the top of the atmosphere"
 }
