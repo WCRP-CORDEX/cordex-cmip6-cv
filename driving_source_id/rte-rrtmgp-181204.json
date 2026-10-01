@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rte-rrtmgp-181204",
-    "type": "source"
+    "type": "source",
+    "driving_source": "RTE+RRTMGP (2018-12-04 full-resolution) (2019): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

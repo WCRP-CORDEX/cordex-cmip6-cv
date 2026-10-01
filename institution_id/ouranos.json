@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ouranos",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Ouranos Consortium, Montreal (Quebec), Canada"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hclimcom-metno",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Norwegian Meteorological Institute (METNo), Oslo, Norway"
 }

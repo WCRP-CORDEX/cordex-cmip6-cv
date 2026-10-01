@@ -1,5 +1,9 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "wrf461u",
-  "type": "source"
+    "@context": "000_context.jsonld",
+    "id": "wrf461u",
+    "type": "source",
+    "source": [
+        "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration U (2024)",
+        "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration U"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "csiro",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Commonwealth Scientific and Industrial Research Organisation, Canberra, Australia"
 }

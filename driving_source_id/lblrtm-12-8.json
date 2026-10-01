@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "lblrtm-12-8",
-    "type": "source"
+    "type": "source",
+    "driving_source": "LBLRTM 12.8 (2017): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

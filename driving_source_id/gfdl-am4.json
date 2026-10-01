@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gfdl-am4",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GFDL-AM4 (2018): \naerosol: interactive\natmos: GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)\natmosChem: fast chemistry, aerosol only\nland: GFDL-LM4.0\nlandIce: GFDL-LM4.0\nocean: none\nocnBgchem: none\nseaIce: none"
 }

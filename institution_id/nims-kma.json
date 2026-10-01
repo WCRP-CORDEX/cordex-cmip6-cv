@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nims-kma",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "National Institute of Meteorological Sciences, Korea Meteorological Administration, Seogwipo-si, Republic of Korea"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rrtmg-sw-4-02",
-    "type": "source"
+    "type": "source",
+    "driving_source": "RRTMG-SW 4.02 (2017): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

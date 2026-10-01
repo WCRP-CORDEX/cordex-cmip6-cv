@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "gcoast-ahoi1-1",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)",
+        "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea"
+    ]
 }

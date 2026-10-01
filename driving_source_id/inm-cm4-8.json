@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "inm-cm4-8",
-    "type": "source"
+    "type": "source",
+    "driving_source": "INM-CM4-8 (2016): \naerosol: INM-AER1\natmos: INM-AM4-8 (2x1.5; 180 x 120 longitude/latitude; 21 levels; top level sigma = 0.01)\natmosChem: none\nland: INM-LND1\nlandIce: none\nocean: INM-OM5 (North Pole shifted to 60N, 90E; 360 x 318 longitude/latitude; 40 levels; sigma vertical coordinate)\nocnBgchem: none\nseaIce: INM-ICE1"
 }

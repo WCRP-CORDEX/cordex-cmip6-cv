@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cclm5-0-9-nemomed12-3-6",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain. (2021)",
+        "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain."
+    ]
 }

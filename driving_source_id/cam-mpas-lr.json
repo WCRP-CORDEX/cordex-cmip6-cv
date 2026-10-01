@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cam-mpas-lr",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CAM-MPAS-LR (2018): \naerosol: none, prescribed MACv2-SP\natmos: CAM-MPAS (CAMv5.4 with Grell-Freitas deep convection; MPASv4, C-grid staggered centroidal Voronoi tesselation atmosphere 120 km mesh with 40962 cells and 122880 edges; 32 vertical levels, model top 40363 m)\natmosChem: none\nland: CLM (v4.0, same grid as atmos), River Transport Model (v1.0)\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

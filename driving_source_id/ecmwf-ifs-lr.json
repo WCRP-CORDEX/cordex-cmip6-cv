@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ecmwf-ifs-lr",
-    "type": "source"
+    "type": "source",
+    "driving_source": "ECMWF-IFS-LR (2017): \naerosol: none\natmos: IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)\natmosChem: none\nland: HTESSEL (as implemented in IFS CY43R1)\nlandIce: none\nocean: NEMO3.4 (NEMO v3.4; ORCA1 tripolar grid; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)\nocnBgchem: none\nseaIce: LIM2 (LIM v2; ORCA1 tripolar grid; 362 x 292 longitude/latitude)"
 }

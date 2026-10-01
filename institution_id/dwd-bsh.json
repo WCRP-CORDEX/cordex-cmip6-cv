@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dwd-bsh",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "DWD [Deutscher Wetterdienst, Offenbach am Main, Germany]; BSH [Bundesamt fuer Seeschifffahrt und Hydrographie, Hamburg, Germany]"
 }

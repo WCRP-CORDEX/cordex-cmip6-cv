@@ -30,6 +30,7 @@
         },
         "source_version": {
             "@id": "https://schema.org/version"
-        }
+        },
+        "source": "https://esgvoc.ipsl.fr/resource/universe/source"
     }
 }

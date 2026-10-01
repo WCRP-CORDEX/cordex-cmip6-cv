@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cams-csm1-0",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CAMS-CSM 1.0 (2016): \naerosol: none\natmos: ECHAM5_CAMS (T106; 320 x 160 longitude/latitude; 31 levels; top level 10 mb)\natmosChem: none\nland: CoLM 1.0\nlandIce: none\nocean: MOM4 (tripolar; 360 x 200 longitude/latitude, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: SIS 1.0"
 }

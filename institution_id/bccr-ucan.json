@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bccr-ucan",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "BCCR [Bjerknes Center for Climate Research (BCCR), NORCE Norwegian Research Center, Bergen, Norway]; UCAN [Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain]"
 }

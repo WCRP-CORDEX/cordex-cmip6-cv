@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-mf",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "CNRM [Centre National de Recherches Meteorologiques, Toulouse, France]; MF [Meteo France, Toulouse, France]"
 }

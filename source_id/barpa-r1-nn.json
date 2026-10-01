@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "barpa-r1-nn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging (2022)",
+        "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging"
+    ]
 }

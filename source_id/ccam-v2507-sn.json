@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccam-v2507-sn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Conformal Cubic Atmospheric Model version 2507 with spectral nudging (2025)",
+        "Conformal Cubic Atmospheric Model version 2507 with spectral nudging"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hclimcom-smhi",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Swedish Meteorological and Hydrological Institute (SMHI), Norrkoping, Sweden"
 }

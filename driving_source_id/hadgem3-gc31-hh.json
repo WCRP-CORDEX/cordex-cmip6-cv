@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hadgem3-gc31-hh",
-    "type": "source"
+    "type": "source",
+    "driving_source": "HadGEM3-GC31-HH (2016): \naerosol: UKCA-GLOMAP-mode\natmos: MetUM-HadGEM3-GA7.1 (N512; 1024 x 768 longitude/latitude; 85 levels; top level 85 km)\natmosChem: none\nland: JULES-HadGEM3-GL7.1\nlandIce: none\nocean: NEMO-HadGEM3-GO6.0 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)\nocnBgchem: none\nseaIce: CICE-HadGEM3-GSI8 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)"
 }
