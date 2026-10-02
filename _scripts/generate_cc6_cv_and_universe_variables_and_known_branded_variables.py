@@ -216,8 +216,7 @@ def resolve_paths(args: argparse.Namespace) -> dict[str, Path]:
         "universe": args.wcrp_universe_dir or base / "WCRP-universe",
         "project": args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv",
         "mapping": args.branded_variable_mapping_path
-        or base
-        / "cc-plugin-wcrp/plugins/cordex_cmip6/config/wcrp/mappings/"
+        or base / "cc-plugin-wcrp/plugins/cordex_cmip6/config/wcrp/mappings/"
         "frequency_and_variable_id_to_branded_variable.toml",
         "dataset_metadata": args.dataset_metadata_path
         or base / "data-request-table" / "cmor-table" / "datasets.csv",
@@ -1339,9 +1338,9 @@ def main() -> None:
             )
         if identifier in project_variable_ids:
             overlay, differences = project_overlay(full_payload, universe_payload)
-            report["overlay_differences"].setdefault("variable", {})[identifier] = (
-                differences
-            )
+            report["overlay_differences"].setdefault("variable", {})[
+                identifier
+            ] = differences
             emit(
                 project_root / "variable_id" / f"{identifier}.json",
                 overlay,

@@ -168,7 +168,9 @@ def extract_value(
     value = raw_entry[spec.output_field]
     if isinstance(value, list):
         if not value:
-            raise ValueError(f"Expected a non-empty list at {location}.{spec.output_field}")
+            raise ValueError(
+                f"Expected a non-empty list at {location}.{spec.output_field}"
+            )
         return [
             require_non_empty_string(item, f"{location}.{spec.output_field}[{index}]")
             for index, item in enumerate(value)
@@ -222,9 +224,7 @@ def generate_collection(
 ) -> dict[str, int]:
     raw_collection = cv.get(spec.collection_id)
     if raw_collection is None or raw_collection == {}:
-        raise ValueError(
-            f"CV collection {spec.collection_id!r} is missing or empty"
-        )
+        raise ValueError(f"CV collection {spec.collection_id!r} is missing or empty")
     if not isinstance(raw_collection, dict):
         raise TypeError(
             f"Expected CV collection {spec.collection_id!r} to be a JSON object"
@@ -283,9 +283,7 @@ def main() -> None:
     cmor_repo = (
         args.cordex_cmip6_cmor_tables_dir or base / "cordex-cmip6-cmor-tables"
     ).resolve()
-    project_root = (
-        args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv"
-    ).resolve()
+    project_root = (args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv").resolve()
     cv_path = cmor_repo / "Tables" / "CORDEX-CMIP6_CV.json"
 
     content = read_json(cv_path)
