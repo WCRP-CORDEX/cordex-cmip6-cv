@@ -1,6 +1,23 @@
 {
-  "id": "hus_tpt-h50m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Specific Humidity at 50m"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "hus_tpt-h50m-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.hus50m"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Specific Humidity at 50m"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

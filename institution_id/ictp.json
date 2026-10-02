@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ictp",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "The Abdus Salam International Centre for Theoretical Physics, Trieste, Italy"
 }

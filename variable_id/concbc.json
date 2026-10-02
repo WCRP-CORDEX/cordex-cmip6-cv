@@ -1,6 +1,6 @@
 {
-    "id": "concbc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "concbc",
+    "long_name": "Concentration of Black Carbon"
 }

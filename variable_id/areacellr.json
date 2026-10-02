@@ -1,6 +1,6 @@
 {
-  "id": "areacellr",
-  "@context": "000_context.jsonld",
-  "type": "variable",
-  "description": "For river routing model, if grid differs from the atmospheric grid."
+    "type": "variable",
+    "@context": "000_context.jsonld",
+    "id": "areacellr",
+    "long_name": "Grid-Cell Area for River Model Variables"
 }

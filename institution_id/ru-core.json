@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ru-core",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Ramkhamhaeng University Center Of Regional Climate Change and Renewable Energy (RU-CORE), Bangkok, Thailand"
 }

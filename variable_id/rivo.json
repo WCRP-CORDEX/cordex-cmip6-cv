@@ -1,6 +1,6 @@
 {
-  "id": "rivo",
-  "@context": "000_context.jsonld",
-  "type": "variable",
-  "description": "Outflow of River Water from Cell"
+    "type": "variable",
+    "@context": "000_context.jsonld",
+    "id": "rivo",
+    "long_name": "River Discharge"
 }

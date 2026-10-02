@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "giss-e2-2-g",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GISS-E2-2-G (2019): \naerosol: varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)\natmos: GISS-E2.2 (High-top, 2 x 2.5 degrees; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)\natmosChem: varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)\nland: GISS LSM\nlandIce: Fixed\nocean: GISS Ocean (GO1, 1 degree; 360 x 180 longitude/latitude; 40 levels; top grid cell 0-10m)\nocnBgchem: none\nseaIce: GISS SI"
 }

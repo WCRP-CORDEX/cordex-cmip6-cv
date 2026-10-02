@@ -1,6 +1,6 @@
 {
-  "id": "height250m",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "height"
+    "id": "height250m",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "height"
 }

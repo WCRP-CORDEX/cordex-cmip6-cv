@@ -1,6 +1,6 @@
 {
-    "id": "friver",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "computed as the river flux of water into the ocean divided by the area of the ocean portion of the grid cell."
+    "@context": "000_context.jsonld",
+    "id": "friver",
+    "long_name": "Water Flux into Sea Water from Rivers"
 }

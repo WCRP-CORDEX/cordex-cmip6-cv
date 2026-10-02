@@ -1,0 +1,7 @@
+{
+    "type": "grid_axis",
+    "id": "x_deg",
+    "@context": "000_context.jsonld",
+    "long_name": "x coordinate of projection",
+    "cf_standard_name": "projection_x_coordinate"
+}

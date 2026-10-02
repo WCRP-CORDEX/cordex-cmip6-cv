@@ -1,7 +1,7 @@
 {
-    "id": "siconc",
-    "@context": "000_context.jsonld",
     "type": "variable",
+    "@context": "000_context.jsonld",
+    "id": "siconc",
     "description": "Percentage of grid cell covered by sea ice",
-    "units": "%"
+    "long_name": "Sea-Ice Area Percentage (Ocean Grid)"
 }

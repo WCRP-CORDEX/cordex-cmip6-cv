@@ -1,6 +1,26 @@
 {
-  "id": "ta_tavg-50hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Air Temperature at 50hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ta_tavg-50hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.ta50",
+        "mon.ta50"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Air Temperature at 50hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

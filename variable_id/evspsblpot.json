@@ -1,6 +1,6 @@
 {
-    "id": "evspsblpot",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "at surface; potential flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)"
+    "@context": "000_context.jsonld",
+    "id": "evspsblpot",
+    "long_name": "Potential Evapotranspiration"
 }

@@ -1,8 +1,7 @@
 {
-    "id": "ext550oa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "ext550oa",
     "long_name": "Organic Matter Aerosol Extinction Coefficient",
     "standard_name": "volume_extinction_coefficient_in_air_due_to_ambient_aerosol"
 }

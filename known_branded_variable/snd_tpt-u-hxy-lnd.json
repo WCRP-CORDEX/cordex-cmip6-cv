@@ -1,6 +1,23 @@
 {
-  "id": "snd_tpt-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Snow Depth"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "snd_tpt-u-hxy-lnd",
+    "table_id": [
+        "6hr"
+    ],
+    "compound_name": [
+        "6hr.snd"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "long_name": [
+        "Snow Depth"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

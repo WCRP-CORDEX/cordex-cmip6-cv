@@ -1,6 +1,26 @@
 {
-  "id": "snc_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Snow Area Percentage"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "snc_tpt-u-hxy-u",
+    "table_id": [
+        "6hr"
+    ],
+    "compound_name": [
+        "6hr.snc"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "long_name": [
+        "Snow Area Percentage"
+    ],
+    "comment": [
+        "Percentage of each grid cell that is occupied by snow that rests on land portion of cell."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

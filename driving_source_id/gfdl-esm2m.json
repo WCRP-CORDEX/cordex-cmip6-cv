@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gfdl-esm2m",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GFDL-ESM2M (2012): \naerosol: prescribed\natmos: GFDL-AM2 (144 x 90 longitude/latitude; 24 levels; top level 1 hPa)\natmosChem: prescribed\nland: GFDL-LM3.0\nlandIce: GFDL-LM3.0\nocean: GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: GFDL-TOPAZ2\nseaIce: GFDL-SIM2 (GFDL-SIS, tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 3 layers; 5 thickness categories)"
 }

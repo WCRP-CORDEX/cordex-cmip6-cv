@@ -1,6 +1,29 @@
 {
-  "id": "rlusaf_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Upwelling Aerosol-Free Longwave Radiation"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "rlusaf_tavg-u-hxy-u",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.rlusaf",
+        "day.rlusaf",
+        "mon.rlusaf"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Surface Upwelling Aerosol-Free Longwave Radiation"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

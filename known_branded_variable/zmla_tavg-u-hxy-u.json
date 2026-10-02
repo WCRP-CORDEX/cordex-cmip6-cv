@@ -1,6 +1,29 @@
 {
-  "id": "zmla_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Height of Boundary Layer"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "zmla_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.zmla",
+        "mon.zmla"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Height of Boundary Layer"
+    ],
+    "comment": [
+        "The atmosphere boundary layer thickness is the 'depth' or 'height' of the (atmosphere) planetary boundary layer."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

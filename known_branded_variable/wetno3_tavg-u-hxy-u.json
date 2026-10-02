@@ -1,6 +1,29 @@
 {
-  "id": "wetno3_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Wet Deposition Rate of Nitrate"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wetno3_tavg-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.wetno3",
+        "day.wetno3",
+        "mon.wetno3"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Wet Deposition Rate of Nitrate"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

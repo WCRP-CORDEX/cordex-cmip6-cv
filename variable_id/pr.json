@@ -1,6 +1,7 @@
 {
-    "id": "pr",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "includes both liquid and solid phases"
+    "@context": "000_context.jsonld",
+    "id": "pr",
+    "description": "includes both liquid and solid phases",
+    "long_name": "Precipitation"
 }

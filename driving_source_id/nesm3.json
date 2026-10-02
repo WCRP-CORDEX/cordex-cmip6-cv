@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nesm3",
-    "type": "source"
+    "type": "source",
+    "driving_source": "NESM v3 (2016): \naerosol: none\natmos: ECHAM v6.3 (T63; 192 x 96 longitude/latitude; 47 levels; top level 1 Pa)\natmosChem: none\nland: JSBACH v3.1\nlandIce: none\nocean: NEMO v3.4 (NEMO v3.4, tripolar primarily 1deg; 384 x 362 longitude/latitude; 46 levels; top grid cell 0-6 m)\nocnBgchem: none\nseaIce: CICE4.1"
 }

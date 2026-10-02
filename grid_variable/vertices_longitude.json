@@ -1,0 +1,8 @@
+{
+    "type": "grid_variable",
+    "id": "vertices_longitude",
+    "@context": "000_context.jsonld",
+    "out_name": "vertices_lon",
+    "valid_min": -180.0,
+    "valid_max": 360.0
+}

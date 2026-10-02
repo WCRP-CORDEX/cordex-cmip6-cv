@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ciesm",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CIESM (2017): \naerosol: MAM4\natmos: CIESM-AM (FV/FD; 288 x 192 longitude/latitude; 30 levels; top level 2.255 hPa)\natmosChem: trop_mam4\nland: CIESM-LM (modified CLM4.5)\nlandIce: none\nocean: CIESM-OM (FD, SCCGrid Displaced Pole; 720 x 560 longitude/latitude; 46 levels; top grid cell 0-6 m)\nocnBgchem: none\nseaIce: CICE4"
 }

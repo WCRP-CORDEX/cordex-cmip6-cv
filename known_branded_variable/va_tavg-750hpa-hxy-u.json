@@ -1,6 +1,26 @@
 {
-  "id": "va_tavg-750hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Northward Wind at 750hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "va_tavg-750hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.va750",
+        "mon.va750"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Northward Wind at 750hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

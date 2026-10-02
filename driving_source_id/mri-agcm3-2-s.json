@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mri-agcm3-2-s",
-    "type": "source"
+    "type": "source",
+    "driving_source": "MRI-AGCM3-2-S (2017): \naerosol: Prescribed from MRI-ESM2.0\natmos: MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)\natmosChem: none\nland: SIB0109\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

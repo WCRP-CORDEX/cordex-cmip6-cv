@@ -1,6 +1,6 @@
 {
-    "id": "concso4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "concso4",
+    "long_name": "Concentration of SO4"
 }

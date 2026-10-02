@@ -1,0 +1,6 @@
+{
+    "type": "grid_axis",
+    "id": "i_index",
+    "@context": "000_context.jsonld",
+    "long_name": "first spatial index for variables stored on an unstructured grid"
+}

@@ -1,8 +1,26 @@
 {
-  "id": "vo_tavg-ol-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Water Y Velocity",
-  "description": "Prognostic y-ward velocity component resolved by the model.",
-  "cell_measures": "--OPT"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "vo_tavg-ol-hxy-sea",
+    "table_id": [
+        "day"
+    ],
+    "compound_name": [
+        "day.vo"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "long_name": [
+        "Sea Water Y Velocity"
+    ],
+    "comment": [
+        "Prognostic y-ward velocity component resolved by the model."
+    ],
+    "cell_measures": [
+        "--OPT"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

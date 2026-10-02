@@ -1,7 +1,26 @@
 {
-  "id": "tas_tpt-h2m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Near-Surface Air Temperature",
-  "description": "near-surface (usually, 2 meter) air temperature"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "tas_tpt-h2m-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.tas"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Near-Surface Air Temperature"
+    ],
+    "comment": [
+        "near-surface (usually, 2 meter) air temperature"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

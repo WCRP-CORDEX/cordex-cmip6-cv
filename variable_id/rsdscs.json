@@ -1,6 +1,6 @@
 {
-    "id": "rsdscs",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Surface solar irradiance clear sky for UV calculations"
+    "@context": "000_context.jsonld",
+    "id": "rsdscs",
+    "long_name": "Surface Downwelling Clear-Sky Shortwave Radiation"
 }

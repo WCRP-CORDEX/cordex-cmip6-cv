@@ -1,6 +1,29 @@
 {
-  "id": "hfcorr_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Heat Flux Correction"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "hfcorr_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.hfcorr",
+        "mon.hfcorr"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Heat Flux Correction"
+    ],
+    "comment": [
+        "Flux correction is also called 'flux adjustment'. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, 'flux' implies per unit area, called 'flux density' in physics."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

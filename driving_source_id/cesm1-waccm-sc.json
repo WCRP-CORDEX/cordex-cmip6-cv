@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cesm1-waccm-sc",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CESM1-WACCM-SC (2011): \naerosol: MOZART-specified (same grid as atmos)\natmos: WACCM4 (1.9x2.5 finite volume grid; 144 x 96 longitude/latitude; 66 levels; top level 5.9e-06 mb)\natmosChem: MOZART-specified (same grid as atmos)\nland: CLM4.0\nlandIce: none\nocean: POP2 (320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)\nocnBgchem: BEC (same grid as ocean)\nseaIce: CICE4 (same as grid as ocean)"
 }

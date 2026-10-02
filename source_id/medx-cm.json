@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "medx-cm",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "The NKUA regional Coupled Model for the eXtended Mediterranean region (2025)",
+        "The NKUA regional Coupled Model for the eXtended Mediterranean region"
+    ]
 }

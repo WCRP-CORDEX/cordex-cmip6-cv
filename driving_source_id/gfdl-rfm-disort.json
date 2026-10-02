@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gfdl-rfm-disort",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GFDL-RFM-DISORT (2019): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

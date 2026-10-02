@@ -1,7 +1,6 @@
 {
-    "id": "sconcsoa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "sconcsoa",
     "long_name": "Surface Concentration of Secondary Organic Aerosol"
 }

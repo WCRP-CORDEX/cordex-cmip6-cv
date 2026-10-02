@@ -1,7 +1,6 @@
 {
-    "id": "rhop",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "rhop",
     "long_name": "Sea Water Potential Density"
 }

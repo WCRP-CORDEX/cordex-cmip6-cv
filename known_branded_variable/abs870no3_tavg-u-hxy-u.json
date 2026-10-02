@@ -1,6 +1,26 @@
 {
-  "id": "abs870no3_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Nitrate Aerosol Absorption Optical Thickness at 870 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs870no3_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.abs870no3",
+        "mon.abs870no3"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Nitrate Aerosol Absorption Optical Thickness at 870 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

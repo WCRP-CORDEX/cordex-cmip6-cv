@@ -1,7 +1,6 @@
 {
-    "id": "tob",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Potential temperature at the ocean bottom-most grid cell.",
-    "units": "degC"
+    "@context": "000_context.jsonld",
+    "id": "tob",
+    "long_name": "Sea Water Potential Temperature at Sea Floor"
 }

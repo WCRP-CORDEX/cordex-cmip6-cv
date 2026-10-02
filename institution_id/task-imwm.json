@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "task-imwm",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "TASK [Centre of Informatics TASK, Gdansk University of Technology, Gdansk, Poland]; IMWM [Institute of Meteorology and Water Management, Warsaw, Poland]"
 }

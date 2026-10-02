@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "hclim43-aladin",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "HARMONIE Climate model cycle 43 with ALADIN physics (2022)",
+        "HARMONIE Climate model cycle 43 with ALADIN physics"
+    ]
 }

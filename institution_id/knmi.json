@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "knmi",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Royal Netherlands Meteorological Institute, De Bilt, The Netherlands"
 }

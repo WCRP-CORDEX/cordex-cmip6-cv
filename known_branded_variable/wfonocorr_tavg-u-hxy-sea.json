@@ -1,6 +1,29 @@
 {
-  "id": "wfonocorr_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Water Flux into Sea Water Without Flux Correction"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wfonocorr_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.wfonocorr",
+        "mon.wfonocorr"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Water Flux into Sea Water Without Flux Correction"
+    ],
+    "comment": [
+        "Computed as the water flux (without flux correction) into the ocean divided by the area of the ocean portion of the grid cell."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

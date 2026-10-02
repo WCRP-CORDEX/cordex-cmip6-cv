@@ -1,6 +1,26 @@
 {
-  "id": "va_tpt-400hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Northward Wind at 400hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "va_tpt-400hpa-hxy-u",
+    "table_id": [
+        "3hr",
+        "6hr"
+    ],
+    "compound_name": [
+        "3hr.va400",
+        "6hr.va400"
+    ],
+    "frequency": [
+        "3hr",
+        "6hr"
+    ],
+    "long_name": [
+        "Northward Wind at 400hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnr-isac",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Italian National Research Council, Institute of Atmospheric Sciences and Climate, Lecce, Italy"
 }

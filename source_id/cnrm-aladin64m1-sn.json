@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-aladin64m1-sn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "CNRM-ALADIN regional climate model, version 6.4 M1 (Med-CORDEX domain) with spectral nudging (2023)",
+        "CNRM-ALADIN regional climate model, version 6.4 M1 (Med-CORDEX domain) with spectral nudging"
+    ]
 }

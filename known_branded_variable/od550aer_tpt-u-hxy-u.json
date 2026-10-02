@@ -1,6 +1,27 @@
 {
-  "id": "od550aer_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ambient Aerosol Optical Thickness at 550nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od550aer_tpt-u-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.od550aer"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Ambient Aerosol Optical Thickness at 550nm"
+    ],
+    "comment": [
+        "AOD from ambient aerosols, including aerosol water. It excludes prescribed stratospheric aerosol but includes other background aerosol types. The file needs a wavelength: 550nm comment attribute."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos",
+        "aerosol"
+    ]
 }

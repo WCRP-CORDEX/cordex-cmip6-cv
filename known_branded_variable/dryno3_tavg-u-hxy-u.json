@@ -1,9 +1,30 @@
 {
-  "id": "dryno3_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dry Deposition Rate of Nitrate",
-  "description": "",
-  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_nitrate_dry_aerosol_particles_due_to_dry_deposition",
-  "positive_direction": "down"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "dryno3_tavg-u-hxy-u",
+    "cf_standard_name": "tendency_of_atmosphere_mass_content_of_nitrate_dry_aerosol_particles_due_to_dry_deposition",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.dryno3",
+        "day.dryno3",
+        "mon.dryno3"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dry Deposition Rate of Nitrate"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

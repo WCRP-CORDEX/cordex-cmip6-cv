@@ -1,5 +1,6 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "ull",
-  "type": "organisation"
+    "@context": "000_context.jsonld",
+    "id": "ull",
+    "type": "organisation",
+    "institution": "Universidad de La Laguna, La Laguna (Canary Islands), Spain"
 }

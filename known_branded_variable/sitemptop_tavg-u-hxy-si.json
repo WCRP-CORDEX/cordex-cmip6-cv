@@ -1,6 +1,29 @@
 {
-  "id": "sitemptop_tavg-u-hxy-si",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Temperature of Sea Ice"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sitemptop_tavg-u-hxy-si",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.sitemptop",
+        "mon.sitemptop"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Surface Temperature of Sea Ice"
+    ],
+    "comment": [
+        "Report surface temperature of snow where snow covers the sea ice."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

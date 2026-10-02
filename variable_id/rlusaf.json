@@ -1,8 +1,7 @@
 {
-    "id": "rlusaf",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "rlusaf",
     "long_name": "Surface Upwelling Aerosol-Free Longwave Radiation",
     "standard_name": "surface_upwelling_longwave_flux_in_air"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fio-esm-2-0",
-    "type": "source"
+    "type": "source",
+    "driving_source": "FIO-ESM 2.0 (2018): \naerosol: Prescribed monthly fields\natmos: CAM4 (0.9x1.25 finite volume grid; 192 x 288 longitude/latitude; 26 levels; top level ~2 hPa)\natmosChem: none\nland: CLM4.0 (same grid at atmos)\nlandIce: none\nocean: POP2-W (POP2 coupled with MASNUM surface wave model, Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: CICE4.0 (same grid as ocean)"
 }

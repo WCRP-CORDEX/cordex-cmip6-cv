@@ -1,6 +1,6 @@
 {
-    "id": "rsuscs",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Surface Upwelling Clear-sky Shortwave Radiation"
+    "@context": "000_context.jsonld",
+    "id": "rsuscs",
+    "long_name": "Surface Upwelling Clear-Sky Shortwave Radiation"
 }

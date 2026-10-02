@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "pcmdi-test-1-0",
-    "type": "source"
+    "type": "source",
+    "driving_source": "PCMDI-test 1.0 (1989): \naerosol: none\natmos: Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)\natmosChem: none\nland: Earth1.0\nlandIce: none\nocean: BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: Declining1.0-warming (360 x 180 longitude/latitude)"
 }

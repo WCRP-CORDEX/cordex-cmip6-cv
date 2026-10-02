@@ -1,6 +1,23 @@
 {
-  "id": "ssa440aer_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Aerosol Single Scattering Albedo at 440 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ssa440aer_tpt-u-hxy-u",
+    "table_id": [
+        "3hr"
+    ],
+    "compound_name": [
+        "3hr.ssa440aer"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "long_name": [
+        "Aerosol Single Scattering Albedo at 440 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

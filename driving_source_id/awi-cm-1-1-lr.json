@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "awi-cm-1-1-lr",
-    "type": "source"
+    "type": "source",
+    "driving_source": "AWI-CM 1.1 LR (2018): \naerosol: none\natmos: ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)\natmosChem: none\nland: JSBACH 3.20\nlandIce: none\nocean: FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)\nocnBgchem: none\nseaIce: FESOM 1.4"
 }

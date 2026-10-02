@@ -1,6 +1,7 @@
 {
-    "id": "thkcello",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "'Thickness' means the vertical extent of a layer. 'Cell' refers to a model grid-cell."
+    "@context": "000_context.jsonld",
+    "id": "thkcello",
+    "description": "'Thickness' means the vertical extent of a layer. 'Cell' refers to a model grid-cell.",
+    "long_name": "Ocean Model Cell Thickness"
 }

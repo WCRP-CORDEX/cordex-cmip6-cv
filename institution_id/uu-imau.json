@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "uu-imau",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Utrecht University, Institute for Marine and Atmospheric Research Utrecht (IMAU), Utrecht, The Netherlands"
 }

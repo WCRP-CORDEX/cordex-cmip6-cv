@@ -1,7 +1,6 @@
 {
-    "id": "li",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "li",
     "long_name": "Lifted Index"
 }

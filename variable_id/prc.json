@@ -1,6 +1,6 @@
 {
-    "id": "prc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Convective precipitation at surface; includes both liquid and solid phases."
+    "@context": "000_context.jsonld",
+    "id": "prc",
+    "long_name": "Convective Precipitation"
 }

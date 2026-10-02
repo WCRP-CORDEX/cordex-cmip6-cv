@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cmcc-cm2-vhr4",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CMCC-CM2-VHR4 (2017): \naerosol: prescribed MACv2-SP\natmos: CAM4 (1/4deg; 1152 x 768 longitude/latitude; 26 levels; top at ~2 hPa)\natmosChem: none\nland: CLM4.5 (SP mode)\nlandIce: none\nocean: NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)\nocnBgchem: none\nseaIce: CICE4.0"
 }

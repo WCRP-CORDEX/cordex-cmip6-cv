@@ -1,7 +1,6 @@
 {
-    "id": "limax",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "limax",
     "long_name": "Daily Maximum Lifted Index"
 }
