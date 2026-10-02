@@ -1,6 +1,0 @@
-{
-    "id": "time2",
-    "type": "data_coordinate",
-    "@context": "000_context.jsonld",
-    "long_name": "time"
-}

@@ -783,6 +783,67 @@ def select_referenced_formula_entries(
     return selected
 
 
+def collect_referenced_coordinate_ids(
+    cmor_variables: list[CmorVariable],
+    known_payloads: dict[str, dict[str, Any]],
+    model_level_payloads: dict[str, dict[str, Any]],
+    formula_entries: dict[str, dict[str, Any]],
+    grid_content: dict[str, Any],
+) -> set[str]:
+    """Collect coordinate IDs referenced by emitted CMOR-derived descriptors."""
+    referenced = {
+        dimension.lower()
+        for record in cmor_variables
+        for dimension in split_words(record.entry.get("dimensions"))
+    }
+    referenced.update(
+        dimension.lower()
+        for payload in known_payloads.values()
+        for dimension in split_words(payload.get("dimensions"))
+    )
+    referenced.update(
+        dimension.lower()
+        for entry in formula_entries.values()
+        for dimension in split_words(entry.get("dimensions"))
+    )
+    referenced.update(
+        generic.lower()
+        for payload in model_level_payloads.values()
+        for generic in split_words(payload.get("generic_level_name"))
+    )
+    referenced.update(
+        dimension.lower()
+        for collection in ("axis_entry", "variable_entry")
+        for entry in grid_content.get(collection, {}).values()
+        for dimension in split_words(entry.get("dimensions"))
+    )
+    return referenced
+
+
+def select_referenced_coordinate_entries(
+    coordinate_entries: dict[str, dict[str, Any]],
+    referenced_ids: set[str],
+    report: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Keep data coordinates referenced by another emitted descriptor."""
+    selected: dict[str, dict[str, Any]] = {}
+    skipped: list[str] = []
+    for identifier, entry in sorted(coordinate_entries.items()):
+        if identifier.lower() in referenced_ids:
+            selected[identifier] = entry
+            continue
+        skipped.append(identifier.lower())
+        warning = (
+            f"data_coordinate {identifier!r} is not referenced by any CMOR "
+            "variable, formula term, model-level coordinate, or grid descriptor "
+            "and therefore skipped"
+        )
+        report["warnings"].append(warning)
+        print(f"WARNING: {warning}")
+    report["unreferenced_data_coordinates"] = skipped
+    return selected
+
+
 def build_formula_term_payload(
     identifier: str, entry: dict[str, Any]
 ) -> dict[str, Any]:
@@ -1381,15 +1442,30 @@ def main() -> None:
         for dimension in split_words(entry.get("dimensions"))
         if dimension in GENERIC_LEVEL_METADATA
     )
-    data_payloads = {
-        identifier: build_data_coordinate_payload(identifier, entry)
-        for identifier, entry in data_entries.items()
-    }
-    for generic_id in sorted(generic_ids):
-        if generic_id not in GENERIC_LEVEL_METADATA:
-            raise ValueError(f"No generic coordinate metadata for {generic_id!r}")
-        data_payloads[generic_id] = build_generic_coordinate_payload(generic_id)
-    data_payloads["vertices"] = build_vertices_coordinate_payload()
+    grid_content = read_json(cmor_dir / "CORDEX-CMIP6_grids.json")
+    coordinate_candidates = dict(data_entries)
+    coordinate_candidates.update(
+        (generic_id, {}) for generic_id in sorted(generic_ids)
+    )
+    coordinate_candidates["vertices"] = {}
+    referenced_coordinate_ids = collect_referenced_coordinate_ids(
+        cmor_variables,
+        {},
+        model_level_payloads,
+        referenced_formula_entries,
+        grid_content,
+    )
+    selected_coordinate_entries = select_referenced_coordinate_entries(
+        coordinate_candidates, referenced_coordinate_ids, report
+    )
+    data_payloads: dict[str, dict[str, Any]] = {}
+    for identifier, entry in selected_coordinate_entries.items():
+        if identifier == "vertices":
+            data_payloads[identifier] = build_vertices_coordinate_payload()
+        elif identifier in GENERIC_LEVEL_METADATA:
+            data_payloads[identifier] = build_generic_coordinate_payload(identifier)
+        else:
+            data_payloads[identifier] = build_data_coordinate_payload(identifier, entry)
     for payload in data_payloads.values():
         emit_layered_payload(
             "data_coordinate",
@@ -1418,7 +1494,6 @@ def main() -> None:
             report=report,
         )
 
-    grid_content = read_json(cmor_dir / "CORDEX-CMIP6_grids.json")
     for identifier, entry in grid_content.get("axis_entry", {}).items():
         emit_layered_payload(
             "grid_axis",

@@ -55,6 +55,48 @@ def test_unreferenced_formula_terms_are_skipped() -> None:
     ]
 
 
+def test_unreferenced_data_coordinates_are_skipped_by_id_not_out_name() -> None:
+    report = {"warnings": []}
+
+    selected = generator.select_referenced_coordinate_entries(
+        {
+            "time": {"out_name": "time"},
+            "timefxc": {"out_name": "time"},
+            "depth_coord": {"out_name": "lev"},
+        },
+        {"time", "depth_coord"},
+        report,
+    )
+
+    assert set(selected) == {"time", "depth_coord"}
+    assert report["unreferenced_data_coordinates"] == ["timefxc"]
+    assert "data_coordinate 'timefxc'" in report["warnings"][0]
+
+
+def test_coordinate_references_include_indirect_dimensions() -> None:
+    references = generator.collect_referenced_coordinate_ids(
+        [
+            generator.CmorVariable(
+                "mon",
+                "tas",
+                {"dimensions": ["longitude", "latitude", "time"]},
+            )
+        ],
+        {"tas": {"dimensions": ["longitude", "latitude", "time"]}},
+        {"depth": {"generic_level_name": "depth_coord"}},
+        {"a": {"dimensions": "depth_coord"}},
+        {"variable_entry": {"bounds": {"dimensions": "vertices latitude"}}},
+    )
+
+    assert {
+        "depth_coord",
+        "latitude",
+        "longitude",
+        "time",
+        "vertices",
+    } <= references
+
+
 def test_resolve_paths_uses_active_qa_mapping(tmp_path: Path) -> None:
     args = SimpleNamespace(
         repos_base_dir=tmp_path,

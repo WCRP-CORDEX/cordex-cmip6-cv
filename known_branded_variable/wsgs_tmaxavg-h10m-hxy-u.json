@@ -1,7 +1,13 @@
 {
     "type": "known_branded_variable",
-    "@context": "000_context.jsonld",
     "id": "wsgs_tmaxavg-h10m-hxy-u",
+    "@context": "000_context.jsonld",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "time",
+        "height10m"
+    ],
     "table_id": [
         "mon"
     ],
