@@ -67,9 +67,7 @@ def test_compare_mappings_reports_each_difference_category() -> None:
         "day.same": "same_tavg-u-hxy-u",
     }
 
-    new, conflicts, obsolete = mapping_generator.compare_mappings(
-        generated, existing
-    )
+    new, conflicts, obsolete = mapping_generator.compare_mappings(generated, existing)
 
     assert new == {"day.new": "new_tavg-u-hxy-u"}
     assert conflicts == {
