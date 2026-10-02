@@ -43,7 +43,9 @@ def load_main_generator() -> ModuleType:
         Path(__file__).resolve().parent
         / "generate_cc6_cv_and_universe_variables_and_known_branded_variables.py"
     )
-    spec = importlib.util.spec_from_file_location("generate_cc6_cv_mapping_source", path)
+    spec = importlib.util.spec_from_file_location(
+        "generate_cc6_cv_mapping_source", path
+    )
     if spec is None or spec.loader is None:
         raise ImportError(f"Could not load the CORDEX-CMIP6 generator from {path}")
     module = importlib.util.module_from_spec(spec)
@@ -174,9 +176,7 @@ def compare_mappings(
     generated: dict[str, str], existing: dict[str, str]
 ) -> tuple[dict[str, str], dict[str, dict[str, str]], dict[str, str]]:
     """Return new, conflicting, and obsolete entries, each sorted by key."""
-    new = {
-        key: generated[key] for key in sorted(generated.keys() - existing.keys())
-    }
+    new = {key: generated[key] for key in sorted(generated.keys() - existing.keys())}
     conflicts = {
         key: {"existing": existing[key], "generated": generated[key]}
         for key in sorted(generated.keys() & existing.keys())
@@ -203,8 +203,7 @@ def write_mapping(path: Path, mapping: dict[str, str]) -> None:
         "[mapping_variables]",
     ]
     lines.extend(
-        f"{toml_string(key)} = {toml_string(value)}"
-        for key, value in mapping.items()
+        f"{toml_string(key)} = {toml_string(value)}" for key, value in mapping.items()
     )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -247,7 +246,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not cmor_dir.is_dir():
         raise FileNotFoundError(f"CMOR Tables directory not found: {cmor_dir}")
 
-    mapper_path = Path(inspect.getfile(generator.map_to_cmip_branded_variable)).resolve()
+    mapper_path = Path(
+        inspect.getfile(generator.map_to_cmip_branded_variable)
+    ).resolve()
     mapper_failures = check_mapper_compatibility()
     generated, source_conflicts = build_mapping(cmor_dir)
     output_existed = output_path.is_file()
@@ -283,7 +284,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 2
     if conflicts and not args.force_conflicts:
         print("ERROR: existing mapping conflicts require review.")
-        print("Mapping was not written; pass --force-conflicts after review to replace it.")
+        print(
+            "Mapping was not written; pass --force-conflicts after review to replace it."
+        )
         return 2
 
     if output_existed and not new and not conflicts and not obsolete:
