@@ -1,6 +1,29 @@
 {
-  "id": "od550nh4_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ammonium Aerosol Optical Thickness at 550nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od550nh4_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.od550nh4",
+        "mon.od550nh4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Ammonium Aerosol Optical Thickness at 550nm"
+    ],
+    "comment": [
+        "1hr optional (considered for Tier1)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

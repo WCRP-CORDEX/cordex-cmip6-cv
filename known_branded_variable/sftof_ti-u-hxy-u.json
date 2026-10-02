@@ -1,7 +1,26 @@
 {
-  "id": "sftof_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Area Percentage",
-  "description": "This is the area fraction at the ocean surface."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sftof_ti-u-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.sftof"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Sea Area Percentage"
+    ],
+    "comment": [
+        "This is the area fraction at the ocean surface."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

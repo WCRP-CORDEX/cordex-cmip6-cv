@@ -1,0 +1,32 @@
+{
+    "type": "known_branded_variable",
+    "id": "hfso_tavg-u-hxy-u",
+    "@context": "000_context.jsonld",
+    "table_id": [
+        "1hr",
+        "3hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.hfso",
+        "3hr.hfso",
+        "day.hfso",
+        "mon.hfso"
+    ],
+    "frequency": [
+        "1hr",
+        "3hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Ground Heat Flux"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
+}

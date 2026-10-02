@@ -1,6 +1,6 @@
 {
-    "id": "od440nh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od440nh4",
+    "long_name": "Ammonium Aerosol Optical Thickness at 440nm"
 }

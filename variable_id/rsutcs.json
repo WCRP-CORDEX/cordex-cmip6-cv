@@ -1,6 +1,6 @@
 {
-    "id": "rsutcs",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Calculated in the absence of clouds."
+    "@context": "000_context.jsonld",
+    "id": "rsutcs",
+    "long_name": "TOA Outgoing Clear-Sky Shortwave Radiation"
 }

@@ -1,7 +1,32 @@
 {
-  "id": "mrro_tavg-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Total Runoff",
-  "description": "The total run-off (including drainage through the base of the soil model) per unit area leaving the land portion of the grid cell."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrro_tavg-u-hxy-lnd",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.mrro",
+        "day.mrro",
+        "mon.mrro"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Total Runoff"
+    ],
+    "comment": [
+        "The total run-off (including drainage through the base of the soil model) per unit area leaving the land portion of the grid cell."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

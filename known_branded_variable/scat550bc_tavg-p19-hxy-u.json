@@ -1,6 +1,26 @@
 {
-  "id": "scat550bc_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Black Carbon Aerosol Scattering Coefficient"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "scat550bc_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.scat550bc",
+        "mon.scat550bc"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Black Carbon Aerosol Scattering Coefficient"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

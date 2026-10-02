@@ -1,7 +1,6 @@
 {
-    "id": "chepno3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "chepno3",
     "long_name": "Chemical Production of Dry Nitrate Aerosol"
 }

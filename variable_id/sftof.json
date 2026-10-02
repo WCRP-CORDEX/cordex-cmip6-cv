@@ -1,7 +1,7 @@
 {
-    "id": "sftof",
-    "@context": "000_context.jsonld",
     "type": "variable",
+    "@context": "000_context.jsonld",
+    "id": "sftof",
     "description": "This is the area fraction at the ocean surface.",
-    "units": "%"
+    "long_name": "Sea Area Percentage"
 }

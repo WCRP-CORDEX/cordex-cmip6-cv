@@ -1,7 +1,26 @@
 {
-  "id": "orog_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Altitude",
-  "description": "The surface called 'surface' means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "orog_ti-u-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.orog"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Surface Altitude"
+    ],
+    "comment": [
+        "The surface called 'surface' means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

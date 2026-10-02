@@ -1,6 +1,7 @@
 {
-    "id": "rsut",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "at the top of the atmosphere"
+    "@context": "000_context.jsonld",
+    "id": "rsut",
+    "description": "at the top of the atmosphere",
+    "long_name": "TOA Outgoing Shortwave Radiation"
 }

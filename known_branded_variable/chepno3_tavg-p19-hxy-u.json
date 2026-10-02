@@ -1,6 +1,26 @@
 {
-  "id": "chepno3_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Chemical Production of Dry Nitrate Aerosol"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "chepno3_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.chepno3",
+        "mon.chepno3"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Chemical Production of Dry Nitrate Aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,6 +1,6 @@
 {
-    "id": "abs440ss",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs440ss",
+    "long_name": "Sea-salt Aerosol Absorption Optical Thickness at 440 nm"
 }

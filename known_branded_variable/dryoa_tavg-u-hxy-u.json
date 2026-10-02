@@ -1,8 +1,29 @@
 {
-  "id": "dryoa_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dry Deposition Rate of Organic Matter",
-  "description": "",
-  "positive_direction": "down"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "dryoa_tavg-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.dryoa",
+        "day.dryoa",
+        "mon.dryoa"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dry Deposition Rate of Organic Matter"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

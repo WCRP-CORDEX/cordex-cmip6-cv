@@ -1,7 +1,6 @@
 {
-    "id": "cll",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "cll",
     "long_name": "Low Level Cloud Fraction"
 }

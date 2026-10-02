@@ -1,6 +1,26 @@
 {
-  "id": "mrsos_tpt-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Moisture in Upper Portion of Soil Column"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrsos_tpt-u-hxy-lnd",
+    "table_id": [
+        "1hr",
+        "3hr"
+    ],
+    "compound_name": [
+        "1hr.mrsos",
+        "3hr.mrsos"
+    ],
+    "frequency": [
+        "1hr",
+        "3hr"
+    ],
+    "long_name": [
+        "Moisture in Upper Portion of Soil Column"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

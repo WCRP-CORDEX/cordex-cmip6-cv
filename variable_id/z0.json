@@ -1,7 +1,6 @@
 {
-    "id": "z0",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "z0",
     "long_name": "Surface Roughness Length"
 }

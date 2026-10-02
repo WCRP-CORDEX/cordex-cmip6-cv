@@ -1,6 +1,26 @@
 {
-  "id": "chepsoa_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Chemical Production of Dry Aerosol Secondary Organic Matter"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "chepsoa_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.chepsoa",
+        "mon.chepsoa"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Chemical Production of Dry Aerosol Secondary Organic Matter"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

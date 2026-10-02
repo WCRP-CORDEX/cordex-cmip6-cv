@@ -1,6 +1,6 @@
 {
-  "id": "p300",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "pressure"
+    "id": "p300",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "pressure"
 }

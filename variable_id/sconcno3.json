@@ -1,7 +1,6 @@
 {
-    "id": "sconcno3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "sconcno3",
     "long_name": "Surface Concentration of Nitrate"
 }

@@ -1,7 +1,32 @@
 {
-  "id": "evspsblpot_tavg-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Potential Evapotranspiration",
-  "description": "at surface; potential flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "evspsblpot_tavg-u-hxy-lnd",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.evspsblpot",
+        "day.evspsblpot",
+        "mon.evspsblpot"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Potential Evapotranspiration"
+    ],
+    "comment": [
+        "at surface; potential flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -1,6 +1,7 @@
 {
-    "id": "od550aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "AOD from the ambient aerosols (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute 'wavelength: 550nm'"
+    "@context": "000_context.jsonld",
+    "id": "od550aer",
+    "description": "AOD from ambient aerosols, including aerosol water. It excludes prescribed stratospheric aerosol but includes other background aerosol types. The file needs a wavelength: 550nm comment attribute.",
+    "long_name": "Ambient Aerosol Optical Thickness at 550nm"
 }

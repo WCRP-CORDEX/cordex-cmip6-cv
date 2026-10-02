@@ -1,6 +1,6 @@
 {
-    "id": "abs1000aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs1000aer",
+    "long_name": "Ambient Aerosol Absorption Optical Thickness at 1000 nm"
 }

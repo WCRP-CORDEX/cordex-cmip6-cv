@@ -1,6 +1,23 @@
 {
-  "id": "wsgs_tmax-h10m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Daily Maximum Near-Surface Wind Speed of Gust"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wsgs_tmax-h10m-hxy-u",
+    "table_id": [
+        "day"
+    ],
+    "compound_name": [
+        "day.wsgsmax"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "long_name": [
+        "Daily Maximum Near-Surface Wind Speed of Gust"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

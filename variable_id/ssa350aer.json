@@ -1,6 +1,6 @@
 {
-    "id": "ssa350aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "ssa350aer",
+    "long_name": "Aerosol Single Scattering Albedo at 350 nm"
 }

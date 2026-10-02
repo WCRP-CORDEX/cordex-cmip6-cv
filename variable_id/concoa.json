@@ -1,6 +1,6 @@
 {
-    "id": "concoa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "concoa",
+    "long_name": "Concentration of Organic Matter"
 }

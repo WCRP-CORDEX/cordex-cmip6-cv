@@ -1,6 +1,6 @@
 {
-    "id": "od870bc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od870bc",
+    "long_name": "Black Carbon Aerosol Optical Thickness at 870nm"
 }

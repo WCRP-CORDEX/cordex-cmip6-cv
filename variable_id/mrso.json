@@ -1,6 +1,6 @@
 {
-    "id": "mrso",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "the mass per unit area  (summed over all soil layers) of water in all phases."
+    "@context": "000_context.jsonld",
+    "id": "mrso",
+    "long_name": "Total Soil Moisture Content"
 }

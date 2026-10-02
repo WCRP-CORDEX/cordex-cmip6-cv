@@ -1,6 +1,7 @@
 {
-    "id": "emidust",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "daily output only if daily variations in emissions"
+    "@context": "000_context.jsonld",
+    "id": "emidust",
+    "description": "daily output only if daily variations in emissions",
+    "long_name": "Total Emission Rate of Dust"
 }

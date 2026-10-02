@@ -1,0 +1,8 @@
+{
+    "type": "model_level_coordinate",
+    "id": "depth_coord",
+    "@context": "000_context.jsonld",
+    "long_name": "ocean depth coordinate",
+    "valid_min": 0.0,
+    "valid_max": 12000.0
+}

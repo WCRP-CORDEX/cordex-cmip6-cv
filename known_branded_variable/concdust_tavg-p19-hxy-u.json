@@ -1,6 +1,26 @@
 {
-  "id": "concdust_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Concentration of Dust"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "concdust_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.concdust",
+        "mon.concdust"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Concentration of Dust"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,7 +1,6 @@
 {
-    "id": "chepnh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "chepnh4",
     "long_name": "Chemical Production of Dry Ammonium Aerosol"
 }

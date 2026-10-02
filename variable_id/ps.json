@@ -1,6 +1,6 @@
 {
-    "id": "ps",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates"
+    "@context": "000_context.jsonld",
+    "id": "ps",
+    "long_name": "Surface Air Pressure"
 }

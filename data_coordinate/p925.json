@@ -1,6 +1,9 @@
 {
-  "id": "p925",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "pressure"
+    "id": "p925",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "pressure",
+    "coordinate_values": [
+        92500.0
+    ]
 }

@@ -1,12 +1,31 @@
 {
-  "id": "abs550dust_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dust Aerosol Absorption Optical Thickness at 550 nm",
-  "description": "",
-  "dimensions": [
-    "longitude",
-    "latitude",
-    "time"
-  ]
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs550dust_tavg-u-hxy-u",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "time"
+    ],
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.abs550dust",
+        "mon.abs550dust"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dust Aerosol Absorption Optical Thickness at 550 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

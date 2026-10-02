@@ -1,6 +1,26 @@
 {
-  "id": "va_tavg-h250m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Northward Wind at 250m"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "va_tavg-h250m-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.va250m",
+        "mon.va250m"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Northward Wind at 250m"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

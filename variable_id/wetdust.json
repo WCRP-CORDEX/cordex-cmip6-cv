@@ -1,6 +1,6 @@
 {
-    "id": "wetdust",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "wetdust",
+    "long_name": "Wet Deposition Rate of Dust"
 }

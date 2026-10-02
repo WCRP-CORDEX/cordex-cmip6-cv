@@ -1,6 +1,6 @@
 {
-    "id": "asy350aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "asy350aer",
+    "long_name": "Aerosol Asymmetry Parameter at 350 nm"
 }

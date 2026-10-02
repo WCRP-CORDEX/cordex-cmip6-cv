@@ -1,6 +1,7 @@
 {
-    "id": "asy550aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "1hr optional (considered for Tier1)"
+    "@context": "000_context.jsonld",
+    "id": "asy550aer",
+    "description": "1hr optional (considered for Tier1)",
+    "long_name": "Aerosol Asymmetry Parameter at 550 nm"
 }

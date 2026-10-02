@@ -1,6 +1,23 @@
 {
-  "id": "ext550aer_tpt-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Aerosol Extinction Coefficient"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ext550aer_tpt-p19-hxy-u",
+    "table_id": [
+        "3hr"
+    ],
+    "compound_name": [
+        "3hr.ext550aer"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "long_name": [
+        "Aerosol Extinction Coefficient"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

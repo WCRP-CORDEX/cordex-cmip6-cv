@@ -1,7 +1,26 @@
 {
-  "id": "sftgif_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Percentage of the Grid Cell Covered by Glacier",
-  "description": "Percentage of grid cell covered by land ice (ice sheet, ice shelf, ice cap, glacier)"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sftgif_ti-u-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.sftgif"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Percentage of the Grid Cell Covered by Glacier"
+    ],
+    "comment": [
+        "Percentage of grid cell covered by land ice (ice sheet, ice shelf, ice cap, glacier)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

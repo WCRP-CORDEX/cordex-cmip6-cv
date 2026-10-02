@@ -1,12 +1,28 @@
 {
-  "id": "sftlaf_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Percentage of the Grid Cell Occupied by Lake",
-  "description": "",
-  "dimensions": [
-    "longitude",
-    "latitude",
-    "typelake"
-  ]
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sftlaf_ti-u-hxy-u",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "typelake"
+    ],
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.sftlaf"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Percentage of the Grid Cell Occupied by Lake"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

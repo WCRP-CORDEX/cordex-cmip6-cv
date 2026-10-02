@@ -1,13 +1,32 @@
 {
-  "id": "od550soa_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Secondary Organic Aerosol Optical Thickness at 550nm",
-  "description": "",
-  "cf_standard_name": "atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol_particles",
-  "dimensions": [
-    "longitude",
-    "latitude",
-    "time"
-  ]
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od550soa_tavg-u-hxy-u",
+    "cf_standard_name": "atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol_particles",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "time"
+    ],
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.od550soa",
+        "mon.od550soa"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Secondary Organic Aerosol Optical Thickness at 550nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

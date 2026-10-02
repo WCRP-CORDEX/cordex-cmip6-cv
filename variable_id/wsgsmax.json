@@ -1,7 +1,6 @@
 {
-    "id": "wsgsmax",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "wsgsmax",
     "long_name": "Daily Maximum Near-Surface Wind Speed of Gust"
 }

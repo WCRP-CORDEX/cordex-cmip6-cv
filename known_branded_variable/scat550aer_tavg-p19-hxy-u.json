@@ -1,6 +1,26 @@
 {
-  "id": "scat550aer_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Aerosol Scattering Coefficient"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "scat550aer_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.scat550aer",
+        "mon.scat550aer"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Aerosol Scattering Coefficient"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,6 +1,23 @@
 {
-  "id": "sconcss_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Concentration of Sea-Salt Aerosol"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sconcss_tpt-u-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.sconcss"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Surface Concentration of Sea-Salt Aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

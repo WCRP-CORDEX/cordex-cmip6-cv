@@ -1,6 +1,6 @@
 {
-    "id": "rlutcs",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Upwelling clear-sky longwave radiation at top of atmosphere"
+    "@context": "000_context.jsonld",
+    "id": "rlutcs",
+    "long_name": "TOA Outgoing Clear-Sky Longwave Radiation"
 }

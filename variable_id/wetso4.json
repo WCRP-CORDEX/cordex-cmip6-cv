@@ -1,7 +1,6 @@
 {
-    "id": "wetso4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "wetso4",
     "long_name": "Wet Deposition Rate of Sulfate"
 }

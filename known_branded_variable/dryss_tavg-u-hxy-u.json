@@ -1,8 +1,29 @@
 {
-  "id": "dryss_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dry Deposition Rate of Sea-Salt",
-  "description": "",
-  "positive_direction": "down"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "dryss_tavg-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.dryss",
+        "day.dryss",
+        "mon.dryss"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dry Deposition Rate of Sea-Salt"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

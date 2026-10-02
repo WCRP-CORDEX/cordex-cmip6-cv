@@ -1,6 +1,23 @@
 {
-  "id": "od350aer_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ambient Aerosol Optical Thickness at 350nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od350aer_tpt-u-hxy-u",
+    "table_id": [
+        "3hr"
+    ],
+    "compound_name": [
+        "3hr.od350aer"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "long_name": [
+        "Ambient Aerosol Optical Thickness at 350nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

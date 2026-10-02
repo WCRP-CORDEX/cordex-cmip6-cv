@@ -1,6 +1,23 @@
 {
-  "id": "ua_tpt-h200m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Eastward Wind at 200m"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ua_tpt-h200m-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.ua200m"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Eastward Wind at 200m"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

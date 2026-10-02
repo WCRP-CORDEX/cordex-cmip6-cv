@@ -1,6 +1,26 @@
 {
-  "id": "chegpso4_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Gas-Phase Production Rate of SO4"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "chegpso4_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.chegpso4",
+        "mon.chegpso4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Gas-Phase Production Rate of SO4"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

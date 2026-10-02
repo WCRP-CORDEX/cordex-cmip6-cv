@@ -1,7 +1,6 @@
 {
-    "id": "od550lt1aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "od550lt1aer",
     "long_name": "Ambient Fine Aerosol Optical Thickness at 550nm"
 }

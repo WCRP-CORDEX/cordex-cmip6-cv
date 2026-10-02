@@ -1,6 +1,26 @@
 {
-  "id": "sconcbc_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Concentration of Black Carbon"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sconcbc_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.sconcbc",
+        "mon.sconcbc"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Surface Concentration of Black Carbon"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

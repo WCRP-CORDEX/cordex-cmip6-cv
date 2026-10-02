@@ -1,6 +1,7 @@
 {
-    "id": "evspsbl",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Evaporation at surface (also known as evapotranspiration): flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)"
+    "@context": "000_context.jsonld",
+    "id": "evspsbl",
+    "description": "Evaporation at surface (also known as evapotranspiration): flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)",
+    "long_name": "Evaporation Including Sublimation and Transpiration"
 }

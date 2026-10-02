@@ -1,6 +1,6 @@
 {
-  "id": "typeurban",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "Urban area type"
+    "id": "typeurban",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "Urban area type"
 }

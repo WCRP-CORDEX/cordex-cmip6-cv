@@ -1,6 +1,9 @@
 {
-  "id": "latitude",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "Latitude"
+    "id": "latitude",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "Latitude",
+    "valid_min": -90.0,
+    "valid_max": 90.0,
+    "bounds_required": false
 }

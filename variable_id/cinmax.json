@@ -1,7 +1,6 @@
 {
-    "id": "cinmax",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "cinmax",
     "long_name": "Daily Maximum Convective Inhibition"
 }

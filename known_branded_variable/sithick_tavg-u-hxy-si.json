@@ -1,8 +1,30 @@
 {
-  "id": "sithick_tavg-u-hxy-si",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Ice Thickness",
-  "description": "Actual (floe) thickness of sea ice (NOT volume divided by grid area as was done in CMIP5)",
-  "cell_methods": "area: time: mean where sea_ice (comment: mask=siconc)"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sithick_tavg-u-hxy-si",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.sithick",
+        "mon.sithick"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sea Ice Thickness"
+    ],
+    "comment": [
+        "Actual (floe) thickness of sea ice (NOT volume divided by grid area as was done in CMIP5)"
+    ],
+    "cell_methods": "area: time: mean where sea_ice (comment: mask=siconc)",
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

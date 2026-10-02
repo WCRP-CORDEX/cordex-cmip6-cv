@@ -1,7 +1,6 @@
 {
-    "id": "sconcss",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "sconcss",
     "long_name": "Surface Concentration of Sea-Salt Aerosol"
 }

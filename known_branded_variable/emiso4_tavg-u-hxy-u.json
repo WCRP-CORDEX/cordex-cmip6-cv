@@ -1,8 +1,29 @@
 {
-  "id": "emiso4_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Total Emission Rate of Sulfate",
-  "description": "daily output only if daily variations in emissions",
-  "positive_direction": "up"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "emiso4_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.emiso4",
+        "mon.emiso4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Total Emission Rate of Sulfate"
+    ],
+    "comment": [
+        "daily output only if daily variations in emissions"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

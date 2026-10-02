@@ -1,6 +1,7 @@
 {
-  "id": "typelake",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "Lake and Inland Sea area type"
+    "id": "typelake",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "Lake and Inland Sea area type",
+    "coordinate_values": "lake_and_inland_sea"
 }

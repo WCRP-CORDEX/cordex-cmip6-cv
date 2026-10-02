@@ -1,6 +1,7 @@
 {
-    "id": "ssa550aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "1hr optional (considered for Tier1)"
+    "@context": "000_context.jsonld",
+    "id": "ssa550aer",
+    "description": "1hr optional (considered for Tier1)",
+    "long_name": "Aerosol Single Scattering Albedo at 550 nm"
 }

@@ -1,6 +1,26 @@
 {
-  "id": "od870dust_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dust Aerosol Optical Thickness at 870nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od870dust_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.od870dust",
+        "mon.od870dust"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dust Aerosol Optical Thickness at 870nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }
