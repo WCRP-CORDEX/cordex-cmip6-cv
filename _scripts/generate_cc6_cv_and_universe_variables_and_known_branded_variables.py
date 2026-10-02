@@ -1444,9 +1444,7 @@ def main() -> None:
     )
     grid_content = read_json(cmor_dir / "CORDEX-CMIP6_grids.json")
     coordinate_candidates = dict(data_entries)
-    coordinate_candidates.update(
-        (generic_id, {}) for generic_id in sorted(generic_ids)
-    )
+    coordinate_candidates.update((generic_id, {}) for generic_id in sorted(generic_ids))
     coordinate_candidates["vertices"] = {}
     referenced_coordinate_ids = collect_referenced_coordinate_ids(
         cmor_variables,
