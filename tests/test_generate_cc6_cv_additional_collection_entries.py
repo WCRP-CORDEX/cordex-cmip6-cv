@@ -27,8 +27,7 @@ def load_generator() -> ModuleType:
     ).resolve()
     if not generator_path.is_file():
         raise FileNotFoundError(
-            f"CORDEX-CMIP6 additional collection generator not found: "
-            f"{generator_path}"
+            f"CORDEX-CMIP6 additional collection generator not found: {generator_path}"
         )
 
     spec = importlib.util.spec_from_file_location(

@@ -28,6 +28,33 @@ def load_generator() -> ModuleType:
 generator = load_generator()
 
 
+def test_unreferenced_formula_terms_are_skipped() -> None:
+    report = {"warnings": []}
+    selected = generator.select_referenced_formula_entries(
+        {
+            "a": {"out_name": "a"},
+            "a_time1": {"out_name": "a"},
+            "a_bnds": {"out_name": "a_bnds"},
+            "unused": {"out_name": "unused"},
+        },
+        {"lev": {"z_factors": ["a"], "z_bounds_factors": ["a_bnds"]}},
+        report,
+    )
+
+    assert selected == {
+        "a": {"out_name": "a"},
+        "a_time1": {"out_name": "a"},
+        "a_bnds": {"out_name": "a_bnds"},
+    }
+    assert report["unreferenced_formula_terms"] == ["unused"]
+    assert report["warnings"] == [
+        (
+            "formula_term 'unused' is not referenced by any "
+            "model_level_coordinate entry and therefore skipped"
+        )
+    ]
+
+
 def test_resolve_paths_uses_active_qa_mapping(tmp_path: Path) -> None:
     args = SimpleNamespace(
         repos_base_dir=tmp_path,

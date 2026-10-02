@@ -754,6 +754,36 @@ def build_model_level_payload(identifier: str, entry: dict[str, Any]) -> dict[st
     return payload
 
 
+def select_referenced_formula_entries(
+    formula_entries: dict[str, dict[str, Any]],
+    model_level_payloads: dict[str, dict[str, Any]],
+    report: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Keep formula terms referenced by at least one model-level coordinate."""
+    referenced = {
+        reference.lower()
+        for payload in model_level_payloads.values()
+        for field in ("z_factors", "z_bounds_factors")
+        for reference in split_words(payload.get(field))
+    }
+    selected: dict[str, dict[str, Any]] = {}
+    skipped: list[str] = []
+    for identifier, entry in sorted(formula_entries.items()):
+        out_name = optional_text(entry.get("out_name")) or identifier
+        if {identifier.lower(), out_name.lower()} & referenced:
+            selected[identifier] = entry
+            continue
+        skipped.append(identifier.lower())
+        warning = (
+            f"formula_term {identifier!r} is not referenced by any "
+            "model_level_coordinate entry and therefore skipped"
+        )
+        report["warnings"].append(warning)
+        print(f"WARNING: {warning}")
+    report["unreferenced_formula_terms"] = skipped
+    return selected
+
+
 def build_formula_term_payload(
     identifier: str, entry: dict[str, Any]
 ) -> dict[str, Any]:
@@ -1338,9 +1368,17 @@ def main() -> None:
         for generic_id in split_words(entry.get("generic_level_name"))
     }
     formula_content = read_json(cmor_dir / "CORDEX-CMIP6_formula_terms.json")
+    formula_entries = formula_content.get("formula_entry", {})
+    model_level_payloads = {
+        identifier: build_model_level_payload(identifier, entry)
+        for identifier, entry in model_level_entries.items()
+    }
+    referenced_formula_entries = select_referenced_formula_entries(
+        formula_entries, model_level_payloads, report
+    )
     generic_ids.update(
         dimension
-        for entry in formula_content.get("formula_entry", {}).values()
+        for entry in referenced_formula_entries.values()
         for dimension in split_words(entry.get("dimensions"))
         if dimension in GENERIC_LEVEL_METADATA
     )
@@ -1362,16 +1400,16 @@ def main() -> None:
             dry_run=args.dry_run,
             report=report,
         )
-    for identifier, entry in model_level_entries.items():
+    for payload in model_level_payloads.values():
         emit_layered_payload(
             "model_level_coordinate",
-            build_model_level_payload(identifier, entry),
+            payload,
             universe_root,
             project_root,
             dry_run=args.dry_run,
             report=report,
         )
-    for identifier, entry in formula_content.get("formula_entry", {}).items():
+    for identifier, entry in referenced_formula_entries.items():
         emit_layered_payload(
             "formula_term",
             build_formula_term_payload(identifier, entry),
