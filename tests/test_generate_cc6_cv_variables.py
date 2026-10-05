@@ -282,6 +282,50 @@ def test_known_branded_references_use_ids_but_drs_name_keeps_label_case() -> Non
     assert payload["out_name"] == "zg"
 
 
+def test_known_branded_variable_preserves_unique_cell_method_variants() -> None:
+    records = [
+        generator.CmorVariable(
+            "day",
+            "example",
+            {
+                "out_name": "example",
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "area: mean time: mean",
+            },
+        ),
+        generator.CmorVariable(
+            "mon",
+            "example",
+            {
+                "out_name": "example",
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "time: mean",
+            },
+        ),
+        generator.CmorVariable(
+            "sem",
+            "example",
+            {
+                "out_name": "example",
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "area: mean time: mean",
+            },
+        ),
+    ]
+
+    payload = generator.build_known_payload(
+        "example_tavg-u-hxy-u", "example", records, ["atmos"]
+    )
+
+    assert payload["cell_methods"] == ["area: mean time: mean", "time: mean"]
+
+
 @pytest.mark.parametrize(
     ("table_id", "cell_methods", "dimensions", "expected"),
     [

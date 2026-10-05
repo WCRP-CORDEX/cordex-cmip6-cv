@@ -1130,6 +1130,13 @@ def build_known_payload(
             if (measure := optional_text(record.entry.get("cell_measures")))
         ]
     )
+    cell_methods = unique(
+        [
+            cell_method
+            for record in records
+            if (cell_method := optional_text(record.entry.get("cell_methods")))
+        ]
+    )
     frequencies = unique(
         [
             frequency.lower()
@@ -1166,7 +1173,7 @@ def build_known_payload(
     }
     add_optional(payload, "long_name", long_names)
     add_optional(payload, "comment", comments)
-    add_optional(payload, "cell_methods", optional_text(entry.get("cell_methods")))
+    add_optional(payload, "cell_methods", cell_methods)
     add_optional(payload, "cell_measures", cell_measures)
     add_optional(payload, "realm", realms)
     for record in records[1:]:
@@ -1175,7 +1182,6 @@ def build_known_payload(
             "standard_name",
             "units",
             "out_name",
-            "cell_methods",
         ):
             if optional_text(entry.get(key)) != optional_text(candidate.get(key)):
                 print(
