@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ssp119",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment": "low-end scenario reaching 1.9 W m-2, based on SSP1"
 }

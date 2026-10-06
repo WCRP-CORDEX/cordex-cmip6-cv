@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ssp370",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment": "gap-filling scenario reaching 7.0 based on SSP3"
 }

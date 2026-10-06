@@ -1,7 +1,7 @@
 {
-    "type": "known_branded_variable",
     "@context": "000_context.jsonld",
     "id": "od550aer_tpt-u-hxy-u",
+    "type": "known_branded_variable",
     "table_id": [
         "1hr"
     ],
@@ -15,7 +15,7 @@
         "Ambient Aerosol Optical Thickness at 550nm"
     ],
     "comment": [
-        "AOD from ambient aerosols, including aerosol water. It excludes prescribed stratospheric aerosol but includes other background aerosol types. The file needs a wavelength: 550nm comment attribute."
+        "1hr optional (considered for Tier1)"
     ],
     "cell_measures": [
         "area: areacella"

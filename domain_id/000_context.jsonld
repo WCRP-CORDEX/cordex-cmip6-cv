@@ -3,6 +3,7 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://esgvoc.ipsl.fr/resource/universe/region/",
-        "region": "https://esgvoc.ipsl.fr/resource/universe/region"
+        "region": "https://esgvoc.ipsl.fr/resource/universe/region",
+        "description": "https://schema.org/description"
     }
 }
