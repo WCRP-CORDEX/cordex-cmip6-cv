@@ -359,9 +359,7 @@ def test_od550aer_comments_are_preserved_from_each_cmor_table(
 
     records = generator.load_cmor_variables(tmp_path)
 
-    assert {
-        record.table_id: record.entry["comment"] for record in records
-    } == comments
+    assert {record.table_id: record.entry["comment"] for record in records} == comments
     variable_payload = generator.build_variable_payload(
         "od550aer",
         records[0].entry,

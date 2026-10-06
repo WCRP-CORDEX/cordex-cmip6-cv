@@ -184,9 +184,7 @@ def extract_value(
     value = raw_entry[source_field]
     if isinstance(value, list):
         if not value:
-            raise ValueError(
-                f"Expected a non-empty list at {location}.{source_field}"
-            )
+            raise ValueError(f"Expected a non-empty list at {location}.{source_field}")
         return [
             require_non_empty_string(item, f"{location}.{source_field}[{index}]")
             for index, item in enumerate(value)
