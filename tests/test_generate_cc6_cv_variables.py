@@ -362,6 +362,15 @@ def test_od550aer_comments_are_preserved_from_each_cmor_table(
     assert {
         record.table_id: record.entry["comment"] for record in records
     } == comments
+    variable_payload = generator.build_variable_payload(
+        "od550aer",
+        records[0].entry,
+    )
+    assert variable_payload["description"] == (
+        "AOD from ambient aerosols, including aerosol water. It excludes prescribed "
+        "stratospheric aerosol but includes other background aerosol types. The file "
+        "needs a wavelength: 550nm comment attribute."
+    )
     time_mean_records = [
         record for record in records if record.table_id in {"day", "mon"}
     ]

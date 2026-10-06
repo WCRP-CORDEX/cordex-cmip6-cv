@@ -29,6 +29,13 @@ PROJECT_ONLY_FIELDS = {
     "compound_name",
 }
 KNOWN_BRANDED_VARIABLE_PROJECT_ONLY_FIELDS = {"description", "frequency"}
+VARIABLE_DESCRIPTION_OVERRIDES = {
+    "od550aer": (
+        "AOD from ambient aerosols, including aerosol water. It excludes prescribed "
+        "stratospheric aerosol but includes other background aerosol types. The file "
+        "needs a wavelength: 550nm comment attribute."
+    ),
+}
 CANONICAL_TIME_COORDINATE_BY_TEMPORAL_LABEL = {
     "tminavg": "time4",
     "tmaxavg": "time4",
@@ -549,11 +556,15 @@ def load_table_payloads(cmor_dir: Path) -> dict[str, dict[str, Any]]:
 
 
 def build_variable_payload(out_name: str, entry: dict[str, Any]) -> dict[str, Any]:
+    description = VARIABLE_DESCRIPTION_OVERRIDES.get(
+        out_name.lower(),
+        str(entry.get("comment", "")),
+    )
     return {
         "@context": "000_context.jsonld",
         "id": out_name.lower(),
         "type": "variable",
-        "description": str(entry.get("comment", "")),
+        "description": description,
         "drs_name": out_name,
         "long_name": optional_text(entry.get("long_name")),
         "standard_name": optional_text(entry.get("standard_name")),
