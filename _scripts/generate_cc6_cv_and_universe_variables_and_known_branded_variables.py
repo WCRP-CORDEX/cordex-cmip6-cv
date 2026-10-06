@@ -519,12 +519,6 @@ def load_cmor_variables(cmor_dir: Path) -> list[CmorVariable]:
             read_json(table_path).get("variable_entry", {}).items()
         ):
             entry = dict(raw_entry)
-            if entry.get("out_name") == "od550aer":
-                entry["comment"] = (
-                    "AOD from ambient aerosols, including aerosol water. It excludes prescribed "
-                    "stratospheric aerosol but includes other background aerosol types. The file "
-                    "needs a wavelength: 550nm comment attribute."
-                )
             records.append(CmorVariable(table_id, variable_entry, entry))
     return records
 

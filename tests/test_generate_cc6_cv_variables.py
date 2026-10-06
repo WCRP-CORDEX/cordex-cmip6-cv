@@ -326,6 +326,54 @@ def test_known_branded_variable_preserves_unique_cell_method_variants() -> None:
     assert payload["cell_methods"] == ["area: mean time: mean", "time: mean"]
 
 
+def test_od550aer_comments_are_preserved_from_each_cmor_table(
+    tmp_path: Path,
+) -> None:
+    comments = {
+        "1hr": "1hr optional (considered for Tier1)",
+        "day": "1hr optional (considered for Tier1)",
+        "mon": (
+            "AOD from the ambient aerosols (i.e., includes aerosol water). "
+            "Does not include AOD from stratospheric aerosols if these are "
+            "prescribed but includes other possible background aerosol types. "
+            "Needs a comment attribute 'wavelength: 550nm'"
+        ),
+    }
+    for table_id, comment in comments.items():
+        generator.write_json(
+            tmp_path / f"CORDEX-CMIP6_{table_id}.json",
+            {
+                "variable_entry": {
+                    "od550aer": {
+                        "out_name": "od550aer",
+                        "standard_name": (
+                            "atmosphere_optical_thickness_due_to_ambient_aerosol_particles"
+                        ),
+                        "units": "1",
+                        "dimensions": "longitude latitude time",
+                        "comment": comment,
+                    }
+                }
+            },
+        )
+
+    records = generator.load_cmor_variables(tmp_path)
+
+    assert {
+        record.table_id: record.entry["comment"] for record in records
+    } == comments
+    time_mean_records = [
+        record for record in records if record.table_id in {"day", "mon"}
+    ]
+    payload = generator.build_known_payload(
+        "od550aer_tavg-u-hxy-u",
+        "od550aer",
+        time_mean_records,
+        ["atmos", "aerosol"],
+    )
+    assert payload["comment"] == [comments["day"], comments["mon"]]
+
+
 @pytest.mark.parametrize(
     ("table_id", "cell_methods", "dimensions", "expected"),
     [
