@@ -71,6 +71,24 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
             "Institute A description",
             "Institute A description",
         ),
+        (
+            generator.COLLECTION_SPECS[3],
+            "CEUX-3",
+            {
+                "domain": "Central Europe Extended",
+                "domain_id": "CEUX-3",
+            },
+            "Central Europe Extended",
+        ),
+        (
+            generator.COLLECTION_SPECS[4],
+            "historical",
+            {
+                "driving_experiment": "all-forcing simulation of the recent past",
+                "driving_experiment_id": "historical",
+            },
+            "all-forcing simulation of the recent past",
+        ),
     ),
 )
 def test_generation_augments_context_and_preserves_existing_metadata(

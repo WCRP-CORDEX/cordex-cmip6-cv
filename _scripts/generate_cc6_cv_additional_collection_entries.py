@@ -1,9 +1,9 @@
 """Generate descriptive CORDEX-CMIP6 project collection metadata.
 
 The CORDEX-CMIP6 project collections reference terms from WCRP-universe, but
-the project CV additionally needs the exact strings used by the NetCDF global
-attributes ``source``, ``driving_source``, and ``institution``.  These values
-are copied from the CORDEX-CMIP6 CMOR-table CV.
+the project CV additionally needs the exact strings used by selected NetCDF
+global attributes. These values are copied from the CORDEX-CMIP6 CMOR-table
+CV, while unrelated project metadata is preserved.
 """
 
 from __future__ import annotations
@@ -26,6 +26,7 @@ class CollectionSpec:
     output_field: str
     term_type: str
     property_iri: str
+    source_field: str | None = None
 
 
 COLLECTION_SPECS = (
@@ -49,6 +50,20 @@ COLLECTION_SPECS = (
         "institution",
         "organisation",
         f"{PROPERTY_BASE}/institution",
+    ),
+    CollectionSpec(
+        "domain_id",
+        "description",
+        "region",
+        "https://schema.org/description",
+        source_field="domain",
+    ),
+    CollectionSpec(
+        "driving_experiment_id",
+        "experiment",
+        "experiment",
+        f"{UNIVERSE_BASE}/experiment",
+        source_field="driving_experiment",
     ),
 )
 
@@ -162,20 +177,21 @@ def extract_value(
 
     if not isinstance(raw_entry, dict):
         raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
-    if spec.output_field not in raw_entry:
-        raise ValueError(f"Missing {spec.output_field!r} at {location}")
+    source_field = spec.source_field or spec.output_field
+    if source_field not in raw_entry:
+        raise ValueError(f"Missing {source_field!r} at {location}")
 
-    value = raw_entry[spec.output_field]
+    value = raw_entry[source_field]
     if isinstance(value, list):
         if not value:
             raise ValueError(
-                f"Expected a non-empty list at {location}.{spec.output_field}"
+                f"Expected a non-empty list at {location}.{source_field}"
             )
         return [
-            require_non_empty_string(item, f"{location}.{spec.output_field}[{index}]")
+            require_non_empty_string(item, f"{location}.{source_field}[{index}]")
             for index, item in enumerate(value)
         ]
-    return require_non_empty_string(value, f"{location}.{spec.output_field}")
+    return require_non_empty_string(value, f"{location}.{source_field}")
 
 
 def build_payload(
