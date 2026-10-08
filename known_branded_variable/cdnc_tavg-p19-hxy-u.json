@@ -1,6 +1,26 @@
 {
-  "id": "cdnc_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Cloud Liquid Droplet Number Concentration"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "cdnc_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.cdnc",
+        "mon.cdnc"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Cloud Liquid Droplet Number Concentration"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

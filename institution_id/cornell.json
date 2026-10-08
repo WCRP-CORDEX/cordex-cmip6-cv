@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cornell",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Cornell University, Ithaca (New York), USA"
 }

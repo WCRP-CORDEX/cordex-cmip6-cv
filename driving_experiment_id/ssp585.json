@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ssp585",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment": "update of RCP8.5 based on SSP5"
 }

@@ -1,8 +1,7 @@
 {
-    "id": "scat550nh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "scat550nh4",
     "long_name": "Ammonium Aerosol Scattering Coefficient",
     "standard_name": "volume_scattering_coefficient_in_air_due_to_ambient_aerosol_particles"
 }

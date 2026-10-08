@@ -1,6 +1,6 @@
 {
-    "id": "rlutaf",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "rlutaf",
+    "long_name": "TOA Outgoing Aerosol-Free Longwave Radiation"
 }

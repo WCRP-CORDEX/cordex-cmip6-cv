@@ -1,6 +1,26 @@
 {
-  "id": "va_tpt-700hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Northward Wind at 700hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "va_tpt-700hpa-hxy-u",
+    "table_id": [
+        "3hr",
+        "6hr"
+    ],
+    "compound_name": [
+        "3hr.va700",
+        "6hr.va700"
+    ],
+    "frequency": [
+        "3hr",
+        "6hr"
+    ],
+    "long_name": [
+        "Northward Wind at 700hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

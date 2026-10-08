@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bcc-esm1",
-    "type": "source"
+    "type": "source",
+    "driving_source": "BCC-ESM 1 (2017): \naerosol: none\natmos: BCC_AGCM3_LR (T42; 128 x 64 longitude/latitude; 26 levels; top level 2.19 hPa)\natmosChem: BCC-AGCM3-Chem\nland: BCC_AVIM2\nlandIce: none\nocean: MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: SIS2"
 }

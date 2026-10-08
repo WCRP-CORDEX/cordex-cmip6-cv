@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "uq-dec",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "UQ [University of Queensland, Brisbane, Australia]; DEC [Department of Energy and Climate, Brisbane, Australia]"
 }

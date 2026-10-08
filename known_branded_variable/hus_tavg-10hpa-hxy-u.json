@@ -1,6 +1,26 @@
 {
-  "id": "hus_tavg-10hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Specific Humidity at 10hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "hus_tavg-10hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.hus10",
+        "mon.hus10"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Specific Humidity at 10hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

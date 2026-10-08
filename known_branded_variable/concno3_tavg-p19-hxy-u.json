@@ -1,6 +1,26 @@
 {
-  "id": "concno3_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Concentration of Nitrate"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "concno3_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.concno3",
+        "mon.concno3"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Concentration of Nitrate"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ipsl-cm5a2-inca",
-    "type": "source"
+    "type": "source",
+    "driving_source": "IPSL-CM5A2-INCA (2019): \naerosol: INCA v6 NMHC-AER-S\natmos: LMDZ (APv5; 96 x 96 longitude/latitude; 39 levels; top level 80000 m)\natmosChem: INCA v6 NMHC-AER-S\nland: ORCHIDEE (IPSLCM5A2.1, Water/Carbon/Energy mode)\nlandIce: none\nocean: NEMO-OPA (v3.6, ORCA2 tripolar primarily 2deg; 182 x 149 longitude/latitude; 31 levels; top grid cell 0-10 m)\nocnBgchem: NEMO-PISCES\nseaIce: NEMO-LIM2"
 }

@@ -89,3 +89,6 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Content generator reports
+_scripts/cc6_cv_universe_overlay_report.json

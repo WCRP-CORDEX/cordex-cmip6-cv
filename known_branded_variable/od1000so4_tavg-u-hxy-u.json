@@ -1,6 +1,26 @@
 {
-  "id": "od1000so4_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sulfate Aerosol Optical Thickness at 1000nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "od1000so4_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.od1000so4",
+        "mon.od1000so4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sulfate Aerosol Optical Thickness at 1000nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

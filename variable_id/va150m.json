@@ -1,7 +1,6 @@
 {
-    "id": "va150m",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "va150m",
     "long_name": "Northward Wind at 150m"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rmib-ugent",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "RMIB [Royal Meteorological Institute of Belgium, Brussels, Belgium]; UGent [Ghent University, Ghent, Belgium]"
 }

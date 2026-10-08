@@ -1,7 +1,6 @@
 {
-    "id": "ta30",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "ta30",
     "long_name": "Air Temperature at 30hPa"
 }

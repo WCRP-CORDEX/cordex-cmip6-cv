@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "iitm-esm",
-    "type": "source"
+    "type": "source",
+    "driving_source": "IITM-ESM (2015): \naerosol: prescribed MAC-v2\natmos: IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)\natmosChem: none\nland: NOAH LSMv2.7.1\nlandIce: none\nocean: MOM4p1 (tripolar, primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: TOPAZv2.0\nseaIce: SISv1.0"
 }

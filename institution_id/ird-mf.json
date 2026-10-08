@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ird-mf",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "IRD [Institut de Recherche pour le Developpement, Noumea (New Caledonia), France]; MF [Meteo France, Toulouse, France]"
 }

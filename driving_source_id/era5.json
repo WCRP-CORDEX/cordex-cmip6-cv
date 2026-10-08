@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "era5",
-    "type": "source"
+    "type": "source",
+    "driving_source": "ECMWF Reanalysis v5"
 }

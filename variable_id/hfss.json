@@ -1,6 +1,7 @@
 {
-    "id": "hfss",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "The surface sensible heat flux, also called turbulent heat flux, is the exchange of heat between the surface and the air by motion of air."
+    "@context": "000_context.jsonld",
+    "id": "hfss",
+    "description": "The surface sensible heat flux, also called turbulent heat flux, is the exchange of heat between the surface and the air by motion of air.",
+    "long_name": "Surface Upward Sensible Heat Flux"
 }

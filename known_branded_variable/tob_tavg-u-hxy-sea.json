@@ -1,7 +1,29 @@
 {
-  "id": "tob_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Water Potential Temperature at Sea Floor",
-  "description": "Potential temperature at the ocean bottom-most grid cell."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "tob_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.tob",
+        "mon.tob"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sea Water Potential Temperature at Sea Floor"
+    ],
+    "comment": [
+        "Potential temperature at the ocean bottom-most grid cell."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

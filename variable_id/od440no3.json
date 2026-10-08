@@ -1,6 +1,6 @@
 {
-    "id": "od440no3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od440no3",
+    "long_name": "Nitrate Aerosol Optical Thickness at 440nm"
 }

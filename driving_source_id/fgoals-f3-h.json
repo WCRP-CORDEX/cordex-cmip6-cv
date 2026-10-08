@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fgoals-f3-h",
-    "type": "source"
+    "type": "source",
+    "driving_source": "FGOALS-f3-H (2017): \naerosol: none\natmos: FAMIL2.2 (Cubed-sphere, c384; 1440 x 720 longitude/latitude; 32 levels; top level 2.16 hPa)\natmosChem: none\nland: CLM4.0\nlandIce: none\nocean: LICOM3.0 (LICOM3.0, tripolar primarily 0.1deg; 3600 x 2302 longitude/latitude; 55 levels; top grid cell 0-5 m)\nocnBgchem: none\nseaIce: CICE4.0"
 }

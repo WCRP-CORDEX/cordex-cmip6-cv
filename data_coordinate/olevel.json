@@ -1,6 +1,7 @@
 {
-  "id": "olevel",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "Ocean Model Levels"
+    "id": "olevel",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "description": "Generic ocean model vertical coordinate (nondimensional or dimensional). Use the CF standard name appropriate for the model vertical coordinate.",
+    "long_name": "Ocean Model Level"
 }

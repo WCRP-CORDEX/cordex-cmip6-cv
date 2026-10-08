@@ -1,6 +1,26 @@
 {
-  "id": "concoa_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Concentration of Organic Matter"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "concoa_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.concoa",
+        "mon.concoa"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Concentration of Organic Matter"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,6 +1,6 @@
 {
-    "id": "clivi",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "mass of ice water in the column divided by the area of the column (not just the area of the cloudy portion of the column). Includes precipitating frozen hydrometeors ONLY if the precipitating hydrometeor affects the calculation of radiative transfer in model."
+    "@context": "000_context.jsonld",
+    "id": "clivi",
+    "long_name": "Ice Water Path"
 }

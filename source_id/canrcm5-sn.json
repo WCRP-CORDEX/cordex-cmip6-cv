@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "canrcm5-sn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Canadian Regional Climate Model version 5, with spectral nudging (2024)",
+        "Canadian Regional Climate Model version 5, with spectral nudging"
+    ]
 }

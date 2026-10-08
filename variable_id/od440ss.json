@@ -1,6 +1,6 @@
 {
-    "id": "od440ss",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od440ss",
+    "long_name": "Sea-Salt Aerosol Optical Thickness at 440nm"
 }

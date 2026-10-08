@@ -1,6 +1,26 @@
 {
-  "id": "chepnh4_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Chemical Production of Dry Ammonium Aerosol"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "chepnh4_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.chepnh4",
+        "mon.chepnh4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Chemical Production of Dry Ammonium Aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

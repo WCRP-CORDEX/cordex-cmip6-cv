@@ -1,6 +1,6 @@
 {
-    "id": "rlut",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "at the top of the atmosphere (to be compared with satellite measurements)"
+    "@context": "000_context.jsonld",
+    "id": "rlut",
+    "long_name": "TOA Outgoing Longwave Radiation"
 }

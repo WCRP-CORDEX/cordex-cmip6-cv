@@ -1,7 +1,6 @@
 {
-    "id": "rsdsdir",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "rsdsdir",
     "long_name": "Surface Direct Downwelling Shortwave Radiation"
 }

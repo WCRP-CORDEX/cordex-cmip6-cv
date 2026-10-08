@@ -1,6 +1,26 @@
 {
-  "id": "zos_tpt-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Surface Height Above Geoid"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "zos_tpt-u-hxy-sea",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.zos"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Sea Surface Height Above Geoid"
+    ],
+    "comment": [
+        "This is the dynamic sea level, so should have zero global area mean. It should not include inverse barometer depressions from sea ice."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

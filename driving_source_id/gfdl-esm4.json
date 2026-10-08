@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gfdl-esm4",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GFDL-ESM4 (2018): \naerosol: interactive\natmos: GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 49 levels; top level 1 Pa)\natmosChem: GFDL-ATMCHEM4.1 (full atmospheric chemistry)\nland: GFDL-LM4.1\nlandIce: GFDL-LM4.1\nocean: GFDL-OM4p5 (GFDL-MOM6, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)\nocnBgchem: GFDL-COBALTv2\nseaIce: GFDL-SIM4p5 (GFDL-SIS2.0, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 5 layers; 5 thickness categories)"
 }

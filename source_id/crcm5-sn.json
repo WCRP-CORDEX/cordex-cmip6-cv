@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "crcm5-sn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Canadian Regional Climate Model version 5 (2015)",
+        "Canadian Regional Climate Model version 5"
+    ]
 }

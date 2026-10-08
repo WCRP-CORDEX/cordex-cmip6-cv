@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmcom-kit",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Climate Limited-area Modelling Community (CLMcom) partner: Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
 }

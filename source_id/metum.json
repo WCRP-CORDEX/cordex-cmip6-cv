@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "metum",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "UK Met Office Unified Model version 13.0 (2022)",
+        "UK Met Office Unified Model version 13.0"
+    ]
 }

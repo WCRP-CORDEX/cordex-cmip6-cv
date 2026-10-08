@@ -1,6 +1,26 @@
 {
-  "id": "abs550aer_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ambient Aerosol Absorption Optical Thickness at 550 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs550aer_tpt-u-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.abs550aer"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Ambient Aerosol Absorption Optical Thickness at 550 nm"
+    ],
+    "comment": [
+        "1hr optional (considered for Tier1)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

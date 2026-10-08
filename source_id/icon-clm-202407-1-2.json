@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "icon-clm-202407-1-2",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-2 (2025)",
+        "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-2"
+    ]
 }

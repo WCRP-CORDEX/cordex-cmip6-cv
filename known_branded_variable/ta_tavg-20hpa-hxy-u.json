@@ -1,6 +1,26 @@
 {
-  "id": "ta_tavg-20hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Air Temperature at 20hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ta_tavg-20hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.ta20",
+        "mon.ta20"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Air Temperature at 20hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

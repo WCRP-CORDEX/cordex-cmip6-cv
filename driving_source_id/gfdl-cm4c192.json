@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gfdl-cm4c192",
-    "type": "source"
+    "type": "source",
+    "driving_source": "GFDL-CM4C192 (2018): \naerosol: interactive\natmos: GFDL-AM4C192 (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 720 x 360 longitude/latitude; 33 levels; top level 1 hPa)\natmosChem: fast chemistry, aerosol only\nland: GFDL-LM4.0.1\nlandIce: GFDL-LM4.0.1\nocean: GFDL-OM4p25 (GFDL-MOM6, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 75 levels; top grid cell 0-2 m)\nocnBgchem: none\nseaIce: GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)"
 }

@@ -1,6 +1,26 @@
 {
-  "id": "ext550dust_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Dust Aerosol Extinction Coefficient"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ext550dust_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.ext550dust",
+        "mon.ext550dust"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Dust Aerosol Extinction Coefficient"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

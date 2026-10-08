@@ -1,7 +1,6 @@
 {
-    "id": "dtb",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "dtb",
     "long_name": "Depth to Bedrock"
 }

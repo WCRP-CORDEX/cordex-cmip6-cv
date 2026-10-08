@@ -1,7 +1,29 @@
 {
-  "id": "psl_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Level Pressure",
-  "description": "Sea Level Pressure"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "psl_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.psl",
+        "mon.psl"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sea Level Pressure"
+    ],
+    "comment": [
+        "Sea Level Pressure"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

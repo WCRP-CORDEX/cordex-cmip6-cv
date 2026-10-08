@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "taiesm1",
-    "type": "source"
+    "type": "source",
+    "driving_source": "TaiESM 1.0 (2018): \naerosol: SNAP (same grid as atmos)\natmos: TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)\natmosChem: SNAP (same grid as atmos)\nland: CLM4.0 (same grid as atmos)\nlandIce: none\nocean: POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: CICE4"
 }

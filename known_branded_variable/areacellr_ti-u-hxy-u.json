@@ -1,7 +1,23 @@
 {
-  "id": "areacellr_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Grid-Cell Area for River Model Variables",
-  "description": "For river routing model, if grid differs from the atmospheric grid."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "areacellr_ti-u-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.areacellr"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Grid-Cell Area for River Model Variables"
+    ],
+    "comment": [
+        "For river routing model, if grid differs from the atmospheric grid."
+    ],
+    "realm": [
+        "river"
+    ]
 }

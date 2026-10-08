@@ -1,6 +1,26 @@
 {
-  "id": "ext550so4_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sulfate Aerosol Extinction Coefficient"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ext550so4_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.ext550so4",
+        "mon.ext550so4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sulfate Aerosol Extinction Coefficient"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

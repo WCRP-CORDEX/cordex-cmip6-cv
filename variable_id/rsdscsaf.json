@@ -1,7 +1,6 @@
 {
-    "id": "rsdscsaf",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "rsdscsaf",
     "long_name": "Surface Downwelling Clear-Sky, Aerosol-Free Shortwave Radiation"
 }

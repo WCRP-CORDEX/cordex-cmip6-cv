@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bom",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Bureau of Meteorology, Melbourne, Australia"
 }

@@ -1,6 +1,7 @@
 {
-    "id": "prsn",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "At surface; includes precipitation of all forms of water in the solid phase"
+    "@context": "000_context.jsonld",
+    "id": "prsn",
+    "description": "At surface; includes precipitation of all forms of water in the solid phase",
+    "long_name": "Snowfall Flux"
 }

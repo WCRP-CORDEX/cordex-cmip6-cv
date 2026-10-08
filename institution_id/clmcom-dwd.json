@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmcom-dwd",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Climate Limited-area Modelling Community (CLMcom) partner: Deutscher Wetterdienst, Offenbach am Main, Germany"
 }

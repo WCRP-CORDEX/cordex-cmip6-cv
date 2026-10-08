@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ipsl-cm6a-atm-lr-reprobus",
-    "type": "source"
+    "type": "source",
+    "driving_source": "IPSL-CM6A-ATM-LR-REPROBUS (2021): \naerosol: LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)\natmos: LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)\natmosChem: REPROBUS v6 (same grid as atmos)\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 }

@@ -1,6 +1,6 @@
 {
-    "id": "abs870nh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs870nh4",
+    "long_name": "Ammonium Aerosol Absorption Optical Thickness at 870 nm"
 }

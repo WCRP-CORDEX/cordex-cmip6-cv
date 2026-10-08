@@ -1,6 +1,26 @@
 {
-  "id": "concnh4_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Concentration of Ammonium"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "concnh4_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.concnh4",
+        "mon.concnh4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Concentration of Ammonium"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

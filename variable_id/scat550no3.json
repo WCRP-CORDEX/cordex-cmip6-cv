@@ -1,8 +1,7 @@
 {
-    "id": "scat550no3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "scat550no3",
     "long_name": "Nitrate Aerosol Scattering Coefficient",
     "standard_name": "volume_scattering_coefficient_in_air_due_to_ambient_aerosol_particles"
 }

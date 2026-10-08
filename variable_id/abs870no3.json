@@ -1,6 +1,6 @@
 {
-    "id": "abs870no3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs870no3",
+    "long_name": "Nitrate Aerosol Absorption Optical Thickness at 870 nm"
 }

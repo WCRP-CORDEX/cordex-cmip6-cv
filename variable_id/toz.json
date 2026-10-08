@@ -1,6 +1,6 @@
 {
-    "id": "toz",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "toz",
+    "long_name": "Total Column Ozone"
 }

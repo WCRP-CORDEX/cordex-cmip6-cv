@@ -1,7 +1,32 @@
 {
-  "id": "snm_tavg-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Snow Melt",
-  "description": "The total surface snow melt rate on the land portion of the grid cell divided by the land area in the grid cell; report as zero for snow-free land regions and missing where there is no land."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "snm_tavg-u-hxy-lnd",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.snm",
+        "day.snm",
+        "mon.snm"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Surface Snow Melt"
+    ],
+    "comment": [
+        "The total surface snow melt rate on the land portion of the grid cell divided by the land area in the grid cell; report as zero for snow-free land regions and missing where there is no land."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

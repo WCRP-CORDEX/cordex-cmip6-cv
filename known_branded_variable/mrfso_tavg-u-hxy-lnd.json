@@ -1,7 +1,29 @@
 {
-  "id": "mrfso_tavg-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Soil Frozen Water Content",
-  "description": "The mass per unit area (summed over all model layers) of frozen water."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrfso_tavg-u-hxy-lnd",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.mrfso",
+        "mon.mrfso"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Soil Frozen Water Content"
+    ],
+    "comment": [
+        "The mass per unit area (summed over all model layers) of frozen water."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

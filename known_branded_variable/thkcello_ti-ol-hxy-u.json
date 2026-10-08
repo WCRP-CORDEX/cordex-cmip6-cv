@@ -1,6 +1,26 @@
 {
-  "id": "thkcello_ti-ol-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ocean Model Cell Thickness"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "thkcello_ti-ol-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.thkcello"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Ocean Model Cell Thickness"
+    ],
+    "comment": [
+        "'Thickness' means the vertical extent of a layer. 'Cell' refers to a model grid-cell."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

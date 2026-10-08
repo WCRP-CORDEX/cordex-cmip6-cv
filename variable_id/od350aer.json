@@ -1,6 +1,6 @@
 {
-    "id": "od350aer",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od350aer",
+    "long_name": "Ambient Aerosol Optical Thickness at 350nm"
 }

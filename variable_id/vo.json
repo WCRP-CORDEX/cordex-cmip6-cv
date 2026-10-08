@@ -1,6 +1,6 @@
 {
-    "id": "vo",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Prognostic y-ward velocity component resolved by the model."
+    "@context": "000_context.jsonld",
+    "id": "vo",
+    "long_name": "Sea Water Y Velocity"
 }

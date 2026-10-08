@@ -1,12 +1,34 @@
 {
-  "id": "mlotst_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ocean Mixed Layer Thickness Defined by Sigma T",
-  "description": "Sigma T is potential density referenced to ocean surface.",
-  "dimensions": [
-    "longitude",
-    "latitude",
-    "time"
-  ]
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mlotst_tavg-u-hxy-sea",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "time"
+    ],
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.mlotst",
+        "mon.mlotst"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Ocean Mixed Layer Thickness Defined by Sigma T"
+    ],
+    "comment": [
+        "Sigma T is potential density referenced to ocean surface."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

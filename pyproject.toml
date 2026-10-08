@@ -4,9 +4,24 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["esgvoc",
-                "requests>=2.32.3",
-                ]
+dependencies = [
+    "cmip-branded-variable-mapper",
+    "esgvoc>=6.2.0",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "pyld>=2.0.4",
+    "pytest>=8.3.4",
+    "ruff>=0.11.9",
+]
+
+[tool.pytest.ini_options]
+addopts = ["--strict-config", "--strict-markers"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
 
 [tool.uv.sources]
 esgvoc = { git = "https://github.com/ESGF/esgf-vocab.git", branch = "integration" }
+cmip-branded-variable-mapper = { git = "https://github.com/sol1105/CMIP-branded-variable-mapper.git", branch = "cordex-cmip6" }

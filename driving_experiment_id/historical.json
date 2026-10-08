@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "historical",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment": "all-forcing simulation of the recent past"
 }

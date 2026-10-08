@@ -1,6 +1,23 @@
 {
-  "id": "mrsfl_tpt-sl-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Frozen Water Content of Soil Layer"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrsfl_tpt-sl-hxy-lnd",
+    "table_id": [
+        "6hr"
+    ],
+    "compound_name": [
+        "6hr.mrsfl"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "long_name": [
+        "Frozen Water Content of Soil Layer"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

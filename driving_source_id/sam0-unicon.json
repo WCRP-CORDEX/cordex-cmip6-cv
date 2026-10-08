@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sam0-unicon",
-    "type": "source"
+    "type": "source",
+    "driving_source": "SAM0-UNICON (2017): \naerosol: MAM3\natmos: CAM5.3 with UNICON (1deg; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)\natmosChem: none\nland: CLM4.0\nlandIce: none\nocean: POP2 (Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)\nocnBgchem: none\nseaIce: CICE4.0"
 }

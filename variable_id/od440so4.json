@@ -1,6 +1,6 @@
 {
-    "id": "od440so4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od440so4",
+    "long_name": "Sulfate Aerosol Optical Thickness at 440nm"
 }

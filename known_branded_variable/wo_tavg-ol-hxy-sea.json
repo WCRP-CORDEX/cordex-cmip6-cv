@@ -1,9 +1,29 @@
 {
-  "id": "wo_tavg-ol-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea Water Upward Velocity",
-  "description": "A velocity is a vector quantity. 'Upward' indicates a vector component which is positive when directed upward (negative downward).",
-  "cell_measures": "--OPT",
-  "positive_direction": "up"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wo_tavg-ol-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.wo",
+        "mon.wo"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sea Water Upward Velocity"
+    ],
+    "comment": [
+        "A velocity is a vector quantity. 'Upward' indicates a vector component which is positive when directed upward (negative downward)."
+    ],
+    "cell_measures": [
+        "--OPT"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "senamhi-per",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "National Meteorology and Hydrology Service of Peru, Lima, Peru"
 }

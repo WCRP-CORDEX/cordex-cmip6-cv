@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "access-esm1-5",
-    "type": "source"
+    "type": "source",
+    "driving_source": "ACCESS-ESM1.5 (2019): \naerosol: CLASSIC (v1.0)\natmos: HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)\natmosChem: none\nland: CABLE2.4\nlandIce: none\nocean: ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: WOMBAT (same grid as ocean)\nseaIce: CICE4.1 (same grid as ocean)"
 }

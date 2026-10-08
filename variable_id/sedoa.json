@@ -1,6 +1,7 @@
 {
-    "id": "sedoa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "only if sedimentation is applied for this aerosol"
+    "@context": "000_context.jsonld",
+    "id": "sedoa",
+    "description": "only if sedimentation is applied for this aerosol",
+    "long_name": "Sedimentation Rate of Organic Matter"
 }

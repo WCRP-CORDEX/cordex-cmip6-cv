@@ -1,6 +1,29 @@
 {
-  "id": "hus_tavg-850hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Specific Humidity at 850hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "hus_tavg-850hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.hus850",
+        "mon.hus850"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Specific Humidity at 850hPa"
+    ],
+    "comment": [
+        "Specific humidity is the mass fraction of water vapor in (moist) air."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

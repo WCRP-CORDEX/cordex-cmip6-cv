@@ -1,5 +1,9 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "ccamoc-v2203-sn",
-  "type": "source"
+    "@context": "000_context.jsonld",
+    "id": "ccamoc-v2203-sn",
+    "type": "source",
+    "source": [
+        "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2203 with spectral nudging (2022)",
+        "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2203 with spectral nudging"
+    ]
 }

@@ -1,7 +1,23 @@
 {
-  "id": "areacella_ti-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Atmosphere Grid-Cell Area",
-  "description": "For atmospheres with more than 1 mesh (e.g., staggered grids), report areas that apply to surface vertical fluxes of energy."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "areacella_ti-u-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.areacella"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Atmosphere Grid-Cell Area"
+    ],
+    "comment": [
+        "For atmospheres with more than 1 mesh (e.g., staggered grids), report areas that apply to surface vertical fluxes of energy."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

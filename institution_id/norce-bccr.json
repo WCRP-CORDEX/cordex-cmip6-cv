@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "norce-bccr",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "NORCE [NORCE Norwegian Research Centre, Bergen, Norway]; BCCR [Bjerknes Centre for Climate Research, Bergen, Norway]"
 }

@@ -1,6 +1,26 @@
 {
-  "id": "zg_tpt-30hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Geopotential Height at 30hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "zg_tpt-30hpa-hxy-u",
+    "table_id": [
+        "3hr",
+        "6hr"
+    ],
+    "compound_name": [
+        "3hr.zg30",
+        "6hr.zg30"
+    ],
+    "frequency": [
+        "3hr",
+        "6hr"
+    ],
+    "long_name": [
+        "Geopotential Height at 30hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

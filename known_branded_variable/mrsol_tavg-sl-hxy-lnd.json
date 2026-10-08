@@ -1,7 +1,29 @@
 {
-  "id": "mrsol_tavg-sl-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Total Water Content of Soil Layer",
-  "description": "in each soil layer, the mass of water in all phases, including ice.  Reported as 'missing' for grid cells occupied entirely by 'sea'"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrsol_tavg-sl-hxy-lnd",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.mrsol",
+        "mon.mrsol"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Total Water Content of Soil Layer"
+    ],
+    "comment": [
+        "in each soil layer, the mass of water in all phases, including ice.  Reported as 'missing' for grid cells occupied entirely by 'sea'"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

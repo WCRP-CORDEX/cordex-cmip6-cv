@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mna-50",
-    "type": "region"
+    "type": "region",
+    "description": "Middle East and North Africa"
 }

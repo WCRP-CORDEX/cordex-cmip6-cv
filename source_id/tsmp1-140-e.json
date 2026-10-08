@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "tsmp1-140-e",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler) (2023)",
+        "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler)"
+    ]
 }

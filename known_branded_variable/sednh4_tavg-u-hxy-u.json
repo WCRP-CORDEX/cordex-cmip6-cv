@@ -1,6 +1,32 @@
 {
-  "id": "sednh4_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sedimentation Rate of Ammonium"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sednh4_tavg-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.sednh4",
+        "day.sednh4",
+        "mon.sednh4"
+    ],
+    "frequency": [
+        "1hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sedimentation Rate of Ammonium"
+    ],
+    "comment": [
+        "only if sedimentation is applied for this aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

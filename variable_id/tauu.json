@@ -1,6 +1,6 @@
 {
-    "id": "tauu",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Downward eastward wind stress at the surface"
+    "@context": "000_context.jsonld",
+    "id": "tauu",
+    "long_name": "Surface Downward Eastward Wind Stress"
 }

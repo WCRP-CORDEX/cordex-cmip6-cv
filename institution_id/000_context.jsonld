@@ -4,7 +4,9 @@
         "type": "@type",
         "@base": "https://esgvoc.ipsl.fr/resource/universe/organisation/",
         "organisation": "https://esgvoc.ipsl.fr/resource/universe/organisation",
-
-        "established":{"@id":"https://schema.org/foundingDate"}
+        "established": {
+            "@id": "https://schema.org/foundingDate"
+        },
+        "institution": "https://esgvoc.ipsl.fr/property/institution"
     }
 }

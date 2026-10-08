@@ -1,7 +1,6 @@
 {
-    "id": "drybc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "drybc",
     "long_name": "Dry Deposition Rate of Black Carbon"
 }

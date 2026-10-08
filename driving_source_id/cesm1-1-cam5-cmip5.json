@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cesm1-1-cam5-cmip5",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CESM1-1-CAM5-CMIP5 (2011): \naerosol: MAM3 (same grid as atmos)\natmos: CAM5.2 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)\natmosChem: MAM3 (same grid as atmos)\nland: CLM4 (same grid as atmos)\nlandIce: none\nocean: POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)\nocnBgchem: BEC (same grid as ocean)\nseaIce: CICE4 (same grid as ocean)"
 }

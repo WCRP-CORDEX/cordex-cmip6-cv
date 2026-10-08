@@ -1,6 +1,29 @@
 {
-  "id": "clm_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Mid Level Cloud Fraction"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "clm_tavg-u-hxy-u",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.clm",
+        "day.clm",
+        "mon.clm"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Mid Level Cloud Fraction"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

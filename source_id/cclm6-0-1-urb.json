@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cclm6-0-1-urb",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization (2021)",
+        "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization"
+    ]
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mpi-esm1-2-lr",
-    "type": "source"
+    "type": "source",
+    "driving_source": "MPI-ESM1.2-LR (2017): \naerosol: none, prescribed MACv2-SP\natmos: ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)\natmosChem: none\nland: JSBACH3.20\nlandIce: none/prescribed\nocean: MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)\nocnBgchem: HAMOCC6\nseaIce: unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)"
 }

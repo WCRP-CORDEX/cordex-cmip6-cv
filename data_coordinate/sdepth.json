@@ -1,6 +1,8 @@
 {
-  "id": "sdepth",
-  "@context": "000_context.jsonld",
-  "type": "data_coordinate",
-  "long_name": "depth"
+    "id": "sdepth",
+    "type": "data_coordinate",
+    "@context": "000_context.jsonld",
+    "long_name": "depth",
+    "valid_min": 0.0,
+    "valid_max": 200.0
 }

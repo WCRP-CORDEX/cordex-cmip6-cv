@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "racmo24p-nn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces (2024)",
+        "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces"
+    ]
 }

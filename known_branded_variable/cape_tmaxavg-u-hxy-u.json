@@ -1,6 +1,28 @@
 {
-  "id": "cape_tmaxavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Daily Maximum Convective Available Potential Energy"
+    "type": "known_branded_variable",
+    "id": "cape_tmaxavg-u-hxy-u",
+    "@context": "000_context.jsonld",
+    "dimensions": [
+        "longitude",
+        "latitude",
+        "time"
+    ],
+    "table_id": [
+        "mon"
+    ],
+    "compound_name": [
+        "mon.capemax"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "long_name": [
+        "Daily Maximum Convective Available Potential Energy"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }
