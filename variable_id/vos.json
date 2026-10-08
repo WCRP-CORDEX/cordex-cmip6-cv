@@ -1,8 +1,7 @@
 {
-    "id": "vos",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "vos",
     "long_name": "Surface Y Velocity",
     "standard_name": "surface_northward_sea_water_velocity"
 }

@@ -1,0 +1,6 @@
+{
+    "type": "grid_axis",
+    "id": "y",
+    "@context": "000_context.jsonld",
+    "long_name": "y coordinate of projection"
+}

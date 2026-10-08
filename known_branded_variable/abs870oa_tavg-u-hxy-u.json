@@ -1,6 +1,26 @@
 {
-  "id": "abs870oa_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Organic Matter Aerosol Absorption Optical Thickness at 870 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs870oa_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.abs870oa",
+        "mon.abs870oa"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Organic Matter Aerosol Absorption Optical Thickness at 870 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

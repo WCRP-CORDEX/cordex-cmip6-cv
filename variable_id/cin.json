@@ -1,7 +1,6 @@
 {
-    "id": "cin",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "cin",
     "long_name": "Convective Inhibition"
 }

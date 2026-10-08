@@ -1,6 +1,6 @@
 {
-    "id": "tsl",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Temperature of soil. Reported as missing for grid cells with no land."
+    "@context": "000_context.jsonld",
+    "id": "tsl",
+    "long_name": "Temperature of Soil"
 }

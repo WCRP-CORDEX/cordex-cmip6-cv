@@ -1,6 +1,23 @@
 {
-  "id": "asy870aer_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Aerosol Asymmetry Parameter at 870 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "asy870aer_tpt-u-hxy-u",
+    "table_id": [
+        "3hr"
+    ],
+    "compound_name": [
+        "3hr.asy870aer"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "long_name": [
+        "Aerosol Asymmetry Parameter at 870 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

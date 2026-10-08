@@ -1,6 +1,6 @@
 {
-    "id": "cdnc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "cdnc",
+    "long_name": "Cloud Liquid Droplet Number Concentration"
 }

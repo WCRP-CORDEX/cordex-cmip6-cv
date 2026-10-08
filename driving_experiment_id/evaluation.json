@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "evaluation",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment": "reanalysis simulation of the recent past"
 }

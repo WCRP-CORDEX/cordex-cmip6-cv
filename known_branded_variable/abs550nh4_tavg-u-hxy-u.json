@@ -1,6 +1,26 @@
 {
-  "id": "abs550nh4_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ammonium Aerosol Absorption Optical Thickness at 550 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs550nh4_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.abs550nh4",
+        "mon.abs550nh4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Ammonium Aerosol Absorption Optical Thickness at 550 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "racmo23e",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "The KNMI Regional Climate Model RACMO, version 23E (2022)",
+        "The KNMI Regional Climate Model RACMO, version 23E"
+    ]
 }

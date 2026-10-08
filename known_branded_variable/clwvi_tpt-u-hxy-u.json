@@ -1,7 +1,26 @@
 {
-  "id": "clwvi_tpt-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Condensed Water Path",
-  "description": ""
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "clwvi_tpt-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "3hr"
+    ],
+    "compound_name": [
+        "1hr.clwvi",
+        "3hr.clwvi"
+    ],
+    "frequency": [
+        "1hr",
+        "3hr"
+    ],
+    "long_name": [
+        "Condensed Water Path"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

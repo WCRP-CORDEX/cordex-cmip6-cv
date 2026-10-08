@@ -1,8 +1,21 @@
 {
-  "id": "vos_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Y Velocity",
-  "description": "",
-  "cf_standard_name": "surface_northward_sea_water_velocity"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "vos_tavg-u-hxy-sea",
+    "cf_standard_name": "surface_northward_sea_water_velocity",
+    "table_id": [
+        "day"
+    ],
+    "compound_name": [
+        "day.vos"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "long_name": [
+        "Surface Y Velocity"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

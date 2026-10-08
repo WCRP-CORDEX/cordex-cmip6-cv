@@ -1,6 +1,26 @@
 {
-  "id": "concso4_tavg-p19-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Concentration of SO4"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "concso4_tavg-p19-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.concso4",
+        "mon.concso4"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Concentration of SO4"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -1,6 +1,29 @@
 {
-  "id": "rsdsaf_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Surface Downwelling Aerosol-Free Shortwave Radiation"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "rsdsaf_tavg-u-hxy-u",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.rsdsaf",
+        "day.rsdsaf",
+        "mon.rsdsaf"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Surface Downwelling Aerosol-Free Shortwave Radiation"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

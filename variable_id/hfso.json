@@ -1,0 +1,6 @@
+{
+    "type": "variable",
+    "id": "hfso",
+    "@context": "000_context.jsonld",
+    "long_name": "Ground Heat Flux"
+}

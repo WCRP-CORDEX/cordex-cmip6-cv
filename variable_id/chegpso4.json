@@ -1,6 +1,6 @@
 {
-    "id": "chegpso4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "chegpso4",
+    "long_name": "Gas-Phase Production Rate of SO4"
 }

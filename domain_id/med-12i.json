@@ -1,5 +1,6 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "med-12i",
-  "type": "region"
+    "@context": "000_context.jsonld",
+    "id": "med-12i",
+    "type": "region",
+    "description": "Mediterranean"
 }

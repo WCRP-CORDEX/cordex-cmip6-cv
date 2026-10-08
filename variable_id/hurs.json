@@ -1,8 +1,6 @@
 {
-    "id": "hurs",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.",
-    "long_name": "Near-Surface Relative Humidity",
-    "units": "%"
+    "@context": "000_context.jsonld",
+    "id": "hurs",
+    "long_name": "Near-Surface Relative Humidity"
 }

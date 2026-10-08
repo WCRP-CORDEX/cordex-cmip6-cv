@@ -1,6 +1,6 @@
 {
-    "id": "psl",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Sea Level Pressure"
+    "@context": "000_context.jsonld",
+    "id": "psl",
+    "long_name": "Sea Level Pressure"
 }

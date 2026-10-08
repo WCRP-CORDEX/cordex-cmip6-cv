@@ -1,7 +1,6 @@
 {
-  "id": "od440aer",
-  "@context": "000_context.jsonld",
-  "type": "variable",
-  "description": "",
-  "long_name": "Ambient Aerosol Optical Thickness at 440nm"
+    "type": "variable",
+    "@context": "000_context.jsonld",
+    "id": "od440aer",
+    "long_name": "Ambient Aerosol Optical Thickness at 440nm"
 }

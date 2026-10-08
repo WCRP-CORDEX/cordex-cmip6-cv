@@ -1,7 +1,35 @@
 {
-  "id": "prsn_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Snowfall Flux",
-  "description": "At surface; includes precipitation of all forms of water in the solid phase"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "prsn_tavg-u-hxy-u",
+    "table_id": [
+        "1hr",
+        "3hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "1hr.prsn",
+        "3hr.prsn",
+        "day.prsn",
+        "mon.prsn"
+    ],
+    "frequency": [
+        "1hr",
+        "3hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Snowfall Flux"
+    ],
+    "comment": [
+        "At surface; includes precipitation of all forms of water in the solid phase"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

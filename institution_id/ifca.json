@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ifca",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain"
 }

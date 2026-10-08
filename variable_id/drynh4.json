@@ -1,7 +1,6 @@
 {
-    "id": "drynh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "drynh4",
     "long_name": "Dry Deposition Rate of Ammonium"
 }

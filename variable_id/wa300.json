@@ -1,7 +1,6 @@
 {
-    "id": "wa300",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "wa300",
     "long_name": "Upward Air Velocity at 300hPa"
 }

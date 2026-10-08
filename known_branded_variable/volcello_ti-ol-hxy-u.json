@@ -1,6 +1,26 @@
 {
-  "id": "volcello_ti-ol-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Ocean Grid-Cell Volume"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "volcello_ti-ol-hxy-u",
+    "table_id": [
+        "fx"
+    ],
+    "compound_name": [
+        "fx.volcello"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "long_name": [
+        "Ocean Grid-Cell Volume"
+    ],
+    "comment": [
+        "grid-cell volume ca. 2000."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

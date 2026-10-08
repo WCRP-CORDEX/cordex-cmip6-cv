@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-aladin64p1",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "CNRM-ALADIN regional climate model, version 6.4 P1 (2023)",
+        "CNRM-ALADIN regional climate model, version 6.4 P1"
+    ]
 }

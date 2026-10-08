@@ -1,6 +1,7 @@
 {
-    "id": "sedss",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "only if sedimentation is applied for this aerosol"
+    "@context": "000_context.jsonld",
+    "id": "sedss",
+    "description": "only if sedimentation is applied for this aerosol",
+    "long_name": "Sedimentation Rate of Sea-Salt"
 }

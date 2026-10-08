@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hiram-sit-lr",
-    "type": "source"
+    "type": "source",
+    "driving_source": "HiRAM-SIT-LR (2018): \naerosol: none\natmos: GFDL-HiRAM (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 768 x 384 longitude/latitude; 32 levels; top level 1 hPa)\natmosChem: none\nland: GFDL-LM3 (same grid as atmos)\nlandIce: none\nocean: SIT (1-D, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 50 levels with skin layer and 1 m resolution for uppermost 10 m)\nocnBgchem: none\nseaIce: none"
 }

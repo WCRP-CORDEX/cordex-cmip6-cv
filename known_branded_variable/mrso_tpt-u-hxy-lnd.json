@@ -1,6 +1,23 @@
 {
-  "id": "mrso_tpt-u-hxy-lnd",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Total Soil Moisture Content"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "mrso_tpt-u-hxy-lnd",
+    "table_id": [
+        "6hr"
+    ],
+    "compound_name": [
+        "6hr.mrso"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "long_name": [
+        "Total Soil Moisture Content"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

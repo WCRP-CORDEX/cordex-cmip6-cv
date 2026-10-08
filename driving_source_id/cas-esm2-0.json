@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cas-esm2-0",
-    "type": "source"
+    "type": "source",
+    "driving_source": "CAS-ESM 2.0 (2019): \naerosol: IAP AACM\natmos: IAP AGCM 5.0 (Finite difference dynamical core; 256 x 128 longitude/latitude; 35 levels; top level 2.2 hPa)\natmosChem: IAP AACM\nland: CoLM\nlandIce: none\nocean: LICOM2.0 (LICOM2.0, primarily 1deg; 362 x 196 longitude/latitude; 30 levels; top grid cell 0-10 m)\nocnBgchem: IAP OBGCM\nseaIce: CICE4"
 }

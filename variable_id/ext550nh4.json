@@ -1,8 +1,7 @@
 {
-    "id": "ext550nh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "ext550nh4",
     "long_name": "Ammonium Aerosol Extinction Coefficient",
     "standard_name": "volume_extinction_coefficient_in_air_due_to_ambient_aerosol"
 }

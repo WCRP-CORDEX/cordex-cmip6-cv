@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nkua",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Department of Physics, National and Kapodistrian University of Athens, Athens, Greece"
 }

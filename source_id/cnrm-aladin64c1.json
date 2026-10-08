@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-aladin64c1",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1) (2025)",
+        "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1)"
+    ]
 }

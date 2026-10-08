@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "remo2020-2-2-imove",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static) (2023)",
+        "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static)"
+    ]
 }

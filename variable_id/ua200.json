@@ -1,7 +1,6 @@
 {
-    "id": "ua200",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "ua200",
     "long_name": "Eastward Wind at 200hPa"
 }

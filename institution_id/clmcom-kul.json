@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmcom-kul",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Climate Limited-area Modelling Community (CLMcom) partner: KU Leuven, Leuven, Belgium"
 }

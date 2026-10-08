@@ -1,6 +1,6 @@
 {
-    "id": "abs1000oa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs1000oa",
+    "long_name": "Organic Matter Aerosol Absorption Optical Thickness at 1000 nm"
 }

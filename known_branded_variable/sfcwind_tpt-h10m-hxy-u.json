@@ -1,6 +1,23 @@
 {
-  "id": "sfcwind_tpt-h10m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Near-Surface Wind Speed"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "sfcwind_tpt-h10m-hxy-u",
+    "table_id": [
+        "1hr"
+    ],
+    "compound_name": [
+        "1hr.sfcWind"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "long_name": [
+        "Near-Surface Wind Speed"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

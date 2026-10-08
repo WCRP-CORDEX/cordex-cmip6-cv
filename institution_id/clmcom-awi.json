@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmcom-awi",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Climate Limited-area Modelling Community (CLMcom) partner: Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Potsdam, Germany"
 }

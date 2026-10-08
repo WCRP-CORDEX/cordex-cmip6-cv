@@ -1,6 +1,26 @@
 {
-  "id": "wa_tavg-400hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Upward Air Velocity at 400hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wa_tavg-400hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.wa400",
+        "mon.wa400"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Upward Air Velocity at 400hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -1,7 +1,6 @@
 {
-    "id": "dryoa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "dryoa",
     "long_name": "Dry Deposition Rate of Organic Matter"
 }

@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "enea-reg3",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "The ENEA-REG regional Earth System Model version 3.0 based on WRF v4.2.2, MITgcm z67, and CaMa-Flood v4.10 (2021)",
+        "The ENEA-REG regional Earth System Model version 3.0 based on WRF v4.2.2, MITgcm z67, and CaMa-Flood v4.10"
+    ]
 }

@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-rcsm6-sn",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2019)",
+        "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM)"
+    ]
 }

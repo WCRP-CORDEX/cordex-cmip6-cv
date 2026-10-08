@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nicam16-7s",
-    "type": "source"
+    "type": "source",
+    "driving_source": "NICAM16-7S (2017): \naerosol: Prescribed MACv2-SP\natmos: NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)\natmosChem: none\nland: MATSIRO6 (w/o MOSAIC)\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: Fixed"
 }

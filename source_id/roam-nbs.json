@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "roam-nbs",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea (2024)",
+        "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea"
+    ]
 }

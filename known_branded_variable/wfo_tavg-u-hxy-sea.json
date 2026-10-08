@@ -1,7 +1,29 @@
 {
-  "id": "wfo_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Water Flux into Sea Water",
-  "description": "Computed as the water flux into the ocean divided by the area of the ocean portion of the grid cell. This is the sum *wfonocorr* and *wfcorr*."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wfo_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.wfo",
+        "mon.wfo"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Water Flux into Sea Water"
+    ],
+    "comment": [
+        "Computed as the water flux into the ocean divided by the area of the ocean portion of the grid cell. This is the sum *wfonocorr* and *wfcorr*."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

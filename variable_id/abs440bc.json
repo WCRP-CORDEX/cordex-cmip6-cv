@@ -1,6 +1,6 @@
 {
-    "id": "abs440bc",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs440bc",
+    "long_name": "Black Carbon Aerosol Absorption Optical Thickness at 440 nm"
 }

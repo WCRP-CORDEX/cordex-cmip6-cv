@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "regcm5-0",
-    "type": "source"
+    "type": "source",
+    "source": [
+        "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)",
+        "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core"
+    ]
 }

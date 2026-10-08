@@ -1,7 +1,6 @@
 {
-    "id": "zg700",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "zg700",
     "long_name": "Geopotential Height at 700hPa"
 }

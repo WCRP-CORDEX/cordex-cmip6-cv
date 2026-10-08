@@ -1,6 +1,26 @@
 {
-  "id": "ta_tavg-10hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Air Temperature at 10hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "ta_tavg-10hpa-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.ta10",
+        "mon.ta10"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Air Temperature at 10hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

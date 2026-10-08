@@ -1,7 +1,6 @@
 {
-    "id": "sconcnh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "sconcnh4",
     "long_name": "Surface Concentration of Ammonium"
 }

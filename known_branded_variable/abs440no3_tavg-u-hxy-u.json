@@ -1,6 +1,26 @@
 {
-  "id": "abs440no3_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Nitrate Aerosol Absorption Optical Thickness at 440 nm"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "abs440no3_tavg-u-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.abs440no3",
+        "mon.abs440no3"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Nitrate Aerosol Absorption Optical Thickness at 440 nm"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

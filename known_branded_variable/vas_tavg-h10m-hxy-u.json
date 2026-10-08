@@ -1,7 +1,29 @@
 {
-  "id": "vas_tavg-h10m-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Northward Near-Surface Wind",
-  "description": "Northward component of the near surface wind"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "vas_tavg-h10m-hxy-u",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.vas",
+        "mon.vas"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Northward Near-Surface Wind"
+    ],
+    "comment": [
+        "Northward component of the near surface wind"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

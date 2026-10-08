@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bas",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "British Antarctic Survey, Cambridge, United Kingdom"
 }

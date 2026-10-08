@@ -1,5 +1,6 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "cam-18",
-  "type": "region"
+    "@context": "000_context.jsonld",
+    "id": "cam-18",
+    "type": "region",
+    "description": "Central America"
 }

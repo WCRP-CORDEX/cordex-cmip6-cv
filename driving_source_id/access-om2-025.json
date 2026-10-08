@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "access-om2-025",
-    "type": "source"
+    "type": "source",
+    "driving_source": "ACCESS-OM2-025 (2020): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: ACCESS-OM2 (MOM5, tripolar primarily 1/4 deg; 1440 x 1080 longitude/latitude; 50 levels; top grid cell 0-2.3 m)\nocnBgchem: WOMBAT (same grid as ocean)\nseaIce: CICE5.1.2 (same grid as ocean)"
 }

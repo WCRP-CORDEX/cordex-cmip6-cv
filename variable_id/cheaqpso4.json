@@ -1,6 +1,6 @@
 {
-    "id": "cheaqpso4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "cheaqpso4",
+    "long_name": "Aqueous-Phase Production Rate of SO4"
 }

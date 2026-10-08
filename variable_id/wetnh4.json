@@ -1,7 +1,6 @@
 {
-    "id": "wetnh4",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "wetnh4",
     "long_name": "Wet Deposition Rate of Ammonium"
 }

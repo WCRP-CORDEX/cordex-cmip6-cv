@@ -1,8 +1,6 @@
 {
-    "id": "sftgif",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "Percentage of grid cell covered by land ice (ice sheet, ice shelf, ice cap, glacier)",
-    "long_name": "Percentage of the Grid Cell Covered by Glacier",
-    "units": "%"
+    "@context": "000_context.jsonld",
+    "id": "sftgif",
+    "long_name": "Percentage of the Grid Cell Covered by Glacier"
 }

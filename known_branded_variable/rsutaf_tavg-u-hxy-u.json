@@ -1,8 +1,30 @@
 {
-  "id": "rsutaf_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "TOA Outgoing Aerosol-Free Shortwave Radiation",
-  "description": "",
-  "cf_standard_name": "toa_outgoing_shortwave_flux_assuming_no_aerosol"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "rsutaf_tavg-u-hxy-u",
+    "cf_standard_name": "toa_outgoing_shortwave_flux_assuming_no_aerosol",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.rsutaf",
+        "day.rsutaf",
+        "mon.rsutaf"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "TOA Outgoing Aerosol-Free Shortwave Radiation"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

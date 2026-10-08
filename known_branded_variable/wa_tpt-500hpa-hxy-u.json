@@ -1,6 +1,26 @@
 {
-  "id": "wa_tpt-500hpa-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Upward Air Velocity at 500hPa"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "wa_tpt-500hpa-hxy-u",
+    "table_id": [
+        "3hr",
+        "6hr"
+    ],
+    "compound_name": [
+        "3hr.wa500",
+        "6hr.wa500"
+    ],
+    "frequency": [
+        "3hr",
+        "6hr"
+    ],
+    "long_name": [
+        "Upward Air Velocity at 500hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

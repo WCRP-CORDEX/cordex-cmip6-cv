@@ -1,6 +1,6 @@
 {
-    "id": "concno3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "concno3",
+    "long_name": "Concentration of Nitrate"
 }

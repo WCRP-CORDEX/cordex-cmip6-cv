@@ -1,6 +1,6 @@
 {
-    "id": "od350dust",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od350dust",
+    "long_name": "Dust Aerosol Optical Thickness at 350nm"
 }

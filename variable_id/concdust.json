@@ -1,7 +1,6 @@
 {
-    "id": "concdust",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "",
+    "@context": "000_context.jsonld",
+    "id": "concdust",
     "long_name": "Concentration of Dust"
 }

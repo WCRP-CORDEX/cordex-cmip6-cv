@@ -1,6 +1,6 @@
 {
-    "id": "od870oa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "od870oa",
+    "long_name": "Organic Matter Aerosol Optical Thickness at 870nm"
 }

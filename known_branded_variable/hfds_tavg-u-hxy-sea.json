@@ -1,7 +1,29 @@
 {
-  "id": "hfds_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Downward Heat Flux at Sea Water Surface",
-  "description": "This is the net flux of heat entering the liquid water column through its upper surface (excluding any 'flux adjustment') ."
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "hfds_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.hfds",
+        "mon.hfds"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Downward Heat Flux at Sea Water Surface"
+    ],
+    "comment": [
+        "This is the net flux of heat entering the liquid water column through its upper surface (excluding any 'flux adjustment') ."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

@@ -1,6 +1,6 @@
 {
-    "id": "abs350oa",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": ""
+    "@context": "000_context.jsonld",
+    "id": "abs350oa",
+    "long_name": "Organic Matter Aerosol Absorption Optical Thickness at 350 nm"
 }

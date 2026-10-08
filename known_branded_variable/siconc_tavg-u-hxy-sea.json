@@ -1,6 +1,29 @@
 {
-  "id": "siconc_tavg-u-hxy-sea",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "Sea-Ice Area Percentage (Ocean Grid)"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "siconc_tavg-u-hxy-sea",
+    "table_id": [
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "day.siconc",
+        "mon.siconc"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "Sea-Ice Area Percentage (Ocean Grid)"
+    ],
+    "comment": [
+        "Percentage of grid cell covered by sea ice"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

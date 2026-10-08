@@ -1,6 +1,7 @@
 {
-    "id": "sedno3",
-    "@context": "000_context.jsonld",
     "type": "variable",
-    "description": "only if sedimentation is applied for this aerosol"
+    "@context": "000_context.jsonld",
+    "id": "sedno3",
+    "description": "only if sedimentation is applied for this aerosol",
+    "long_name": "Sedimentation Rate of Nitrate"
 }

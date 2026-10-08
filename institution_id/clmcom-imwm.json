@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmcom-imwm",
-    "type": "organisation"
+    "type": "organisation",
+    "institution": "Climate Limited-area Modelling Community (CLMcom) partner: Institute of Meteorology and Water Management, Warsaw, Poland"
 }

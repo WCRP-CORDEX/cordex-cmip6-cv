@@ -1,7 +1,32 @@
 {
-  "id": "rlutcs_tavg-u-hxy-u",
-  "@context": "000_context.jsonld",
-  "type": "known_branded_variable",
-  "long_name": "TOA Outgoing Clear-Sky Longwave Radiation",
-  "description": "Upwelling clear-sky longwave radiation at top of atmosphere"
+    "type": "known_branded_variable",
+    "@context": "000_context.jsonld",
+    "id": "rlutcs_tavg-u-hxy-u",
+    "table_id": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "compound_name": [
+        "6hr.rlutcs",
+        "day.rlutcs",
+        "mon.rlutcs"
+    ],
+    "frequency": [
+        "6hr",
+        "day",
+        "mon"
+    ],
+    "long_name": [
+        "TOA Outgoing Clear-Sky Longwave Radiation"
+    ],
+    "comment": [
+        "Upwelling clear-sky longwave radiation at top of atmosphere"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }
