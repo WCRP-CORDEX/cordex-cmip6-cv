@@ -2,11 +2,31 @@ schema_version: '1'
 project:
   id: cordex-cmip6
   name: CORDEX-CMIP6 Controlled Vocabulary
-cv_version: 3.0.0
-universe_version: 3.2.6
+cv_version: 4.0.0
+universe_version: 3.3.0
 esgvoc:
   min_version: 7.0.0
 release_notes: |
-  - data_coordinate: new collection model
-  - data_coordinate: 36 added
-  - known_branded_variable: 603 modified
+  - attr_specs.yaml: updated
+  - domain_id: updated collection model
+  - driving_source_id: updated collection model
+  - grid_axis: new collection model
+  - grid_variable: new collection model
+  - institution_id: updated collection model
+  - known_branded_variable: updated collection model
+  - model_level_coordinate: new collection model
+  - source_id: updated collection model
+  - table: new collection model
+  - data_coordinate: 1 added, 35 modified, 1 removed
+  - domain_id: 82 modified
+  - driving_experiment_id: 7 modified
+  - driving_source_id: 134 modified
+  - grid_axis: 12 added
+  - grid_variable: 4 added
+  - institution_id: 56 modified
+  - known_branded_variable: 1 added, 603 modified
+  - model_level_coordinate: 1 added
+  - source_id: 54 modified
+  - table: 6 added
+  - tracking_id: 1 removed
+  - variable_id: 1 added, 367 modified
