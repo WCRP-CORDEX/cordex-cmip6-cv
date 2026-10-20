@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "cordex_cv"
 description = "CORDEX CMIP6 CV"
 keywords = ["random", "cool"]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 version = "0.1.0"
 dependencies = [
   "pandas",

@@ -91,7 +91,7 @@ def main():
     cities = []
     countries = set()
 
-    for institution_id, locations in data["institution_id"].items():
+    for locations in data["institution_id"].values():
         for location in locations.split(';'):
             city, country = unpack_location(location)
             countries.add(country)
