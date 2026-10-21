@@ -239,6 +239,24 @@
             "source_id": "CCLM6-0-1-URB-ESG",
             "source_type": "ARCM"
         },
+        "CMCC-MedESM1": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.cmcc.it/models/cmcc-esm-earth-system-model",
+            "institution_id": [
+                "CMCC-ESYDA"
+            ],
+            "label": "CMCC-MedESM version 1",
+            "label_extended": "Version 1 of the regional Earth system model (MedESM1) of the Euro-Mediterranean Center on Climate Change (CMCC Foundation)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2027",
+            "source_id": "CMCC-MedESM1",
+            "source_type": "AORCM"
+        },
         "CNRM-ALADIN64C1": {
             "activity_participation": [
                 "DD"
