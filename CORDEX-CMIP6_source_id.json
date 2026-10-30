@@ -848,6 +848,24 @@
             "source_id": "REMO2020-2-2-iMOVE-LUC",
             "source_type": "ARCM"
         },
+        "REMO2020-2-3-L27-iMOVE": {
+            "activity_participation": [
+                "DD"
+            ],
+            "cohort": [
+                "Registered"
+            ],
+            "further_info_url": "https://www.remo-rcm.de",
+            "institution_id": [
+                "GERICS"
+            ],
+            "label": "REMO2020 v2.3 L27 iMOVE",
+            "label_extended": "Regional Climate Model REMO, version 2.3, 27 model levels, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake), Town Energy Model v3 (TEB) and interactive Vegetation (iMOVE, static)",
+            "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0).",
+            "release_year": "2026",
+            "source_id": "REMO2020-2-3-L27-iMOVE",
+            "source_type": "ARCM"
+        },
         "ROAM-NBS": {
             "activity_participation": [
                 "DD"
