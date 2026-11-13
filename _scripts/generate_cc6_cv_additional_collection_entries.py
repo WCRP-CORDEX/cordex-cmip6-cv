@@ -19,14 +19,30 @@ PROPERTY_BASE = "https://esgvoc.ipsl.fr/property"
 
 
 @dataclass(frozen=True)
-class CollectionSpec:
-    """Describe one CMOR CV collection and its generated project field."""
+class FieldSpec:
+    """Describe one field copied into an ESGVoc project term."""
 
-    collection_id: str
     output_field: str
-    term_type: str
     property_iri: str
     source_field: str | None = None
+    required: bool = True
+    raw_entry_is_value: bool = False
+    json_literal: bool = False
+    previous_context_definitions: tuple[Any, ...] = ()
+
+
+@dataclass(frozen=True)
+class CollectionSpec:
+    """Describe one CMOR CV collection and its generated project fields."""
+
+    collection_id: str
+    term_type: str
+    fields: tuple[FieldSpec, ...]
+
+    @property
+    def owned_fields(self) -> tuple[str, ...]:
+        """Fields that are authoritatively maintained by this generator."""
+        return tuple(field.output_field for field in self.fields)
 
 
 COLLECTION_SPECS = (
@@ -36,36 +52,80 @@ COLLECTION_SPECS = (
     CollectionSpec(
         "source_id",
         "source",
-        "source",
-        f"{UNIVERSE_BASE}/source",
+        (
+            FieldSpec("source", f"{UNIVERSE_BASE}/source"),
+            FieldSpec(
+                "source_type",
+                f"{PROPERTY_BASE}/source_type",
+                previous_context_definitions=("http://schema.org/source_type",),
+            ),
+            FieldSpec(
+                "activity_participation",
+                f"{PROPERTY_BASE}/activity_participation",
+                previous_context_definitions=(
+                    "http://schema.org/activity_participation",
+                ),
+            ),
+            FieldSpec(
+                "license",
+                "http://schema.org/license",
+                json_literal=True,
+                previous_context_definitions=("http://schema.org/license",),
+            ),
+        ),
     ),
     CollectionSpec(
         "driving_source_id",
-        "driving_source",
         "source",
-        f"{PROPERTY_BASE}/driving_source",
+        (
+            FieldSpec("driving_source", f"{PROPERTY_BASE}/driving_source"),
+            FieldSpec(
+                "driving_experiment_id",
+                f"{PROPERTY_BASE}/driving_experiment_id",
+                required=False,
+            ),
+        ),
     ),
     CollectionSpec(
         "institution_id",
-        "institution",
         "organisation",
-        f"{PROPERTY_BASE}/institution",
+        (
+            FieldSpec(
+                "institution",
+                f"{PROPERTY_BASE}/institution",
+                raw_entry_is_value=True,
+            ),
+        ),
     ),
     CollectionSpec(
         "domain_id",
-        "description",
         "region",
-        "https://schema.org/description",
-        source_field="domain",
+        (
+            FieldSpec(
+                "description",
+                "https://schema.org/description",
+                source_field="domain",
+            ),
+        ),
     ),
     CollectionSpec(
         "driving_experiment_id",
         "experiment",
-        "experiment",
-        f"{UNIVERSE_BASE}/experiment",
-        source_field="driving_experiment",
+        (
+            FieldSpec(
+                "experiment",
+                f"{UNIVERSE_BASE}/experiment",
+                source_field="driving_experiment",
+            ),
+        ),
     ),
 )
+
+CORDEX_CMIP6_LICENSE = (
+    "https://cordex.org/data-access/cordex-cmip6-data/"
+    "cordex-cmip6-terms-of-use"
+)
+CORDEX_CMIP6_LICENSE_ID = "cordex-cmip6-terms-of-use"
 
 
 def parse_args() -> argparse.Namespace:
@@ -116,15 +176,21 @@ def require_non_empty_string(value: Any, location: str) -> str:
     return value
 
 
-def desired_context_terms(spec: CollectionSpec) -> dict[str, str]:
+def desired_context_terms(spec: CollectionSpec) -> dict[str, Any]:
     """Return the JSON-LD terms required by one generated collection."""
-    return {
+    terms: dict[str, Any] = {
         "@base": f"{UNIVERSE_BASE}/{spec.term_type}/",
         "id": "@id",
         "type": "@type",
         spec.term_type: f"{UNIVERSE_BASE}/{spec.term_type}",
-        spec.output_field: spec.property_iri,
     }
+    for field in spec.fields:
+        terms[field.output_field] = (
+            {"@id": field.property_iri, "@type": "@json"}
+            if field.json_literal
+            else field.property_iri
+        )
+    return terms
 
 
 def augment_context(
@@ -145,15 +211,18 @@ def augment_context(
         )
 
     context = dict(raw_context)
+    fields_by_name = {field.output_field: field for field in spec.fields}
     for term, definition in desired_context_terms(spec).items():
         current = context.get(term)
         if term in context and current != definition:
-            raise ValueError(
-                f"Refusing to overwrite context term {term!r} in {context_path}: "
-                f"existing value {current!r} differs from required value "
-                f"{definition!r}"
-            )
-        context.setdefault(term, definition)
+            field = fields_by_name.get(term)
+            if field is None or current not in field.previous_context_definitions:
+                raise ValueError(
+                    f"Refusing to overwrite context term {term!r} in "
+                    f"{context_path}: existing value {current!r} differs from "
+                    f"required value {definition!r}"
+                )
+        context[term] = definition
     payload["@context"] = context
 
     if payload == existing:
@@ -165,31 +234,57 @@ def augment_context(
     return action
 
 
-def extract_value(
+def validate_metadata_value(value: Any, location: str) -> str | list[str]:
+    """Validate a scalar or nonempty list of metadata strings."""
+    if isinstance(value, list):
+        if not value:
+            raise ValueError(f"Expected a non-empty list at {location}")
+        return [
+            require_non_empty_string(item, f"{location}[{index}]")
+            for index, item in enumerate(value)
+        ]
+    return require_non_empty_string(value, location)
+
+
+def normalize_license(value: Any, location: str) -> dict[str, Any]:
+    """Convert the CMOR license value to the legacy Source license shape."""
+    license_value = require_non_empty_string(value, location).rstrip("/")
+    if license_value != CORDEX_CMIP6_LICENSE:
+        raise ValueError(
+            f"Unsupported CORDEX-CMIP6 source license at {location}: {value!r}. "
+            "Add a project license term before mapping this value."
+        )
+    return {
+        "id": CORDEX_CMIP6_LICENSE_ID,
+        "exceptions-contact": None,
+        "source-specific-info": "",
+    }
+
+
+def extract_field_value(
     identifier: str,
     raw_entry: Any,
     spec: CollectionSpec,
-) -> str | list[str]:
-    """Extract and validate one descriptive value from a CMOR CV entry."""
+    field: FieldSpec,
+) -> str | list[str] | dict[str, Any] | None:
+    """Extract and validate one generated field from a CMOR CV entry."""
     location = f"CV.{spec.collection_id}.{identifier}"
-    if spec.collection_id == "institution_id":
-        return require_non_empty_string(raw_entry, location)
+    if field.raw_entry_is_value:
+        return validate_metadata_value(raw_entry, location)
 
     if not isinstance(raw_entry, dict):
         raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
-    source_field = spec.source_field or spec.output_field
+    source_field = field.source_field or field.output_field
     if source_field not in raw_entry:
-        raise ValueError(f"Missing {source_field!r} at {location}")
+        if field.required:
+            raise ValueError(f"Missing {source_field!r} at {location}")
+        return None
 
     value = raw_entry[source_field]
-    if isinstance(value, list):
-        if not value:
-            raise ValueError(f"Expected a non-empty list at {location}.{source_field}")
-        return [
-            require_non_empty_string(item, f"{location}.{source_field}[{index}]")
-            for index, item in enumerate(value)
-        ]
-    return require_non_empty_string(value, f"{location}.{source_field}")
+    field_location = f"{location}.{source_field}"
+    if field.output_field == "license":
+        return normalize_license(value, field_location)
+    return validate_metadata_value(value, field_location)
 
 
 def build_payload(
@@ -197,12 +292,16 @@ def build_payload(
     raw_entry: Any,
     spec: CollectionSpec,
 ) -> dict[str, Any]:
-    return {
+    payload: dict[str, Any] = {
         "@context": "000_context.jsonld",
         "id": identifier.lower(),
         "type": spec.term_type,
-        spec.output_field: extract_value(identifier, raw_entry, spec),
     }
+    for field in spec.fields:
+        value = extract_field_value(identifier, raw_entry, spec, field)
+        if value is not None:
+            payload[field.output_field] = value
+    return payload
 
 
 def merge_payload(
@@ -225,7 +324,13 @@ def merge_payload(
                 f"existing value {current!r} differs from required value {expected!r}"
             )
         merged[field] = expected
-    merged[spec.output_field] = generated[spec.output_field]
+    for field in spec.owned_fields:
+        if field in generated:
+            merged[field] = generated[field]
+        else:
+            # An absent optional upstream field means that no restriction is
+            # defined. Remove stale generator-owned metadata accordingly.
+            merged.pop(field, None)
     return merged
 
 
