@@ -32,6 +32,7 @@
             "@id": "https://schema.org/version"
         },
         "source": "https://esgvoc.ipsl.fr/resource/universe/source",
-        "driving_source": "https://esgvoc.ipsl.fr/property/driving_source"
+        "driving_source": "https://esgvoc.ipsl.fr/property/driving_source",
+        "driving_experiment_id": "https://esgvoc.ipsl.fr/property/driving_experiment_id"
     }
 }

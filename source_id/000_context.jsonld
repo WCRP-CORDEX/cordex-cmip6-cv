@@ -31,6 +31,12 @@
         "source_version": {
             "@id": "https://schema.org/version"
         },
-        "source": "https://esgvoc.ipsl.fr/resource/universe/source"
+        "source": "https://esgvoc.ipsl.fr/resource/universe/source",
+        "source_type": "https://esgvoc.ipsl.fr/property/source_type",
+        "activity_participation": "https://esgvoc.ipsl.fr/property/activity_participation",
+        "license": {
+            "@id": "http://schema.org/license",
+            "@type": "@json"
+        }
     }
 }

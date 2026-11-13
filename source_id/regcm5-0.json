@@ -5,5 +5,14 @@
     "source": [
         "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)",
         "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

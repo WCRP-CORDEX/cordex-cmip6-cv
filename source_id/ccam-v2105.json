@@ -5,5 +5,14 @@
     "source": [
         "Conformal Cubic Atmospheric Model version 2105 (2022)",
         "Conformal Cubic Atmospheric Model version 2105"
-    ]
+    ],
+    "source_type": "AGCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

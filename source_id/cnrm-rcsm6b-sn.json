@@ -5,5 +5,14 @@
     "source": [
         "Version 6B of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2024)",
         "Version 6B of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM)"
-    ]
+    ],
+    "source_type": "AORCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

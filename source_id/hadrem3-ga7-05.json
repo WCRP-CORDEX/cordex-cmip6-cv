@@ -5,5 +5,14 @@
     "source": [
         "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)",
         "Hadley Centre Regional Model using Global Atmosphere version 7-05"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

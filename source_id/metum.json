@@ -5,5 +5,14 @@
     "source": [
         "UK Met Office Unified Model version 13.0 (2022)",
         "UK Met Office Unified Model version 13.0"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

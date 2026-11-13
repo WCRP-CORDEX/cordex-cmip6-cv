@@ -5,5 +5,14 @@
     "source": [
         "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 (2021)",
         "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

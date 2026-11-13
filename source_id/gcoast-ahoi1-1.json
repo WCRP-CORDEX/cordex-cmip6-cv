@@ -5,5 +5,14 @@
     "source": [
         "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)",
         "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea"
-    ]
+    ],
+    "source_type": "AORCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }
