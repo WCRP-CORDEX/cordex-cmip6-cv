@@ -117,9 +117,7 @@ def test_load_conventional_cv_reproduces_combined_cv_transformations(
         "activity_participation": ["DD"],
         "license": generator.CORDEX_CMIP6_LICENSE,
     }
-    assert cv["driving_source_id"]["ERA5"]["driving_experiment_id"] == [
-        "evaluation"
-    ]
+    assert cv["driving_source_id"]["ERA5"]["driving_experiment_id"] == ["evaluation"]
     assert cv["driving_experiment_id"]["evaluation"] == {
         "driving_experiment_id": "evaluation",
         "driving_experiment": "reanalysis simulation of the recent past",
@@ -314,9 +312,7 @@ def test_custom_properties_upgrade_previous_schema_org_mappings(
                 "id": "@id",
                 "type": "@type",
                 "source_type": "http://schema.org/source_type",
-                "activity_participation": (
-                    "http://schema.org/activity_participation"
-                ),
+                "activity_participation": ("http://schema.org/activity_participation"),
             }
         },
     )
@@ -452,8 +448,7 @@ def test_empty_driving_experiment_restriction_is_rejected() -> None:
 def test_checked_in_driving_experiment_restrictions_are_valid() -> None:
     repository_root = Path(__file__).resolve().parents[1]
     known_experiments = {
-        path.stem
-        for path in (repository_root / "driving_experiment_id").glob("*.json")
+        path.stem for path in (repository_root / "driving_experiment_id").glob("*.json")
     }
 
     for path in (repository_root / "driving_source_id").glob("*.json"):
@@ -462,19 +457,19 @@ def test_checked_in_driving_experiment_restrictions_are_valid() -> None:
             continue
 
         restrictions = payload["driving_experiment_id"]
-        assert isinstance(restrictions, list), (
-            f"{path}: driving_experiment_id must be a list"
-        )
-        assert restrictions, (
-            f"{path}: omit driving_experiment_id instead of defining an empty list"
-        )
+        assert isinstance(
+            restrictions, list
+        ), f"{path}: driving_experiment_id must be a list"
+        assert (
+            restrictions
+        ), f"{path}: omit driving_experiment_id instead of defining an empty list"
         assert all(
             isinstance(restriction, str) and restriction.strip()
             for restriction in restrictions
         ), f"{path}: driving_experiment_id must contain non-empty strings"
-        assert len(restrictions) == len(set(restrictions)), (
-            f"{path}: driving_experiment_id contains duplicate values"
-        )
+        assert len(restrictions) == len(
+            set(restrictions)
+        ), f"{path}: driving_experiment_id contains duplicate values"
         assert set(restrictions) <= known_experiments, (
             f"{path}: unresolved driving_experiment_id value(s): "
             f"{sorted(set(restrictions) - known_experiments)}"

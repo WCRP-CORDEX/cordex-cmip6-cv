@@ -123,8 +123,7 @@ COLLECTION_SPECS = (
 )
 
 CORDEX_CMIP6_LICENSE = (
-    "https://cordex.org/data-access/cordex-cmip6-data/"
-    "cordex-cmip6-terms-of-use"
+    "https://cordex.org/data-access/cordex-cmip6-data/" "cordex-cmip6-terms-of-use"
 )
 CORDEX_CMIP6_LICENSE_ID = "cordex-cmip6-terms-of-use"
 
@@ -175,9 +174,7 @@ def read_collection(root: Path, collection_id: str) -> dict[str, Any]:
     payload = read_json(path)
     collection = payload.get(collection_id)
     if not isinstance(collection, dict) or not collection:
-        raise ValueError(
-            f"Expected non-empty JSON object {collection_id!r} in {path}"
-        )
+        raise ValueError(f"Expected non-empty JSON object {collection_id!r} in {path}")
     return collection
 
 
@@ -215,9 +212,7 @@ def load_conventional_cv(root: Path) -> dict[str, dict[str, Any]]:
             "driving_experiment_id": identifier,
             "driving_experiment": value,
         }
-        for identifier, value in read_collection(
-            root, "driving_experiment_id"
-        ).items()
+        for identifier, value in read_collection(root, "driving_experiment_id").items()
     }
 
     return {
