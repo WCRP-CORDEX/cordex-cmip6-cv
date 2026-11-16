@@ -2,8 +2,9 @@
 
 The CORDEX-CMIP6 project collections reference terms from WCRP-universe, but
 the project CV additionally needs the exact strings used by selected NetCDF
-global attributes. These values are copied from the CORDEX-CMIP6 CMOR-table
-CV, while unrelated project metadata is preserved.
+global attributes. These values are derived directly from the conventional
+CORDEX-CMIP6 CV files on the ``main`` branch, while unrelated ESGVoc project
+metadata is preserved.
 """
 
 from __future__ import annotations
@@ -19,14 +20,30 @@ PROPERTY_BASE = "https://esgvoc.ipsl.fr/property"
 
 
 @dataclass(frozen=True)
-class CollectionSpec:
-    """Describe one CMOR CV collection and its generated project field."""
+class FieldSpec:
+    """Describe one field copied into an ESGVoc project term."""
 
-    collection_id: str
     output_field: str
-    term_type: str
     property_iri: str
     source_field: str | None = None
+    required: bool = True
+    raw_entry_is_value: bool = False
+    json_literal: bool = False
+    previous_context_definitions: tuple[Any, ...] = ()
+
+
+@dataclass(frozen=True)
+class CollectionSpec:
+    """Describe one conventional CV collection and its generated project fields."""
+
+    collection_id: str
+    term_type: str
+    fields: tuple[FieldSpec, ...]
+
+    @property
+    def owned_fields(self) -> tuple[str, ...]:
+        """Fields that are authoritatively maintained by this generator."""
+        return tuple(field.output_field for field in self.fields)
 
 
 COLLECTION_SPECS = (
@@ -36,36 +53,79 @@ COLLECTION_SPECS = (
     CollectionSpec(
         "source_id",
         "source",
-        "source",
-        f"{UNIVERSE_BASE}/source",
+        (
+            FieldSpec("source", f"{UNIVERSE_BASE}/source"),
+            FieldSpec(
+                "source_type",
+                f"{PROPERTY_BASE}/source_type",
+                previous_context_definitions=("http://schema.org/source_type",),
+            ),
+            FieldSpec(
+                "activity_participation",
+                f"{PROPERTY_BASE}/activity_participation",
+                previous_context_definitions=(
+                    "http://schema.org/activity_participation",
+                ),
+            ),
+            FieldSpec(
+                "license",
+                "http://schema.org/license",
+                json_literal=True,
+                previous_context_definitions=("http://schema.org/license",),
+            ),
+        ),
     ),
     CollectionSpec(
         "driving_source_id",
-        "driving_source",
         "source",
-        f"{PROPERTY_BASE}/driving_source",
+        (
+            FieldSpec("driving_source", f"{PROPERTY_BASE}/driving_source"),
+            FieldSpec(
+                "driving_experiment_id",
+                f"{PROPERTY_BASE}/driving_experiment_id",
+                required=False,
+            ),
+        ),
     ),
     CollectionSpec(
         "institution_id",
-        "institution",
         "organisation",
-        f"{PROPERTY_BASE}/institution",
+        (
+            FieldSpec(
+                "institution",
+                f"{PROPERTY_BASE}/institution",
+                raw_entry_is_value=True,
+            ),
+        ),
     ),
     CollectionSpec(
         "domain_id",
-        "description",
         "region",
-        "https://schema.org/description",
-        source_field="domain",
+        (
+            FieldSpec(
+                "description",
+                "https://schema.org/description",
+                source_field="domain",
+            ),
+        ),
     ),
     CollectionSpec(
         "driving_experiment_id",
         "experiment",
-        "experiment",
-        f"{UNIVERSE_BASE}/experiment",
-        source_field="driving_experiment",
+        (
+            FieldSpec(
+                "experiment",
+                f"{UNIVERSE_BASE}/experiment",
+                source_field="driving_experiment",
+            ),
+        ),
     ),
 )
+
+CORDEX_CMIP6_LICENSE = (
+    "https://cordex.org/data-access/cordex-cmip6-data/" "cordex-cmip6-terms-of-use"
+)
+CORDEX_CMIP6_LICENSE_ID = "cordex-cmip6-terms-of-use"
 
 
 def parse_args() -> argparse.Namespace:
@@ -75,12 +135,17 @@ def parse_args() -> argparse.Namespace:
         "--repos-base-dir",
         type=Path,
         default=script_dir.parents[1],
-        help="Directory containing the CMOR-table and project-CV repositories.",
+        help="Directory containing the conventional and ESGVoc CV checkouts.",
     )
     parser.add_argument(
-        "--cordex-cmip6-cmor-tables-dir",
+        "--conventional-cv-dir",
+        "--cordex-cmip6-cv-main-dir",
+        dest="conventional_cv_dir",
         type=Path,
-        help="CORDEX-CMIP6 CMOR-table repository (defaults below repos-base-dir).",
+        help=(
+            "Conventional CORDEX-CMIP6 CV checkout from the main branch "
+            "(defaults to cordex-cmip6-cv_main below repos-base-dir)."
+        ),
     )
     parser.add_argument(
         "--cordex-cmip6-cv-dir",
@@ -103,6 +168,62 @@ def read_json(path: Path) -> dict[str, Any]:
     return payload
 
 
+def read_collection(root: Path, collection_id: str) -> dict[str, Any]:
+    """Read one collection from a conventional CORDEX-CMIP6 CV file."""
+    path = root / f"CORDEX-CMIP6_{collection_id}.json"
+    payload = read_json(path)
+    collection = payload.get(collection_id)
+    if not isinstance(collection, dict) or not collection:
+        raise ValueError(f"Expected non-empty JSON object {collection_id!r} in {path}")
+    return collection
+
+
+def load_conventional_cv(root: Path) -> dict[str, dict[str, Any]]:
+    """Build the generator input directly from conventional project CV files."""
+    source_entries = read_collection(root, "source_id")
+    license_path = root / "CORDEX-CMIP6_license.json"
+    license_values = read_json(license_path).get("license")
+    if not isinstance(license_values, list) or not license_values:
+        raise ValueError(f"Expected non-empty JSON array 'license' in {license_path}")
+    project_license = require_non_empty_string(
+        license_values[0], f"{license_path}.license[0]"
+    )
+
+    sources: dict[str, dict[str, Any]] = {}
+    for identifier, raw_entry in source_entries.items():
+        location = f"source_id.{identifier}"
+        if not isinstance(raw_entry, dict):
+            raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
+        label = require_non_empty_string(
+            raw_entry.get("label_extended"), f"{location}.label_extended"
+        )
+        release_year = require_non_empty_string(
+            raw_entry.get("release_year"), f"{location}.release_year"
+        )
+        sources[identifier] = {
+            "source": [f"{label} ({release_year})", label],
+            "source_type": raw_entry.get("source_type"),
+            "activity_participation": raw_entry.get("activity_participation"),
+            "license": project_license,
+        }
+
+    driving_experiments = {
+        identifier: {
+            "driving_experiment_id": identifier,
+            "driving_experiment": value,
+        }
+        for identifier, value in read_collection(root, "driving_experiment_id").items()
+    }
+
+    return {
+        "source_id": sources,
+        "driving_source_id": read_collection(root, "driving_source_id"),
+        "institution_id": read_collection(root, "institution_id"),
+        "domain_id": read_collection(root, "domain_id"),
+        "driving_experiment_id": driving_experiments,
+    }
+
+
 def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
@@ -116,15 +237,21 @@ def require_non_empty_string(value: Any, location: str) -> str:
     return value
 
 
-def desired_context_terms(spec: CollectionSpec) -> dict[str, str]:
+def desired_context_terms(spec: CollectionSpec) -> dict[str, Any]:
     """Return the JSON-LD terms required by one generated collection."""
-    return {
+    terms: dict[str, Any] = {
         "@base": f"{UNIVERSE_BASE}/{spec.term_type}/",
         "id": "@id",
         "type": "@type",
         spec.term_type: f"{UNIVERSE_BASE}/{spec.term_type}",
-        spec.output_field: spec.property_iri,
     }
+    for field in spec.fields:
+        terms[field.output_field] = (
+            {"@id": field.property_iri, "@type": "@json"}
+            if field.json_literal
+            else field.property_iri
+        )
+    return terms
 
 
 def augment_context(
@@ -145,15 +272,18 @@ def augment_context(
         )
 
     context = dict(raw_context)
+    fields_by_name = {field.output_field: field for field in spec.fields}
     for term, definition in desired_context_terms(spec).items():
         current = context.get(term)
         if term in context and current != definition:
-            raise ValueError(
-                f"Refusing to overwrite context term {term!r} in {context_path}: "
-                f"existing value {current!r} differs from required value "
-                f"{definition!r}"
-            )
-        context.setdefault(term, definition)
+            field = fields_by_name.get(term)
+            if field is None or current not in field.previous_context_definitions:
+                raise ValueError(
+                    f"Refusing to overwrite context term {term!r} in "
+                    f"{context_path}: existing value {current!r} differs from "
+                    f"required value {definition!r}"
+                )
+        context[term] = definition
     payload["@context"] = context
 
     if payload == existing:
@@ -165,31 +295,57 @@ def augment_context(
     return action
 
 
-def extract_value(
+def validate_metadata_value(value: Any, location: str) -> str | list[str]:
+    """Validate a scalar or nonempty list of metadata strings."""
+    if isinstance(value, list):
+        if not value:
+            raise ValueError(f"Expected a non-empty list at {location}")
+        return [
+            require_non_empty_string(item, f"{location}[{index}]")
+            for index, item in enumerate(value)
+        ]
+    return require_non_empty_string(value, location)
+
+
+def normalize_license(value: Any, location: str) -> dict[str, Any]:
+    """Convert the CMOR license value to the legacy Source license shape."""
+    license_value = require_non_empty_string(value, location).rstrip("/")
+    if license_value != CORDEX_CMIP6_LICENSE:
+        raise ValueError(
+            f"Unsupported CORDEX-CMIP6 source license at {location}: {value!r}. "
+            "Add a project license term before mapping this value."
+        )
+    return {
+        "id": CORDEX_CMIP6_LICENSE_ID,
+        "exceptions-contact": None,
+        "source-specific-info": "",
+    }
+
+
+def extract_field_value(
     identifier: str,
     raw_entry: Any,
     spec: CollectionSpec,
-) -> str | list[str]:
-    """Extract and validate one descriptive value from a CMOR CV entry."""
+    field: FieldSpec,
+) -> str | list[str] | dict[str, Any] | None:
+    """Extract and validate one generated field from a CMOR CV entry."""
     location = f"CV.{spec.collection_id}.{identifier}"
-    if spec.collection_id == "institution_id":
-        return require_non_empty_string(raw_entry, location)
+    if field.raw_entry_is_value:
+        return validate_metadata_value(raw_entry, location)
 
     if not isinstance(raw_entry, dict):
         raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
-    source_field = spec.source_field or spec.output_field
+    source_field = field.source_field or field.output_field
     if source_field not in raw_entry:
-        raise ValueError(f"Missing {source_field!r} at {location}")
+        if field.required:
+            raise ValueError(f"Missing {source_field!r} at {location}")
+        return None
 
     value = raw_entry[source_field]
-    if isinstance(value, list):
-        if not value:
-            raise ValueError(f"Expected a non-empty list at {location}.{source_field}")
-        return [
-            require_non_empty_string(item, f"{location}.{source_field}[{index}]")
-            for index, item in enumerate(value)
-        ]
-    return require_non_empty_string(value, f"{location}.{source_field}")
+    field_location = f"{location}.{source_field}"
+    if field.output_field == "license":
+        return normalize_license(value, field_location)
+    return validate_metadata_value(value, field_location)
 
 
 def build_payload(
@@ -197,12 +353,16 @@ def build_payload(
     raw_entry: Any,
     spec: CollectionSpec,
 ) -> dict[str, Any]:
-    return {
+    payload: dict[str, Any] = {
         "@context": "000_context.jsonld",
         "id": identifier.lower(),
         "type": spec.term_type,
-        spec.output_field: extract_value(identifier, raw_entry, spec),
     }
+    for field in spec.fields:
+        value = extract_field_value(identifier, raw_entry, spec, field)
+        if value is not None:
+            payload[field.output_field] = value
+    return payload
 
 
 def merge_payload(
@@ -225,7 +385,13 @@ def merge_payload(
                 f"existing value {current!r} differs from required value {expected!r}"
             )
         merged[field] = expected
-    merged[spec.output_field] = generated[spec.output_field]
+    for field in spec.owned_fields:
+        if field in generated:
+            merged[field] = generated[field]
+        else:
+            # An absent optional upstream field means that no restriction is
+            # defined. Remove stale generator-owned metadata accordingly.
+            merged.pop(field, None)
     return merged
 
 
@@ -284,7 +450,7 @@ def generate_collection(
         if stale:
             print(
                 f"WARNING: {spec.collection_id} contains {len(stale)} JSON file(s) "
-                "not represented in the CMOR CV; they were left unchanged: "
+                "not represented in the conventional CV; they were left unchanged: "
                 + ", ".join(stale)
             )
 
@@ -294,18 +460,11 @@ def generate_collection(
 def main() -> None:
     args = parse_args()
     base = args.repos_base_dir.resolve()
-    cmor_repo = (
-        args.cordex_cmip6_cmor_tables_dir or base / "cordex-cmip6-cmor-tables"
+    conventional_root = (
+        args.conventional_cv_dir or base / "cordex-cmip6-cv_main"
     ).resolve()
     project_root = (args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv").resolve()
-    cv_path = cmor_repo / "Tables" / "CORDEX-CMIP6_CV.json"
-
-    content = read_json(cv_path)
-    cv = content.get("CV")
-    if cv is None:
-        raise ValueError(f"Missing JSON object 'CV' in {cv_path}")
-    if not isinstance(cv, dict):
-        raise TypeError(f"Expected 'CV' in {cv_path} to be a JSON object")
+    cv = load_conventional_cv(conventional_root)
 
     totals = {"created": 0, "updated": 0, "unchanged": 0}
     for spec in COLLECTION_SPECS:

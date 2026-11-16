@@ -5,5 +5,14 @@
     "source": [
         "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202410-2-1, convection-permitting setup with two-step nesting (x2yn2), intermediate ICON-CLM-202407-1-1 simulation at 12 km spatial grid spacing using convection parameterization (2025)",
         "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202410-2-1, convection-permitting setup with two-step nesting (x2yn2), intermediate ICON-CLM-202407-1-1 simulation at 12 km spatial grid spacing using convection parameterization"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

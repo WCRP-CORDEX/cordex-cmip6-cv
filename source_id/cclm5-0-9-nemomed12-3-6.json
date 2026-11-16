@@ -5,5 +5,14 @@
     "source": [
         "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain. (2021)",
         "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain."
-    ]
+    ],
+    "source_type": "AORCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

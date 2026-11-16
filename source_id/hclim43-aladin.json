@@ -5,5 +5,14 @@
     "source": [
         "HARMONIE Climate model cycle 43 with ALADIN physics (2022)",
         "HARMONIE Climate model cycle 43 with ALADIN physics"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

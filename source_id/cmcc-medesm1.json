@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cmcc-medesm1",
+    "type": "source",
+    "source": [
+        "Version 1 of the regional Earth system model (MedESM1) of the Euro-Mediterranean Center on Climate Change (CMCC Foundation) (2027)",
+        "Version 1 of the regional Earth system model (MedESM1) of the Euro-Mediterranean Center on Climate Change (CMCC Foundation)"
+    ],
+    "source_type": "AORCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
+}

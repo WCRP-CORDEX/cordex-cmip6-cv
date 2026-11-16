@@ -5,5 +5,14 @@
     "source": [
         "Canadian Regional Climate Model version 5, with spectral nudging (2024)",
         "Canadian Regional Climate Model version 5, with spectral nudging"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

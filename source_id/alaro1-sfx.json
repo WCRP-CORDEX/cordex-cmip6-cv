@@ -5,5 +5,14 @@
     "source": [
         "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0 (2024)",
         "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0"
-    ]
+    ],
+    "source_type": "ARCM",
+    "activity_participation": [
+        "DD"
+    ],
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }
