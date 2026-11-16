@@ -50,6 +50,82 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=4) + "\n", encoding="utf-8")
 
 
+def test_load_conventional_cv_reproduces_combined_cv_transformations(
+    tmp_path: Path,
+) -> None:
+    write_json(
+        tmp_path / "CORDEX-CMIP6_source_id.json",
+        {
+            "source_id": {
+                "Model-A": {
+                    "label_extended": "Model A regional climate model",
+                    "release_year": "2026",
+                    "source_type": "ARCM",
+                    "activity_participation": ["DD"],
+                    "license": "Registration-form license text",
+                }
+            }
+        },
+    )
+    write_json(
+        tmp_path / "CORDEX-CMIP6_license.json",
+        {"license": [generator.CORDEX_CMIP6_LICENSE]},
+    )
+    write_json(
+        tmp_path / "CORDEX-CMIP6_driving_source_id.json",
+        {
+            "driving_source_id": {
+                "ERA5": {
+                    "driving_source": "ECMWF Reanalysis v5",
+                    "driving_experiment_id": ["evaluation"],
+                }
+            }
+        },
+    )
+    write_json(
+        tmp_path / "CORDEX-CMIP6_institution_id.json",
+        {"institution_id": {"Institute-A": "Institute A description"}},
+    )
+    write_json(
+        tmp_path / "CORDEX-CMIP6_domain_id.json",
+        {
+            "domain_id": {
+                "CEUX-3": {
+                    "domain": "Central Europe Extended",
+                    "domain_id": "CEUX-3",
+                }
+            }
+        },
+    )
+    write_json(
+        tmp_path / "CORDEX-CMIP6_driving_experiment_id.json",
+        {
+            "driving_experiment_id": {
+                "evaluation": "reanalysis simulation of the recent past"
+            }
+        },
+    )
+
+    cv = generator.load_conventional_cv(tmp_path)
+
+    assert cv["source_id"]["Model-A"] == {
+        "source": [
+            "Model A regional climate model (2026)",
+            "Model A regional climate model",
+        ],
+        "source_type": "ARCM",
+        "activity_participation": ["DD"],
+        "license": generator.CORDEX_CMIP6_LICENSE,
+    }
+    assert cv["driving_source_id"]["ERA5"]["driving_experiment_id"] == [
+        "evaluation"
+    ]
+    assert cv["driving_experiment_id"]["evaluation"] == {
+        "driving_experiment_id": "evaluation",
+        "driving_experiment": "reanalysis simulation of the recent past",
+    }
+
+
 @pytest.mark.parametrize(
     ("spec", "identifier", "raw_entry", "expected_fields"),
     (

@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cmcc-esyda",
+    "type": "organisation",
+    "institution": "Earth System Modelling and Data Assimilation (ESYDA) division, Euro-Mediterranean Center on Climate Change (CMCC Foundation), Bologna, Italy,"
+}

@@ -2,8 +2,9 @@
 
 The CORDEX-CMIP6 project collections reference terms from WCRP-universe, but
 the project CV additionally needs the exact strings used by selected NetCDF
-global attributes. These values are copied from the CORDEX-CMIP6 CMOR-table
-CV, while unrelated project metadata is preserved.
+global attributes. These values are derived directly from the conventional
+CORDEX-CMIP6 CV files on the ``main`` branch, while unrelated ESGVoc project
+metadata is preserved.
 """
 
 from __future__ import annotations
@@ -33,7 +34,7 @@ class FieldSpec:
 
 @dataclass(frozen=True)
 class CollectionSpec:
-    """Describe one CMOR CV collection and its generated project fields."""
+    """Describe one conventional CV collection and its generated project fields."""
 
     collection_id: str
     term_type: str
@@ -135,12 +136,17 @@ def parse_args() -> argparse.Namespace:
         "--repos-base-dir",
         type=Path,
         default=script_dir.parents[1],
-        help="Directory containing the CMOR-table and project-CV repositories.",
+        help="Directory containing the conventional and ESGVoc CV checkouts.",
     )
     parser.add_argument(
-        "--cordex-cmip6-cmor-tables-dir",
+        "--conventional-cv-dir",
+        "--cordex-cmip6-cv-main-dir",
+        dest="conventional_cv_dir",
         type=Path,
-        help="CORDEX-CMIP6 CMOR-table repository (defaults below repos-base-dir).",
+        help=(
+            "Conventional CORDEX-CMIP6 CV checkout from the main branch "
+            "(defaults to cordex-cmip6-cv_main below repos-base-dir)."
+        ),
     )
     parser.add_argument(
         "--cordex-cmip6-cv-dir",
@@ -161,6 +167,66 @@ def read_json(path: Path) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise TypeError(f"Expected a JSON object in {path}")
     return payload
+
+
+def read_collection(root: Path, collection_id: str) -> dict[str, Any]:
+    """Read one collection from a conventional CORDEX-CMIP6 CV file."""
+    path = root / f"CORDEX-CMIP6_{collection_id}.json"
+    payload = read_json(path)
+    collection = payload.get(collection_id)
+    if not isinstance(collection, dict) or not collection:
+        raise ValueError(
+            f"Expected non-empty JSON object {collection_id!r} in {path}"
+        )
+    return collection
+
+
+def load_conventional_cv(root: Path) -> dict[str, dict[str, Any]]:
+    """Build the generator input directly from conventional project CV files."""
+    source_entries = read_collection(root, "source_id")
+    license_path = root / "CORDEX-CMIP6_license.json"
+    license_values = read_json(license_path).get("license")
+    if not isinstance(license_values, list) or not license_values:
+        raise ValueError(f"Expected non-empty JSON array 'license' in {license_path}")
+    project_license = require_non_empty_string(
+        license_values[0], f"{license_path}.license[0]"
+    )
+
+    sources: dict[str, dict[str, Any]] = {}
+    for identifier, raw_entry in source_entries.items():
+        location = f"source_id.{identifier}"
+        if not isinstance(raw_entry, dict):
+            raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
+        label = require_non_empty_string(
+            raw_entry.get("label_extended"), f"{location}.label_extended"
+        )
+        release_year = require_non_empty_string(
+            raw_entry.get("release_year"), f"{location}.release_year"
+        )
+        sources[identifier] = {
+            "source": [f"{label} ({release_year})", label],
+            "source_type": raw_entry.get("source_type"),
+            "activity_participation": raw_entry.get("activity_participation"),
+            "license": project_license,
+        }
+
+    driving_experiments = {
+        identifier: {
+            "driving_experiment_id": identifier,
+            "driving_experiment": value,
+        }
+        for identifier, value in read_collection(
+            root, "driving_experiment_id"
+        ).items()
+    }
+
+    return {
+        "source_id": sources,
+        "driving_source_id": read_collection(root, "driving_source_id"),
+        "institution_id": read_collection(root, "institution_id"),
+        "domain_id": read_collection(root, "domain_id"),
+        "driving_experiment_id": driving_experiments,
+    }
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -389,7 +455,7 @@ def generate_collection(
         if stale:
             print(
                 f"WARNING: {spec.collection_id} contains {len(stale)} JSON file(s) "
-                "not represented in the CMOR CV; they were left unchanged: "
+                "not represented in the conventional CV; they were left unchanged: "
                 + ", ".join(stale)
             )
 
@@ -399,18 +465,11 @@ def generate_collection(
 def main() -> None:
     args = parse_args()
     base = args.repos_base_dir.resolve()
-    cmor_repo = (
-        args.cordex_cmip6_cmor_tables_dir or base / "cordex-cmip6-cmor-tables"
+    conventional_root = (
+        args.conventional_cv_dir or base / "cordex-cmip6-cv_main"
     ).resolve()
     project_root = (args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv").resolve()
-    cv_path = cmor_repo / "Tables" / "CORDEX-CMIP6_CV.json"
-
-    content = read_json(cv_path)
-    cv = content.get("CV")
-    if cv is None:
-        raise ValueError(f"Missing JSON object 'CV' in {cv_path}")
-    if not isinstance(cv, dict):
-        raise TypeError(f"Expected 'CV' in {cv_path} to be a JSON object")
+    cv = load_conventional_cv(conventional_root)
 
     totals = {"created": 0, "updated": 0, "unchanged": 0}
     for spec in COLLECTION_SPECS:
