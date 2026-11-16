@@ -82,10 +82,13 @@ body:
       description: >
         The CORDEX-CMIP6 activities that you intend to run experiment simulations.
         DD is for dynamical downscaling and ESD for empirical-statistical downscaling.
+        Select all activities that apply.
       multiple: true
       options:
         - DD
         - ESD
+        - CPRCM
+        - FPS-URB-RCC
     validations:
       required: true
 
