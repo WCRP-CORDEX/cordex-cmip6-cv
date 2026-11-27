@@ -7,9 +7,6 @@
         "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration V"
     ],
     "source_type": "ARCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

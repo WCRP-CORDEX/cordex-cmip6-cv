@@ -7,9 +7,6 @@
         "Conformal Cubic Atmospheric Model version 2507 with spectral nudging"
     ],
     "source_type": "AGCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

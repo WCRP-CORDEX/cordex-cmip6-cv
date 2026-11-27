@@ -7,9 +7,6 @@
         "Regional Climate Model REMO, version 2.3, 27 model levels, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake), Town Energy Model v3 (TEB) and interactive Vegetation (iMOVE, static)"
     ],
     "source_type": "ARCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

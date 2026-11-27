@@ -5,6 +5,14 @@ the project CV additionally needs the exact strings used by selected NetCDF
 global attributes. These values are derived directly from the conventional
 CORDEX-CMIP6 CV files on the ``main`` branch, while unrelated ESGVoc project
 metadata is preserved.
+
+Fields that also exist on the WCRP-universe term (``activity_participation``,
+region ``description``, ``experiment``) are only written to the project when
+the CORDEX-CMIP6 value differs from the Universe value. The Universe value is
+taken as the github_repo_watcher leaves it: empty values filled with the
+CORDEX-CMIP6 value and ``activity_participation`` extended to the union. Copies
+already in the project are kept. Universe itself is not modified here.
+This mirrors the ``cordex_cmip6`` metadata profile of the github_repo_watcher.
 """
 
 from __future__ import annotations
@@ -29,7 +37,8 @@ class FieldSpec:
     required: bool = True
     raw_entry_is_value: bool = False
     json_literal: bool = False
-    previous_context_definitions: tuple[Any, ...] = ()
+    # The field also exists on the Universe term; the project only overrides it.
+    shared_with_universe: bool = False
 
 
 @dataclass(frozen=True)
@@ -55,24 +64,13 @@ COLLECTION_SPECS = (
         "source",
         (
             FieldSpec("source", f"{UNIVERSE_BASE}/source"),
-            FieldSpec(
-                "source_type",
-                f"{PROPERTY_BASE}/source_type",
-                previous_context_definitions=("http://schema.org/source_type",),
-            ),
+            FieldSpec("source_type", f"{PROPERTY_BASE}/source_type"),
             FieldSpec(
                 "activity_participation",
                 f"{PROPERTY_BASE}/activity_participation",
-                previous_context_definitions=(
-                    "http://schema.org/activity_participation",
-                ),
+                shared_with_universe=True,
             ),
-            FieldSpec(
-                "license",
-                "http://schema.org/license",
-                json_literal=True,
-                previous_context_definitions=("http://schema.org/license",),
-            ),
+            FieldSpec("license", "http://schema.org/license", json_literal=True),
         ),
     ),
     CollectionSpec(
@@ -106,6 +104,7 @@ COLLECTION_SPECS = (
                 "description",
                 "https://schema.org/description",
                 source_field="domain",
+                shared_with_universe=True,
             ),
         ),
     ),
@@ -117,6 +116,7 @@ COLLECTION_SPECS = (
                 "experiment",
                 f"{UNIVERSE_BASE}/experiment",
                 source_field="driving_experiment",
+                shared_with_universe=True,
             ),
         ),
     ),
@@ -151,6 +151,11 @@ def parse_args() -> argparse.Namespace:
         "--cordex-cmip6-cv-dir",
         type=Path,
         help="CORDEX-CMIP6 ESGVoc project repository (defaults below repos-base-dir).",
+    )
+    parser.add_argument(
+        "--universe-dir",
+        type=Path,
+        help="WCRP-universe checkout (defaults to WCRP-universe below repos-base-dir).",
     )
     parser.add_argument(
         "--dry-run",
@@ -237,15 +242,23 @@ def require_non_empty_string(value: Any, location: str) -> str:
     return value
 
 
-def desired_context_terms(spec: CollectionSpec) -> dict[str, Any]:
-    """Return the JSON-LD terms required by one generated collection."""
+def desired_context_terms(
+    spec: CollectionSpec, present_fields: set[str] | None = None
+) -> dict[str, Any]:
+    """Return the JSON-LD terms required by one generated collection.
+
+    Field terms are limited to *present_fields* (all fields when None) and are
+    sorted alphabetically, so new entries are appended in alphabetical order.
+    """
     terms: dict[str, Any] = {
         "@base": f"{UNIVERSE_BASE}/{spec.term_type}/",
         "id": "@id",
         "type": "@type",
         spec.term_type: f"{UNIVERSE_BASE}/{spec.term_type}",
     }
-    for field in spec.fields:
+    for field in sorted(spec.fields, key=lambda f: f.output_field):
+        if present_fields is not None and field.output_field not in present_fields:
+            continue
         terms[field.output_field] = (
             {"@id": field.property_iri, "@type": "@json"}
             if field.json_literal
@@ -259,6 +272,7 @@ def augment_context(
     spec: CollectionSpec,
     *,
     dry_run: bool,
+    present_fields: set[str] | None = None,
 ) -> str:
     """Add missing context terms without replacing existing definitions."""
     context_path = output_dir / "000_context.jsonld"
@@ -272,17 +286,14 @@ def augment_context(
         )
 
     context = dict(raw_context)
-    fields_by_name = {field.output_field: field for field in spec.fields}
-    for term, definition in desired_context_terms(spec).items():
+    for term, definition in desired_context_terms(spec, present_fields).items():
         current = context.get(term)
         if term in context and current != definition:
-            field = fields_by_name.get(term)
-            if field is None or current not in field.previous_context_definitions:
-                raise ValueError(
-                    f"Refusing to overwrite context term {term!r} in "
-                    f"{context_path}: existing value {current!r} differs from "
-                    f"required value {definition!r}"
-                )
+            raise ValueError(
+                f"Refusing to overwrite context term {term!r} in "
+                f"{context_path}: existing value {current!r} differs from "
+                f"required value {definition!r}"
+            )
         context[term] = definition
     payload["@context"] = context
 
@@ -365,17 +376,46 @@ def build_payload(
     return payload
 
 
+def universe_value(
+    universe_root: Path | None,
+    spec: CollectionSpec,
+    identifier: str,
+    field: FieldSpec,
+    project_value: Any,
+) -> Any:
+    """Return the Universe value of a shared field as the repo watcher leaves it.
+
+    Empty Universe values are filled with the CORDEX-CMIP6 value and
+    ``activity_participation`` is extended to the union. A Universe term that
+    does not exist yet is assumed to be created with the CORDEX-CMIP6 value.
+    Returns None without a Universe checkout (the field is then always written).
+    """
+    if universe_root is None:
+        return None
+    path = universe_root / spec.term_type / f"{identifier.lower()}.json"
+    if not path.is_file():
+        return project_value
+    current = read_json(path).get(field.output_field)
+    if field.output_field == "activity_participation":
+        current = current or []
+        return [*current, *(v for v in project_value if v not in current)]
+    return current or project_value
+
+
 def merge_payload(
     existing: dict[str, Any] | None,
     generated: dict[str, Any],
     spec: CollectionSpec,
     output_path: Path,
+    universe_values: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Update generator-owned fields while retaining unrelated metadata."""
-    if existing is None:
-        return generated
+    """Update generator-owned fields while retaining unrelated metadata.
 
-    merged = dict(existing)
+    Fields shared with Universe are only added when they differ from
+    *universe_values*; existing copies are kept up to date.
+    """
+    universe_values = universe_values or {}
+    merged = dict(existing) if existing is not None else {}
     for field in ("@context", "id", "type"):
         expected = generated[field]
         current = merged.get(field)
@@ -386,12 +426,12 @@ def merge_payload(
             )
         merged[field] = expected
     for field in spec.owned_fields:
-        if field in generated:
-            merged[field] = generated[field]
-        else:
+        if field not in generated:
             # An absent optional upstream field means that no restriction is
             # defined. Remove stale generator-owned metadata accordingly.
             merged.pop(field, None)
+        elif field in merged or universe_values.get(field) != generated[field]:
+            merged[field] = generated[field]
     return merged
 
 
@@ -401,6 +441,7 @@ def generate_collection(
     spec: CollectionSpec,
     *,
     dry_run: bool,
+    universe_root: Path | None = None,
 ) -> dict[str, int]:
     raw_collection = cv.get(spec.collection_id)
     if raw_collection is None or raw_collection == {}:
@@ -414,7 +455,7 @@ def generate_collection(
     counts = {"created": 0, "updated": 0, "unchanged": 0}
     expected_files: set[str] = set()
     output_dir = project_root / spec.collection_id
-    augment_context(output_dir, spec, dry_run=dry_run)
+    present_fields: set[str] = set()
 
     for identifier, raw_entry in sorted(raw_collection.items()):
         normalized_id = str(identifier).lower()
@@ -430,7 +471,20 @@ def generate_collection(
         expected_files.add(output_path.name)
         existing = read_json(output_path) if output_path.is_file() else None
         generated = build_payload(str(identifier), raw_entry, spec)
-        payload = merge_payload(existing, generated, spec, output_path)
+        universe_values = {
+            field.output_field: universe_value(
+                universe_root,
+                spec,
+                str(identifier),
+                field,
+                generated[field.output_field],
+            )
+            for field in spec.fields
+            if field.shared_with_universe
+        }
+        payload = merge_payload(existing, generated, spec, output_path, universe_values)
+        present_fields |= set(spec.owned_fields) & set(payload)
+        warn_universe_only_activities(normalized_id, existing, payload, universe_values)
         if existing == payload:
             counts["unchanged"] += 1
             continue
@@ -454,7 +508,30 @@ def generate_collection(
                 + ", ".join(stale)
             )
 
+    augment_context(output_dir, spec, dry_run=dry_run, present_fields=present_fields)
     return counts
+
+
+def warn_universe_only_activities(
+    term_id: str,
+    existing: dict[str, Any] | None,
+    payload: dict[str, Any],
+    universe_values: dict[str, Any],
+) -> None:
+    """Flag activities kept in Universe that CORDEX-CMIP6 does not list.
+
+    Universe content is never removed here; a reviewer has to decide.
+    """
+    field = "activity_participation"
+    if field not in payload or (existing or {}).get(field) == payload[field]:
+        return
+    extra = [a for a in universe_values.get(field) or [] if a not in payload[field]]
+    if extra:
+        print(
+            f"NOTICE: source/{term_id}: Universe activity_participation also lists "
+            f"{extra}, which CORDEX-CMIP6 does not. Not removed from Universe; "
+            "check manually whether still needed."
+        )
 
 
 def main() -> None:
@@ -464,6 +541,9 @@ def main() -> None:
         args.conventional_cv_dir or base / "cordex-cmip6-cv_main"
     ).resolve()
     project_root = (args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv").resolve()
+    universe_root = (args.universe_dir or base / "WCRP-universe").resolve()
+    if not universe_root.is_dir():
+        raise FileNotFoundError(f"WCRP-universe checkout not found: {universe_root}")
     cv = load_conventional_cv(conventional_root)
 
     totals = {"created": 0, "updated": 0, "unchanged": 0}
@@ -473,6 +553,7 @@ def main() -> None:
             project_root,
             spec,
             dry_run=args.dry_run,
+            universe_root=universe_root,
         )
         for action, count in counts.items():
             totals[action] += count

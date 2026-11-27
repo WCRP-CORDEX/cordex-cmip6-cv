@@ -1,0 +1,15 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "wrf451r-ci4c",
+    "type": "source",
+    "source": [
+        "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration R, I4C configuration variant (2024)",
+        "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration R, I4C configuration variant"
+    ],
+    "source_type": "ARCM",
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
+}

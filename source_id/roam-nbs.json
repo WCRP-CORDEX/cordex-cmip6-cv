@@ -7,9 +7,6 @@
         "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea"
     ],
     "source_type": "AORCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

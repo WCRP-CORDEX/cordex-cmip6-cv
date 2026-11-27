@@ -7,9 +7,6 @@
         "The KNMI Regional Climate Model RACMO, version 23E"
     ],
     "source_type": "ARCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

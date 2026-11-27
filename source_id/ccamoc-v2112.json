@@ -7,9 +7,6 @@
         "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112"
     ],
     "source_type": "AOGCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

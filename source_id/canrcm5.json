@@ -7,9 +7,6 @@
         "Canadian Regional Climate Model version 5"
     ],
     "source_type": "ARCM",
-    "activity_participation": [
-        "DD"
-    ],
     "license": {
         "id": "cordex-cmip6-terms-of-use",
         "exceptions-contact": null,

@@ -269,65 +269,155 @@ def test_conflicting_context_mapping_is_not_overwritten(tmp_path: Path) -> None:
     assert generator.read_json(context_path) == original
 
 
-def test_license_context_upgrades_previous_generator_mapping(
-    tmp_path: Path,
-) -> None:
-    spec = generator.COLLECTION_SPECS[0]
-    context_path = tmp_path / spec.collection_id / "000_context.jsonld"
+def _source_project(tmp_path: Path, existing_fields: dict[str, Any]) -> Path:
+    """Project with one source_id term and a context without generated fields."""
+    project_root = tmp_path / "project"
     write_json(
-        context_path,
+        project_root / "source_id" / "000_context.jsonld",
         {
             "@context": {
-                "@base": f"{generator.UNIVERSE_BASE}/{spec.term_type}/",
+                "@base": f"{generator.UNIVERSE_BASE}/source/",
                 "id": "@id",
                 "type": "@type",
-                "license": "http://schema.org/license",
+                "source": f"{generator.UNIVERSE_BASE}/source",
             }
         },
     )
+    write_json(
+        project_root / "source_id" / "model.json",
+        {
+            "@context": "000_context.jsonld",
+            "id": "model",
+            "type": "source",
+            **existing_fields,
+        },
+    )
+    return project_root
 
-    generator.augment_context(
-        tmp_path / spec.collection_id,
+
+SOURCE_ENTRY = {
+    "source": ["Model description"],
+    "source_type": "ARCM",
+    "activity_participation": ["DD"],
+    "license": generator.CORDEX_CMIP6_LICENSE,
+}
+
+
+@pytest.mark.parametrize(
+    ("universe_participation", "existing_fields", "expected"),
+    (
+        # Universe equals CORDEX-CMIP6 -> no project override
+        (["DD"], {}, None),
+        # Universe gets DD appended, but also lists CMIP -> project override
+        (["CMIP"], {}, ["DD"]),
+        # Identical copies already in the project are kept
+        (["DD"], {"activity_participation": ["DD"]}, ["DD"]),
+        # Outdated project copies are corrected
+        (["DD"], {"activity_participation": ["DD", "ESD"]}, ["DD"]),
+    ),
+)
+def test_shared_fields_are_only_written_when_they_differ_from_universe(
+    tmp_path: Path,
+    universe_participation: list[str],
+    existing_fields: dict[str, Any],
+    expected: list[str] | None,
+) -> None:
+    spec = generator.COLLECTION_SPECS[0]
+    universe_root = tmp_path / "universe"
+    write_json(
+        universe_root / "source" / "model.json",
+        {"id": "model", "activity_participation": universe_participation},
+    )
+    project_root = _source_project(tmp_path, existing_fields)
+
+    generator.generate_collection(
+        {spec.collection_id: {"Model": SOURCE_ENTRY}},
+        project_root,
         spec,
         dry_run=False,
+        universe_root=universe_root,
     )
 
-    context = generator.read_json(context_path)["@context"]
-    assert context["license"] == {
-        "@id": "http://schema.org/license",
-        "@type": "@json",
-    }
+    payload = generator.read_json(project_root / "source_id" / "model.json")
+    assert payload.get("activity_participation") == expected
+    assert payload["source_type"] == "ARCM"
 
 
-def test_custom_properties_upgrade_previous_schema_org_mappings(
+def test_missing_universe_term_is_assumed_to_get_the_cordex_value(
     tmp_path: Path,
 ) -> None:
     spec = generator.COLLECTION_SPECS[0]
-    context_path = tmp_path / spec.collection_id / "000_context.jsonld"
-    write_json(
-        context_path,
-        {
-            "@context": {
-                "@base": f"{generator.UNIVERSE_BASE}/{spec.term_type}/",
-                "id": "@id",
-                "type": "@type",
-                "source_type": "http://schema.org/source_type",
-                "activity_participation": ("http://schema.org/activity_participation"),
-            }
-        },
-    )
+    universe_root = tmp_path / "universe"
+    (universe_root / "source").mkdir(parents=True)
+    project_root = _source_project(tmp_path, {})
 
-    generator.augment_context(
-        tmp_path / spec.collection_id,
+    generator.generate_collection(
+        {spec.collection_id: {"Model": SOURCE_ENTRY}},
+        project_root,
         spec,
         dry_run=False,
+        universe_root=universe_root,
     )
 
-    context = generator.read_json(context_path)["@context"]
-    assert context["source_type"] == f"{generator.PROPERTY_BASE}/source_type"
-    assert context["activity_participation"] == (
-        f"{generator.PROPERTY_BASE}/activity_participation"
+    payload = generator.read_json(project_root / "source_id" / "model.json")
+    assert "activity_participation" not in payload
+
+
+def test_universe_only_activities_are_reported_not_removed(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    spec = generator.COLLECTION_SPECS[0]
+    universe_root = tmp_path / "universe"
+    universe_term = universe_root / "source" / "model.json"
+    write_json(universe_term, {"id": "model", "activity_participation": ["CMIP", "DD"]})
+    project_root = _source_project(tmp_path, {})
+
+    generator.generate_collection(
+        {spec.collection_id: {"Model": SOURCE_ENTRY}},
+        project_root,
+        spec,
+        dry_run=False,
+        universe_root=universe_root,
     )
+
+    assert (
+        "NOTICE: source/model: Universe activity_participation also lists ['CMIP']"
+        in (capsys.readouterr().out)
+    )
+    assert generator.read_json(universe_term)["activity_participation"] == [
+        "CMIP",
+        "DD",
+    ]
+
+
+def test_context_gets_only_present_fields_in_alphabetical_order(
+    tmp_path: Path,
+) -> None:
+    spec = generator.COLLECTION_SPECS[0]
+    universe_root = tmp_path / "universe"
+    write_json(
+        universe_root / "source" / "model.json",
+        {"id": "model", "activity_participation": ["DD"]},
+    )
+    project_root = _source_project(tmp_path, {})
+
+    generator.generate_collection(
+        {spec.collection_id: {"Model": SOURCE_ENTRY}},
+        project_root,
+        spec,
+        dry_run=False,
+        universe_root=universe_root,
+    )
+
+    context = generator.read_json(project_root / "source_id" / "000_context.jsonld")
+    assert list(context["@context"]) == [
+        "@base",
+        "id",
+        "type",
+        "source",
+        "license",
+        "source_type",
+    ]
 
 
 def test_dry_run_does_not_modify_context_or_entries(tmp_path: Path) -> None:
