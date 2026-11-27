@@ -5,5 +5,11 @@
     "source": [
         "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202401-1-1 (2024)",
         "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202401-1-1"
-    ]
+    ],
+    "source_type": "ARCM",
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

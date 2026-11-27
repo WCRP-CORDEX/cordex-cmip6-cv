@@ -5,5 +5,11 @@
     "source": [
         "The NKUA regional Coupled Model for the eXtended Mediterranean region (2025)",
         "The NKUA regional Coupled Model for the eXtended Mediterranean region"
-    ]
+    ],
+    "source_type": "AORCM",
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
 }

@@ -1,0 +1,15 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "regcm4-6-sn",
+    "type": "source",
+    "source": [
+        "RegCM 4.6.1 with CLM4.5 and spectral nudging, UNIST configuration (2021)",
+        "RegCM 4.6.1 with CLM4.5 and spectral nudging, UNIST configuration"
+    ],
+    "source_type": "ARCM",
+    "license": {
+        "id": "cordex-cmip6-terms-of-use",
+        "exceptions-contact": null,
+        "source-specific-info": ""
+    }
+}

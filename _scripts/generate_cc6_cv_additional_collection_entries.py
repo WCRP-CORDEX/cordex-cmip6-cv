@@ -2,8 +2,17 @@
 
 The CORDEX-CMIP6 project collections reference terms from WCRP-universe, but
 the project CV additionally needs the exact strings used by selected NetCDF
-global attributes. These values are copied from the CORDEX-CMIP6 CMOR-table
-CV, while unrelated project metadata is preserved.
+global attributes. These values are derived directly from the conventional
+CORDEX-CMIP6 CV files on the ``main`` branch, while unrelated ESGVoc project
+metadata is preserved.
+
+Fields that also exist on the WCRP-universe term (``activity_participation``,
+region ``description``, ``experiment``) are only written to the project when
+the CORDEX-CMIP6 value differs from the Universe value. The Universe value is
+taken as the github_repo_watcher leaves it: empty values filled with the
+CORDEX-CMIP6 value and ``activity_participation`` extended to the union. Copies
+already in the project are kept. Universe itself is not modified here.
+This mirrors the ``cordex_cmip6`` metadata profile of the github_repo_watcher.
 """
 
 from __future__ import annotations
@@ -19,14 +28,31 @@ PROPERTY_BASE = "https://esgvoc.ipsl.fr/property"
 
 
 @dataclass(frozen=True)
-class CollectionSpec:
-    """Describe one CMOR CV collection and its generated project field."""
+class FieldSpec:
+    """Describe one field copied into an ESGVoc project term."""
 
-    collection_id: str
     output_field: str
-    term_type: str
     property_iri: str
     source_field: str | None = None
+    required: bool = True
+    raw_entry_is_value: bool = False
+    json_literal: bool = False
+    # The field also exists on the Universe term; the project only overrides it.
+    shared_with_universe: bool = False
+
+
+@dataclass(frozen=True)
+class CollectionSpec:
+    """Describe one conventional CV collection and its generated project fields."""
+
+    collection_id: str
+    term_type: str
+    fields: tuple[FieldSpec, ...]
+
+    @property
+    def owned_fields(self) -> tuple[str, ...]:
+        """Fields that are authoritatively maintained by this generator."""
+        return tuple(field.output_field for field in self.fields)
 
 
 COLLECTION_SPECS = (
@@ -36,36 +62,70 @@ COLLECTION_SPECS = (
     CollectionSpec(
         "source_id",
         "source",
-        "source",
-        f"{UNIVERSE_BASE}/source",
+        (
+            FieldSpec("source", f"{UNIVERSE_BASE}/source"),
+            FieldSpec("source_type", f"{PROPERTY_BASE}/source_type"),
+            FieldSpec(
+                "activity_participation",
+                f"{PROPERTY_BASE}/activity_participation",
+                shared_with_universe=True,
+            ),
+            FieldSpec("license", "http://schema.org/license", json_literal=True),
+        ),
     ),
     CollectionSpec(
         "driving_source_id",
-        "driving_source",
         "source",
-        f"{PROPERTY_BASE}/driving_source",
+        (
+            FieldSpec("driving_source", f"{PROPERTY_BASE}/driving_source"),
+            FieldSpec(
+                "driving_experiment_id",
+                f"{PROPERTY_BASE}/driving_experiment_id",
+                required=False,
+            ),
+        ),
     ),
     CollectionSpec(
         "institution_id",
-        "institution",
         "organisation",
-        f"{PROPERTY_BASE}/institution",
+        (
+            FieldSpec(
+                "institution",
+                f"{PROPERTY_BASE}/institution",
+                raw_entry_is_value=True,
+            ),
+        ),
     ),
     CollectionSpec(
         "domain_id",
-        "description",
         "region",
-        "https://schema.org/description",
-        source_field="domain",
+        (
+            FieldSpec(
+                "description",
+                "https://schema.org/description",
+                source_field="domain",
+                shared_with_universe=True,
+            ),
+        ),
     ),
     CollectionSpec(
         "driving_experiment_id",
         "experiment",
-        "experiment",
-        f"{UNIVERSE_BASE}/experiment",
-        source_field="driving_experiment",
+        (
+            FieldSpec(
+                "experiment",
+                f"{UNIVERSE_BASE}/experiment",
+                source_field="driving_experiment",
+                shared_with_universe=True,
+            ),
+        ),
     ),
 )
+
+CORDEX_CMIP6_LICENSE = (
+    "https://cordex.org/data-access/cordex-cmip6-data/" "cordex-cmip6-terms-of-use"
+)
+CORDEX_CMIP6_LICENSE_ID = "cordex-cmip6-terms-of-use"
 
 
 def parse_args() -> argparse.Namespace:
@@ -75,17 +135,27 @@ def parse_args() -> argparse.Namespace:
         "--repos-base-dir",
         type=Path,
         default=script_dir.parents[1],
-        help="Directory containing the CMOR-table and project-CV repositories.",
+        help="Directory containing the conventional and ESGVoc CV checkouts.",
     )
     parser.add_argument(
-        "--cordex-cmip6-cmor-tables-dir",
+        "--conventional-cv-dir",
+        "--cordex-cmip6-cv-main-dir",
+        dest="conventional_cv_dir",
         type=Path,
-        help="CORDEX-CMIP6 CMOR-table repository (defaults below repos-base-dir).",
+        help=(
+            "Conventional CORDEX-CMIP6 CV checkout from the main branch "
+            "(defaults to cordex-cmip6-cv_main below repos-base-dir)."
+        ),
     )
     parser.add_argument(
         "--cordex-cmip6-cv-dir",
         type=Path,
         help="CORDEX-CMIP6 ESGVoc project repository (defaults below repos-base-dir).",
+    )
+    parser.add_argument(
+        "--universe-dir",
+        type=Path,
+        help="WCRP-universe checkout (defaults to WCRP-universe below repos-base-dir).",
     )
     parser.add_argument(
         "--dry-run",
@@ -103,6 +173,62 @@ def read_json(path: Path) -> dict[str, Any]:
     return payload
 
 
+def read_collection(root: Path, collection_id: str) -> dict[str, Any]:
+    """Read one collection from a conventional CORDEX-CMIP6 CV file."""
+    path = root / f"CORDEX-CMIP6_{collection_id}.json"
+    payload = read_json(path)
+    collection = payload.get(collection_id)
+    if not isinstance(collection, dict) or not collection:
+        raise ValueError(f"Expected non-empty JSON object {collection_id!r} in {path}")
+    return collection
+
+
+def load_conventional_cv(root: Path) -> dict[str, dict[str, Any]]:
+    """Build the generator input directly from conventional project CV files."""
+    source_entries = read_collection(root, "source_id")
+    license_path = root / "CORDEX-CMIP6_license.json"
+    license_values = read_json(license_path).get("license")
+    if not isinstance(license_values, list) or not license_values:
+        raise ValueError(f"Expected non-empty JSON array 'license' in {license_path}")
+    project_license = require_non_empty_string(
+        license_values[0], f"{license_path}.license[0]"
+    )
+
+    sources: dict[str, dict[str, Any]] = {}
+    for identifier, raw_entry in source_entries.items():
+        location = f"source_id.{identifier}"
+        if not isinstance(raw_entry, dict):
+            raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
+        label = require_non_empty_string(
+            raw_entry.get("label_extended"), f"{location}.label_extended"
+        )
+        release_year = require_non_empty_string(
+            raw_entry.get("release_year"), f"{location}.release_year"
+        )
+        sources[identifier] = {
+            "source": [f"{label} ({release_year})", label],
+            "source_type": raw_entry.get("source_type"),
+            "activity_participation": raw_entry.get("activity_participation"),
+            "license": project_license,
+        }
+
+    driving_experiments = {
+        identifier: {
+            "driving_experiment_id": identifier,
+            "driving_experiment": value,
+        }
+        for identifier, value in read_collection(root, "driving_experiment_id").items()
+    }
+
+    return {
+        "source_id": sources,
+        "driving_source_id": read_collection(root, "driving_source_id"),
+        "institution_id": read_collection(root, "institution_id"),
+        "domain_id": read_collection(root, "domain_id"),
+        "driving_experiment_id": driving_experiments,
+    }
+
+
 def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
@@ -116,15 +242,29 @@ def require_non_empty_string(value: Any, location: str) -> str:
     return value
 
 
-def desired_context_terms(spec: CollectionSpec) -> dict[str, str]:
-    """Return the JSON-LD terms required by one generated collection."""
-    return {
+def desired_context_terms(
+    spec: CollectionSpec, present_fields: set[str] | None = None
+) -> dict[str, Any]:
+    """Return the JSON-LD terms required by one generated collection.
+
+    Field terms are limited to *present_fields* (all fields when None) and are
+    sorted alphabetically, so new entries are appended in alphabetical order.
+    """
+    terms: dict[str, Any] = {
         "@base": f"{UNIVERSE_BASE}/{spec.term_type}/",
         "id": "@id",
         "type": "@type",
         spec.term_type: f"{UNIVERSE_BASE}/{spec.term_type}",
-        spec.output_field: spec.property_iri,
     }
+    for field in sorted(spec.fields, key=lambda f: f.output_field):
+        if present_fields is not None and field.output_field not in present_fields:
+            continue
+        terms[field.output_field] = (
+            {"@id": field.property_iri, "@type": "@json"}
+            if field.json_literal
+            else field.property_iri
+        )
+    return terms
 
 
 def augment_context(
@@ -132,6 +272,7 @@ def augment_context(
     spec: CollectionSpec,
     *,
     dry_run: bool,
+    present_fields: set[str] | None = None,
 ) -> str:
     """Add missing context terms without replacing existing definitions."""
     context_path = output_dir / "000_context.jsonld"
@@ -145,15 +286,15 @@ def augment_context(
         )
 
     context = dict(raw_context)
-    for term, definition in desired_context_terms(spec).items():
+    for term, definition in desired_context_terms(spec, present_fields).items():
         current = context.get(term)
         if term in context and current != definition:
             raise ValueError(
-                f"Refusing to overwrite context term {term!r} in {context_path}: "
-                f"existing value {current!r} differs from required value "
-                f"{definition!r}"
+                f"Refusing to overwrite context term {term!r} in "
+                f"{context_path}: existing value {current!r} differs from "
+                f"required value {definition!r}"
             )
-        context.setdefault(term, definition)
+        context[term] = definition
     payload["@context"] = context
 
     if payload == existing:
@@ -165,31 +306,57 @@ def augment_context(
     return action
 
 
-def extract_value(
+def validate_metadata_value(value: Any, location: str) -> str | list[str]:
+    """Validate a scalar or nonempty list of metadata strings."""
+    if isinstance(value, list):
+        if not value:
+            raise ValueError(f"Expected a non-empty list at {location}")
+        return [
+            require_non_empty_string(item, f"{location}[{index}]")
+            for index, item in enumerate(value)
+        ]
+    return require_non_empty_string(value, location)
+
+
+def normalize_license(value: Any, location: str) -> dict[str, Any]:
+    """Convert the CMOR license value to the legacy Source license shape."""
+    license_value = require_non_empty_string(value, location).rstrip("/")
+    if license_value != CORDEX_CMIP6_LICENSE:
+        raise ValueError(
+            f"Unsupported CORDEX-CMIP6 source license at {location}: {value!r}. "
+            "Add a project license term before mapping this value."
+        )
+    return {
+        "id": CORDEX_CMIP6_LICENSE_ID,
+        "exceptions-contact": None,
+        "source-specific-info": "",
+    }
+
+
+def extract_field_value(
     identifier: str,
     raw_entry: Any,
     spec: CollectionSpec,
-) -> str | list[str]:
-    """Extract and validate one descriptive value from a CMOR CV entry."""
+    field: FieldSpec,
+) -> str | list[str] | dict[str, Any] | None:
+    """Extract and validate one generated field from a CMOR CV entry."""
     location = f"CV.{spec.collection_id}.{identifier}"
-    if spec.collection_id == "institution_id":
-        return require_non_empty_string(raw_entry, location)
+    if field.raw_entry_is_value:
+        return validate_metadata_value(raw_entry, location)
 
     if not isinstance(raw_entry, dict):
         raise TypeError(f"Expected an object at {location}, got {raw_entry!r}")
-    source_field = spec.source_field or spec.output_field
+    source_field = field.source_field or field.output_field
     if source_field not in raw_entry:
-        raise ValueError(f"Missing {source_field!r} at {location}")
+        if field.required:
+            raise ValueError(f"Missing {source_field!r} at {location}")
+        return None
 
     value = raw_entry[source_field]
-    if isinstance(value, list):
-        if not value:
-            raise ValueError(f"Expected a non-empty list at {location}.{source_field}")
-        return [
-            require_non_empty_string(item, f"{location}.{source_field}[{index}]")
-            for index, item in enumerate(value)
-        ]
-    return require_non_empty_string(value, f"{location}.{source_field}")
+    field_location = f"{location}.{source_field}"
+    if field.output_field == "license":
+        return normalize_license(value, field_location)
+    return validate_metadata_value(value, field_location)
 
 
 def build_payload(
@@ -197,12 +364,42 @@ def build_payload(
     raw_entry: Any,
     spec: CollectionSpec,
 ) -> dict[str, Any]:
-    return {
+    payload: dict[str, Any] = {
         "@context": "000_context.jsonld",
         "id": identifier.lower(),
         "type": spec.term_type,
-        spec.output_field: extract_value(identifier, raw_entry, spec),
     }
+    for field in spec.fields:
+        value = extract_field_value(identifier, raw_entry, spec, field)
+        if value is not None:
+            payload[field.output_field] = value
+    return payload
+
+
+def universe_value(
+    universe_root: Path | None,
+    spec: CollectionSpec,
+    identifier: str,
+    field: FieldSpec,
+    project_value: Any,
+) -> Any:
+    """Return the Universe value of a shared field as the repo watcher leaves it.
+
+    Empty Universe values are filled with the CORDEX-CMIP6 value and
+    ``activity_participation`` is extended to the union. A Universe term that
+    does not exist yet is assumed to be created with the CORDEX-CMIP6 value.
+    Returns None without a Universe checkout (the field is then always written).
+    """
+    if universe_root is None:
+        return None
+    path = universe_root / spec.term_type / f"{identifier.lower()}.json"
+    if not path.is_file():
+        return project_value
+    current = read_json(path).get(field.output_field)
+    if field.output_field == "activity_participation":
+        current = current or []
+        return [*current, *(v for v in project_value if v not in current)]
+    return current or project_value
 
 
 def merge_payload(
@@ -210,12 +407,15 @@ def merge_payload(
     generated: dict[str, Any],
     spec: CollectionSpec,
     output_path: Path,
+    universe_values: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Update generator-owned fields while retaining unrelated metadata."""
-    if existing is None:
-        return generated
+    """Update generator-owned fields while retaining unrelated metadata.
 
-    merged = dict(existing)
+    Fields shared with Universe are only added when they differ from
+    *universe_values*; existing copies are kept up to date.
+    """
+    universe_values = universe_values or {}
+    merged = dict(existing) if existing is not None else {}
     for field in ("@context", "id", "type"):
         expected = generated[field]
         current = merged.get(field)
@@ -225,7 +425,13 @@ def merge_payload(
                 f"existing value {current!r} differs from required value {expected!r}"
             )
         merged[field] = expected
-    merged[spec.output_field] = generated[spec.output_field]
+    for field in spec.owned_fields:
+        if field not in generated:
+            # An absent optional upstream field means that no restriction is
+            # defined. Remove stale generator-owned metadata accordingly.
+            merged.pop(field, None)
+        elif field in merged or universe_values.get(field) != generated[field]:
+            merged[field] = generated[field]
     return merged
 
 
@@ -235,6 +441,7 @@ def generate_collection(
     spec: CollectionSpec,
     *,
     dry_run: bool,
+    universe_root: Path | None = None,
 ) -> dict[str, int]:
     raw_collection = cv.get(spec.collection_id)
     if raw_collection is None or raw_collection == {}:
@@ -248,7 +455,7 @@ def generate_collection(
     counts = {"created": 0, "updated": 0, "unchanged": 0}
     expected_files: set[str] = set()
     output_dir = project_root / spec.collection_id
-    augment_context(output_dir, spec, dry_run=dry_run)
+    present_fields: set[str] = set()
 
     for identifier, raw_entry in sorted(raw_collection.items()):
         normalized_id = str(identifier).lower()
@@ -264,7 +471,20 @@ def generate_collection(
         expected_files.add(output_path.name)
         existing = read_json(output_path) if output_path.is_file() else None
         generated = build_payload(str(identifier), raw_entry, spec)
-        payload = merge_payload(existing, generated, spec, output_path)
+        universe_values = {
+            field.output_field: universe_value(
+                universe_root,
+                spec,
+                str(identifier),
+                field,
+                generated[field.output_field],
+            )
+            for field in spec.fields
+            if field.shared_with_universe
+        }
+        payload = merge_payload(existing, generated, spec, output_path, universe_values)
+        present_fields |= set(spec.owned_fields) & set(payload)
+        warn_universe_only_activities(normalized_id, existing, payload, universe_values)
         if existing == payload:
             counts["unchanged"] += 1
             continue
@@ -284,28 +504,47 @@ def generate_collection(
         if stale:
             print(
                 f"WARNING: {spec.collection_id} contains {len(stale)} JSON file(s) "
-                "not represented in the CMOR CV; they were left unchanged: "
+                "not represented in the conventional CV; they were left unchanged: "
                 + ", ".join(stale)
             )
 
+    augment_context(output_dir, spec, dry_run=dry_run, present_fields=present_fields)
     return counts
+
+
+def warn_universe_only_activities(
+    term_id: str,
+    existing: dict[str, Any] | None,
+    payload: dict[str, Any],
+    universe_values: dict[str, Any],
+) -> None:
+    """Flag activities kept in Universe that CORDEX-CMIP6 does not list.
+
+    Universe content is never removed here; a reviewer has to decide.
+    """
+    field = "activity_participation"
+    if field not in payload or (existing or {}).get(field) == payload[field]:
+        return
+    extra = [a for a in universe_values.get(field) or [] if a not in payload[field]]
+    if extra:
+        print(
+            f"NOTICE: source/{term_id}: Universe activity_participation also lists "
+            f"{extra}, which CORDEX-CMIP6 does not. Not removed from Universe; "
+            "check manually whether still needed."
+        )
 
 
 def main() -> None:
     args = parse_args()
     base = args.repos_base_dir.resolve()
-    cmor_repo = (
-        args.cordex_cmip6_cmor_tables_dir or base / "cordex-cmip6-cmor-tables"
+    conventional_root = (
+        args.conventional_cv_dir or base / "cordex-cmip6-cv_main"
     ).resolve()
     project_root = (args.cordex_cmip6_cv_dir or base / "cordex-cmip6-cv").resolve()
-    cv_path = cmor_repo / "Tables" / "CORDEX-CMIP6_CV.json"
-
-    content = read_json(cv_path)
-    cv = content.get("CV")
-    if cv is None:
-        raise ValueError(f"Missing JSON object 'CV' in {cv_path}")
-    if not isinstance(cv, dict):
-        raise TypeError(f"Expected 'CV' in {cv_path} to be a JSON object")
+    universe_root = (args.universe_dir or base / "WCRP-universe").resolve()
+    if not universe_root.is_dir():
+        raise FileNotFoundError(f"WCRP-universe checkout not found: {universe_root}")
+    cv = load_conventional_cv(conventional_root)
 
     totals = {"created": 0, "updated": 0, "unchanged": 0}
     for spec in COLLECTION_SPECS:
@@ -314,6 +553,7 @@ def main() -> None:
             project_root,
             spec,
             dry_run=args.dry_run,
+            universe_root=universe_root,
         )
         for action, count in counts.items():
             totals[action] += count

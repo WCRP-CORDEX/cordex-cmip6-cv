@@ -2,5 +2,8 @@
     "@context": "000_context.jsonld",
     "id": "era5",
     "type": "source",
-    "driving_source": "ECMWF Reanalysis v5"
+    "driving_source": "ECMWF Reanalysis v5",
+    "driving_experiment_id": [
+        "evaluation"
+    ]
 }
